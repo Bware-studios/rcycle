@@ -1,13 +1,6 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
+# for mac
+.DS_Store
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+# ignore xcode user preferences
+xcuserdata
