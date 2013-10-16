@@ -27,6 +27,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
 
+    auto scene2 = MainMenuScene::create();
+    
     // run
     director->runWithScene(scene);
 
