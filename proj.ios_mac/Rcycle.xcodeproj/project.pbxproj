@@ -63,6 +63,22 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		97A384F71810A0F700F956F0 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F01810A0F700F956F0 /* ccbResources */; };
+		97A384F81810A0F700F956F0 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F01810A0F700F956F0 /* ccbResources */; };
+		97A384F91810A0F700F956F0 /* fileLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F11810A0F700F956F0 /* fileLookup.plist */; };
+		97A384FA1810A0F700F956F0 /* fileLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F11810A0F700F956F0 /* fileLookup.plist */; };
+		97A384FB1810A0F700F956F0 /* MainScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F21810A0F700F956F0 /* MainScene.ccbi */; };
+		97A384FC1810A0F700F956F0 /* MainScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F21810A0F700F956F0 /* MainScene.ccbi */; };
+		97A384FD1810A0F700F956F0 /* resources-ipad in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F31810A0F700F956F0 /* resources-ipad */; };
+		97A384FE1810A0F700F956F0 /* resources-ipad in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F31810A0F700F956F0 /* resources-ipad */; };
+		97A384FF1810A0F700F956F0 /* resources-ipadhd in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F41810A0F700F956F0 /* resources-ipadhd */; };
+		97A385001810A0F700F956F0 /* resources-ipadhd in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F41810A0F700F956F0 /* resources-ipadhd */; };
+		97A385011810A0F700F956F0 /* resources-iphone in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F51810A0F700F956F0 /* resources-iphone */; };
+		97A385021810A0F700F956F0 /* resources-iphone in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F51810A0F700F956F0 /* resources-iphone */; };
+		97A385031810A0F700F956F0 /* resources-iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F61810A0F700F956F0 /* resources-iphonehd */; };
+		97A385041810A0F700F956F0 /* resources-iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F61810A0F700F956F0 /* resources-iphonehd */; };
+		97A385061810AB1000F956F0 /* FinishScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 97A385051810AB1000F956F0 /* FinishScene.ccbi */; };
+		97A385071810AB1000F956F0 /* FinishScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 97A385051810AB1000F956F0 /* FinishScene.ccbi */; };
 		97EFB228180F431B00F7FDE6 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFB226180F431B00F7FDE6 /* MenuScene.cpp */; };
 		97EFB229180F431B00F7FDE6 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFB226180F431B00F7FDE6 /* MenuScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -290,6 +306,14 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		97A384F01810A0F700F956F0 /* ccbResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ccbResources; path = "../ccb_rcycle/publish-ios/ccbResources"; sourceTree = "<group>"; };
+		97A384F11810A0F700F956F0 /* fileLookup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fileLookup.plist; path = "../ccb_rcycle/publish-ios/fileLookup.plist"; sourceTree = "<group>"; };
+		97A384F21810A0F700F956F0 /* MainScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = MainScene.ccbi; path = "../ccb_rcycle/publish-ios/MainScene.ccbi"; sourceTree = "<group>"; };
+		97A384F31810A0F700F956F0 /* resources-ipad */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "resources-ipad"; path = "../ccb_rcycle/publish-ios/resources-ipad"; sourceTree = "<group>"; };
+		97A384F41810A0F700F956F0 /* resources-ipadhd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "resources-ipadhd"; path = "../ccb_rcycle/publish-ios/resources-ipadhd"; sourceTree = "<group>"; };
+		97A384F51810A0F700F956F0 /* resources-iphone */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "resources-iphone"; path = "../ccb_rcycle/publish-ios/resources-iphone"; sourceTree = "<group>"; };
+		97A384F61810A0F700F956F0 /* resources-iphonehd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "resources-iphonehd"; path = "../ccb_rcycle/publish-ios/resources-iphonehd"; sourceTree = "<group>"; };
+		97A385051810AB1000F956F0 /* FinishScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = FinishScene.ccbi; path = "../ccb_rcycle/publish-ios/FinishScene.ccbi"; sourceTree = "<group>"; };
 		97EFB226180F431B00F7FDE6 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
 		97EFB227180F431B00F7FDE6 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -494,6 +518,14 @@
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
+				97A384F01810A0F700F956F0 /* ccbResources */,
+				97A384F11810A0F700F956F0 /* fileLookup.plist */,
+				97A384F21810A0F700F956F0 /* MainScene.ccbi */,
+				97A385051810AB1000F956F0 /* FinishScene.ccbi */,
+				97A384F31810A0F700F956F0 /* resources-ipad */,
+				97A384F41810A0F700F956F0 /* resources-ipadhd */,
+				97A384F51810A0F700F956F0 /* resources-iphone */,
+				97A384F61810A0F700F956F0 /* resources-iphonehd */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -555,7 +587,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = MDDB52YB8L;
+						DevelopmentTeam = TDLHBUJMUY;
 					};
 				};
 			};
@@ -692,9 +724,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				97A385011810A0F700F956F0 /* resources-iphone in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				97A384FF1810A0F700F956F0 /* resources-ipadhd in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				97A384FB1810A0F700F956F0 /* MainScene.ccbi in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
@@ -703,13 +738,18 @@
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				97A384F91810A0F700F956F0 /* fileLookup.plist in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				97A384FD1810A0F700F956F0 /* resources-ipad in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				97A385061810AB1000F956F0 /* FinishScene.ccbi in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				97A384F71810A0F700F956F0 /* ccbResources in Resources */,
+				97A385031810A0F700F956F0 /* resources-iphonehd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,10 +757,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A384FA1810A0F700F956F0 /* fileLookup.plist in Resources */,
+				97A385021810A0F700F956F0 /* resources-iphone in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
+				97A384FE1810A0F700F956F0 /* resources-ipad in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
+				97A384F81810A0F700F956F0 /* ccbResources in Resources */,
+				97A384FC1810A0F700F956F0 /* MainScene.ccbi in Resources */,
+				97A385041810A0F700F956F0 /* resources-iphonehd in Resources */,
+				97A385071810AB1000F956F0 /* FinishScene.ccbi in Resources */,
+				97A385001810A0F700F956F0 /* resources-ipadhd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +860,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -844,6 +893,7 @@
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
 				);
 				PRODUCT_NAME = "Rcycle iOS";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -855,6 +905,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -885,6 +936,7 @@
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
 				);
 				PRODUCT_NAME = "Rcycle iOS";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

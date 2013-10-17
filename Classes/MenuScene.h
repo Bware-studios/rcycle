@@ -26,12 +26,33 @@ public:
 };
 
 
-class MainMenuScene : public MenuScene
+class MainMenuScene : public MenuScene, public cocos2d::extension::CCBSelectorResolver
 {
 public:
     bool init();
     CREATE_FUNC(MainMenuScene);
+
+    cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
+    cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);
+    cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
+
+    void click(Object *pSender);
 };
+
+
+class FinishScene : public MenuScene, public cocos2d::extension::CCBSelectorResolver
+{
+public:
+    bool init();
+    CREATE_FUNC(FinishScene);
+    
+    cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
+    cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);
+    cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
+    
+    void click(Object *pSender);
+};
+
 
 
 class MenuLayer : public cocos2d::Layer, public cocos2d::extension::CCBSelectorResolver

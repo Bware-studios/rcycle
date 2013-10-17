@@ -23,6 +23,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
+    
+    // pon codigo decente para el orden de resoluciones
+    std::vector<std::string> searchDirs;
+    searchDirs.push_back("resources-iphonehd");
+    FileUtils::getInstance()->setSearchResolutionsOrder(searchDirs);
+
+    
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
@@ -30,7 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto scene2 = MainMenuScene::create();
     
     // run
-    director->runWithScene(scene);
+    director->runWithScene(scene2);
 
     return true;
 }
