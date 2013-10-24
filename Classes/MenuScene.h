@@ -55,14 +55,21 @@ public:
 
 
 
-class MenuLayer : public cocos2d::Layer, public cocos2d::extension::CCBSelectorResolver
+class MenuLayer : public cocos2d::Layer, public cocos2d::extension::CCBSelectorResolver, public cocos2d::extension::CCBMemberVariableAssigner
 {
 public:
     bool init();
     cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
     cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);
     cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
+    
+    bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
+
     CREATE_FUNC(MenuLayer);
+    
+private:
+    cocos2d::LabelTTF *label1;
+    
 };
 
 

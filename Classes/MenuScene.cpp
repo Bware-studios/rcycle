@@ -62,7 +62,17 @@ void FinishScene::click(Object *pSender)
 
 bool MenuLayer::init()
 {
-    
+
+    return true;
+}
+
+
+bool MenuLayer::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
+{
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label1", LabelTTF *, this->label1);
+
+    label1->setString("Ooooh !!!\nPerdiste :-(");
+
     return true;
 }
 

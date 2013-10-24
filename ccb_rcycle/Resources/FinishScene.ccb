@@ -148,9 +148,9 @@
 				<key>displayName</key>
 				<string>CCLabelTTF</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>label1</string>
 				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -160,9 +160,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>234</real>
-							<real>212</real>
-							<integer>0</integer>
+							<real>51.458332061767578</real>
+							<real>68.125</real>
+							<integer>4</integer>
 						</array>
 					</dict>
 					<dict>
@@ -203,7 +203,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>MarkerFelt-Thin</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -213,7 +213,7 @@
 						<key>value</key>
 						<array>
 							<real>40</real>
-							<integer>0</integer>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -281,9 +281,9 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>46</real>
-									<real>-66</real>
-									<integer>0</integer>
+									<real>0.0</real>
+									<real>0.0</real>
+									<integer>4</integer>
 								</array>
 							</dict>
 							<dict>
@@ -390,9 +390,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>250</real>
-							<real>140</real>
-							<integer>0</integer>
+							<real>50.208332061767578</real>
+							<real>23.75</real>
+							<integer>4</integer>
 						</array>
 					</dict>
 					<dict>
@@ -578,7 +578,7 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>2.34375</real>
 			<key>position</key>
 			<real>0.0</real>
 			<key>resolution</key>
