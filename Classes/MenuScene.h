@@ -19,14 +19,17 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 
+class MenuLayer;
+
 class MenuScene : public cocos2d::Scene
 {
 public:
     bool init(const char *ccb_filename);
+    MenuLayer *layer;
 };
 
 
-class MainMenuScene : public MenuScene, public cocos2d::extension::CCBSelectorResolver
+class MainMenuScene : public MenuScene, public cocos2d::extension::CCBSelectorResolver, public cocos2d::extension::CCBAnimationManagerDelegate
 {
 public:
     bool init();
@@ -37,6 +40,9 @@ public:
     cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
 
     void click(Object *pSender);
+
+    void completedAnimationSequenceNamed(const char *name);
+
 };
 
 
@@ -49,6 +55,9 @@ public:
     cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
     cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);
     cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
+    
+    
+
     
     void click(Object *pSender);
 };
@@ -67,7 +76,7 @@ public:
 
     CREATE_FUNC(MenuLayer);
     
-private:
+public:
     cocos2d::LabelTTF *label1;
     
 };

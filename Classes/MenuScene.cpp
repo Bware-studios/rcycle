@@ -14,11 +14,12 @@ USING_NS_CC_EXT;
 
 bool MenuScene::init(const char *ccb_filename)
 {
-    auto loaderLibrary = CCNodeLoaderLibrary::newDefaultNodeLoaderLibrary();
-    loaderLibrary->registerCCNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    cout << "init with file: " <<ccb_filename<<"\n";
+    auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
     auto ccbReader = new CCBReader(loaderLibrary);
     
-    Node *layer=ccbReader->readNodeGraphFromFile(ccb_filename,this);
+    layer=(MenuLayer *)ccbReader->readNodeGraphFromFile(ccb_filename,this);
     ccbReader->release();
 
     this->addChild(layer);
@@ -29,6 +30,7 @@ bool MenuScene::init(const char *ccb_filename)
 
 bool MainMenuScene::init()
 {
+    cout << "init MainMenuScene \n";
     if ( ! MenuScene::init("MainScene") ) return false;
     return true;
 }
@@ -37,15 +39,24 @@ bool MainMenuScene::init()
 
 void MainMenuScene::click(Object *pSender)
 {
+    FinishScene *newscene = FinishScene::create();
     //cout << "clicked\n";
-    Director::getInstance()->replaceScene(FinishScene::create());
+    newscene->layer->label1->setString("Sorry...\nyou lost :-(");
+    Director::getInstance()->replaceScene((Scene *)newscene);
     
+}
+
+void MainMenuScene::completedAnimationSequenceNamed(const char *name) {
+    printf("%s completada\n",name);
 }
 
 
 bool FinishScene::init()
 {
+    cout << "init FinishScene \n";
     if ( ! MenuScene::init("FinishScene") ) return false;
+
+
     return true;
 }
 
@@ -57,7 +68,12 @@ void FinishScene::click(Object *pSender)
     auto scene = MainMenuScene::create();
     Director::getInstance()->replaceScene(scene);
 
+    CCBAnimationManager *amanager=(CCBAnimationManager *)scene->layer->getUserObject();
+    amanager->setDelegate(scene);
+    amanager->runAnimationsForSequenceNamed("a1");
+
 }
+
 
 
 bool MenuLayer::init()
@@ -69,10 +85,9 @@ bool MenuLayer::init()
 
 bool MenuLayer::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
+    cout << "var: " << pMemberVariableName << "\n";
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "label1", LabelTTF *, this->label1);
-
-    label1->setString("Ooooh !!!\nPerdiste :-(");
-
+    
     return true;
 }
 

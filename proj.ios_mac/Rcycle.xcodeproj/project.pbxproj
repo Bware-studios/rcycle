@@ -63,6 +63,8 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		976D449D181C3346002EFD3D /* SimHei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 976D449C181C3346002EFD3D /* SimHei.ttf */; };
+		976D449E181C3346002EFD3D /* SimHei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 976D449C181C3346002EFD3D /* SimHei.ttf */; };
 		97A384F71810A0F700F956F0 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F01810A0F700F956F0 /* ccbResources */; };
 		97A384F81810A0F700F956F0 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F01810A0F700F956F0 /* ccbResources */; };
 		97A384F91810A0F700F956F0 /* fileLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F11810A0F700F956F0 /* fileLookup.plist */; };
@@ -306,6 +308,7 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		976D449C181C3346002EFD3D /* SimHei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimHei.ttf; path = ../ccb_rcycle/Resources/SimHei.ttf; sourceTree = "<group>"; };
 		97A384F01810A0F700F956F0 /* ccbResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ccbResources; path = "../ccb_rcycle/publish-ios/ccbResources"; sourceTree = "<group>"; };
 		97A384F11810A0F700F956F0 /* fileLookup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fileLookup.plist; path = "../ccb_rcycle/publish-ios/fileLookup.plist"; sourceTree = "<group>"; };
 		97A384F21810A0F700F956F0 /* MainScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = MainScene.ccbi; path = "../ccb_rcycle/publish-ios/MainScene.ccbi"; sourceTree = "<group>"; };
@@ -515,6 +518,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				976D449C181C3346002EFD3D /* SimHei.ttf */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -744,6 +748,7 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				97A384FD1810A0F700F956F0 /* resources-ipad in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				976D449D181C3346002EFD3D /* SimHei.ttf in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				97A385061810AB1000F956F0 /* FinishScene.ccbi in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
@@ -759,6 +764,7 @@
 			files = (
 				97A384FA1810A0F700F956F0 /* fileLookup.plist in Resources */,
 				97A385021810A0F700F956F0 /* resources-iphone in Resources */,
+				976D449E181C3346002EFD3D /* SimHei.ttf in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
