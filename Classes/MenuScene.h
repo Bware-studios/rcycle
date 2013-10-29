@@ -19,6 +19,9 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 
+#include "SceneLoadManager.h"
+
+
 class MenuLayer;
 
 class MenuScene : public cocos2d::Scene

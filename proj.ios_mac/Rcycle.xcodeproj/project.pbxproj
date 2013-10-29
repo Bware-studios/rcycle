@@ -63,6 +63,10 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		976AB034181F25910055B4EF /* LoadedScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB032181F25910055B4EF /* LoadedScene.cpp */; };
+		976AB035181F25910055B4EF /* LoadedScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB032181F25910055B4EF /* LoadedScene.cpp */; };
+		976AB042181F37760055B4EF /* SceneLoadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB040181F37760055B4EF /* SceneLoadManager.cpp */; };
+		976AB043181F37760055B4EF /* SceneLoadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB040181F37760055B4EF /* SceneLoadManager.cpp */; };
 		976D449D181C3346002EFD3D /* SimHei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 976D449C181C3346002EFD3D /* SimHei.ttf */; };
 		976D449E181C3346002EFD3D /* SimHei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 976D449C181C3346002EFD3D /* SimHei.ttf */; };
 		97A384F71810A0F700F956F0 /* ccbResources in Resources */ = {isa = PBXBuildFile; fileRef = 97A384F01810A0F700F956F0 /* ccbResources */; };
@@ -308,6 +312,10 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		976AB032181F25910055B4EF /* LoadedScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoadedScene.cpp; path = ../Classes/LoadedScene.cpp; sourceTree = "<group>"; };
+		976AB033181F25910055B4EF /* LoadedScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadedScene.h; path = ../Classes/LoadedScene.h; sourceTree = "<group>"; };
+		976AB040181F37760055B4EF /* SceneLoadManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneLoadManager.cpp; path = ../Classes/SceneLoadManager.cpp; sourceTree = "<group>"; };
+		976AB041181F37760055B4EF /* SceneLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneLoadManager.h; path = ../Classes/SceneLoadManager.h; sourceTree = "<group>"; };
 		976D449C181C3346002EFD3D /* SimHei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimHei.ttf; path = ../ccb_rcycle/Resources/SimHei.ttf; sourceTree = "<group>"; };
 		97A384F01810A0F700F956F0 /* ccbResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ccbResources; path = "../ccb_rcycle/publish-ios/ccbResources"; sourceTree = "<group>"; };
 		97A384F11810A0F700F956F0 /* fileLookup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = fileLookup.plist; path = "../ccb_rcycle/publish-ios/fileLookup.plist"; sourceTree = "<group>"; };
@@ -396,6 +404,10 @@
 			children = (
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
+				976AB040181F37760055B4EF /* SceneLoadManager.cpp */,
+				976AB041181F37760055B4EF /* SceneLoadManager.h */,
+				976AB032181F25910055B4EF /* LoadedScene.cpp */,
+				976AB033181F25910055B4EF /* LoadedScene.h */,
 				97EFB226180F431B00F7FDE6 /* MenuScene.cpp */,
 				97EFB227180F431B00F7FDE6 /* MenuScene.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -786,10 +798,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				976AB034181F25910055B4EF /* LoadedScene.cpp in Sources */,
 				97EFB228180F431B00F7FDE6 /* MenuScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				976AB042181F37760055B4EF /* SceneLoadManager.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,7 +812,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976AB035181F25910055B4EF /* LoadedScene.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				976AB043181F37760055B4EF /* SceneLoadManager.cpp in Sources */,
 				97EFB229180F431B00F7FDE6 /* MenuScene.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,

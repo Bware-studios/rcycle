@@ -14,6 +14,7 @@ USING_NS_CC_EXT;
 
 bool MenuScene::init(const char *ccb_filename)
 {
+    //auto slm = SceneLoadManager::getInstance();
     cout << "init with file: " <<ccb_filename<<"\n";
     auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
