@@ -96,8 +96,4 @@ protected:
 
 
 
-
-
-
-
 #endif /* defined(__Rcycle__MenuScene__) */
