@@ -33,7 +33,8 @@ private:
 
 
 class MenuLayer : public cocos2d::Layer
-//, public cocos2d::extension::CCBSelectorResolver, public cocos2d::extension::CCBMemberVariableAssigner
+//, public cocos2d::extension::CCBSelectorResolver
+//, public cocos2d::extension::CCBMemberVariableAssigner
 {
 public:
     bool init();
@@ -45,8 +46,8 @@ public:
     
     CREATE_FUNC(MenuLayer);
     
-public:
-    cocos2d::LabelTTF *label1;
+//public:
+//    cocos2d::LabelTTF *label1;
     
 };
 

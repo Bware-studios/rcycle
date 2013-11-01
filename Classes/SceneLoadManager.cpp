@@ -39,7 +39,8 @@ SceneLoadManager *SceneLoadManager::getInstance()
 
 Layer *SceneLoadManager::layerFromFile(const char *pFileName,cocos2d::extension::CCBSelectorResolver *pOwner)
 {
-    return (Layer *)ccbReader->readNodeGraphFromFile(pFileName,(Object*)pOwner);
+    Object *owner=dynamic_cast<Object*>(pOwner);
+    return (Layer *)ccbReader->readNodeGraphFromFile(pFileName,owner);
 }
 
 
@@ -56,9 +57,7 @@ bool MenuLayer::init()
 bool MenuScene::init(const char *ccb_filename)
 {
     auto loadmanager = SceneLoadManager::getInstance();
-    cout<<"loading\n";
     layer=(MenuLayer *)loadmanager->layerFromFile("MainScene",this);
-    cout<<"loaded\n";
     this->addChild(layer);
     
     return true;
@@ -70,6 +69,7 @@ SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Object * pTarget, cons
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "enter", MenuScene::enter);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "back", MenuScene::back);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "info", MenuScene::info);
+        
     return NULL;
 }
 
@@ -105,8 +105,5 @@ void MenuScene::back(Object *pSender) {
 void MenuScene::info(Object *pSender) {
     cout << "Menu scene selector called: info  Not overriden\n";
 }
-
-
-
 
 
