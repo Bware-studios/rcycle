@@ -215,7 +215,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>MarkerFelt-Thin</string>
+						<string>Futura-Medium</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -265,6 +265,8 @@
 						<string>Hello CocosBuilder</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -609,8 +611,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
