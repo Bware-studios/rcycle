@@ -84,7 +84,8 @@ Control::Handler MenuScene::onResolveCCBCCControlSelector(Object * pTarget, cons
 }
 
 
-bool MenuScene::onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node) {
+bool MenuScene::onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node)
+{
     return true;
 }
 
