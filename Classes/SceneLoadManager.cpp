@@ -57,7 +57,7 @@ bool MenuLayer::init()
 bool MenuScene::init(const char *ccb_filename)
 {
     auto loadmanager = SceneLoadManager::getInstance();
-    layer=(MenuLayer *)loadmanager->layerFromFile("MainScene",this);
+    layer=(MenuLayer *)loadmanager->layerFromFile(ccb_filename,this);
     this->addChild(layer);
     
     return true;
