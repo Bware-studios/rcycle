@@ -14,6 +14,7 @@
 #include "cocos-ext.h"
 
 #include "SceneLoadManager.h"
+#include "CreditsScene.h"
 
 
 class MainMenuScene : public MenuScene
@@ -23,6 +24,9 @@ public:
     bool init();
     CREATE_FUNC(MainMenuScene);
     
+    void enter(Object *pSender);
+    void info(Object *pSender);
+
 };
 
 

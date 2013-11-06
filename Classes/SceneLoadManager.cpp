@@ -16,6 +16,7 @@ SceneLoadManager *SceneLoadManager::theInstance=NULL;
 SceneLoadManager::SceneLoadManager()
 {
     auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    loaderLibrary->retain();
     loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
     ccbReader = new CCBReader(loaderLibrary);
     ccbReader->retain();
@@ -90,20 +91,24 @@ bool MenuScene::onAssignCCBMemberVariable(Object* target, const char* memberVari
 }
 
 
-void MenuScene::completedAnimationSequenceNamed(const char *name) {
+void MenuScene::completedAnimationSequenceNamed(const char *name)
+{
     cout << "Menu scene completedanimation  Not overriden\n";
 }
 
 
-void MenuScene::enter(Object *pSender) {
+void MenuScene::enter(Object *pSender)
+{
     cout << "Menu scene selector called: enter  Not overriden\n";
 }
 
-void MenuScene::back(Object *pSender) {
+void MenuScene::back(Object *pSender)
+{
     cout << "Menu scene selector called: back  Not overriden\n";
 }
 
-void MenuScene::info(Object *pSender) {
+void MenuScene::info(Object *pSender)
+{
     cout << "Menu scene selector called: info  Not overriden\n";
 }
 

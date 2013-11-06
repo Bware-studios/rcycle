@@ -78,14 +78,14 @@ public:
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
 
     // VariableAsigner
-    bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
+    virtual bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
 
     // AnimationDelegate
-    void completedAnimationSequenceNamed(const char *name);
+    virtual void completedAnimationSequenceNamed(const char *name);
     
-    void enter(Object *pSender);
-    void back(Object *pSender);
-    void info(Object *pSender);
+    virtual void enter(Object *pSender);
+    virtual void back(Object *pSender);
+    virtual void info(Object *pSender);
     
     MenuLayer *layer;
 };

@@ -61,6 +61,8 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		9752E87A1829B233001AC6C4 /* CreditsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752E8781829B233001AC6C4 /* CreditsScene.cpp */; };
+		9752E87B1829B233001AC6C4 /* CreditsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752E8781829B233001AC6C4 /* CreditsScene.cpp */; };
 		976AB034181F25910055B4EF /* LoadedScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB032181F25910055B4EF /* LoadedScene.cpp */; };
 		976AB035181F25910055B4EF /* LoadedScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB032181F25910055B4EF /* LoadedScene.cpp */; };
 		976AB042181F37760055B4EF /* SceneLoadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976AB040181F37760055B4EF /* SceneLoadManager.cpp */; };
@@ -298,6 +300,8 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		9752E8781829B233001AC6C4 /* CreditsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreditsScene.cpp; path = ../Classes/CreditsScene.cpp; sourceTree = "<group>"; };
+		9752E8791829B233001AC6C4 /* CreditsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreditsScene.h; path = ../Classes/CreditsScene.h; sourceTree = "<group>"; };
 		976AB032181F25910055B4EF /* LoadedScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoadedScene.cpp; path = ../Classes/LoadedScene.cpp; sourceTree = "<group>"; };
 		976AB033181F25910055B4EF /* LoadedScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadedScene.h; path = ../Classes/LoadedScene.h; sourceTree = "<group>"; };
 		976AB040181F37760055B4EF /* SceneLoadManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneLoadManager.cpp; path = ../Classes/SceneLoadManager.cpp; sourceTree = "<group>"; };
@@ -386,6 +390,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9752E8821829B23E001AC6C4 /* menus */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				976AB040181F37760055B4EF /* SceneLoadManager.cpp */,
@@ -396,10 +401,6 @@
 				97EFB227180F431B00F7FDE6 /* MenuScene.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
-				979D4BFE1821D1CD002128A2 /* MainMenuScene.cpp */,
-				979D4BFF1821D1CD002128A2 /* MainMenuScene.h */,
-				97A4504F182728D9003E9086 /* LoadingScene.cpp */,
-				97A45050182728D9003E9086 /* LoadingScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -526,6 +527,19 @@
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		9752E8821829B23E001AC6C4 /* menus */ = {
+			isa = PBXGroup;
+			children = (
+				979D4BFE1821D1CD002128A2 /* MainMenuScene.cpp */,
+				979D4BFF1821D1CD002128A2 /* MainMenuScene.h */,
+				97A4504F182728D9003E9086 /* LoadingScene.cpp */,
+				97A45050182728D9003E9086 /* LoadingScene.h */,
+				9752E8781829B233001AC6C4 /* CreditsScene.cpp */,
+				9752E8791829B233001AC6C4 /* CreditsScene.h */,
+			);
+			name = menus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -768,6 +782,7 @@
 				976AB034181F25910055B4EF /* LoadedScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				9752E87A1829B233001AC6C4 /* CreditsScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				97A45051182728D9003E9086 /* LoadingScene.cpp in Sources */,
 				976AB042181F37760055B4EF /* SceneLoadManager.cpp in Sources */,
@@ -784,6 +799,7 @@
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				976AB043181F37760055B4EF /* SceneLoadManager.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				9752E87B1829B233001AC6C4 /* CreditsScene.cpp in Sources */,
 				97A45052182728D9003E9086 /* LoadingScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);

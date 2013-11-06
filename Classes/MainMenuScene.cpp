@@ -12,10 +12,25 @@ USING_NS_CC;
 USING_NS_CC_EXT;
 
 bool MainMenuScene::init() {
-    if ( ! MenuScene::init("MainScene") ) return false;
+    if ( ! MenuScene::init("MainMenuScene") ) return false;
     return true;
 }
 
+
+
+
+
+void MainMenuScene::enter(Object *pSender)
+{
+    cout<<"juego\n";
+}
+
+
+void MainMenuScene::info(Object *pSender)
+{
+    auto newscene = CreditsScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
 
 
 
