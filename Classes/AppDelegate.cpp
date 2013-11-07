@@ -99,7 +99,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto scene = HelloWorld::createScene();
 
     Scene *scene2;
-    scene2 = MainMenuScene::create();
     scene2 = LoadingScene::create();
 
     // run

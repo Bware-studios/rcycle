@@ -40,6 +40,12 @@ SceneLoadManager *SceneLoadManager::getInstance()
 
 Layer *SceneLoadManager::layerFromFile(const char *pFileName,cocos2d::extension::CCBSelectorResolver *pOwner)
 {
+    
+    auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    ccbReader = new CCBReader(loaderLibrary);
+
+    
     Object *owner=dynamic_cast<Object*>(pOwner);
     return (Layer *)ccbReader->readNodeGraphFromFile(pFileName,owner);
 }
