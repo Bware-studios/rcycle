@@ -15,6 +15,10 @@
 
 #include "SceneLoadManager.h"
 #include "CreditsScene.h"
+#include "OptionsScene.h"
+#include "FameScene.h"
+
+#include "GameScene.h"
 
 
 class MainMenuScene : public MenuScene
@@ -25,7 +29,10 @@ public:
     CREATE_FUNC(MainMenuScene);
     
     void enter(Object *pSender);
+    void options(Object *pSender);
     void info(Object *pSender);
+    void fame(Object *pSender);
+    void back(Object *pSender);
 
 };
 

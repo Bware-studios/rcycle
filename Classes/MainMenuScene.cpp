@@ -23,6 +23,16 @@ bool MainMenuScene::init() {
 void MainMenuScene::enter(Object *pSender)
 {
     cout<<"juego\n";
+    auto newscene = GameScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
+
+
+
+void MainMenuScene::options(Object *pSender)
+{
+    auto newscene = OptionsScene::create();
+    Director::getInstance()->replaceScene(newscene);
 }
 
 
@@ -33,4 +43,14 @@ void MainMenuScene::info(Object *pSender)
 }
 
 
+void MainMenuScene::fame(Object *pSender)
+{
+    auto newscene = FameScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
 
+
+void MainMenuScene::back(Object *pSender)
+{
+    Director::getInstance()->end();
+}

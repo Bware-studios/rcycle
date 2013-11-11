@@ -86,11 +86,28 @@ public:
     virtual void enter(Object *pSender);
     virtual void back(Object *pSender);
     virtual void info(Object *pSender);
+    virtual void options(Object *pSender);
+    virtual void fame(Object *pSender);
     
     MenuLayer *layer;
 };
 
 
+class GameLayer : public cocos2d::Layer
+{
+public:
+    bool init();
+    
+    CREATE_FUNC(GameLayer);
+    
+};
+
+class GameLayerLoader : public cocos2d::extension::LayerLoader {
+public:
+    CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(GameLayerLoader, loader);
+protected:
+    CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(GameLayer);
+};
 
 
 

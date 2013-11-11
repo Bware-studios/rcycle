@@ -18,6 +18,7 @@ SceneLoadManager::SceneLoadManager()
     auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     loaderLibrary->retain();
     loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
     ccbReader = new CCBReader(loaderLibrary);
     ccbReader->retain();
 }
@@ -43,6 +44,7 @@ Layer *SceneLoadManager::layerFromFile(const char *pFileName,cocos2d::extension:
     
     auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
     ccbReader = new CCBReader(loaderLibrary);
 
     
@@ -76,7 +78,9 @@ SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Object * pTarget, cons
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "enter", MenuScene::enter);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "back", MenuScene::back);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "info", MenuScene::info);
-        
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "options", MenuScene::options);
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "fame", MenuScene::fame);
+    
     return NULL;
 }
 
@@ -118,4 +122,20 @@ void MenuScene::info(Object *pSender)
     cout << "Menu scene selector called: info  Not overriden\n";
 }
 
+void MenuScene::options(Object *pSender)
+{
+    cout << "Menu scene selector called: options  Not overriden\n";
+}
 
+void MenuScene::fame(Object *pSender)
+{
+    cout << "Menu scene selector called: fame  Not overriden\n";
+}
+
+
+
+bool GameLayer::init()
+{
+    
+    return true;
+}

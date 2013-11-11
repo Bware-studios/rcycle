@@ -61,6 +61,12 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		97149B45182FC7CF00E6A44E /* FameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97149B43182FC7CF00E6A44E /* FameScene.cpp */; };
+		97149B46182FC7CF00E6A44E /* FameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97149B43182FC7CF00E6A44E /* FameScene.cpp */; };
+		97149B4F182FC7E800E6A44E /* OptionsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97149B4D182FC7E800E6A44E /* OptionsScene.cpp */; };
+		97149B50182FC7E800E6A44E /* OptionsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97149B4D182FC7E800E6A44E /* OptionsScene.cpp */; };
+		97149B5718304B9000E6A44E /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97149B5518304B9000E6A44E /* GameScene.cpp */; };
+		97149B5818304B9000E6A44E /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97149B5518304B9000E6A44E /* GameScene.cpp */; };
 		971BD609182C566200D05CEF /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 971BD608182C566200D05CEF /* HelloWorld.png */; };
 		971BD60A182C566200D05CEF /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 971BD608182C566200D05CEF /* HelloWorld.png */; };
 		9752E87A1829B233001AC6C4 /* CreditsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9752E8781829B233001AC6C4 /* CreditsScene.cpp */; };
@@ -302,6 +308,12 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		97149B43182FC7CF00E6A44E /* FameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FameScene.cpp; path = ../Classes/FameScene.cpp; sourceTree = "<group>"; };
+		97149B44182FC7CF00E6A44E /* FameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FameScene.h; path = ../Classes/FameScene.h; sourceTree = "<group>"; };
+		97149B4D182FC7E800E6A44E /* OptionsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionsScene.cpp; path = ../Classes/OptionsScene.cpp; sourceTree = "<group>"; };
+		97149B4E182FC7E800E6A44E /* OptionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsScene.h; path = ../Classes/OptionsScene.h; sourceTree = "<group>"; };
+		97149B5518304B9000E6A44E /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../Classes/GameScene.cpp; sourceTree = "<group>"; };
+		97149B5618304B9000E6A44E /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
 		971BD608182C566200D05CEF /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		9752E8781829B233001AC6C4 /* CreditsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreditsScene.cpp; path = ../Classes/CreditsScene.cpp; sourceTree = "<group>"; };
 		9752E8791829B233001AC6C4 /* CreditsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreditsScene.h; path = ../Classes/CreditsScene.h; sourceTree = "<group>"; };
@@ -398,6 +410,8 @@
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				976AB040181F37760055B4EF /* SceneLoadManager.cpp */,
 				976AB041181F37760055B4EF /* SceneLoadManager.h */,
+				97149B5518304B9000E6A44E /* GameScene.cpp */,
+				97149B5618304B9000E6A44E /* GameScene.h */,
 				976AB032181F25910055B4EF /* LoadedScene.cpp */,
 				976AB033181F25910055B4EF /* LoadedScene.h */,
 				97EFB226180F431B00F7FDE6 /* MenuScene.cpp */,
@@ -542,6 +556,10 @@
 				97A45050182728D9003E9086 /* LoadingScene.h */,
 				9752E8781829B233001AC6C4 /* CreditsScene.cpp */,
 				9752E8791829B233001AC6C4 /* CreditsScene.h */,
+				97149B43182FC7CF00E6A44E /* FameScene.cpp */,
+				97149B44182FC7CF00E6A44E /* FameScene.h */,
+				97149B4D182FC7E800E6A44E /* OptionsScene.cpp */,
+				97149B4E182FC7E800E6A44E /* OptionsScene.h */,
 			);
 			name = menus;
 			sourceTree = "<group>";
@@ -786,10 +804,13 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				979D4C001821D1CD002128A2 /* MainMenuScene.cpp in Sources */,
 				976AB034181F25910055B4EF /* LoadedScene.cpp in Sources */,
+				97149B4F182FC7E800E6A44E /* OptionsScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				97149B5718304B9000E6A44E /* GameScene.cpp in Sources */,
 				9752E87A1829B233001AC6C4 /* CreditsScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				97149B45182FC7CF00E6A44E /* FameScene.cpp in Sources */,
 				97A45051182728D9003E9086 /* LoadingScene.cpp in Sources */,
 				976AB042181F37760055B4EF /* SceneLoadManager.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
@@ -808,6 +829,9 @@
 				9752E87B1829B233001AC6C4 /* CreditsScene.cpp in Sources */,
 				97A45052182728D9003E9086 /* LoadingScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				97149B5818304B9000E6A44E /* GameScene.cpp in Sources */,
+				97149B46182FC7CF00E6A44E /* FameScene.cpp in Sources */,
+				97149B50182FC7E800E6A44E /* OptionsScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
