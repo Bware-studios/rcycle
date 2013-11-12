@@ -74,7 +74,6 @@ bool MenuScene::init(const char *ccb_filename)
 
 SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName)
 {
-    cout<<"resolver called\n";
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "enter", MenuScene::enter);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "back", MenuScene::back);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "info", MenuScene::info);

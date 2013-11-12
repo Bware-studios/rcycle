@@ -18,23 +18,31 @@
 
 
 class GameScene : public cocos2d::Scene,
-public cocos2d::extension::CCBSelectorResolver
+public cocos2d::extension::CCBSelectorResolver,
+public cocos2d::extension::CCBMemberVariableAssigner
 //public cocos2d::extension::CCBAnimationManagerDelegate
 {
 public:
     bool init();
-    CREATE_FUNC(GameScene);
+    static GameScene *create();
     
     // SelectorResolver
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
     virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
+
+    // VariableAsigner
+    virtual bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
+
     
     void time_passes();
+
 
     
     cocos2d::Layer *backLayer;
     cocos2d::Layer *frontLayer;
+    
+    cocos2d::Sprite *s1;
 };
 
 
