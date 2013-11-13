@@ -18,7 +18,7 @@ bool LoadingScene::init() {
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
 //    this->schedule(schedule_selector(LoadingScene::time_passes),1.0);
-    
+        
     return true;
 }
 

@@ -18,12 +18,13 @@ bool GameScene::init() {
 
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
 
-    
-    Sprite *s2=PhysicsSprite::createWithTexture(<#cocos2d::Texture2D *pTexture#>, <#const cocos2d::Rect &rect#>)
+    auto sf=SpriteFrame::create("s1.png",Rect(0,0,128,128));
+    PhysicsSprite *s2=PhysicsSprite::createWithSpriteFrame(sf);
     
     addChild(backLayer,1);
     addChild(frontLayer,10);
     
+    backLayer->addChild(s2);
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
     
