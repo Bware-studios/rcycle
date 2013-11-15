@@ -12,6 +12,10 @@ USING_NS_CC;
 USING_NS_CC_EXT;
 
 bool GameScene::init() {
+    cout << "Init GameScene\n";
+    //cout << "CC_ENABLE_CHIPMUNK_INTEGRATION: " << CC_ENABLE_CHIPMUNK_INTEGRATION << "\n";
+    cout << "CC_ENABLE_BOX2D_INTEGRATION: " << CC_ENABLE_BOX2D_INTEGRATION << "\n";
+    
     if ( ! Scene::initWithPhysics() ) return false;
 
     backLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
@@ -19,7 +23,14 @@ bool GameScene::init() {
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
 
     auto sf=SpriteFrame::create("s1.png",Rect(0,0,128,128));
+    PhysicsBody::createCircle(10);
+    
+    
     PhysicsSprite *s2=PhysicsSprite::createWithSpriteFrame(sf);
+  //  s2->setB2Body(<#b2Body *pBody#>);
+  //  PhysicsWorld *w = this->getPhysicsWorld();
+    
+    
     
     addChild(backLayer,1);
     addChild(frontLayer,10);
