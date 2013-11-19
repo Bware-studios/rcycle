@@ -23,11 +23,13 @@ bool GameScene::init() {
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
 
     auto sf=SpriteFrame::create("s1.png",Rect(0,0,128,128));
-    PhysicsBody::createCircle(10);
+    //PhysicsBody::createCircle(10);
     
     
-    PhysicsSprite *s2=PhysicsSprite::createWithSpriteFrame(sf);
-  //  s2->setB2Body(<#b2Body *pBody#>);
+    Sprite *s2=Sprite::createWithSpriteFrame(sf);
+    s2->setPhysicsBody(PhysicsBody::createCircle(10));
+    s2->setPosition(Point(200,250));
+  //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
     
     
