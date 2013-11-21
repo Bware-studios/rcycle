@@ -22,13 +22,33 @@ bool GameScene::init() {
 
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
 
-    auto sf=SpriteFrame::create("s1.png",Rect(0,0,128,128));
+    this->getPhysicsWorld()->setDebugDraw(true);
+    
+    cout<<"debug draw: "<<this->getPhysicsWorld()->isDebugDraw()<<"\n";
+    this->getPhysicsWorld()->setGravity(Point(0,-10));
+    
+    
+    auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
     //PhysicsBody::createCircle(10);
     
-    
+
+    PhysicsBody *sb;
+    sb=PhysicsBody::createCircle(500);
     Sprite *s2=Sprite::createWithSpriteFrame(sf);
-    s2->setPhysicsBody(PhysicsBody::createCircle(10));
+    s2->setPhysicsBody(sb);
     s2->setPosition(Point(200,250));
+    s2->setRotation(10);
+    
+    backLayer->addChild(s2,20);
+    
+    s2=Sprite::createWithSpriteFrame(sf);
+    sb=PhysicsBody::createCircle(500);
+    sb->setDynamic(false);
+    s2->setPhysicsBody(sb);
+    s2->setPosition(Point(210,100));
+    
+    backLayer->addChild(s2,20);
+    
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
     
@@ -37,7 +57,6 @@ bool GameScene::init() {
     addChild(backLayer,1);
     addChild(frontLayer,10);
     
-    backLayer->addChild(s2);
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
     
