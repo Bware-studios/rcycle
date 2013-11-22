@@ -37,7 +37,6 @@ public:
     
     void time_passes();
 
-
     
     cocos2d::Layer *backLayer;
     cocos2d::Layer *frontLayer;

@@ -112,3 +112,5 @@ void GameScene::time_passes()
     Director::getInstance()->replaceScene(newscene);
 }
 
+
+
