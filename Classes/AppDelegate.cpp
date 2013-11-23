@@ -3,6 +3,8 @@
 
 USING_NS_CC;
 
+using namespace std;
+
 AppDelegate::AppDelegate() {
 
 }
@@ -96,7 +98,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    //auto scene= HelloWorld::createScene();
 
     Scene *scene2;
     scene2 = LoadingScene::create();

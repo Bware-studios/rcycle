@@ -12,6 +12,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "cocos-ext.h"
+#include "cocosbuilder/CocosBuilder.h"
 
 class SceneLoadManager
 {
@@ -20,11 +21,11 @@ public:
     ~SceneLoadManager();
     static SceneLoadManager *getInstance();
     
-    cocos2d::Layer *layerFromFile(const char *pFileName,cocos2d::extension::CCBSelectorResolver *pOwner=NULL);
+    cocos2d::Layer *layerFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
     
 private:
     static SceneLoadManager *theInstance;
-    cocos2d::extension::CCBReader *ccbReader;
+    cocosbuilder::CCBReader *ccbReader;
 };
 
 
@@ -55,7 +56,7 @@ public:
 
 
 
-class MenuLayerLoader : public cocos2d::extension::LayerLoader {
+class MenuLayerLoader : public cocosbuilder::LayerLoader {
 public:
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(MenuLayerLoader, loader);
 protected:
@@ -64,10 +65,10 @@ protected:
 
 
 
-class MenuScene : public cocos2d::Scene, public cocos2d::extension::CCBSelectorResolver
+class MenuScene : public cocos2d::Scene, public cocosbuilder::CCBSelectorResolver
 // no necesario pero para acordarme de sobreescribirlo
-    , public cocos2d::extension::CCBMemberVariableAssigner
-    , public cocos2d::extension::CCBAnimationManagerDelegate
+    , public cocosbuilder::CCBMemberVariableAssigner
+    , public cocosbuilder::CCBAnimationManagerDelegate
 {
 public:
     bool init(const char *ccb_filename);
@@ -102,7 +103,7 @@ public:
     
 };
 
-class GameLayerLoader : public cocos2d::extension::LayerLoader {
+class GameLayerLoader : public cocosbuilder::LayerLoader {
 public:
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(GameLayerLoader, loader);
 protected:

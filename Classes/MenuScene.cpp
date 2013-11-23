@@ -11,6 +11,8 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+using namespace std;
+using namespace cocosbuilder;
 
 bool MenuScene::init(const char *ccb_filename)
 {

@@ -11,6 +11,9 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+using namespace std;
+using namespace cocosbuilder;
+
 bool CreditsScene::init() {
     if ( ! MenuScene::init("CreditsScene") ) return false;
     return true;

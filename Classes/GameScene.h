@@ -12,15 +12,16 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "cocos-ext.h"
+#include "cocosbuilder/CocosBuilder.h"
 
 #include "SceneLoadManager.h"
 #include "FameScene.h"
 
 
 class GameScene : public cocos2d::Scene,
-public cocos2d::extension::CCBSelectorResolver,
-public cocos2d::extension::CCBMemberVariableAssigner
-//public cocos2d::extension::CCBAnimationManagerDelegate
+public cocosbuilder::CCBSelectorResolver,
+public cocosbuilder::CCBMemberVariableAssigner
+//public cocosbuilder::CCBAnimationManagerDelegate
 {
 public:
     bool init();

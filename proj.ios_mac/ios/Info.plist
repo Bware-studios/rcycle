@@ -58,9 +58,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
-	<array>
-		<string>SimHei.ttf</string>
-	</array>
+	<array/>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>

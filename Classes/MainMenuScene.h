@@ -12,6 +12,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "cocos-ext.h"
+#include "cocosbuilder/CocosBuilder.h"
 
 #include "SceneLoadManager.h"
 #include "CreditsScene.h"
@@ -22,7 +23,7 @@
 
 
 class MainMenuScene : public MenuScene
-    //public cocos2d::extension::CCBAnimationManagerDelegate
+    //public cocosbuilder::CCBAnimationManagerDelegate
 {
 public:
     bool init();

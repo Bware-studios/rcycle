@@ -11,6 +11,9 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+using namespace std;
+using namespace cocosbuilder;
+
 bool MainMenuScene::init() {
     if ( ! MenuScene::init("MainMenuScene") ) return false;
     return true;

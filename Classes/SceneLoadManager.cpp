@@ -11,6 +11,9 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+using namespace std;
+using namespace cocosbuilder;
+
 SceneLoadManager *SceneLoadManager::theInstance=NULL;
 
 SceneLoadManager::SceneLoadManager()
@@ -39,7 +42,7 @@ SceneLoadManager *SceneLoadManager::getInstance()
 }
 
 
-Layer *SceneLoadManager::layerFromFile(const char *pFileName,cocos2d::extension::CCBSelectorResolver *pOwner)
+Layer *SceneLoadManager::layerFromFile(const char *pFileName,CCBSelectorResolver *pOwner)
 {
     
     auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();

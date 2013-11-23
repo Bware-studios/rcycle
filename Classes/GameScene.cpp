@@ -11,10 +11,12 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+using namespace std;
+using namespace cocosbuilder;
+
 bool GameScene::init() {
     cout << "Init GameScene\n";
     //cout << "CC_ENABLE_CHIPMUNK_INTEGRATION: " << CC_ENABLE_CHIPMUNK_INTEGRATION << "\n";
-    cout << "CC_ENABLE_BOX2D_INTEGRATION: " << CC_ENABLE_BOX2D_INTEGRATION << "\n";
     
     if ( ! Scene::initWithPhysics() ) return false;
 
@@ -22,10 +24,14 @@ bool GameScene::init() {
 
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
 
-    this->getPhysicsWorld()->setDebugDraw(true);
     
-    cout<<"debug draw: "<<this->getPhysicsWorld()->isDebugDraw()<<"\n";
-    this->getPhysicsWorld()->setGravity(Point(0,-10));
+    PhysicsWorld *world;
+    world=this->getPhysicsWorld();
+    world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    
+    
+    cout<<"debug draw: "<<this->getPhysicsWorld()->getDebugDrawMask()<<"\n";
+    //this->getPhysicsWorld()->setGravity(Point(0,-10));
     
     
     auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
@@ -33,7 +39,7 @@ bool GameScene::init() {
     
 
     PhysicsBody *sb;
-    sb=PhysicsBody::createCircle(500);
+    sb=PhysicsBody::createCircle(32);
     Sprite *s2=Sprite::createWithSpriteFrame(sf);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(200,250));
@@ -42,7 +48,7 @@ bool GameScene::init() {
     backLayer->addChild(s2,20);
     
     s2=Sprite::createWithSpriteFrame(sf);
-    sb=PhysicsBody::createCircle(500);
+    sb=PhysicsBody::createCircle(32);
     sb->setDynamic(false);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(210,100));

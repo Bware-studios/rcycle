@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CA5B919F-6648-4BB7-A297-E473FE6BC34B</string>
+	<string>0BBAB0D0-CDEC-49EF-B9E2-0DD445D093FE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Rcycle</string>
+	<string>rcycle</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C0E0A95E-04B0-4F94-A0F0-D0FE3F5D4BF0</key>
@@ -16,7 +16,7 @@
 		<string>ssh://github.com/Bware-studios/rcycle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>projects/rcycle/proj.ios_mac/Rcycle.xcodeproj/project.xcworkspace</string>
+	<string>projects/rcycle/proj.ios_mac/rcycle.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C0E0A95E-04B0-4F94-A0F0-D0FE3F5D4BF0</key>
