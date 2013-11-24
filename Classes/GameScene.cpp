@@ -29,6 +29,10 @@ bool GameScene::init() {
     world=this->getPhysicsWorld();
     world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
+//    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
+    
+    PhysicsBody *borde=PhysicsBody::createEdgeBox(Size(Point(200,200)));
+    //world->addBody(borde);
     
     cout<<"debug draw: "<<this->getPhysicsWorld()->getDebugDrawMask()<<"\n";
     //this->getPhysicsWorld()->setGravity(Point(0,-10));
@@ -39,16 +43,15 @@ bool GameScene::init() {
     
 
     PhysicsBody *sb;
-    sb=PhysicsBody::createCircle(32);
+    sb=PhysicsBody::createCircle(42);
     Sprite *s2=Sprite::createWithSpriteFrame(sf);
     s2->setPhysicsBody(sb);
-    s2->setPosition(Point(200,250));
+    s2->setPosition(Point(200,200));
     s2->setRotation(10);
-    
     backLayer->addChild(s2,20);
     
     s2=Sprite::createWithSpriteFrame(sf);
-    sb=PhysicsBody::createCircle(32);
+    sb=PhysicsBody::createCircle(42);
     sb->setDynamic(false);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(210,100));
@@ -118,5 +121,10 @@ void GameScene::time_passes()
     Director::getInstance()->replaceScene(newscene);
 }
 
+void GameScene::draw()
+{
+//    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
+    DrawPrimitives::drawRect(Point(20,20),Point(300,40));
+}
 
 
