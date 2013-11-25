@@ -23,7 +23,7 @@ bool GameScene::init() {
     backLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
 
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
-
+    
     
     PhysicsWorld *world;
     world=this->getPhysicsWorld();
@@ -43,20 +43,39 @@ bool GameScene::init() {
     
 
     PhysicsBody *sb;
-    sb=PhysicsBody::createCircle(42);
+    sb=PhysicsBody::createCircle(32);
     Sprite *s2=Sprite::createWithSpriteFrame(sf);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(200,200));
     s2->setRotation(10);
+    s2->setOpacity(150);
     backLayer->addChild(s2,20);
     
     s2=Sprite::createWithSpriteFrame(sf);
-    sb=PhysicsBody::createCircle(42);
+    sb=PhysicsBody::createCircle(32);
     sb->setDynamic(false);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(210,100));
+    s2->setOpacity(150);
     
     backLayer->addChild(s2,20);
+    
+    Texture2D *t1;
+    t1=new Texture2D();
+    short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
+    t1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
+    s2=Sprite::createWithTexture(t1,Rect(0, 0, 500, 60));
+    s2->setPosition(Point(240,0));
+    Point sueloshape[]={Point(-200,0),Point(-240,30),Point(240,30),Point(200,0)};
+//    sb=PhysicsBody::createPolygon(sueloshape, 4);
+    sb=PhysicsBody::createEdgeSegment(Point(-200,0), Point(200,0));
+    sb->addShape(PhysicsShapeEdgeSegment::create(Point(-200,0), Point(-240,30)));
+    sb->addShape(PhysicsShapeEdgeSegment::create(Point(200,0), Point(240,30)));
+    sb->setDynamic(false);
+    s2->setPhysicsBody(sb);
+    s2->setOpacity(100);
+    backLayer->addChild(s2,20);
+    
     
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
