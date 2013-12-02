@@ -35,6 +35,9 @@ public:
     // VariableAsigner
     virtual bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
 
+    // contactlistener
+    bool contact_begin(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact);
+    
     
     void time_passes();
     void draw();

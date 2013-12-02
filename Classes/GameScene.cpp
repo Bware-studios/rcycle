@@ -30,6 +30,7 @@ bool GameScene::init() {
     world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
 //    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
+
     
     PhysicsBody *borde=PhysicsBody::createEdgeBox(Size(Point(200,200)));
     //world->addBody(borde);
@@ -86,6 +87,11 @@ bool GameScene::init() {
     addChild(frontLayer,10);
     
     
+    EventListenerPhysicsContact *e = EventListenerPhysicsContact::create();
+    e->onContactBegin=CC_CALLBACK_2(GameScene::contact_begin,this);
+    
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(e,this);
+    
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
     
     return true;
@@ -129,6 +135,13 @@ Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, cons
 bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
+    return true;
+}
+
+
+bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
+{
+    printf("contact...\n");
     return true;
 }
 
