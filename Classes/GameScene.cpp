@@ -45,6 +45,9 @@ bool GameScene::init() {
 
     PhysicsBody *sb;
     sb=PhysicsBody::createCircle(32);
+    sb->setCategoryBitmask(1);
+    sb->setContactTestBitmask(4);
+    sb->setCollisionBitmask(4);
     Sprite *s2=Sprite::createWithSpriteFrame(sf);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(200,200));
@@ -54,6 +57,9 @@ bool GameScene::init() {
     
     s2=Sprite::createWithSpriteFrame(sf);
     sb=PhysicsBody::createCircle(32);
+    sb->setCategoryBitmask(2);
+    sb->setContactTestBitmask(1);
+    sb->setCollisionBitmask(0);
     sb->setDynamic(false);
     s2->setPhysicsBody(sb);
     s2->setPosition(Point(210,100));
@@ -73,6 +79,10 @@ bool GameScene::init() {
     sb->addShape(PhysicsShapeEdgeSegment::create(Point(-200,0), Point(-240,30)));
     sb->addShape(PhysicsShapeEdgeSegment::create(Point(200,0), Point(240,30)));
     sb->setDynamic(false);
+    sb->setCategoryBitmask(4);
+    sb->setContactTestBitmask(UINT32_MAX);
+    sb->setCollisionBitmask(7);
+
     s2->setPhysicsBody(sb);
     s2->setOpacity(100);
     backLayer->addChild(s2,20);
@@ -89,11 +99,14 @@ bool GameScene::init() {
     
     EventListenerPhysicsContact *e = EventListenerPhysicsContact::create();
     e->onContactBegin=CC_CALLBACK_2(GameScene::contact_begin,this);
+    e->onContactPreSolve=CC_CALLBACK_3(GameScene::contact_presolve,this);
+    e->onContactPostSolve=CC_CALLBACK_3(GameScene::contact_postsolve,this);
+    e->onContactSeperate=CC_CALLBACK_2(GameScene::contact_separate,this);
     
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(e,this);
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
-    
+
     return true;
 }
 
@@ -145,6 +158,22 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
     return true;
 }
 
+bool GameScene::contact_presolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPreSolve& solve)
+{
+    printf("pre solve...\n");
+    return true;
+}
+
+void GameScene::contact_postsolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPostSolve& solve)
+{
+    printf("post solve...\n");
+}
+
+
+void GameScene::contact_separate(EventCustom* event, const PhysicsContact& contact)
+{
+    printf("separate...\n");
+}
 
 
 void GameScene::time_passes()

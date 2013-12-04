@@ -37,6 +37,9 @@ public:
 
     // contactlistener
     bool contact_begin(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact);
+    bool contact_presolve(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPreSolve& solve);
+    void contact_postsolve(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPostSolve& solve);
+    void contact_separate(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact);
     
     
     void time_passes();
