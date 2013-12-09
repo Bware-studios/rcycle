@@ -10,11 +10,11 @@
 #define __Rcycle__GameObject__
 
 #include <iostream>
-
+#include <cocos2d.h>
 
 class GameObject : public cocos2d::Sprite
 {
-    
+    bool init();
     
 };
 

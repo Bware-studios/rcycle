@@ -7,3 +7,11 @@
 //
 
 #include "GameObject.h"
+
+
+bool GameObject::init()
+{
+
+    return true;
+}
+
