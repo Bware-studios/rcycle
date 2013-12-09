@@ -78,6 +78,8 @@
 		9720F5E41841479F0091CB08 /* SceneLoadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9720F5CD1841479F0091CB08 /* SceneLoadManager.cpp */; };
 		9720F5ED184147F00091CB08 /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 9720F5EC184147F00091CB08 /* publish-ios */; };
 		9720F5EE184147F00091CB08 /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 9720F5EC184147F00091CB08 /* publish-ios */; };
+		973E7142185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
+		973E7143185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -319,6 +321,8 @@
 		9720F5CD1841479F0091CB08 /* SceneLoadManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneLoadManager.cpp; path = ../Classes/SceneLoadManager.cpp; sourceTree = "<group>"; };
 		9720F5CE1841479F0091CB08 /* SceneLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneLoadManager.h; path = ../Classes/SceneLoadManager.h; sourceTree = "<group>"; };
 		9720F5EC184147F00091CB08 /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
+		973E7140185533E6004623A2 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = ../Classes/GameObject.cpp; sourceTree = "<group>"; };
+		973E7141185533E6004623A2 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = ../Classes/GameObject.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -413,6 +417,8 @@
 				9720F5CC1841479F0091CB08 /* OptionsScene.h */,
 				9720F5CD1841479F0091CB08 /* SceneLoadManager.cpp */,
 				9720F5CE1841479F0091CB08 /* SceneLoadManager.h */,
+				973E7140185533E6004623A2 /* GameObject.cpp */,
+				973E7141185533E6004623A2 /* GameObject.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -601,7 +607,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -777,6 +783,7 @@
 			files = (
 				9720F5D91841479F0091CB08 /* LoadedScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				973E7142185533E6004623A2 /* GameObject.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				9720F5CF1841479F0091CB08 /* AppDelegate.cpp in Sources */,
 				9720F5DD1841479F0091CB08 /* MainMenuScene.cpp in Sources */,
@@ -796,6 +803,7 @@
 			files = (
 				9720F5E41841479F0091CB08 /* SceneLoadManager.cpp in Sources */,
 				9720F5D21841479F0091CB08 /* CreditsScene.cpp in Sources */,
+				973E7143185533E6004623A2 /* GameObject.cpp in Sources */,
 				9720F5E21841479F0091CB08 /* OptionsScene.cpp in Sources */,
 				9720F5D01841479F0091CB08 /* AppDelegate.cpp in Sources */,
 				9720F5DA1841479F0091CB08 /* LoadedScene.cpp in Sources */,
@@ -1063,7 +1071,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
