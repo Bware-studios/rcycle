@@ -32,6 +32,8 @@ public:
     
     void start();
 
+    void do_init();
+    
     cocos2d::LabelTTF *text1;
     int state;
 

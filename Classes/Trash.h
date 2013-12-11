@@ -18,7 +18,12 @@ class Trash : public GameObject
 {
 public:
     bool init();
+    bool init(int trash_type, int trash_category);
     CREATE_FUNC(Trash);
+    static Trash* create(int p_trash_type, int p_trash_category);
+    
+    int trash_type;
+    int trash_category;
     
 };
 

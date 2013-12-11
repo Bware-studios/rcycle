@@ -21,7 +21,9 @@ bool LoadingScene::init() {
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
 //    this->schedule(schedule_selector(LoadingScene::time_passes),1.0);
-        
+
+    do_init();
+    
     return true;
 }
 
@@ -70,5 +72,14 @@ void LoadingScene::start()
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
+
+void LoadingScene::do_init()
+{
+    SpriteFrameCache *sf_cache;
+    sf_cache = SpriteFrameCache::getInstance();
+    sf_cache->addSpriteFramesWithFile("trashs.plist");
+}
+
+
 
 

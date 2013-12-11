@@ -40,6 +40,7 @@ bool GameScene::init() {
     
     
     auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
+    sf=SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png");
     //PhysicsBody::createCircle(10);
     
 
