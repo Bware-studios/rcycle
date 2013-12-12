@@ -40,7 +40,7 @@ bool GameScene::init() {
     
     
     auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
-    sf=SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png");
+//    sf=SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png");
     //PhysicsBody::createCircle(10);
     
 
@@ -92,7 +92,9 @@ bool GameScene::init() {
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
     
-    
+    Trash *ts1=Trash::create(0, 3);
+    ts1->setPosition(Point(280,190));
+    backLayer->addChild(ts1);
     
     addChild(backLayer,1);
     addChild(frontLayer,10);
