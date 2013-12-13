@@ -80,6 +80,8 @@
 		9720F5EE184147F00091CB08 /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 9720F5EC184147F00091CB08 /* publish-ios */; };
 		973E7142185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
 		973E7143185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
+		97A9E408185A8FD8007745D0 /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A9E406185A8FD8007745D0 /* Container.cpp */; };
+		97A9E409185A8FD8007745D0 /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A9E406185A8FD8007745D0 /* Container.cpp */; };
 		97C950991856887D003283FF /* Trash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C950971856887D003283FF /* Trash.cpp */; };
 		97C9509A1856887D003283FF /* Trash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C950971856887D003283FF /* Trash.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -325,6 +327,8 @@
 		9720F5EC184147F00091CB08 /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
 		973E7140185533E6004623A2 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = ../Classes/GameObject.cpp; sourceTree = "<group>"; };
 		973E7141185533E6004623A2 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = ../Classes/GameObject.h; sourceTree = "<group>"; };
+		97A9E406185A8FD8007745D0 /* Container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Container.cpp; path = ../Classes/Container.cpp; sourceTree = "<group>"; };
+		97A9E407185A8FD8007745D0 /* Container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Container.h; path = ../Classes/Container.h; sourceTree = "<group>"; };
 		97C950971856887D003283FF /* Trash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Trash.cpp; path = ../Classes/Trash.cpp; sourceTree = "<group>"; };
 		97C950981856887D003283FF /* Trash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trash.h; path = ../Classes/Trash.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -425,6 +429,8 @@
 				973E7141185533E6004623A2 /* GameObject.h */,
 				97C950971856887D003283FF /* Trash.cpp */,
 				97C950981856887D003283FF /* Trash.h */,
+				97A9E406185A8FD8007745D0 /* Container.cpp */,
+				97A9E407185A8FD8007745D0 /* Container.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -787,6 +793,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A9E408185A8FD8007745D0 /* Container.cpp in Sources */,
 				9720F5D91841479F0091CB08 /* LoadedScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				973E7142185533E6004623A2 /* GameObject.cpp in Sources */,
@@ -817,6 +824,7 @@
 				9720F5DA1841479F0091CB08 /* LoadedScene.cpp in Sources */,
 				9720F5D61841479F0091CB08 /* GameScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				97A9E409185A8FD8007745D0 /* Container.cpp in Sources */,
 				9720F5D41841479F0091CB08 /* FameScene.cpp in Sources */,
 				9720F5DC1841479F0091CB08 /* LoadingScene.cpp in Sources */,
 				9720F5DE1841479F0091CB08 /* MainMenuScene.cpp in Sources */,
