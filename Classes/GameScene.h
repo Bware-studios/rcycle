@@ -17,6 +17,7 @@
 #include "SceneLoadManager.h"
 #include "FameScene.h"
 #include "Trash.h"
+#include "Container.h"
 
 
 class GameScene : public cocos2d::Scene,

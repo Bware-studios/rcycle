@@ -94,7 +94,10 @@ bool GameScene::init() {
     
     Trash *ts1=Trash::create(0, 3);
     ts1->setPosition(Point(280,190));
+    Container *c1=Container::create(0);
+    c1->setPosition(Point(140,20));
     backLayer->addChild(ts1);
+    backLayer->addChild(c1);
     
     addChild(backLayer,1);
     addChild(frontLayer,10);
