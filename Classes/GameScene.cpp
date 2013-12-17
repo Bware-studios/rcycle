@@ -68,25 +68,25 @@ bool GameScene::init() {
     
     backLayer->addChild(s2,20);
     
-    Texture2D *t1;
-    t1=new Texture2D();
-    short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
-    t1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
-    s2=Sprite::createWithTexture(t1,Rect(0, 0, 500, 60));
-    s2->setPosition(Point(240,0));
-    Point sueloshape[]={Point(-200,0),Point(-240,30),Point(240,30),Point(200,0)};
-//    sb=PhysicsBody::createPolygon(sueloshape, 4);
-    sb=PhysicsBody::createEdgeSegment(Point(-200,0), Point(200,0));
-    sb->addShape(PhysicsShapeEdgeSegment::create(Point(-200,0), Point(-240,30)));
-    sb->addShape(PhysicsShapeEdgeSegment::create(Point(200,0), Point(240,30)));
-    sb->setDynamic(false);
-    sb->setCategoryBitmask(4);
-    sb->setContactTestBitmask(UINT32_MAX);
-    sb->setCollisionBitmask(7);
-
-    s2->setPhysicsBody(sb);
-    s2->setOpacity(100);
-    backLayer->addChild(s2,20);
+//    Texture2D *t1;
+//    t1=new Texture2D();
+//    short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
+//    t1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
+//    s2=Sprite::createWithTexture(t1,Rect(0, 0, 500, 60));
+//    s2->setPosition(Point(240,0));
+//    Point sueloshape[]={Point(-200,0),Point(-240,30),Point(240,30),Point(200,0)};
+////    sb=PhysicsBody::createPolygon(sueloshape, 4);
+//    sb=PhysicsBody::createEdgeSegment(Point(-200,0), Point(200,0));
+//    sb->addShape(PhysicsShapeEdgeSegment::create(Point(-200,0), Point(-240,30)));
+//    sb->addShape(PhysicsShapeEdgeSegment::create(Point(200,0), Point(240,30)));
+//    sb->setDynamic(false);
+//    sb->setCategoryBitmask(4);
+//    sb->setContactTestBitmask(UINT32_MAX);
+//    sb->setCollisionBitmask(7);
+//
+//    s2->setPhysicsBody(sb);
+//    s2->setOpacity(100);
+//    backLayer->addChild(s2,20);
     
     
   //  s2->setB2Body();
@@ -94,11 +94,21 @@ bool GameScene::init() {
     
     Trash *ts1=Trash::create(0, 3);
     ts1->setPosition(Point(280,190));
-    Container *c1=Container::create(0);
-    c1->setPosition(Point(140,20));
-    backLayer->addChild(ts1);
+    Container *c1;
+    c1=Container::create(0);
+    c1->setPosition(Point(70,40));
     backLayer->addChild(c1);
+    c1=Container::create(1);
+    c1->setPosition(Point(210,30));
+    backLayer->addChild(c1);
+    c1=Container::create(2);
+    c1->setPosition(Point(350,40));
+    backLayer->addChild(c1);
+
     
+    
+    backLayer->addChild(ts1);
+
     addChild(backLayer,1);
     addChild(frontLayer,10);
     

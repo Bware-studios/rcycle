@@ -22,6 +22,7 @@ public:
     
     int trash_category;
     
+    
 };
 
 #endif /* defined(__Rcycle__Container__) */
