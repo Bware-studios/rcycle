@@ -22,7 +22,12 @@ public:
     
     int trash_category;
     
-    
+private:
+    int semiheight;
+    int semiwidth;
+    int semiindent;
+    int verticalindent;
+
 };
 
 #endif /* defined(__Rcycle__Container__) */

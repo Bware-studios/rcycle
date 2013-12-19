@@ -104,6 +104,9 @@ bool GameScene::init() {
     c1=Container::create(2);
     c1->setPosition(Point(350,40));
     backLayer->addChild(c1);
+    c1=Container::create(3);
+    c1->setPosition(Point(420,90));
+    backLayer->addChild(c1);
 
     
     
