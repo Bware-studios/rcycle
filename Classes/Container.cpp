@@ -61,6 +61,10 @@ bool Container::init(int p_trash_category)
     
     body->setDynamic(false);
     
+    body->setCategoryBitmask(2);
+    body->setContactTestBitmask(0);
+    body->setCollisionBitmask(255);
+
     this->setPhysicsBody(body);
     this->setOpacity(100);
     

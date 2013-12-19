@@ -32,41 +32,41 @@ bool GameScene::init() {
 //    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
 
     
-    PhysicsBody *borde=PhysicsBody::createEdgeBox(Size(Point(200,200)));
+    //PhysicsBody *borde=PhysicsBody::createEdgeBox(Size(Point(200,200)));
     //world->addBody(borde);
     
     cout<<"debug draw: "<<this->getPhysicsWorld()->getDebugDrawMask()<<"\n";
     //this->getPhysicsWorld()->setGravity(Point(0,-10));
     
     
-    auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
+//    auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
 //    sf=SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png");
     //PhysicsBody::createCircle(10);
     
 
-    PhysicsBody *sb;
-    sb=PhysicsBody::createCircle(32);
-    sb->setCategoryBitmask(1);
-    sb->setContactTestBitmask(4);
-    sb->setCollisionBitmask(4);
-    Sprite *s2=Sprite::createWithSpriteFrame(sf);
-    s2->setPhysicsBody(sb);
-    s2->setPosition(Point(200,200));
-    s2->setRotation(10);
-    s2->setOpacity(150);
-    backLayer->addChild(s2,20);
-    
-    s2=Sprite::createWithSpriteFrame(sf);
-    sb=PhysicsBody::createCircle(32);
-    sb->setCategoryBitmask(2);
-    sb->setContactTestBitmask(1);
-    sb->setCollisionBitmask(0);
-    sb->setDynamic(false);
-    s2->setPhysicsBody(sb);
-    s2->setPosition(Point(210,100));
-    s2->setOpacity(150);
-    
-    backLayer->addChild(s2,20);
+//    PhysicsBody *sb;
+//    sb=PhysicsBody::createCircle(32);
+//    sb->setCategoryBitmask(1);
+//    sb->setContactTestBitmask(4);
+//    sb->setCollisionBitmask(4);
+//    Sprite *s2=Sprite::createWithSpriteFrame(sf);
+//    s2->setPhysicsBody(sb);
+//    s2->setPosition(Point(200,200));
+//    s2->setRotation(10);
+//    s2->setOpacity(150);
+//    backLayer->addChild(s2,20);
+//    
+//    s2=Sprite::createWithSpriteFrame(sf);
+//    sb=PhysicsBody::createCircle(32);
+//    sb->setCategoryBitmask(2);
+//    sb->setContactTestBitmask(1);
+//    sb->setCollisionBitmask(0);
+//    sb->setDynamic(false);
+//    s2->setPhysicsBody(sb);
+//    s2->setPosition(Point(210,100));
+//    s2->setOpacity(150);
+//
+//    backLayer->addChild(s2,20);
     
 //    Texture2D *t1;
 //    t1=new Texture2D();
@@ -92,8 +92,25 @@ bool GameScene::init() {
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
     
-    Trash *ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(280,190));
+    Trash *ts1;
+    ts1=Trash::create(0, 3);
+    ts1->setPosition(Point(180,210));
+    backLayer->addChild(ts1);
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(200,200));
+//    backLayer->addChild(ts1);
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(260,250));
+//    backLayer->addChild(ts1);
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(280,240));
+//    backLayer->addChild(ts1);
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(320,200));
+//    backLayer->addChild(ts1);
+
+    
+    
     Container *c1;
     c1=Container::create(0);
     c1->setPosition(Point(70,40));
@@ -110,7 +127,6 @@ bool GameScene::init() {
 
     
     
-    backLayer->addChild(ts1);
 
     addChild(backLayer,1);
     addChild(frontLayer,10);
