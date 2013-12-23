@@ -46,24 +46,38 @@ bool Container::init(int p_trash_category)
     tex1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
     this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
     
+    // body
+    PhysicsBody *body=PhysicsBody::create();
+    body->setDynamic(false);
+    body->setCategoryBitmask(cat_wall);
+    body->setContactTestBitmask(cat_trash);
+    body->setCollisionBitmask(cat_trash);
+    
     // down
-    PhysicsBody *body=PhysicsBody::createEdgeSegment(Point(-(semiwidth-semiindent),-semiheight), Point(semiwidth-semiindent,-semiheight));
+    PhysicsShape *s1;
+    s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent),-semiheight), Point(semiwidth-semiindent,-semiheight));
+    s1->setCategoryBitmask(cat_wall|cat_sensor);
+    body->addShape(s1);
+    
     // left
-    body->addShape(PhysicsShapeEdgeSegment::create(Point(-semiwidth,semiheight-verticalindent), Point(-(semiwidth-semiindent),-semiheight)));
+    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,semiheight-verticalindent), Point(-(semiwidth-semiindent),-semiheight));
+    s1->setCategoryBitmask(cat_wall);
+    body->addShape(s1);
     // right
-    body->addShape(PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent), Point(semiwidth-semiindent,-semiheight)));
+    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent), Point(semiwidth-semiindent,-semiheight));
+    s1->setCategoryBitmask(cat_wall);
+    body->addShape(s1);
 
     if (p_trash_category==3) {
-        body->addShape(PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent),Point(semiwidth-verticalindent,semiheight)));
-        body->addShape(PhysicsShapeEdgeSegment::create(Point(-(semiwidth-verticalindent),semiheight),Point(semiwidth-verticalindent,semiheight)));
+        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent),Point(semiwidth-verticalindent,semiheight));
+        body->addShape(s1);
+        s1->setCategoryBitmask(cat_wall);
+        s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-verticalindent),semiheight),Point(semiwidth-verticalindent,semiheight));
+        s1->setCategoryBitmask(cat_wall);
+        body->addShape(s1);
     }
     
     
-    body->setDynamic(false);
-    
-    body->setCategoryBitmask(2);
-    body->setContactTestBitmask(0);
-    body->setCollisionBitmask(255);
 
     this->setPhysicsBody(body);
     this->setOpacity(100);

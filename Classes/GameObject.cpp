@@ -10,9 +10,11 @@
 
 USING_NS_CC;
 
+
 bool GameObject::init()
 {
     Sprite::init();
     return true;
+
 }
 

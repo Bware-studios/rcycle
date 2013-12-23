@@ -19,7 +19,7 @@ bool LoadingScene::init() {
 
     state=0;
     
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(0.1),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
 //    this->schedule(schedule_selector(LoadingScene::time_passes),1.0);
 
     do_init();
@@ -61,7 +61,7 @@ void LoadingScene::time_passes()
     }
     
     if (!reschedule) return;
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(0.1),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
 //    this->schedule(schedule_selector(LoadingScene::time_passes),1.0);
 }
 

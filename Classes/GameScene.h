@@ -43,6 +43,11 @@ public:
     void contact_postsolve(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPostSolve& solve);
     void contact_separate(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact);
     
+    // touchlistener
+    bool touch_began(cocos2d::Touch *t,cocos2d::Event *e);
+    void touch_moved(cocos2d::Touch *t,cocos2d::Event *e);
+    void touch_ended(cocos2d::Touch *t,cocos2d::Event *e);
+    void touch_cancelled(cocos2d::Touch *t,cocos2d::Event *e);
     
     void time_passes();
     void draw();
@@ -50,7 +55,14 @@ public:
     cocos2d::Layer *backLayer;
     cocos2d::Layer *frontLayer;
     
+    
+    bool touch_down;
+    cocos2d::Sprite *touch_sprite;
+    cocos2d::Point touch_pos;
+    
+    
     cocos2d::Sprite *s1;
+    
 };
 
 

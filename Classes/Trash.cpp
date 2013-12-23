@@ -26,9 +26,9 @@ bool Trash::init(int p_trash_type, int p_trash_category)
     this->setDisplayFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png"));
     PhysicsBody *body=PhysicsBody::createCircle(24);
 
-    body->setCategoryBitmask(1);
-    body->setContactTestBitmask(0);
-    body->setCollisionBitmask(255);
+    body->setCategoryBitmask(cat_trash);
+    body->setContactTestBitmask(cat_wall|cat_trash|cat_sensor);
+    body->setCollisionBitmask(cat_wall|cat_trash);
 
     this->setPhysicsBody(body);
     

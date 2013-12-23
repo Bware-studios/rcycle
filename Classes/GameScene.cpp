@@ -88,13 +88,15 @@ bool GameScene::init() {
 //    s2->setOpacity(100);
 //    backLayer->addChild(s2,20);
     
+    touch_down=false;
+    touch_sprite=NULL;
     
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
     
     Trash *ts1;
     ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(180,210));
+    ts1->setPosition(Point(150,210));
     backLayer->addChild(ts1);
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(200,200));
@@ -109,6 +111,15 @@ bool GameScene::init() {
     ts1->setPosition(Point(320,200));
     backLayer->addChild(ts1);
 
+    ts1=Trash::create(0, 3);
+    ts1->setPosition(Point(260,250));
+    backLayer->addChild(ts1);
+    ts1=Trash::create(0, 3);
+    ts1->setPosition(Point(280,240));
+    backLayer->addChild(ts1);
+    ts1=Trash::create(0, 3);
+    ts1->setPosition(Point(320,200));
+    backLayer->addChild(ts1);
     
     
     Container *c1;
@@ -138,7 +149,16 @@ bool GameScene::init() {
     e->onContactPostSolve=CC_CALLBACK_3(GameScene::contact_postsolve,this);
     e->onContactSeperate=CC_CALLBACK_2(GameScene::contact_separate,this);
     
-    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(e,this);
+    
+    EventDispatcher *edispatcher = this->getEventDispatcher();
+    edispatcher->addEventListenerWithSceneGraphPriority(e,this);
+    
+    EventListenerTouchOneByOne *etouch = EventListenerTouchOneByOne::create();
+    etouch->onTouchBegan=CC_CALLBACK_2(GameScene::touch_began,this);
+    etouch->onTouchMoved=CC_CALLBACK_2(GameScene::touch_moved,this);
+    etouch->onTouchEnded=CC_CALLBACK_2(GameScene::touch_ended,this);
+    etouch->onTouchCancelled=CC_CALLBACK_2(GameScene::touch_cancelled,this);
+    edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
@@ -189,19 +209,44 @@ bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVa
 
 bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
 {
-    printf("contact...\n");
+    printf("contact...");
+    PhysicsShape *s1 = contact.getShapeA();
+    PhysicsShape *s2 = contact.getShapeB();
+    bool s1_issensor = (s1->getCategoryBitmask() & GameObject::cat_sensor);
+    bool s2_issensor = (s2->getCategoryBitmask() & GameObject::cat_sensor);
+
+    bool destroys1=false;
+    
+    if ( s1_issensor && !s2_issensor ) {
+        destroys1=true;
+        s1=s2;
+    }
+    
+    if ( !s1_issensor && s2_issensor ) {
+        destroys1=true;
+    }
+    
+    if (destroys1) {
+        Node *sp;
+        sp=s1->getBody()->getNode();
+        printf("destroy %p",sp);
+        backLayer->removeChild(sp);
+        
+    }
+    printf("\n");
+    
     return true;
 }
 
 bool GameScene::contact_presolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPreSolve& solve)
 {
-    printf("pre solve...\n");
+//    printf("pre solve...\n");
     return true;
 }
 
 void GameScene::contact_postsolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPostSolve& solve)
 {
-    printf("post solve...\n");
+//    printf("post solve...\n");
 }
 
 
@@ -211,11 +256,44 @@ void GameScene::contact_separate(EventCustom* event, const PhysicsContact& conta
 }
 
 
+bool GameScene::touch_began(Touch *t,Event *e)
+{
+    printf("began\n");
+    if (touch_down) return false;
+    touch_pos=t->getLocationInView();
+    
+    touch_down=true;
+    return true;
+}
+
+
+void GameScene::touch_moved(Touch *t,Event *e)
+{
+    printf("moved\n");
+    touch_pos=t->getLocationInView();
+}
+
+
+void GameScene::touch_ended(Touch *t,Event *e)
+{
+    printf("ended\n");
+    touch_down=false;
+}
+
+
+void GameScene::touch_cancelled(Touch *t,Event *e)
+{
+    printf("cancelled\n");
+    touch_down=false;
+}
+
+
 void GameScene::time_passes()
 {
     auto newscene = FameScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
+
 
 void GameScene::draw()
 {
