@@ -260,9 +260,14 @@ bool GameScene::touch_began(Touch *t,Event *e)
 {
     printf("began\n");
     if (touch_down) return false;
-    touch_pos=t->getLocationInView();
-    
     touch_down=true;
+    touch_pos=t->getLocation();
+    PhysicsShape *selectedshape;
+    selectedshape=getPhysicsWorld()->getShape(touch_pos);
+    if (selectedshape) {
+        touch_sprite=(Sprite *)selectedshape->getBody()->getNode();
+        touch_sprite->getPhysicsBody()->setDynamic(false);
+    }
     return true;
 }
 
@@ -270,7 +275,11 @@ bool GameScene::touch_began(Touch *t,Event *e)
 void GameScene::touch_moved(Touch *t,Event *e)
 {
     printf("moved\n");
-    touch_pos=t->getLocationInView();
+    Point old_pos=touch_pos;
+    touch_pos=t->getLocation();
+    if (!touch_sprite) return;
+    Point old_sprite_pos = touch_sprite->getPosition();
+    touch_sprite->setPosition(Point(old_sprite_pos.x+(touch_pos.x-old_pos.x),old_sprite_pos.y+(touch_pos.y-old_pos.y)));
 }
 
 
@@ -278,6 +287,9 @@ void GameScene::touch_ended(Touch *t,Event *e)
 {
     printf("ended\n");
     touch_down=false;
+    if (touch_sprite) {
+        touch_sprite->getPhysicsBody()->setDynamic(true);
+    }
 }
 
 
@@ -285,6 +297,9 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
 {
     printf("cancelled\n");
     touch_down=false;
+    if (touch_sprite) {
+        touch_sprite->getPhysicsBody()->setDynamic(true);
+    }
 }
 
 
@@ -298,7 +313,12 @@ void GameScene::time_passes()
 void GameScene::draw()
 {
 //    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
-    DrawPrimitives::drawRect(Point(20,20),Point(300,40));
+//    DrawPrimitives::drawRect(Point(20,20),Point(300,40));
+    if (touch_down) {
+        DrawPrimitives::setDrawColor4F(0.0, 1.0, 0, 1.0);
+        DrawPrimitives::drawLine(Point(0,touch_pos.y), Point(480,touch_pos.y));
+        DrawPrimitives::drawLine(Point(touch_pos.x,0), Point(touch_pos.x,320));
+    }
 }
 
 
