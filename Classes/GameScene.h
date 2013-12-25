@@ -62,6 +62,7 @@ public:
     
     
     cocos2d::Sprite *s1;
+    cocos2d::Sprite *score1;
     
 };
 

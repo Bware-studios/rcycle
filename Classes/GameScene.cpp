@@ -136,9 +136,11 @@ bool GameScene::init() {
     c1->setPosition(Point(420,90));
     backLayer->addChild(c1);
 
+    PhysicsBody *sb1=PhysicsBody::create();
+    sb1->setDynamic(false);
+    s1->setPhysicsBody(sb1);
     
     
-
     addChild(backLayer,1);
     addChild(frontLayer,10);
     
@@ -203,6 +205,7 @@ Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, cons
 bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Sprite *, this->score1);
     return true;
 }
 
@@ -266,8 +269,13 @@ bool GameScene::touch_began(Touch *t,Event *e)
     selectedshape=getPhysicsWorld()->getShape(touch_pos);
     if (selectedshape) {
         touch_sprite=(Sprite *)selectedshape->getBody()->getNode();
-        touch_sprite->getPhysicsBody()->setDynamic(false);
+//        touch_sprite->getPhysicsBody()->setDynamic(false);
+        s1->setPosition(touch_pos);
+        getPhysicsWorld()->addJoint(
+        PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),s1->getPhysicsBody(), Point(0,0)));
+
     }
+    
     return true;
 }
 
@@ -275,11 +283,10 @@ bool GameScene::touch_began(Touch *t,Event *e)
 void GameScene::touch_moved(Touch *t,Event *e)
 {
     printf("moved\n");
-    Point old_pos=touch_pos;
     touch_pos=t->getLocation();
     if (!touch_sprite) return;
-    Point old_sprite_pos = touch_sprite->getPosition();
-    touch_sprite->setPosition(Point(old_sprite_pos.x+(touch_pos.x-old_pos.x),old_sprite_pos.y+(touch_pos.y-old_pos.y)));
+//    touch_sprite->setPosition(Point(old_sprite_pos.x+(touch_pos.x-old_pos.x),old_sprite_pos.y+(touch_pos.y-old_pos.y)));
+    s1->setPosition(touch_pos);
 }
 
 
@@ -288,8 +295,9 @@ void GameScene::touch_ended(Touch *t,Event *e)
     printf("ended\n");
     touch_down=false;
     if (touch_sprite) {
-        touch_sprite->getPhysicsBody()->setDynamic(true);
+  //      touch_sprite->getPhysicsBody()->setDynamic(true);
     }
+    touch_sprite=NULL;
 }
 
 
@@ -298,8 +306,9 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
     printf("cancelled\n");
     touch_down=false;
     if (touch_sprite) {
-        touch_sprite->getPhysicsBody()->setDynamic(true);
+//        touch_sprite->getPhysicsBody()->setDynamic(true);
     }
+    touch_sprite=NULL;
 }
 
 
