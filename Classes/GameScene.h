@@ -59,7 +59,9 @@ public:
     bool touch_down;
     cocos2d::Sprite *touch_sprite;
     cocos2d::Point touch_pos;
-    
+    cocos2d::PhysicsJointPin *touch_joint;
+    cocos2d::Sprite *touch_cursorsprite;
+    cocos2d::PhysicsBody *touch_cursorbody;
     
     cocos2d::Sprite *s1;
     cocos2d::Sprite *score1;

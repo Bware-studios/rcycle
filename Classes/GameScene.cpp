@@ -90,6 +90,19 @@ bool GameScene::init() {
     
     touch_down=false;
     touch_sprite=NULL;
+    touch_joint=NULL;
+    touch_cursorsprite=Sprite::create();
+    touch_cursorbody=PhysicsBody::create();
+    touch_cursorsprite->setPhysicsBody(touch_cursorbody);
+    touch_cursorbody->setDynamic(false);
+    backLayer->addChild(touch_cursorsprite);
+    
+//    Texture2D *tex1;
+//    tex1=new Texture2D();
+//    unsigned short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0xf0ff,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
+//    tex1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
+//    touch_cursorsprite->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,10,10)));
+
     
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
@@ -270,10 +283,9 @@ bool GameScene::touch_began(Touch *t,Event *e)
     if (selectedshape) {
         touch_sprite=(Sprite *)selectedshape->getBody()->getNode();
 //        touch_sprite->getPhysicsBody()->setDynamic(false);
-        s1->setPosition(touch_pos);
-        getPhysicsWorld()->addJoint(
-        PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),s1->getPhysicsBody(), Point(0,0)));
-
+        touch_cursorsprite->setPosition(touch_pos);
+        touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
+        getPhysicsWorld()->addJoint(touch_joint);
     }
     
     return true;
@@ -286,7 +298,7 @@ void GameScene::touch_moved(Touch *t,Event *e)
     touch_pos=t->getLocation();
     if (!touch_sprite) return;
 //    touch_sprite->setPosition(Point(old_sprite_pos.x+(touch_pos.x-old_pos.x),old_sprite_pos.y+(touch_pos.y-old_pos.y)));
-    s1->setPosition(touch_pos);
+    touch_cursorsprite->setPosition(touch_pos);
 }
 
 
@@ -296,8 +308,10 @@ void GameScene::touch_ended(Touch *t,Event *e)
     touch_down=false;
     if (touch_sprite) {
   //      touch_sprite->getPhysicsBody()->setDynamic(true);
+        touch_joint->removeFormWorld();
     }
     touch_sprite=NULL;
+    touch_joint=NULL;
 }
 
 
@@ -307,8 +321,10 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
     touch_down=false;
     if (touch_sprite) {
 //        touch_sprite->getPhysicsBody()->setDynamic(true);
+        touch_joint->removeFormWorld();
     }
     touch_sprite=NULL;
+    touch_joint=NULL;
 }
 
 
