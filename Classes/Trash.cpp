@@ -11,6 +11,10 @@
 USING_NS_CC;
 
 
+const int num_trash_cat=4;
+const char *Trash::trash_cat_names[]={"cristal","plastico","organico","papel"};
+
+
 bool Trash::init()
 {
     return init(0,0);
@@ -23,6 +27,8 @@ bool Trash::init(int p_trash_type, int p_trash_category)
     trash_type=p_trash_type;
     trash_category=p_trash_category;
 
+    std::string img_name="basura_"+trash_cat_names[trash_category]+p_;
+    
     this->setDisplayFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png"));
     PhysicsBody *body=PhysicsBody::createCircle(24);
 

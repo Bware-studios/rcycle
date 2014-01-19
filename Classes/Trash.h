@@ -24,7 +24,9 @@ public:
     
     int trash_type;
     int trash_category;
-    
+private:
+    static const int num_trash_cat;
+    static const char *trash_cat_names[];
 };
 
 
