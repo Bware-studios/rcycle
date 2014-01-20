@@ -111,13 +111,13 @@ bool GameScene::init() {
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(150,210));
     backLayer->addChild(ts1);
-    ts1=Trash::create(0, 3);
+    ts1=Trash::create(0, 2);
     ts1->setPosition(Point(200,200));
     backLayer->addChild(ts1);
-    ts1=Trash::create(0, 3);
+    ts1=Trash::create(0, 1);
     ts1->setPosition(Point(260,250));
     backLayer->addChild(ts1);
-    ts1=Trash::create(0, 3);
+    ts1=Trash::create(0, 0);
     ts1->setPosition(Point(280,240));
     backLayer->addChild(ts1);
     ts1=Trash::create(0, 3);

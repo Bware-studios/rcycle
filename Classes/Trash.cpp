@@ -27,9 +27,10 @@ bool Trash::init(int p_trash_type, int p_trash_category)
     trash_type=p_trash_type;
     trash_category=p_trash_category;
 
-    std::string img_name="basura_"+trash_cat_names[trash_category]+p_;
+    char img_name[50];
+    sprintf(img_name,"trashs/basura_%s%d.png",trash_cat_names[trash_category],p_trash_type+1);
     
-    this->setDisplayFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName("trashs/t1.png"));
+    this->setDisplayFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(img_name));
     PhysicsBody *body=PhysicsBody::createCircle(24);
 
     body->setCategoryBitmask(cat_trash);
