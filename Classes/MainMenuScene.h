@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include "cocos2d.h"
-#include "cocos-ext.h"
+//#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
 
 #include "SceneLoadManager.h"
