@@ -14,6 +14,9 @@ AppDelegate::~AppDelegate()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+
+    printf("running start <<<<<<<<<<<<<<<<<<<<  <<<<<<<<\n");
+    
     // initialize director
     auto director = Director::getInstance();
     auto eglView = EGLView::getInstance();

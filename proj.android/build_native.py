@@ -81,6 +81,13 @@ def copy_resources(app_android_root):
     resources_dir = os.path.join(app_android_root, "../Resources")
     if os.path.isdir(resources_dir):
         copy_files(resources_dir, assets_dir)
+    resources_dir = os.path.abspath("/Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-android")
+    print('rd: '+resources_dir)
+    if os.path.isdir(resources_dir):
+        print('copying cocsbuilder files')
+        copy_files(resources_dir, assets_dir)
+
+
 
 def build():
 
@@ -91,7 +98,9 @@ def build():
     cocos_root = os.path.join(current_dir, "../../..")
 
     app_android_root = current_dir
+    print('---------------- copy resources\n')
     copy_resources(app_android_root)
+    print('---------------- build\n')
     do_build(cocos_root, ndk_root, app_android_root)
 
 # -------------- main --------------
