@@ -78,6 +78,7 @@ void LoadingScene::do_init()
     SpriteFrameCache *sf_cache;
     sf_cache = SpriteFrameCache::getInstance();
     sf_cache->addSpriteFramesWithFile("trashs.plist");
+    sf_cache->addSpriteFramesWithFile("Contenedores.plist");
 }
 
 

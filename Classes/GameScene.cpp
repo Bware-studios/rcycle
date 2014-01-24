@@ -14,6 +14,12 @@ USING_NS_CC_EXT;
 using namespace std;
 using namespace cocosbuilder;
 
+
+const bool debug_draw_physics = false;
+const bool debug_draw_alfa = false;
+
+
+
 bool GameScene::init() {
     cout << "Init GameScene\n";
     //cout << "CC_ENABLE_CHIPMUNK_INTEGRATION: " << CC_ENABLE_CHIPMUNK_INTEGRATION << "\n";
@@ -27,7 +33,7 @@ bool GameScene::init() {
     
     PhysicsWorld *world;
     world=this->getPhysicsWorld();
-    world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    if (debug_draw_physics) world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
 //    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
 
@@ -110,44 +116,55 @@ bool GameScene::init() {
     Trash *ts1;
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(150,210));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
     ts1=Trash::create(0, 2);
     ts1->setPosition(Point(200,200));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
     ts1=Trash::create(0, 1);
     ts1->setPosition(Point(260,250));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
     ts1=Trash::create(0, 0);
     ts1->setPosition(Point(280,240));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(320,200));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
 
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(260,250));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(280,240));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
+
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(320,200));
-    backLayer->addChild(ts1);
+    ts1->add_to_layer(backLayer);
     
     
     Container *c1;
-    c1=Container::create(0);
-    c1->setPosition(Point(70,40));
-    backLayer->addChild(c1);
-    c1=Container::create(1);
-    c1->setPosition(Point(210,30));
-    backLayer->addChild(c1);
-    c1=Container::create(2);
-    c1->setPosition(Point(350,40));
-    backLayer->addChild(c1);
-    c1=Container::create(3);
-    c1->setPosition(Point(420,90));
-    backLayer->addChild(c1);
+    c1=Container::create(Trash::CAT_ORGANICO);
+    c1->setPosition(Point(40,40));
+    c1->add_to_layer(backLayer);
+    //backLayer->addChild(c1);
+    c1=Container::create(Trash::CAT_PAPEL);
+    c1->setPosition(Point(170,35));
+    c1->add_to_layer(backLayer);
+    //backLayer->addChild(c1);
+    c1=Container::create(Trash::CAT_PLASTICO);
+    c1->setPosition(Point(310,40));
+    c1->add_to_layer(backLayer);
+    //backLayer->addChild(c1);
+    c1=Container::create(Trash::CAT_CRISTAL);
+    c1->setPosition(Point(430,100));
+    c1->add_to_layer(backLayer);
+    //backLayer->addChild(c1);
 
     PhysicsBody *sb1=PhysicsBody::create();
     sb1->setDynamic(false);

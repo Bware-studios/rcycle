@@ -20,6 +20,10 @@
 #include "Container.h"
 
 
+extern const bool debug_draw_physics;
+extern const bool debug_draw_alfa;
+
+
 class GameScene : public cocos2d::Scene,
 public cocosbuilder::CCBSelectorResolver,
 public cocosbuilder::CCBMemberVariableAssigner
@@ -65,6 +69,8 @@ public:
     
     cocos2d::Sprite *s1;
     cocos2d::Sprite *score1;
+    
+    
     
 };
 

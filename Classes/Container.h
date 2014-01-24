@@ -12,6 +12,8 @@
 #include <iostream>
 #include <cocos2d.h>
 #include "GameObject.h"
+#include "GameScene.h"
+#include "Trash.h"
 
 
 class Container : public GameObject
@@ -19,6 +21,7 @@ class Container : public GameObject
 public:
     bool init(int p_trash_category);
     static Container* create(int p_trash_category);
+    void add_to_layer(cocos2d::Layer *alayer);
     
     int trash_category;
     
@@ -27,6 +30,9 @@ private:
     int semiwidth;
     int semiindent;
     int verticalindent;
+    
+    // para el contenedor de cristal que esta arriba
+    cocos2d::Sprite *over_sprite;
 
 };
 

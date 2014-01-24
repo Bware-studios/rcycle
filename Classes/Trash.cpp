@@ -13,7 +13,10 @@ USING_NS_CC;
 
 const int num_trash_cat=4;
 const char *Trash::trash_cat_names[]={"cristal","plastico","organico","papel"};
-
+const int Trash::CAT_CRISTAL=0;
+const int Trash::CAT_PLASTICO=1;
+const int Trash::CAT_ORGANICO=2;
+const int Trash::CAT_PAPEL=3;
 
 bool Trash::init()
 {
@@ -58,4 +61,13 @@ Trash* Trash::create(int p_trash_type, int p_trash_category)
         return NULL;
     }
 }
+
+
+
+void Trash::add_to_layer(cocos2d::Layer *alayer)
+{
+    alayer->addChild(this,15);
+}
+
+
 
