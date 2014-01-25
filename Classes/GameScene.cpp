@@ -303,6 +303,7 @@ bool GameScene::touch_began(Touch *t,Event *e)
         touch_cursorsprite->setPosition(touch_pos);
         touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
         getPhysicsWorld()->addJoint(touch_joint);
+        touch_sprite->getPhysicsBody()->setRotationEnable(false);
     }
     
     return true;
@@ -326,6 +327,7 @@ void GameScene::touch_ended(Touch *t,Event *e)
     if (touch_sprite) {
   //      touch_sprite->getPhysicsBody()->setDynamic(true);
         touch_joint->removeFormWorld();
+        touch_sprite->getPhysicsBody()->setRotationEnable(true);
     }
     touch_sprite=NULL;
     touch_joint=NULL;
