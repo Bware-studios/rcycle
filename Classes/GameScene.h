@@ -19,7 +19,6 @@
 #include "Trash.h"
 #include "Container.h"
 
-
 extern const bool debug_draw_physics;
 extern const bool debug_draw_alfa;
 
@@ -55,6 +54,7 @@ public:
     
     void time_passes();
     void draw();
+    void pause_pressed(cocos2d::Object *o,cocos2d::extension::Control::EventType e);
     
     cocos2d::Layer *backLayer;
     cocos2d::Layer *frontLayer;
@@ -70,6 +70,7 @@ public:
     cocos2d::Sprite *s1;
     cocos2d::Sprite *score1;
     
+    cocos2d::Menu *pause_menu;
     
     
 };

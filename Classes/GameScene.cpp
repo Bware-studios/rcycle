@@ -228,14 +228,18 @@ SEL_CallFuncN GameScene::onResolveCCBCCCallFuncSelector(Object * pTarget, const 
 
 Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName)
 {
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "pause_button", GameScene::pause_pressed);
     return NULL;
 }
 
 
 bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
+    printf("[[[ variable %s ]]]\n",pMemberVariableName);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Sprite *, this->score1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
+
     return true;
 }
 
@@ -365,4 +369,9 @@ void GameScene::draw()
     }
 }
 
+void GameScene::pause_pressed(Object *o,Control::EventType e)
+{
+    printf("click pause...\n");
+    pause_menu->setVisible(true);
+}
 
