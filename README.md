@@ -10,7 +10,7 @@ the game
 
 ## to do ##
 
-- hacer layer con boton de pause y demas
+- detectar salida de objeto por los bordes
 - poner que el juego empiece y acabe por tiempo al menos una oleada
 
 - hacer clase para juntar las estadisticas de una oleada

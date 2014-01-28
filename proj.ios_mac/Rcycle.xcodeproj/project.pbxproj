@@ -74,6 +74,8 @@
 		9720F5E21841479F0091CB08 /* OptionsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9720F5CB1841479F0091CB08 /* OptionsScene.cpp */; };
 		9720F5E31841479F0091CB08 /* SceneLoadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9720F5CD1841479F0091CB08 /* SceneLoadManager.cpp */; };
 		9720F5E41841479F0091CB08 /* SceneLoadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9720F5CD1841479F0091CB08 /* SceneLoadManager.cpp */; };
+		9728F149189871D300EFB819 /* WorldFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9728F147189871D300EFB819 /* WorldFrame.cpp */; };
+		9728F14A189871D300EFB819 /* WorldFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9728F147189871D300EFB819 /* WorldFrame.cpp */; };
 		973E7142185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
 		973E7143185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
 		97A9E408185A8FD8007745D0 /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A9E406185A8FD8007745D0 /* Container.cpp */; };
@@ -321,6 +323,8 @@
 		9720F5CD1841479F0091CB08 /* SceneLoadManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneLoadManager.cpp; path = ../Classes/SceneLoadManager.cpp; sourceTree = "<group>"; };
 		9720F5CE1841479F0091CB08 /* SceneLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneLoadManager.h; path = ../Classes/SceneLoadManager.h; sourceTree = "<group>"; };
 		9728C5C51894745F00CD8974 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9728F147189871D300EFB819 /* WorldFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WorldFrame.cpp; path = ../Classes/WorldFrame.cpp; sourceTree = "<group>"; };
+		9728F148189871D300EFB819 /* WorldFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldFrame.h; path = ../Classes/WorldFrame.h; sourceTree = "<group>"; };
 		973E7140185533E6004623A2 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = ../Classes/GameObject.cpp; sourceTree = "<group>"; };
 		973E7141185533E6004623A2 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = ../Classes/GameObject.h; sourceTree = "<group>"; };
 		97A9E406185A8FD8007745D0 /* Container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Container.cpp; path = ../Classes/Container.cpp; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 				97C950981856887D003283FF /* Trash.h */,
 				97A9E406185A8FD8007745D0 /* Container.cpp */,
 				97A9E407185A8FD8007745D0 /* Container.h */,
+				9728F147189871D300EFB819 /* WorldFrame.cpp */,
+				9728F148189871D300EFB819 /* WorldFrame.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -615,7 +621,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -797,6 +803,7 @@
 				9720F5CF1841479F0091CB08 /* AppDelegate.cpp in Sources */,
 				9720F5DD1841479F0091CB08 /* MainMenuScene.cpp in Sources */,
 				9720F5D11841479F0091CB08 /* CreditsScene.cpp in Sources */,
+				9728F149189871D300EFB819 /* WorldFrame.cpp in Sources */,
 				9720F5D31841479F0091CB08 /* FameScene.cpp in Sources */,
 				9720F5E11841479F0091CB08 /* OptionsScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -813,6 +820,7 @@
 				97C9509A1856887D003283FF /* Trash.cpp in Sources */,
 				9720F5E41841479F0091CB08 /* SceneLoadManager.cpp in Sources */,
 				9720F5D21841479F0091CB08 /* CreditsScene.cpp in Sources */,
+				9728F14A189871D300EFB819 /* WorldFrame.cpp in Sources */,
 				973E7143185533E6004623A2 /* GameObject.cpp in Sources */,
 				9720F5E21841479F0091CB08 /* OptionsScene.cpp in Sources */,
 				9720F5D01841479F0091CB08 /* AppDelegate.cpp in Sources */,
@@ -1081,7 +1089,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

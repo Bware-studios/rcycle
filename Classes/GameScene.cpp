@@ -15,7 +15,7 @@ using namespace std;
 using namespace cocosbuilder;
 
 
-const bool debug_draw_physics = false;
+const bool debug_draw_physics = true;
 const bool debug_draw_alfa = false;
 
 
@@ -218,6 +218,8 @@ GameScene *GameScene::create()
 
 SEL_MenuHandler GameScene::onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName)
 {
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_resume", GameScene::action_resume);
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_quit", GameScene::action_quit);
     return NULL;
 }
 
@@ -228,7 +230,7 @@ SEL_CallFuncN GameScene::onResolveCCBCCCallFuncSelector(Object * pTarget, const 
 
 Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName)
 {
-    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "pause_button", GameScene::pause_pressed);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "pause_button", GameScene::action_pause);
     return NULL;
 }
 
@@ -268,7 +270,7 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
         sp=s1->getBody()->getNode();
         printf("destroy %p",sp);
         backLayer->removeChild(sp);
-        
+        add_random_trash();
     }
     printf("\n");
     
@@ -353,8 +355,7 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
 
 void GameScene::time_passes()
 {
-    auto newscene = FameScene::create();
-    Director::getInstance()->replaceScene(newscene);
+   // game_end();
 }
 
 
@@ -369,9 +370,41 @@ void GameScene::draw()
     }
 }
 
-void GameScene::pause_pressed(Object *o,Control::EventType e)
+void GameScene::action_pause(Object *o,Control::EventType e)
 {
     printf("click pause...\n");
     pause_menu->setVisible(true);
+    pause();
 }
+
+void GameScene::action_resume(Object *o)
+{
+    printf("click resume...\n");
+    pause_menu->setVisible(false);
+    resume();
+}
+
+void GameScene::action_quit(Object *o)
+{
+    game_end();
+}
+
+void GameScene::game_end()
+{
+    auto newscene = FameScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
+
+void GameScene::add_random_trash()
+{
+    Trash *ts1;
+    int r1,r2;
+    r1=rand()%2;
+    r2=rand()%4;
+    ts1=Trash::create(r1, r2);
+    ts1->setPosition(Point(rand()%480,rand()%100+300));
+    ts1->add_to_layer(backLayer);
+}
+
+
 

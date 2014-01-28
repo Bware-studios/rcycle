@@ -54,7 +54,16 @@ public:
     
     void time_passes();
     void draw();
-    void pause_pressed(cocos2d::Object *o,cocos2d::extension::Control::EventType e);
+
+    void action_pause(cocos2d::Object *o,cocos2d::extension::Control::EventType e);
+    void action_resume(cocos2d::Object *o);
+    void action_quit(cocos2d::Object *o);
+
+    
+    void game_end();
+    
+    void add_random_trash();
+    
     
     cocos2d::Layer *backLayer;
     cocos2d::Layer *frontLayer;
