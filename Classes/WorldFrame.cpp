@@ -11,6 +11,9 @@
 
 USING_NS_CC;
 
+const int semiheight = 200;
+const int semiwidth = 200;
+
 
 bool WorldFrame::init()
 {
@@ -21,7 +24,7 @@ bool WorldFrame::init()
     tex1=new Texture2D();
     unsigned short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0xf0ff,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
     tex1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
-    //    this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
+    this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
     
 
     PhysicsBody *body=PhysicsBody::create();
@@ -32,35 +35,20 @@ bool WorldFrame::init()
     
     // down
     PhysicsShape *s1;
-    s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent),-semiheight), Point(semiwidth-semiindent,-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-semiheight), Point(semiwidth,-semiheight));
     s1->setCategoryBitmask(cat_wall|cat_sensor);
     body->addShape(s1);
     
     // left
-    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,semiheight-verticalindent), Point(-(semiwidth-semiindent),-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-semiheight), Point(-2*semiwidth,semiheight));
     s1->setCategoryBitmask(cat_wall);
     body->addShape(s1);
     // right
-    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent), Point(semiwidth-semiindent,-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,-semiheight), Point(2*semiwidth,semiheight));
     s1->setCategoryBitmask(cat_wall);
     body->addShape(s1);
     
-    if (p_trash_category==Trash::CAT_CRISTAL) {
-        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent),Point(semiwidth-verticalindent,semiheight));
-        body->addShape(s1);
-        s1->setCategoryBitmask(cat_wall);
-        s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-verticalindent),semiheight),Point(semiwidth-verticalindent,semiheight));
-        s1->setCategoryBitmask(cat_wall);
-        body->addShape(s1);
-    }
-    
     this->setPhysicsBody(body);
-    
-    over_sprite=NULL;
-    if (p_trash_category==Trash::CAT_CRISTAL) {
-        over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0005.png");
-        if (debug_draw_alfa) over_sprite->setOpacity(100);
-    }
     
     if (debug_draw_alfa) this->setOpacity(100);
     

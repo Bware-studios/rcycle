@@ -18,6 +18,7 @@
 #include "FameScene.h"
 #include "Trash.h"
 #include "Container.h"
+#include "WorldFrame.h"
 
 extern const bool debug_draw_physics;
 extern const bool debug_draw_alfa;

@@ -16,7 +16,7 @@ using namespace cocosbuilder;
 
 
 const bool debug_draw_physics = true;
-const bool debug_draw_alfa = false;
+const bool debug_draw_alfa = true;
 
 
 
@@ -112,6 +112,12 @@ bool GameScene::init() {
     
   //  s2->setB2Body();
   //  PhysicsWorld *w = this->getPhysicsWorld();
+    
+    
+    WorldFrame *wf;
+    wf=WorldFrame::create();
+    wf->add_to_layer(backLayer);
+    
     
     Trash *ts1;
     ts1=Trash::create(0, 3);
