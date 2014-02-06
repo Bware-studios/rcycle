@@ -17,6 +17,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/SceneLoadManager.cpp \
                    ../../Classes/GameObject.cpp \
                    ../../Classes/Trash.cpp \
+                   ../../Classes/WorldFrame.cpp \
                    ../../Classes/Container.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
