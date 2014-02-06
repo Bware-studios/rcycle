@@ -16,7 +16,7 @@ using namespace cocosbuilder;
 
 
 const bool debug_draw_physics = true;
-const bool debug_draw_alfa = true;
+const bool debug_draw_alfa = false;
 
 
 
@@ -200,6 +200,9 @@ bool GameScene::init() {
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
+
+    //this->setScale(0.5);
+    
     return true;
 }
 

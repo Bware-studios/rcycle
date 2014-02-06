@@ -11,9 +11,9 @@
 
 USING_NS_CC;
 
-const int semiheight = 200;
-const int semiwidth = 200;
-
+const int height = 5000;
+const int semiwidth = 300;
+const int offset = 10;
 
 bool WorldFrame::init()
 {
@@ -24,9 +24,12 @@ bool WorldFrame::init()
     tex1=new Texture2D();
     unsigned short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0xf0ff,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
     tex1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
-    this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
+    //this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
     
 
+    this->setAnchorPoint(Point(0.5,0));
+    this->setPosition(Point(240,0));
+    
     PhysicsBody *body=PhysicsBody::create();
     body->setDynamic(false);
     body->setCategoryBitmask(cat_wall);
@@ -35,17 +38,17 @@ bool WorldFrame::init()
     
     // down
     PhysicsShape *s1;
-    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-semiheight), Point(semiwidth,-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-offset), Point(semiwidth,-offset));
     s1->setCategoryBitmask(cat_wall|cat_sensor);
     body->addShape(s1);
     
     // left
-    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-semiheight), Point(-2*semiwidth,semiheight));
-    s1->setCategoryBitmask(cat_wall);
+    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-offset), Point(-2*semiwidth,height));
+    s1->setCategoryBitmask(cat_wall|cat_sensor);
     body->addShape(s1);
     // right
-    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,-semiheight), Point(2*semiwidth,semiheight));
-    s1->setCategoryBitmask(cat_wall);
+    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,-offset), Point(2*semiwidth,height));
+    s1->setCategoryBitmask(cat_wall|cat_sensor);
     body->addShape(s1);
     
     this->setPhysicsBody(body);
