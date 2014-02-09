@@ -69,7 +69,9 @@ public:
     void add_random_trash();
     
     
+    
     cocos2d::Layer *backLayer;
+    cocos2d::Layer *gameLayer;
     cocos2d::Layer *frontLayer;
     
     

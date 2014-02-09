@@ -140,6 +140,6 @@ void MenuScene::fame(Object *pSender)
 
 bool GameLayer::init()
 {
-    
+
     return true;
 }

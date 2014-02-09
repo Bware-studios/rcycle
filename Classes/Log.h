@@ -20,7 +20,7 @@ void Log_msg(const char *type,const char *msg, ... );
 // log types switches
 #define DEBUG_LOG_GENERAL true
 #define DEBUG_LOG_CCB true
-#define DEBUG_LOG_UI false
+#define DEBUG_LOG_UI true
 #define DEBUG_LOG_COLLISION false
 
 

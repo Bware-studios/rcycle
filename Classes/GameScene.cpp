@@ -25,7 +25,8 @@ bool GameScene::init() {
     
     if ( ! Scene::initWithPhysics() ) return false;
 
-    backLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
+    backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
+    gameLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
 
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
     
@@ -59,7 +60,7 @@ bool GameScene::init() {
 //    s2->setPosition(Point(200,200));
 //    s2->setRotation(10);
 //    s2->setOpacity(150);
-//    backLayer->addChild(s2,20);
+//    gameLayer->addChild(s2,20);
 //    
 //    s2=Sprite::createWithSpriteFrame(sf);
 //    sb=PhysicsBody::createCircle(32);
@@ -71,7 +72,7 @@ bool GameScene::init() {
 //    s2->setPosition(Point(210,100));
 //    s2->setOpacity(150);
 //
-//    backLayer->addChild(s2,20);
+//    gameLayer->addChild(s2,20);
     
 //    Texture2D *t1;
 //    t1=new Texture2D();
@@ -91,7 +92,7 @@ bool GameScene::init() {
 //
 //    s2->setPhysicsBody(sb);
 //    s2->setOpacity(100);
-//    backLayer->addChild(s2,20);
+//    gameLayer->addChild(s2,20);
     
     touch_down=false;
     touch_sprite=NULL;
@@ -100,7 +101,7 @@ bool GameScene::init() {
     touch_cursorbody=PhysicsBody::create();
     touch_cursorsprite->setPhysicsBody(touch_cursorbody);
     touch_cursorbody->setDynamic(false);
-    backLayer->addChild(touch_cursorsprite);
+    gameLayer->addChild(touch_cursorsprite);
     
 //    Texture2D *tex1;
 //    tex1=new Texture2D();
@@ -115,68 +116,68 @@ bool GameScene::init() {
     
     WorldFrame *wf;
     wf=WorldFrame::create();
-    wf->add_to_layer(backLayer);
+    wf->add_to_layer(gameLayer);
     
     
     Trash *ts1;
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(150,210));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
     ts1=Trash::create(0, 2);
     ts1->setPosition(Point(200,200));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
     ts1=Trash::create(0, 1);
     ts1->setPosition(Point(260,250));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
     ts1=Trash::create(0, 0);
     ts1->setPosition(Point(280,240));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(320,200));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
 
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(260,250));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(280,240));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 
     ts1=Trash::create(0, 3);
     ts1->setPosition(Point(320,200));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
     
     
     Container *c1;
     c1=Container::create(Trash::CAT_ORGANICO);
     c1->setPosition(Point(40,40));
-    c1->add_to_layer(backLayer);
-    //backLayer->addChild(c1);
+    c1->add_to_layer(gameLayer);
+    //gameLayer->addChild(c1);
     c1=Container::create(Trash::CAT_PAPEL);
     c1->setPosition(Point(170,35));
-    c1->add_to_layer(backLayer);
-    //backLayer->addChild(c1);
+    c1->add_to_layer(gameLayer);
+    //gameLayer->addChild(c1);
     c1=Container::create(Trash::CAT_PLASTICO);
     c1->setPosition(Point(310,40));
-    c1->add_to_layer(backLayer);
-    //backLayer->addChild(c1);
+    c1->add_to_layer(gameLayer);
+    //gameLayer->addChild(c1);
     c1=Container::create(Trash::CAT_CRISTAL);
     c1->setPosition(Point(430,100));
-    c1->add_to_layer(backLayer);
-    //backLayer->addChild(c1);
+    c1->add_to_layer(gameLayer);
+    //gameLayer->addChild(c1);
 
     PhysicsBody *sb1=PhysicsBody::create();
     sb1->setDynamic(false);
     //s1->setPhysicsBody(sb1);
     
-    
     addChild(backLayer,1);
+    addChild(gameLayer,2);
     addChild(frontLayer,10);
     
     
@@ -277,7 +278,7 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
         Node *sp;
         sp=s1->getBody()->getNode();
         LOG_COLLISION("destroy %p",sp);
-        backLayer->removeChild(sp);
+        gameLayer->removeChild(sp);
         add_random_trash();
     }
     LOG_COLLISION("");
@@ -315,6 +316,10 @@ bool GameScene::touch_began(Touch *t,Event *e)
     selectedshape=getPhysicsWorld()->getShape(touch_pos);
     if (selectedshape) {
         touch_sprite=(Sprite *)selectedshape->getBody()->getNode();
+        GameObject *go = dynamic_cast<GameObject *>(selectedshape->getBody()->getNode());
+        
+        LOG_UI("touched %s",go?"game object":"non game object");
+        
 //        touch_sprite->getPhysicsBody()->setDynamic(false);
         touch_cursorsprite->setPosition(touch_pos);
         touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
@@ -413,7 +418,7 @@ void GameScene::add_random_trash()
     r2=rand()%4;
     ts1=Trash::create(r1, r2);
     ts1->setPosition(Point(rand()%480,rand()%100+300));
-    ts1->add_to_layer(backLayer);
+    ts1->add_to_layer(gameLayer);
 }
 
 

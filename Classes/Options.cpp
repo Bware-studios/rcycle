@@ -10,7 +10,8 @@
 
 
 
-bool Options::debug_draw_physics = true;
-bool Options::debug_draw_alfa = true;
+bool Options::debug_draw_physics = false;
+bool Options::debug_draw_alfa = false;
+bool Options::debug_draw_background = true;
 
 
