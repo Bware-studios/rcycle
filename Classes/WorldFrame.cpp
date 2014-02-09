@@ -53,7 +53,7 @@ bool WorldFrame::init()
     
     this->setPhysicsBody(body);
     
-    if (debug_draw_alfa) this->setOpacity(100);
+    if (Options::debug_draw_alfa) this->setOpacity(100);
     
     return true;
 }

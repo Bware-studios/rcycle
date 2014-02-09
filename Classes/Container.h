@@ -9,10 +9,9 @@
 #ifndef __Rcycle__Container__
 #define __Rcycle__Container__
 
-#include <iostream>
-#include <cocos2d.h>
+#include "Common.h"
+
 #include "GameObject.h"
-#include "GameScene.h"
 #include "Trash.h"
 
 

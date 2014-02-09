@@ -16,6 +16,15 @@ using namespace cocosbuilder;
 
 bool MainMenuScene::init() {
     if ( ! MenuScene::init("MainMenuScene") ) return false;
+    
+    Application::Platform platform = Application::getInstance()->getTargetPlatform();
+    if ( platform == Application::Platform::OS_IPAD ||
+         platform == Application::Platform::OS_IPHONE
+       // || platform == Application::Platform::OS_MAC
+        ) {
+        quit_button->setVisible(false);
+    }
+    
     return true;
 }
 
@@ -25,7 +34,7 @@ bool MainMenuScene::init() {
 
 void MainMenuScene::enter(Object *pSender)
 {
-    cout<<"juego\n";
+    LOG("juego");
     auto newscene = GameScene::create();
     Director::getInstance()->replaceScene(newscene);
 }

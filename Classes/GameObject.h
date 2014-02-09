@@ -9,8 +9,8 @@
 #ifndef __Rcycle__GameObject__
 #define __Rcycle__GameObject__
 
-#include <iostream>
-#include <cocos2d.h>
+#include "Common.h"
+
 
 class GameObject : public cocos2d::Sprite
 {

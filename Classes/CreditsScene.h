@@ -9,8 +9,8 @@
 #ifndef __Rcycle__CreditsScene__
 #define __Rcycle__CreditsScene__
 
-#include <iostream>
-#include "cocos2d.h"
+#include "Common.h"
+
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
 

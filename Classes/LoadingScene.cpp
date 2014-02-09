@@ -40,7 +40,7 @@ bool LoadingScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMembe
 void LoadingScene::time_passes()
 {
     bool reschedule=true;
-    cout<<"time passes\n";
+    LOG("time passes");
  
     state+=1;
     switch (state) {
@@ -68,7 +68,7 @@ void LoadingScene::time_passes()
 
 void LoadingScene::start()
 {
-    cout << "go go go";
+    LOG("go go go");
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);
 }

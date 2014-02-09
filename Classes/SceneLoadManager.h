@@ -9,10 +9,12 @@
 #ifndef __Rcycle__SceneLoadManager__
 #define __Rcycle__SceneLoadManager__
 
-#include <iostream>
-#include "cocos2d.h"
+#include "Common.h"
+
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
+
+
 
 class SceneLoadManager
 {
@@ -79,7 +81,7 @@ public:
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
 
     // VariableAsigner
-    virtual bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
+    virtual bool onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode);
 
     // AnimationDelegate
     virtual void completedAnimationSequenceNamed(const char *name);
@@ -89,6 +91,8 @@ public:
     virtual void info(Object *pSender);
     virtual void options(Object *pSender);
     virtual void fame(Object *pSender);
+    
+    cocos2d::MenuItem *quit_button;
     
     MenuLayer *layer;
 };

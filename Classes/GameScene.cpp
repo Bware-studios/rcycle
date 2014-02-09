@@ -15,14 +15,13 @@ using namespace std;
 using namespace cocosbuilder;
 
 
-const bool debug_draw_physics = true;
-const bool debug_draw_alfa = false;
+//const bool debug_draw_physics = true;
+//const bool debug_draw_alfa = false;
 
 
 
 bool GameScene::init() {
-    cout << "Init GameScene\n";
-    //cout << "CC_ENABLE_CHIPMUNK_INTEGRATION: " << CC_ENABLE_CHIPMUNK_INTEGRATION << "\n";
+    LOG("Init GameScene");
     
     if ( ! Scene::initWithPhysics() ) return false;
 
@@ -33,7 +32,7 @@ bool GameScene::init() {
     
     PhysicsWorld *world;
     world=this->getPhysicsWorld();
-    if (debug_draw_physics) world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    if (Options::debug_draw_physics) world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
 //    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
 
@@ -41,7 +40,7 @@ bool GameScene::init() {
     //PhysicsBody *borde=PhysicsBody::createEdgeBox(Size(Point(200,200)));
     //world->addBody(borde);
     
-    cout<<"debug draw: "<<this->getPhysicsWorld()->getDebugDrawMask()<<"\n";
+    LOG("debug draw: %u",this->getPhysicsWorld()->getDebugDrawMask());
     //this->getPhysicsWorld()->setGravity(Point(0,-10));
     
     
@@ -174,7 +173,7 @@ bool GameScene::init() {
 
     PhysicsBody *sb1=PhysicsBody::create();
     sb1->setDynamic(false);
-    s1->setPhysicsBody(sb1);
+    //s1->setPhysicsBody(sb1);
     
     
     addChild(backLayer,1);
@@ -246,8 +245,8 @@ Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, cons
 
 bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
-    printf("[[[ variable %s ]]]\n",pMemberVariableName);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
+    LOG_CCB("variable [%s]",pMemberVariableName);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Sprite *, this->score1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
 
@@ -257,7 +256,7 @@ bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVa
 
 bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
 {
-    printf("contact...");
+    LOG_COLLISION("contact...");
     PhysicsShape *s1 = contact.getShapeA();
     PhysicsShape *s2 = contact.getShapeB();
     bool s1_issensor = (s1->getCategoryBitmask() & GameObject::cat_sensor);
@@ -277,39 +276,41 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
     if (destroys1) {
         Node *sp;
         sp=s1->getBody()->getNode();
-        printf("destroy %p",sp);
+        LOG_COLLISION("destroy %p",sp);
         backLayer->removeChild(sp);
         add_random_trash();
     }
-    printf("\n");
+    LOG_COLLISION("");
     
     return true;
 }
 
 bool GameScene::contact_presolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPreSolve& solve)
 {
-//    printf("pre solve...\n");
+//    LOG("pre solve...");
     return true;
 }
 
 void GameScene::contact_postsolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPostSolve& solve)
 {
-//    printf("post solve...\n");
+//    LOG("post solve...");
 }
 
 
 void GameScene::contact_separate(EventCustom* event, const PhysicsContact& contact)
 {
-    printf("separate...\n");
+    LOG_COLLISION("separate... [%d]",5);
+ //   Log_msg("COL", "separate %d o",5);
 }
 
 
 bool GameScene::touch_began(Touch *t,Event *e)
 {
-    printf("began\n");
+    LOG_UI("began");
     if (touch_down) return false;
     touch_down=true;
-    touch_pos=t->getLocation();
+//    touch_pos=t->getLocation();
+    touch_pos=this->convertTouchToNodeSpace(t);
     PhysicsShape *selectedshape;
     selectedshape=getPhysicsWorld()->getShape(touch_pos);
     if (selectedshape) {
@@ -327,8 +328,8 @@ bool GameScene::touch_began(Touch *t,Event *e)
 
 void GameScene::touch_moved(Touch *t,Event *e)
 {
-    printf("moved\n");
-    touch_pos=t->getLocation();
+    LOG_UI("moved");
+    touch_pos=this->convertTouchToNodeSpace(t);
     if (!touch_sprite) return;
 //    touch_sprite->setPosition(Point(old_sprite_pos.x+(touch_pos.x-old_pos.x),old_sprite_pos.y+(touch_pos.y-old_pos.y)));
     touch_cursorsprite->setPosition(touch_pos);
@@ -337,7 +338,7 @@ void GameScene::touch_moved(Touch *t,Event *e)
 
 void GameScene::touch_ended(Touch *t,Event *e)
 {
-    printf("ended\n");
+    LOG_UI("ended");
     touch_down=false;
     if (touch_sprite) {
   //      touch_sprite->getPhysicsBody()->setDynamic(true);
@@ -351,7 +352,7 @@ void GameScene::touch_ended(Touch *t,Event *e)
 
 void GameScene::touch_cancelled(Touch *t,Event *e)
 {
-    printf("cancelled\n");
+    LOG_UI("cancelled");
     touch_down=false;
     if (touch_sprite) {
 //        touch_sprite->getPhysicsBody()->setDynamic(true);
@@ -381,14 +382,14 @@ void GameScene::draw()
 
 void GameScene::action_pause(Object *o,Control::EventType e)
 {
-    printf("click pause...\n");
+    LOG_UI("click pause...");
     pause_menu->setVisible(true);
     pause();
 }
 
 void GameScene::action_resume(Object *o)
 {
-    printf("click resume...\n");
+    LOG_UI("click resume...");
     pause_menu->setVisible(false);
     resume();
 }

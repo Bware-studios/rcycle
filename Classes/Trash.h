@@ -9,8 +9,8 @@
 #ifndef __Rcycle__Trash__
 #define __Rcycle__Trash__
 
-#include <iostream>
-#include <cocos2d.h>
+#include "Common.h"
+
 #include "GameObject.h"
 
 

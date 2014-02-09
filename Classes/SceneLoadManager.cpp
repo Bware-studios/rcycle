@@ -97,41 +97,43 @@ Control::Handler MenuScene::onResolveCCBCCControlSelector(Object * pTarget, cons
 }
 
 
-bool MenuScene::onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node)
+bool MenuScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
+    LOG_CCB("variable [%s]",pMemberVariableName);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "quit_button", MenuItem *, this->quit_button);
     return true;
 }
 
 
 void MenuScene::completedAnimationSequenceNamed(const char *name)
 {
-    cout << "Menu scene completedanimation  Not overriden\n";
+    LOG_CCB("Menu scene completedanimation  Not overriden");
 }
 
 
 void MenuScene::enter(Object *pSender)
 {
-    cout << "Menu scene selector called: enter  Not overriden\n";
+    LOG_CCB("Menu scene selector called: enter  Not overriden");
 }
 
 void MenuScene::back(Object *pSender)
 {
-    cout << "Menu scene selector called: back  Not overriden\n";
+    LOG_CCB("Menu scene selector called: back  Not overriden");
 }
 
 void MenuScene::info(Object *pSender)
 {
-    cout << "Menu scene selector called: info  Not overriden\n";
+    LOG_CCB("Menu scene selector called: info  Not overriden");
 }
 
 void MenuScene::options(Object *pSender)
 {
-    cout << "Menu scene selector called: options  Not overriden\n";
+    LOG_CCB("Menu scene selector called: options  Not overriden");
 }
 
 void MenuScene::fame(Object *pSender)
 {
-    cout << "Menu scene selector called: fame  Not overriden\n";
+    LOG_CCB("Menu scene selector called: fame  Not overriden");
 }
 
 

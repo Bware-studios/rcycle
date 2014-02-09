@@ -25,7 +25,7 @@ bool OptionsScene::init() {
 
 void OptionsScene::enter(Object *pSender)
 {
-    cout<<"option1\n";
+    LOG("option1");
 }
 
 

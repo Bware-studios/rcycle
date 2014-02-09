@@ -9,11 +9,9 @@
 #ifndef __Rcycle__WorldFrame__
 #define __Rcycle__WorldFrame__
 
-#include <iostream>
-#include <cocos2d.h>
+#include "Common.h"
+
 #include "GameObject.h"
-#include "GameScene.h"
-#include "Trash.h"
 
 
 class WorldFrame : public GameObject

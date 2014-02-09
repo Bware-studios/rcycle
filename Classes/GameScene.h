@@ -9,10 +9,12 @@
 #ifndef __Rcycle__GameScene__
 #define __Rcycle__GameScene__
 
-#include <iostream>
-#include "cocos2d.h"
+#include "Common.h"
+
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
+
+#include "Options.h"
 
 #include "SceneLoadManager.h"
 #include "FameScene.h"
@@ -20,8 +22,9 @@
 #include "Container.h"
 #include "WorldFrame.h"
 
-extern const bool debug_draw_physics;
-extern const bool debug_draw_alfa;
+
+//extern const bool debug_draw_physics;
+//extern const bool debug_draw_alfa;
 
 
 class GameScene : public cocos2d::Scene,

@@ -9,8 +9,8 @@
 #ifndef __Rcycle__FameScene__
 #define __Rcycle__FameScene__
 
-#include <iostream>
-#include "cocos2d.h"
+#include "Common.h"
+
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
 

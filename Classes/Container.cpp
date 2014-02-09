@@ -98,10 +98,10 @@ bool Container::init(int p_trash_category)
     over_sprite=NULL;
     if (p_trash_category==Trash::CAT_CRISTAL) {
         over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0005.png");
-        if (debug_draw_alfa) over_sprite->setOpacity(100);
+        if (Options::debug_draw_alfa) over_sprite->setOpacity(100);
     }
     
-    if (debug_draw_alfa) this->setOpacity(100);
+    if (Options::debug_draw_alfa) this->setOpacity(100);
     
     return true;
 }

@@ -81,7 +81,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         FileUtils::getInstance()->setSearchResolutionsOrder(resDirOrders);
         
     } else {
-        cout<<"Warning platform not supported\n";
+        LOG("Warning platform not supported");
     }
     
 //    // pon codigo decente para el orden de resoluciones
@@ -89,8 +89,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    searchDirs.push_back("resources-iphonehd");
 //    FileUtils::getInstance()->setSearchResolutionsOrder(searchDirs);
 
-    cout << "scale factor (p): " << resourceSize.height/designSize.height << "\n";
-    cout << "scale factor: " << resourceSize.width/designSize.width << "\n";
+    LOG("scale factor (p): %f",resourceSize.height/designSize.height);
+    LOG("scale factor: %f",resourceSize.width/designSize.width);
 //    director->setContentScaleFactor(resourceSize.width/designSize.width);
     director->setContentScaleFactor(resourceSize.height/designSize.height);
 
