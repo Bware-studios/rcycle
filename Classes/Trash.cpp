@@ -41,6 +41,8 @@ bool Trash::init(int p_trash_type, int p_trash_category)
     body->setCollisionBitmask(cat_wall|cat_trash);
 
     this->setPhysicsBody(body);
+
+    this->is_dragable=true;
     
     return true;
 }

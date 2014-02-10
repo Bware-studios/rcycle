@@ -315,16 +315,18 @@ bool GameScene::touch_began(Touch *t,Event *e)
     PhysicsShape *selectedshape;
     selectedshape=getPhysicsWorld()->getShape(touch_pos);
     if (selectedshape) {
-        touch_sprite=(Sprite *)selectedshape->getBody()->getNode();
-        GameObject *go = dynamic_cast<GameObject *>(selectedshape->getBody()->getNode());
-        
-        LOG_UI("touched %s",go?"game object":"non game object");
+        touch_sprite=dynamic_cast<GameObject *>(selectedshape->getBody()->getNode());
+        LOG_UI("is_dragable: %s",touch_sprite->is_dragable?"yes":"no");
         
 //        touch_sprite->getPhysicsBody()->setDynamic(false);
-        touch_cursorsprite->setPosition(touch_pos);
-        touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
-        getPhysicsWorld()->addJoint(touch_joint);
-        touch_sprite->getPhysicsBody()->setRotationEnable(false);
+        if (touch_sprite->is_dragable) {
+            touch_cursorsprite->setPosition(touch_pos);
+            touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
+            getPhysicsWorld()->addJoint(touch_joint);
+            touch_sprite->getPhysicsBody()->setRotationEnable(false);
+        } else {
+            touch_sprite=NULL;
+        }
     }
     
     return true;

@@ -21,6 +21,8 @@ public:
     
     bool init();
     
+    bool is_dragable;
+    
 };
 
 

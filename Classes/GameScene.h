@@ -76,7 +76,7 @@ public:
     
     
     bool touch_down;
-    cocos2d::Sprite *touch_sprite;
+    GameObject *touch_sprite;
     cocos2d::Point touch_pos;
     cocos2d::PhysicsJointPin *touch_joint;
     cocos2d::Sprite *touch_cursorsprite;
