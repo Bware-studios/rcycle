@@ -250,6 +250,10 @@ bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVa
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Sprite *, this->score1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", LabelTTF *, this->score_1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", LabelTTF *, this->score_2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", LabelTTF *, this->score_3);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", LabelTTF *, this->score_4);
 
     return true;
 }
@@ -367,6 +371,25 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
     }
     touch_sprite=NULL;
     touch_joint=NULL;
+}
+
+
+void GameScene::set_recycled(int category, int value)
+{
+    LabelTTF *thelabel;
+    if (category==Trash::CAT_ORGANICO) thelabel=score_1;
+    if (category==Trash::CAT_PLASTICO) thelabel=score_2;
+    if (category==Trash::CAT_PAPEL) thelabel=score_3;
+    if (category==Trash::CAT_CRISTAL) thelabel=score_4;
+
+    thelabel->setString(std::to_string(value));
+
+}
+
+
+void GameScene::set_failed(int category, int value)
+{
+    
 }
 
 

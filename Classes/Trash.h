@@ -30,8 +30,6 @@ public:
     static const int CAT_PLASTICO;
     static const int CAT_ORGANICO;
     static const int CAT_PAPEL;
-    
-private:
     static const int num_trash_cat;
     static const char *trash_cat_names[];
 };

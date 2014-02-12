@@ -11,7 +11,7 @@
 USING_NS_CC;
 
 
-const int num_trash_cat=4;
+const int Trash::num_trash_cat=4;
 const char *Trash::trash_cat_names[]={"cristal","plastico","organico","papel"};
 const int Trash::CAT_CRISTAL=0;
 const int Trash::CAT_PLASTICO=1;

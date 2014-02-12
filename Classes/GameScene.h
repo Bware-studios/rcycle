@@ -56,6 +56,10 @@ public:
     void touch_ended(cocos2d::Touch *t,cocos2d::Event *e);
     void touch_cancelled(cocos2d::Touch *t,cocos2d::Event *e);
     
+    // counter manipulation
+    void set_recycled(int category, int value);
+    void set_failed(int category, int value);
+    
     void time_passes();
     void draw();
 
@@ -84,7 +88,12 @@ public:
     
     cocos2d::Sprite *s1;
     cocos2d::Sprite *score1;
-    
+
+    cocos2d::LabelTTF *score_1;
+    cocos2d::LabelTTF *score_2;
+    cocos2d::LabelTTF *score_3;
+    cocos2d::LabelTTF *score_4;
+
     cocos2d::Menu *pause_menu;
     
     
