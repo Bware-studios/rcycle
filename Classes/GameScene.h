@@ -36,6 +36,8 @@ public:
     bool init();
     static GameScene *create();
     
+    static GameScene *thegamescene;
+
     // SelectorResolver
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
     virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);

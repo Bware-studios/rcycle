@@ -11,6 +11,8 @@
 
 #include "Common.h"
 
+#include "Game.h"
+#include "GameScene.h"
 #include "GameObject.h"
 #include "Trash.h"
 
@@ -21,6 +23,8 @@ public:
     bool init(int p_trash_category);
     static Container* create(int p_trash_category);
     void add_to_layer(cocos2d::Layer *alayer);
+    
+    void destroy(Trash *atrash);
     
     int trash_category;
     

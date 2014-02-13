@@ -35,6 +35,7 @@ bool MainMenuScene::init() {
 void MainMenuScene::enter(Object *pSender)
 {
     LOG("juego");
+    Game::create();
     auto newscene = GameScene::create();
     Director::getInstance()->replaceScene(newscene);
 }

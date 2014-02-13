@@ -134,6 +134,14 @@ void Container::add_to_layer(cocos2d::Layer *alayer)
     }
 }
 
+void Container::destroy(Trash *atrash)
+{
+    if ( trash_category == atrash->trash_category ) {
+        Game::thegame->trash_recycled(trash_category);
+    } else {
+        Game::thegame->trash_recycled(atrash->trash_category);
+    }
+}
 
 
 

@@ -19,6 +19,7 @@
 #include "OptionsScene.h"
 #include "FameScene.h"
 
+#include "Game.h"
 #include "GameScene.h"
 
 

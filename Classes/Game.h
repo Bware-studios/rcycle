@@ -11,12 +11,15 @@
 
 #include "Common.h"
 #include "Trash.h"
+#include "GameScene.h"
 
 class Game : public cocos2d::Object
 {
 public:
     bool init();
     CREATE_FUNC(Game);
+    
+    static Game *thegame;
     
     void trash_recycled(int category);
     void trash_failed(int category);

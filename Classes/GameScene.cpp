@@ -19,8 +19,11 @@ using namespace cocosbuilder;
 //const bool debug_draw_alfa = false;
 
 
+GameScene *GameScene::thegamescene=NULL;
+
 
 bool GameScene::init() {
+    GameScene::thegamescene = this;
     LOG("Init GameScene");
     
     if ( ! Scene::initWithPhysics() ) return false;
@@ -264,6 +267,7 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
     LOG_COLLISION("contact...");
     PhysicsShape *s1 = contact.getShapeA();
     PhysicsShape *s2 = contact.getShapeB();
+    PhysicsShape *sother;
     bool s1_issensor = (s1->getCategoryBitmask() & GameObject::cat_sensor);
     bool s2_issensor = (s2->getCategoryBitmask() & GameObject::cat_sensor);
 
@@ -271,19 +275,27 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
     
     if ( s1_issensor && !s2_issensor ) {
         destroys1=true;
+        sother=s1;
         s1=s2;
     }
     
     if ( !s1_issensor && s2_issensor ) {
         destroys1=true;
+        sother=s2;
     }
     
     if (destroys1) {
-        Node *sp;
-        sp=s1->getBody()->getNode();
-        LOG_COLLISION("destroy %p",sp);
-        gameLayer->removeChild(sp);
-        add_random_trash();
+        // here s1 is not a sensor and sother is a sensor
+        Trash *atrash=dynamic_cast<Trash*>(s1->getBody()->getNode());
+        Container *acontainer=dynamic_cast<Container*>(sother->getBody()->getNode());
+        LOG_COLLISION("s vs no s %p %p",acontainer,atrash);
+        if (atrash && acontainer) {
+            acontainer->destroy(atrash);
+            LOG_COLLISION("destroy %p",atrash);
+            gameLayer->removeChild(atrash);
+            add_random_trash();
+        }
+        
     }
     LOG_COLLISION("");
     
