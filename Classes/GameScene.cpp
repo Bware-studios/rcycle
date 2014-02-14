@@ -24,6 +24,7 @@ GameScene *GameScene::thegamescene=NULL;
 
 bool GameScene::init() {
     GameScene::thegamescene = this;
+    
     LOG("Init GameScene");
     
     if ( ! Scene::initWithPhysics() ) return false;
@@ -204,7 +205,7 @@ bool GameScene::init() {
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
 
-    //this->setScale(0.5);
+    if (Options::debug_draw_outside) this->setScale(0.5);
     
     return true;
 }
@@ -390,8 +391,8 @@ void GameScene::set_recycled(int category, int value)
 {
     LabelTTF *thelabel;
     if (category==Trash::CAT_ORGANICO) thelabel=score_1;
-    if (category==Trash::CAT_PLASTICO) thelabel=score_2;
-    if (category==Trash::CAT_PAPEL) thelabel=score_3;
+    if (category==Trash::CAT_PAPEL) thelabel=score_2;
+    if (category==Trash::CAT_PLASTICO) thelabel=score_3;
     if (category==Trash::CAT_CRISTAL) thelabel=score_4;
 
     thelabel->setString(std::to_string(value));

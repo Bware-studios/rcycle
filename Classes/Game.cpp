@@ -8,7 +8,6 @@
 
 #include "Game.h"
 
-const int N_CAT = 4;
 
 
 Game *Game::thegame=NULL;
@@ -16,6 +15,7 @@ Game *Game::thegame=NULL;
 bool Game::init()
 {
     Game::thegame=this;
+    Game::thegame->retain();
     
     wave_recycled=new int[Trash::num_trash_cat];
     wave_failed=new int[Trash::num_trash_cat];

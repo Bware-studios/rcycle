@@ -19,6 +19,7 @@ public:
     static bool debug_draw_physics;
     static bool debug_draw_alfa;
     static bool debug_draw_background;
+    static bool debug_draw_outside;
     
     
     

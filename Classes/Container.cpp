@@ -47,11 +47,11 @@ bool Container::init(int p_trash_category)
 //    this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
     
     const char *img_name = NULL;
-    if (p_trash_category==Trash::CAT_PAPEL) {
+    if (p_trash_category==Trash::CAT_PLASTICO) {
         img_name="Contenedores/Contenedor0001.png";
-    } else if (p_trash_category==Trash::CAT_ORGANICO) {
+    } else if (p_trash_category==Trash::CAT_PAPEL) {
         img_name="Contenedores/Contenedor0002.png";
-    } else if (p_trash_category==Trash::CAT_PLASTICO) {
+    } else if (p_trash_category==Trash::CAT_ORGANICO) {
         img_name="Contenedores/Contenedor0003.png";
     } else if (p_trash_category==Trash::CAT_CRISTAL) {
         img_name="Contenedores/Contenedor0004.png";
