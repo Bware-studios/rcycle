@@ -13,6 +13,6 @@
 bool Options::debug_draw_physics = false;
 bool Options::debug_draw_alfa = false;
 bool Options::debug_draw_background = true;
-bool Options::debug_draw_outside = true;
+bool Options::debug_draw_outside = false;
 
 
