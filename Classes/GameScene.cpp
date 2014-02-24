@@ -288,15 +288,26 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
     if (destroys1) {
         // here s1 is not a sensor and sother is a sensor
         Trash *atrash=dynamic_cast<Trash*>(s1->getBody()->getNode());
-        Container *acontainer=dynamic_cast<Container*>(sother->getBody()->getNode());
-        LOG_COLLISION("s vs no s %p %p",acontainer,atrash);
-        if (atrash && acontainer) {
-            acontainer->destroy(atrash);
-            LOG_COLLISION("destroy %p",atrash);
-            gameLayer->removeChild(atrash);
-            add_random_trash();
-        }
+        Container *acontainer;
+        WorldFrame *aborder;
         
+        if (atrash) {
+            acontainer=dynamic_cast<Container*>(sother->getBody()->getNode());
+            if (acontainer) {
+                acontainer->destroy(atrash);
+                LOG_COLLISION("destroy in container %p",atrash);
+                gameLayer->removeChild(atrash);
+                add_random_trash();
+            } else {
+                aborder=dynamic_cast<WorldFrame*>(sother->getBody()->getNode());
+                if (aborder) {
+                    aborder->destroy(atrash);
+                    LOG_COLLISION("destroy in border %p",atrash);
+                    gameLayer->removeChild(atrash);
+                    add_random_trash();
+                }
+            }
+        }
     }
     LOG_COLLISION("");
     

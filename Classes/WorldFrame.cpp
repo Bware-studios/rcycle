@@ -12,8 +12,8 @@
 USING_NS_CC;
 
 const int height = 5000;
-const int semiwidth = 300;
-const int offset = 10;
+const int semiwidth = 400;
+const int offset = 150;
 
 bool WorldFrame::init()
 {
@@ -69,3 +69,10 @@ void WorldFrame::add_to_layer(cocos2d::Layer *alayer)
 {
     alayer->addChild(this,0);
 }
+
+void WorldFrame::destroy(Trash *atrash)
+{
+    Game::thegame->trash_out(atrash->trash_category);
+}
+
+

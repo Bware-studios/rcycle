@@ -11,7 +11,9 @@
 
 #include "Common.h"
 
+#include "Game.h"
 #include "GameObject.h"
+#include "Trash.h"
 
 
 class WorldFrame : public GameObject
@@ -21,7 +23,7 @@ public:
     CREATE_FUNC(WorldFrame);
 
     void add_to_layer(cocos2d::Layer *alayer);
-    
+    void destroy(Trash *atrash);
     
 };
 
