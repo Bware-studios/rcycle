@@ -58,6 +58,9 @@ public:
     void touch_ended(cocos2d::Touch *t,cocos2d::Event *e);
     void touch_cancelled(cocos2d::Touch *t,cocos2d::Event *e);
     
+    // queryrect callback for touch search
+    bool found_object(cocos2d::PhysicsWorld&world ,cocos2d::PhysicsShape& shape,void *data);
+    
     // counter manipulation
     void set_recycled(int category, int value);
     void set_failed(int category, int value);

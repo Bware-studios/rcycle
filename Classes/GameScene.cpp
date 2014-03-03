@@ -341,21 +341,26 @@ bool GameScene::touch_began(Touch *t,Event *e)
 //    touch_pos=t->getLocation();
     touch_pos=this->convertTouchToNodeSpace(t);
     PhysicsShape *selectedshape;
-    selectedshape=getPhysicsWorld()->getShape(touch_pos);
-    if (selectedshape) {
-        touch_sprite=dynamic_cast<GameObject *>(selectedshape->getBody()->getNode());
-        LOG_UI("is_dragable: %s",touch_sprite->is_dragable?"yes":"no");
-        
-//        touch_sprite->getPhysicsBody()->setDynamic(false);
-        if (touch_sprite->is_dragable) {
-            touch_cursorsprite->setPosition(touch_pos);
-            touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
-            getPhysicsWorld()->addJoint(touch_joint);
-            touch_sprite->getPhysicsBody()->setRotationEnable(false);
-        } else {
-            touch_sprite=NULL;
-        }
-    }
+//    selectedshape=getPhysicsWorld()->getShape(touch_pos);
+    PhysicsRectQueryCallbackFunc f;
+    f=std::bind(&GameScene::found_object,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3);
+    
+    getPhysicsWorld()->queryRect(f,Rect(touch_pos.x-10,touch_pos.y-10,20,20), NULL);
+
+//    if (selectedshape) {
+//        touch_sprite=dynamic_cast<GameObject *>(selectedshape->getBody()->getNode());
+//        LOG_UI("is_dragable: %s",touch_sprite->is_dragable?"yes":"no");
+//        
+////        touch_sprite->getPhysicsBody()->setDynamic(false);
+//        if (touch_sprite->is_dragable) {
+//            touch_cursorsprite->setPosition(touch_pos);
+//            touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
+//            getPhysicsWorld()->addJoint(touch_joint);
+//            touch_sprite->getPhysicsBody()->setRotationEnable(false);
+//        } else {
+//            touch_sprite=NULL;
+//        }
+//    }
     
     return true;
 }
@@ -395,6 +400,14 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
     }
     touch_sprite=NULL;
     touch_joint=NULL;
+}
+
+
+bool GameScene::found_object(cocos2d::PhysicsWorld& world ,cocos2d::PhysicsShape& shape,void *data)
+{
+    printf("found_object\n");
+
+    return true;
 }
 
 
