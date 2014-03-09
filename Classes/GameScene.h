@@ -66,6 +66,7 @@ public:
     void set_failed(int category, int value);
     
     void time_passes();
+    void update(float deltat);
     void draw();
 
     void action_pause(cocos2d::Object *o,cocos2d::extension::Control::EventType e);
@@ -91,8 +92,7 @@ public:
     cocos2d::Sprite *touch_cursorsprite;
     cocos2d::PhysicsBody *touch_cursorbody;
     
-    cocos2d::Sprite *s1;
-    cocos2d::Sprite *score1;
+    cocos2d::LabelTTF *score1;
 
     cocos2d::LabelTTF *score_1;
     cocos2d::LabelTTF *score_2;
@@ -101,6 +101,7 @@ public:
 
     cocos2d::Menu *pause_menu;
     
+    float gameTime=0.0;
     
 };
 

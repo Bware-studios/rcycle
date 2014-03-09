@@ -202,9 +202,15 @@ bool GameScene::init() {
     etouch->onTouchCancelled=CC_CALLBACK_2(GameScene::touch_cancelled,this);
     edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
     
+    
+    
+    
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
 
+    score1->setString("0");
+    
+    
     if (Options::debug_draw_outside) this->setScale(0.5);
     
     return true;
@@ -251,8 +257,8 @@ Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, cons
 bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
 {
     LOG_CCB("variable [%s]",pMemberVariableName);
-//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "s1", Sprite *, this->s1);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Sprite *, this->score1);
+
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", LabelTTF *, this->score1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", LabelTTF *, this->score_1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", LabelTTF *, this->score_2);
@@ -446,6 +452,13 @@ void GameScene::set_failed(int category, int value)
 void GameScene::time_passes()
 {
    // game_end();
+}
+
+void GameScene::update(float deltat)
+{
+    gameTime+=deltat;
+    score1->setString(std::to_string(gameTime));
+    Scene::update(deltat);
 }
 
 
