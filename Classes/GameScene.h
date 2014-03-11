@@ -102,7 +102,7 @@ public:
     cocos2d::Menu *pause_menu;
     
     float gameTime=0.0;
-    
+    float gameEndTime;
 };
 
 

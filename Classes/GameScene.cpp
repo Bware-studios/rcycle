@@ -209,7 +209,7 @@ bool GameScene::init() {
 
 
     score1->setString("0");
-    
+    gameEndTime=30.0;
     
     if (Options::debug_draw_outside) this->setScale(0.5);
     
@@ -457,7 +457,14 @@ void GameScene::time_passes()
 void GameScene::update(float deltat)
 {
     gameTime+=deltat;
-    score1->setString(std::to_string(gameTime));
+    int secondsLeftToEnd=(int)(gameEndTime-gameTime);
+    if (secondsLeftToEnd<0) secondsLeftToEnd=0;
+    if (secondsLeftToEnd!=(int)(gameEndTime-gameTime+deltat)) {
+        score1->setString(std::to_string(secondsLeftToEnd));
+    }
+    if (gameTime>gameEndTime) {
+        game_end();
+    }
     Scene::update(deltat);
 }
 
