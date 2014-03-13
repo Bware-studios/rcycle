@@ -430,6 +430,16 @@ bool GameScene::touch_began_found_object(cocos2d::PhysicsWorld& world ,cocos2d::
 }
 
 
+void GameScene::add_trash(int trash_type,int trash_category, Point &position)
+{
+    Trash *ts1;
+    ts1=Trash::create(trash_type, trash_category);
+    ts1->setPosition(position);
+    ts1->add_to_layer(gameLayer);
+}
+
+
+
 void GameScene::set_recycled(int category, int value)
 {
     LabelTTF *thelabel;
@@ -445,7 +455,7 @@ void GameScene::set_recycled(int category, int value)
 
 void GameScene::set_failed(int category, int value)
 {
-    
+ 
 }
 
 

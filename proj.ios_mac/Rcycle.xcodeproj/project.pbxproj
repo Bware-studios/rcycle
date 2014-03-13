@@ -78,6 +78,8 @@
 		9728F14A189871D300EFB819 /* WorldFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9728F147189871D300EFB819 /* WorldFrame.cpp */; };
 		973E7142185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
 		973E7143185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
+		977A4A6118D115D100C7634C /* TrashGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A4A5F18D115D100C7634C /* TrashGenerator.cpp */; };
+		977A4A6218D115D100C7634C /* TrashGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A4A5F18D115D100C7634C /* TrashGenerator.cpp */; };
 		979B1E3518A699E60012A88F /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979B1E3318A699E60012A88F /* Options.cpp */; };
 		979B1E3D18A6DC090012A88F /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979B1E3318A699E60012A88F /* Options.cpp */; };
 		979B1E4018A6DE6A0012A88F /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979B1E3E18A6DE6A0012A88F /* Log.cpp */; };
@@ -333,6 +335,8 @@
 		9728F148189871D300EFB819 /* WorldFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldFrame.h; path = ../Classes/WorldFrame.h; sourceTree = "<group>"; };
 		973E7140185533E6004623A2 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = ../Classes/GameObject.cpp; sourceTree = "<group>"; };
 		973E7141185533E6004623A2 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = ../Classes/GameObject.h; sourceTree = "<group>"; };
+		977A4A5F18D115D100C7634C /* TrashGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TrashGenerator.cpp; path = ../Classes/TrashGenerator.cpp; sourceTree = "<group>"; };
+		977A4A6018D115D100C7634C /* TrashGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrashGenerator.h; path = ../Classes/TrashGenerator.h; sourceTree = "<group>"; };
 		979B1E3318A699E60012A88F /* Options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Options.cpp; path = ../Classes/Options.cpp; sourceTree = "<group>"; };
 		979B1E3418A699E60012A88F /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Options.h; path = ../Classes/Options.h; sourceTree = "<group>"; };
 		979B1E3C18A69C580012A88F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = ../Classes/Common.h; sourceTree = "<group>"; };
@@ -452,6 +456,8 @@
 				979B1E3418A699E60012A88F /* Options.h */,
 				97B7A20618AADF8000D154F7 /* Game.cpp */,
 				97B7A20718AADF8000D154F7 /* Game.h */,
+				977A4A5F18D115D100C7634C /* TrashGenerator.cpp */,
+				977A4A6018D115D100C7634C /* TrashGenerator.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -832,6 +838,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				9720F5DB1841479F0091CB08 /* LoadingScene.cpp in Sources */,
 				9720F5D51841479F0091CB08 /* GameScene.cpp in Sources */,
+				977A4A6118D115D100C7634C /* TrashGenerator.cpp in Sources */,
 				9720F5E31841479F0091CB08 /* SceneLoadManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977A4A6218D115D100C7634C /* TrashGenerator.cpp in Sources */,
 				97C9509A1856887D003283FF /* Trash.cpp in Sources */,
 				9720F5E41841479F0091CB08 /* SceneLoadManager.cpp in Sources */,
 				979B1E3D18A6DC090012A88F /* Options.cpp in Sources */,
