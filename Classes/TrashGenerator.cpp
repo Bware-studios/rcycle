@@ -28,3 +28,21 @@ void TrashGenerator::stop()
     
     
 }
+
+
+
+TrashGenerator* TrashGenerator::create(GameScene thescene)
+{
+    Container *pRet = new Container();
+    if (pRet && pRet->init(p_trash_category))
+    {
+        pRet->autorelease();
+        return pRet;
+    }
+    else
+    {
+        delete pRet;
+        pRet = NULL;
+        return NULL;
+    }
+}
