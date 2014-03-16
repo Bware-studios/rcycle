@@ -16,11 +16,14 @@
 class TrashGenerator : public cocos2d::Object
 {
 public:
-    bool init();
-    CREATE_FUNC(TrashGenerator);
-    
+    bool initWithScene(GameScene *pScene);
+    static TrashGenerator* createWithScene(GameScene *pScene);
+
     void start();
     void stop();
+    void generateRandomTrash();
+    
+    GameScene *theScene;
     
 };
 

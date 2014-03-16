@@ -9,9 +9,10 @@
 #include "TrashGenerator.h"
 
 
-bool TrashGenerator::init()
+bool TrashGenerator::initWithScene(GameScene *pScene)
 {
-
+    theScene = pScene;
+    
     return true;
 }
 
@@ -30,19 +31,24 @@ void TrashGenerator::stop()
 }
 
 
-
-TrashGenerator* TrashGenerator::create(GameScene thescene)
+void TrashGenerator::generateRandomTrash()
 {
-    Container *pRet = new Container();
-    if (pRet && pRet->init(p_trash_category))
-    {
-        pRet->autorelease();
-        return pRet;
-    }
-    else
-    {
-        delete pRet;
-        pRet = NULL;
+    Trash *tr;
+    tr = Trash::create(0, 0);
+    
+}
+
+
+
+TrashGenerator* TrashGenerator::createWithScene(GameScene *pScene)
+{
+    TrashGenerator *gen = new TrashGenerator();
+    if (gen && gen->initWithScene(pScene)) {
+        gen->autorelease();
+        return gen;
+    } else {
+        delete gen;
+        gen=NULL;
         return NULL;
     }
 }
