@@ -136,10 +136,13 @@ void Container::add_to_layer(cocos2d::Layer *alayer)
 
 void Container::destroy(Trash *atrash)
 {
+    LOG_COLLISION("trash destroyed [c %d t %d]",atrash->trash_category,atrash->trash_type);
     if ( trash_category == atrash->trash_category ) {
+        LOG_COLLISION("container MATCH");
         Game::thegame->trash_recycled(trash_category);
     } else {
-        Game::thegame->trash_recycled(atrash->trash_category);
+        LOG_COLLISION("container FAILED");
+        Game::thegame->trash_failed(atrash->trash_category);
     }
 }
 

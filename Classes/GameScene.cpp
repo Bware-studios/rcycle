@@ -123,39 +123,39 @@ bool GameScene::init() {
     wf->add_to_layer(gameLayer);
     
     
-    Trash *ts1;
-    ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(150,210));
-    ts1->add_to_layer(gameLayer);
-
-    ts1=Trash::create(0, 2);
-    ts1->setPosition(Point(200,200));
-    ts1->add_to_layer(gameLayer);
-
-    ts1=Trash::create(0, 1);
-    ts1->setPosition(Point(260,250));
-    ts1->add_to_layer(gameLayer);
-
-    ts1=Trash::create(0, 0);
-    ts1->setPosition(Point(280,240));
-    ts1->add_to_layer(gameLayer);
-
-    ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(320,200));
-    ts1->add_to_layer(gameLayer);
-
-
-    ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(260,250));
-    ts1->add_to_layer(gameLayer);
-
-    ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(280,240));
-    ts1->add_to_layer(gameLayer);
-
-    ts1=Trash::create(0, 3);
-    ts1->setPosition(Point(320,200));
-    ts1->add_to_layer(gameLayer);
+//    Trash *ts1;
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(150,210));
+//    ts1->add_to_layer(gameLayer);
+//
+//    ts1=Trash::create(0, 2);
+//    ts1->setPosition(Point(200,200));
+//    ts1->add_to_layer(gameLayer);
+//
+//    ts1=Trash::create(0, 1);
+//    ts1->setPosition(Point(260,250));
+//    ts1->add_to_layer(gameLayer);
+//
+//    ts1=Trash::create(0, 0);
+//    ts1->setPosition(Point(280,240));
+//    ts1->add_to_layer(gameLayer);
+//
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(320,200));
+//    ts1->add_to_layer(gameLayer);
+//
+//
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(260,250));
+//    ts1->add_to_layer(gameLayer);
+//
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(280,240));
+//    ts1->add_to_layer(gameLayer);
+//
+//    ts1=Trash::create(0, 3);
+//    ts1->setPosition(Point(320,200));
+//    ts1->add_to_layer(gameLayer);
     
     
     Container *c1;
@@ -203,6 +203,8 @@ bool GameScene::init() {
     edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
     
     
+    generator= TrashGenerator::createWithScene(<#FameScene *pScene#>)
+    generator=TrashGenerator::createWithScene(this);
     
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
@@ -303,14 +305,14 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
                 acontainer->destroy(atrash);
                 LOG_COLLISION("destroy in container %p",atrash);
                 gameLayer->removeChild(atrash);
-                add_random_trash();
+                //add_random_trash();
             } else {
                 aborder=dynamic_cast<WorldFrame*>(sother->getBody()->getNode());
                 if (aborder) {
                     aborder->destroy(atrash);
                     LOG_COLLISION("destroy in border %p",atrash);
                     gameLayer->removeChild(atrash);
-                    add_random_trash();
+                    //add_random_trash();
                 }
             }
         }
@@ -515,16 +517,16 @@ void GameScene::game_end()
     Director::getInstance()->replaceScene(newscene);
 }
 
-void GameScene::add_random_trash()
-{
-    Trash *ts1;
-    int r1,r2;
-    r1=rand()%2;
-    r2=rand()%4;
-    ts1=Trash::create(r1, r2);
-    ts1->setPosition(Point(rand()%480,rand()%100+300));
-    ts1->add_to_layer(gameLayer);
-}
+//void GameScene::add_random_trash()
+//{
+//    Trash *ts1;
+//    int r1,r2;
+//    r1=rand()%2;
+//    r2=rand()%4;
+//    ts1=Trash::create(r1, r2);
+//    ts1->setPosition(Point(rand()%480,rand()%100+300));
+//    ts1->add_to_layer(gameLayer);
+//}
 
 
 

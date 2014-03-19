@@ -22,6 +22,8 @@
 #include "Container.h"
 #include "WorldFrame.h"
 
+#include "TrashGenerator.h"
+
 
 //extern const bool debug_draw_physics;
 //extern const bool debug_draw_alfa;
@@ -86,6 +88,8 @@ public:
     cocos2d::Layer *backLayer;
     cocos2d::Layer *gameLayer;
     cocos2d::Layer *frontLayer;
+    
+    TrashGenerator *generator;
     
     
     bool touch_down;
