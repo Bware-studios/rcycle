@@ -203,9 +203,8 @@ bool GameScene::init() {
     edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
     
     
-    generator= TrashGenerator::createWithScene(<#FameScene *pScene#>)
     generator=TrashGenerator::createWithScene(this);
-    
+    generator->start();
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 

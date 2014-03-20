@@ -28,6 +28,8 @@
 //extern const bool debug_draw_physics;
 //extern const bool debug_draw_alfa;
 
+class TrashGenerator;
+
 
 class GameScene : public cocos2d::Scene,
 public cocosbuilder::CCBSelectorResolver,

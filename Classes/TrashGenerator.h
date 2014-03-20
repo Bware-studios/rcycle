@@ -13,6 +13,8 @@
 #include "Trash.h"
 #include "GameScene.h"
 
+class GameScene;
+
 class TrashGenerator : public cocos2d::Object
 {
 public:
