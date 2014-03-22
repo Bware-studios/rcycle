@@ -23,6 +23,7 @@ public:
 
     void start();
     void stop();
+    void time_passes();
     void generateRandomTrash();
     
     GameScene *theScene;

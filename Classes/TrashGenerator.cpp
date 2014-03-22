@@ -8,6 +8,8 @@
 
 #include "TrashGenerator.h"
 
+USING_NS_CC;
+
 
 bool TrashGenerator::initWithScene(GameScene *pScene)
 {
@@ -20,8 +22,7 @@ bool TrashGenerator::initWithScene(GameScene *pScene)
 
 void TrashGenerator::start()
 {
-    
-    
+    time_passes();
 }
 
 void TrashGenerator::stop()
@@ -30,12 +31,24 @@ void TrashGenerator::stop()
     
 }
 
+void TrashGenerator::time_passes()
+{
+    std::cout<<"tick\n";
+    generateRandomTrash();
+    theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
+}
 
 void TrashGenerator::generateRandomTrash()
 {
-    Trash *tr;
-    tr = Trash::create(0, 0);
-    
+    int r1,r2;
+    float x,y;
+    r1=rand()%2;
+    r2=rand()%4;
+    x=rand()%480;
+    y=rand()%100+300;
+    Point p(x,y);
+    LOG_TRASHGEN("generated t:%d c:%d at (%.2f,%.2f)",r1,r2,x,y);
+    theScene->add_trash(r1, r2, p);
 }
 
 

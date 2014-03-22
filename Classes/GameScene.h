@@ -83,7 +83,7 @@ public:
     
     void game_end();
     
-    void add_random_trash();
+    //void add_random_trash();
     
     
     

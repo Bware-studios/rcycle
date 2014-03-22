@@ -22,6 +22,7 @@ void Log_msg(const char *type,const char *msg, ... );
 #define DEBUG_LOG_CCB true
 #define DEBUG_LOG_UI false
 #define DEBUG_LOG_COLLISION false
+#define DEBUG_LOG_TRASHGEN true
 
 
 #if ( DEBUG_LOG && DEBUG_LOG_GENERAL )
@@ -48,6 +49,11 @@ void Log_msg(const char *type,const char *msg, ... );
 #define LOG_COLLISION(...)
 #endif
 
+#if ( DEBUG_LOG && DEBUG_LOG_TRASHGEN )
+#define LOG_TRASHGEN(...) Log_msg("[TGN]",__VA_ARGS__)
+#else
+#define LOG_TRASHGEN(...)
+#endif
 
 
 #endif /* defined(__rcycle__Log__) */
