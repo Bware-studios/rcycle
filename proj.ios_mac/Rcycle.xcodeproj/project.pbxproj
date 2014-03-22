@@ -90,8 +90,8 @@
 		97B7A20918AADF8000D154F7 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B7A20618AADF8000D154F7 /* Game.cpp */; };
 		97C950991856887D003283FF /* Trash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C950971856887D003283FF /* Trash.cpp */; };
 		97C9509A1856887D003283FF /* Trash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C950971856887D003283FF /* Trash.cpp */; };
-		97F258E7188C601800809975 /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97F258E6188C601800809975 /* publish-ios */; };
-		97F258E8188C601800809975 /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97F258E6188C601800809975 /* publish-ios */; };
+		97EA91F418DE1F1500F8A857 /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 97EA91F318DE1F1500F8A857 /* Published-iOS */; };
+		97EA91F518DE1F1500F8A857 /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 97EA91F318DE1F1500F8A857 /* Published-iOS */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -348,7 +348,7 @@
 		97B7A20718AADF8000D154F7 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
 		97C950971856887D003283FF /* Trash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Trash.cpp; path = ../Classes/Trash.cpp; sourceTree = "<group>"; };
 		97C950981856887D003283FF /* Trash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trash.h; path = ../Classes/Trash.h; sourceTree = "<group>"; };
-		97F258E6188C601800809975 /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
+		97EA91F318DE1F1500F8A857 /* Published-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Published-iOS"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/sb_rcycle/rcycle.spritebuilder/Source/Resources/Published-iOS"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -578,7 +578,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				97F258E6188C601800809975 /* publish-ios */,
+				97EA91F318DE1F1500F8A857 /* Published-iOS */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -647,7 +647,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -796,8 +796,8 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				97EA91F418DE1F1500F8A857 /* Published-iOS in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
-				97F258E7188C601800809975 /* publish-ios in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,8 +808,8 @@
 			files = (
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				97EA91F518DE1F1500F8A857 /* Published-iOS in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
-				97F258E8188C601800809975 /* publish-ios in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1123,7 +1123,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
