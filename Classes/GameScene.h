@@ -37,6 +37,8 @@ public cocosbuilder::CCBMemberVariableAssigner
 //public cocosbuilder::CCBAnimationManagerDelegate
 {
 public:
+    ~GameScene();
+    
     bool init();
     static GameScene *create();
     
@@ -66,7 +68,7 @@ public:
     bool touch_began_found_object(cocos2d::PhysicsWorld&world ,cocos2d::PhysicsShape& shape,void *data);
     
     // add trhashes interface
-    void add_trash(int trash_type,int trash_category, cocos2d::Point &position);
+    void add_trash(int trash_type,int trash_category, cocos2d::Point &position, cocos2d::Vect &v);
     
     // counter manipulation
     void set_recycled(int category, int value);

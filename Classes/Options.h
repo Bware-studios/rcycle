@@ -20,8 +20,11 @@ public:
     static bool debug_draw_alfa;
     static bool debug_draw_background;
     static bool debug_draw_outside;
+
     
-    
+    // physics parameters
+    static float physics_g;
+    static bool physics_intertrash_collision;
     
 };
 

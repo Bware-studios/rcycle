@@ -24,8 +24,13 @@ public:
     void start();
     void stop();
     void time_passes();
+    int randomCategory();
+    int randomType(int category);
+    cocos2d::Point randomThrowingTarget(cocos2d::Point &start);
+    cocos2d::Point randomThrowingStart();
     void generateRandomTrash();
-    
+    bool calculateVelocityToTarget(cocos2d::Vect &v,const cocos2d::Point &start,const float htop,const cocos2d::Point &target);
+
     GameScene *theScene;
     
 };

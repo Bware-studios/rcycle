@@ -37,9 +37,13 @@ bool Trash::init(int p_trash_type, int p_trash_category)
     PhysicsBody *body=PhysicsBody::createCircle(24);
 
     body->setCategoryBitmask(cat_trash);
-    body->setContactTestBitmask(cat_wall|cat_trash|cat_sensor);
-    body->setCollisionBitmask(cat_wall|cat_trash);
-
+    if (Options::physics_intertrash_collision) {
+        body->setCollisionBitmask(cat_wall|cat_trash);
+        body->setContactTestBitmask(cat_wall|cat_trash|cat_sensor);
+    } else {
+        body->setCollisionBitmask(cat_wall);
+        body->setContactTestBitmask(cat_wall|cat_sensor);
+    }
     this->setPhysicsBody(body);
 
     this->is_dragable=true;

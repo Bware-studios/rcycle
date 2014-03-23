@@ -21,6 +21,11 @@ using namespace cocosbuilder;
 
 GameScene *GameScene::thegamescene=NULL;
 
+GameScene::~GameScene()
+{
+    generator->release();
+}
+
 
 bool GameScene::init() {
     GameScene::thegamescene = this;
@@ -31,12 +36,13 @@ bool GameScene::init() {
 
     backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
     gameLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
-
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
     
     
     PhysicsWorld *world;
     world=this->getPhysicsWorld();
+    world->setGravity(Point(0,-Options::physics_g));
+
     if (Options::debug_draw_physics) world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
 //    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
@@ -46,7 +52,6 @@ bool GameScene::init() {
     //world->addBody(borde);
     
     LOG("debug draw: %u",this->getPhysicsWorld()->getDebugDrawMask());
-    //this->getPhysicsWorld()->setGravity(Point(0,-10));
     
     
 //    auto sf=SpriteFrame::create("s1.png",Rect(0,0,64,64));
@@ -204,6 +209,7 @@ bool GameScene::init() {
     
     
     generator=TrashGenerator::createWithScene(this);
+    generator->retain();
     generator->start();
     
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
@@ -431,11 +437,12 @@ bool GameScene::touch_began_found_object(cocos2d::PhysicsWorld& world ,cocos2d::
 }
 
 
-void GameScene::add_trash(int trash_type,int trash_category, Point &position)
+void GameScene::add_trash(int trash_type,int trash_category, Point &position, Vect &v)
 {
     Trash *ts1;
     ts1=Trash::create(trash_type, trash_category);
     ts1->setPosition(position);
+    ts1->getPhysicsBody()->setVelocity(v);
     ts1->add_to_layer(gameLayer);
 }
 
