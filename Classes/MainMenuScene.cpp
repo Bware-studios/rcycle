@@ -25,6 +25,9 @@ bool MainMenuScene::init() {
         quit_button->setVisible(false);
     }
     
+    sound_play_music(menu_theme_name);
+
+    
     return true;
 }
 

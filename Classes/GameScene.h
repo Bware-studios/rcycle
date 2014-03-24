@@ -24,6 +24,8 @@
 
 #include "TrashGenerator.h"
 
+#include "Audio.h"
+
 
 //extern const bool debug_draw_physics;
 //extern const bool debug_draw_alfa;

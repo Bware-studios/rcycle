@@ -216,9 +216,11 @@ bool GameScene::init() {
 
 
     score1->setString("0");
-    gameEndTime=30.0;
+    gameEndTime=40.0;
     
     if (Options::debug_draw_outside) this->setScale(0.5);
+    
+    sound_play_music(game_theme_name);
     
     return true;
 }
@@ -311,6 +313,7 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
                 LOG_COLLISION("destroy in container %p",atrash);
                 gameLayer->removeChild(atrash);
                 //add_random_trash();
+                sound_play_effect(sound_botella1);
             } else {
                 aborder=dynamic_cast<WorldFrame*>(sother->getBody()->getNode());
                 if (aborder) {

@@ -17,6 +17,7 @@
 #include "SceneLoadManager.h"
 #include "MainMenuScene.h"
 
+#include "Audio.h"
 
 class LoadingScene : public MenuScene
 //public cocosbuilder::CCBAnimationManagerDelegate
