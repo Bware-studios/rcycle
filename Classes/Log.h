@@ -23,6 +23,8 @@ void Log_msg(const char *type,const char *msg, ... );
 #define DEBUG_LOG_UI false
 #define DEBUG_LOG_COLLISION false
 #define DEBUG_LOG_TRASHGEN true
+#define DEBUG_LOG_RESOLUTION true
+
 
 
 #if ( DEBUG_LOG && DEBUG_LOG_GENERAL )
@@ -54,6 +56,13 @@ void Log_msg(const char *type,const char *msg, ... );
 #else
 #define LOG_TRASHGEN(...)
 #endif
+
+#if ( DEBUG_LOG && DEBUG_LOG_RESOLUTION )
+#define LOG_RESOLUTION(...) Log_msg("[RES]",__VA_ARGS__)
+#else
+#define LOG_RESOLUTION(...)
+#endif
+
 
 
 #endif /* defined(__rcycle__Log__) */

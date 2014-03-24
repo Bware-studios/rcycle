@@ -42,20 +42,24 @@ bool AppDelegate::applicationDidFinishLaunching() {
         FileUtils::getInstance()->setSearchPaths(searchPaths);
         if (screenSize.height > 768)
         {
+            LOG_RESOLUTION("ipad hd");
             resourceSize = Size(2048, 1536);
             resDirOrders.push_back("resources-ipadhd");
         }
         else if (screenSize.height > 640)
         {
+            LOG_RESOLUTION("ipad");
             resourceSize = Size(1536, 768);
             resDirOrders.push_back("resources-ipad");
         }else if (screenSize.height > 480)
         {
+            LOG_RESOLUTION("iphone hd");
             resourceSize = Size(960, 640);
             resDirOrders.push_back("resources-iphonehd");
         }
         else
         {
+            LOG_RESOLUTION("iphone");
             resDirOrders.push_back("resources-iphone");
         }
 
