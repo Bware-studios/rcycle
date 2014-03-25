@@ -60,6 +60,8 @@ def do_build(cocos_root, ndk_root, app_android_root):
 def copy_files(src, dst):
 
     for item in os.listdir(src):
+        if item[0:4]=='Icon':
+            continue 
         path = os.path.join(src, item)
         # Android can not package the file that ends with ".gz"
         if not item.startswith('.') and not item.endswith('.gz') and os.path.isfile(path):

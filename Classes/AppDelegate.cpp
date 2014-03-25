@@ -68,16 +68,19 @@ bool AppDelegate::applicationDidFinishLaunching() {
     } else if (platform == Application::Platform::OS_ANDROID) {
         if (screenSize.height > 960)
         {
+            LOG_RESOLUTION("android resources-large");
             resourceSize = Size(960, 640);
             resDirOrders.push_back("resources-large");
         }
         else if (screenSize.height > 480)
         {
+            LOG_RESOLUTION("android resources-medium");
             resourceSize = Size(720, 480);
             resDirOrders.push_back("resources-medium");
         }
         else
         {
+            LOG_RESOLUTION("android resources-small");
             resourceSize = Size(568, 320);
             resDirOrders.push_back("resources-small");
         }
@@ -85,6 +88,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         FileUtils::getInstance()->setSearchResolutionsOrder(resDirOrders);
         
     } else {
+        LOG_RESOLUTION("cannot determine plataform resolution");
         LOG("Warning platform not supported");
     }
     

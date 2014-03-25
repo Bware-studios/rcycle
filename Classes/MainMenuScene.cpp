@@ -22,7 +22,7 @@ bool MainMenuScene::init() {
          platform == Application::Platform::OS_IPHONE
        // || platform == Application::Platform::OS_MAC
         ) {
-        quit_button->setVisible(false);
+        //quit_button->setVisible(false);
     }
     
     sound_play_music(menu_theme_name);
