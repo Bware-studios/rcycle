@@ -12,13 +12,13 @@
 using namespace CocosDenshion;
 
 
-const char *game_theme_name="resources_audio/Music/Main_theme.mp3";
-const char *menu_theme_name="resources_audio/Music/rc_menu.mp3";
+const char *game_theme_name="Music/Main_theme.mp3";
+const char *menu_theme_name="Music/rc_menu.mp3";
 
 
-const char *sound_botella1="resources_audio/Sounds/Botella01.wav";
-const char *sound_botella2="resources_audio/Sounds/Botella02.wav";
-const char *sound_botella3="resources_audio/Sounds/Botella03.wav";
+const char *sound_botella1="Sounds/Botella01.wav";
+const char *sound_botella2="Sounds/Botella02.wav";
+const char *sound_botella3="Sounds/Botella03.wav";
 
 const char *sound_slowmotionsong_name="chariots.mp3";
 

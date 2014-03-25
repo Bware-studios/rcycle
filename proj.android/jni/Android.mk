@@ -7,6 +7,7 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
+                   ../../Classes/Log.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/CreditsScene.cpp \
                    ../../Classes/FameScene.cpp \
@@ -17,10 +18,12 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/SceneLoadManager.cpp \
                    ../../Classes/GameObject.cpp \
                    ../../Classes/Trash.cpp \
-                   ../../Classes/WorldFrame.cpp \
                    ../../Classes/Container.cpp \
+                   ../../Classes/WorldFrame.cpp \
                    ../../Classes/Options.cpp \
-                   ../../Classes/Log.cpp \
+                   ../../Classes/Game.cpp \
+                   ../../Classes/TrashGenerator.cpp \
+                   ../../Classes/Audio.cpp \
                    
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes

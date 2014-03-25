@@ -78,6 +78,10 @@
 		9728F14A189871D300EFB819 /* WorldFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9728F147189871D300EFB819 /* WorldFrame.cpp */; };
 		973E7142185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
 		973E7143185533E6004623A2 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 973E7140185533E6004623A2 /* GameObject.cpp */; };
+		9778AED918E1680300C84278 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 9778AED718E1680300C84278 /* Music */; };
+		9778AEDA18E1680300C84278 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 9778AED718E1680300C84278 /* Music */; };
+		9778AEDB18E1680300C84278 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 9778AED818E1680300C84278 /* Sounds */; };
+		9778AEDC18E1680300C84278 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 9778AED818E1680300C84278 /* Sounds */; };
 		977A4A6118D115D100C7634C /* TrashGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A4A5F18D115D100C7634C /* TrashGenerator.cpp */; };
 		977A4A6218D115D100C7634C /* TrashGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A4A5F18D115D100C7634C /* TrashGenerator.cpp */; };
 		979B1E3518A699E60012A88F /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979B1E3318A699E60012A88F /* Options.cpp */; };
@@ -90,8 +94,6 @@
 		97B7A20918AADF8000D154F7 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B7A20618AADF8000D154F7 /* Game.cpp */; };
 		97BEC70A18E00CBD006A0066 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97BEC70818E00CBD006A0066 /* Audio.cpp */; };
 		97BEC70B18E00CBD006A0066 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97BEC70818E00CBD006A0066 /* Audio.cpp */; };
-		97BEC71318E00DA7006A0066 /* resources_audio in Resources */ = {isa = PBXBuildFile; fileRef = 97BEC71218E00DA7006A0066 /* resources_audio */; };
-		97BEC71418E00DA7006A0066 /* resources_audio in Resources */ = {isa = PBXBuildFile; fileRef = 97BEC71218E00DA7006A0066 /* resources_audio */; };
 		97C950991856887D003283FF /* Trash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C950971856887D003283FF /* Trash.cpp */; };
 		97C9509A1856887D003283FF /* Trash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97C950971856887D003283FF /* Trash.cpp */; };
 		97F258E7188C601800809975 /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97F258E6188C601800809975 /* publish-ios */; };
@@ -339,6 +341,8 @@
 		9728F148189871D300EFB819 /* WorldFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldFrame.h; path = ../Classes/WorldFrame.h; sourceTree = "<group>"; };
 		973E7140185533E6004623A2 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = ../Classes/GameObject.cpp; sourceTree = "<group>"; };
 		973E7141185533E6004623A2 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = ../Classes/GameObject.h; sourceTree = "<group>"; };
+		9778AED718E1680300C84278 /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Music; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Music"; sourceTree = "<group>"; };
+		9778AED818E1680300C84278 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Sounds"; sourceTree = "<group>"; };
 		977A4A5F18D115D100C7634C /* TrashGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TrashGenerator.cpp; path = ../Classes/TrashGenerator.cpp; sourceTree = "<group>"; };
 		977A4A6018D115D100C7634C /* TrashGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrashGenerator.h; path = ../Classes/TrashGenerator.h; sourceTree = "<group>"; };
 		979B1E3318A699E60012A88F /* Options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Options.cpp; path = ../Classes/Options.cpp; sourceTree = "<group>"; };
@@ -352,7 +356,6 @@
 		97B7A20718AADF8000D154F7 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
 		97BEC70818E00CBD006A0066 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Audio.cpp; path = ../Classes/Audio.cpp; sourceTree = "<group>"; };
 		97BEC70918E00CBD006A0066 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Audio.h; path = ../Classes/Audio.h; sourceTree = "<group>"; };
-		97BEC71218E00DA7006A0066 /* resources_audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = resources_audio; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio"; sourceTree = "<group>"; };
 		97C950971856887D003283FF /* Trash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Trash.cpp; path = ../Classes/Trash.cpp; sourceTree = "<group>"; };
 		97C950981856887D003283FF /* Trash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trash.h; path = ../Classes/Trash.h; sourceTree = "<group>"; };
 		97F258E6188C601800809975 /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
@@ -587,7 +590,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				97BEC71218E00DA7006A0066 /* resources_audio */,
+				9778AED718E1680300C84278 /* Music */,
+				9778AED818E1680300C84278 /* Sounds */,
 				97F258E6188C601800809975 /* publish-ios */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -789,9 +793,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9778AED918E1680300C84278 /* Music in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				9778AEDB18E1680300C84278 /* Sounds in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
@@ -802,7 +808,6 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
-				97BEC71318E00DA7006A0066 /* resources_audio in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
@@ -817,12 +822,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9778AEDA18E1680300C84278 /* Music in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
-				97BEC71418E00DA7006A0066 /* resources_audio in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				97F258E8188C601800809975 /* publish-ios in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
+				9778AEDC18E1680300C84278 /* Sounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

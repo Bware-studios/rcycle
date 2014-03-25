@@ -86,6 +86,11 @@ def copy_resources(app_android_root):
     if os.path.isdir(resources_dir):
         print('copying cocsbuilder files')
         copy_files(resources_dir, assets_dir)
+    resources_dir = os.path.abspath("/Users/mikel/Google Drive/bware/rcycler/resources_audio")
+    print('rd: '+resources_dir)
+    if os.path.isdir(resources_dir):
+        print('copying audio files')
+        copy_files(resources_dir, assets_dir)
 
 
 

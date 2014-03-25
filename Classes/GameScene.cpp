@@ -454,13 +454,16 @@ void GameScene::add_trash(int trash_type,int trash_category, Point &position, Ve
 void GameScene::set_recycled(int category, int value)
 {
     LabelTTF *thelabel;
+    char labelstring[10];
     if (category==Trash::CAT_ORGANICO) thelabel=score_1;
     if (category==Trash::CAT_PAPEL) thelabel=score_2;
     if (category==Trash::CAT_PLASTICO) thelabel=score_3;
     if (category==Trash::CAT_CRISTAL) thelabel=score_4;
 
-    thelabel->setString(std::to_string(value));
-
+    sprintf(labelstring, "%d",value);
+    // para evitar problemas de añadir stl en la compilacion de android
+    //    thelabel->setString(std::to_string(value));
+    thelabel->setString(labelstring);
 }
 
 
@@ -481,7 +484,12 @@ void GameScene::update(float deltat)
     int secondsLeftToEnd=(int)(gameEndTime-gameTime);
     if (secondsLeftToEnd<0) secondsLeftToEnd=0;
     if (secondsLeftToEnd!=(int)(gameEndTime-gameTime+deltat)) {
-        score1->setString(std::to_string(secondsLeftToEnd));
+        char labelstring[10];
+        sprintf(labelstring, "%d",secondsLeftToEnd);
+        // para evitar problemas de añadir stl en la compilacion de android
+        //    score1->setString(std::to_string(secondsLeftToEnd));
+        score1->setString(labelstring);
+
     }
     if (gameTime>gameEndTime) {
         game_end();
