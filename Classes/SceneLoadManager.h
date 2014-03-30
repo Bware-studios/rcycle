@@ -22,6 +22,7 @@ public:
     SceneLoadManager();
     ~SceneLoadManager();
     static SceneLoadManager *getInstance();
+    static cocosbuilder::CCBAnimationManager *getAnimationManager();
     
     cocos2d::Layer *layerFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
     

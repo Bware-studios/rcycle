@@ -41,6 +41,10 @@ SceneLoadManager *SceneLoadManager::getInstance()
     return theInstance;
 }
 
+CCBAnimationManager *SceneLoadManager::getAnimationManager()
+{
+    return SceneLoadManager::getInstance()->ccbReader->getAnimationManager();
+}
 
 Layer *SceneLoadManager::layerFromFile(const char *pFileName,CCBSelectorResolver *pOwner)
 {

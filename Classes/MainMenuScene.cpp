@@ -25,6 +25,7 @@ bool MainMenuScene::init() {
         //quit_button->setVisible(false);
     }
     
+    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("a2");
     sound_play_music(menu_theme_name);
 
     
