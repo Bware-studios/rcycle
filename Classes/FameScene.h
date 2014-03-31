@@ -25,7 +25,7 @@ public:
     bool init();
     CREATE_FUNC(FameScene);
     
-    void back(Object *pSender);
+    void back(cocos2d::Object *pSender);
     
 };
 

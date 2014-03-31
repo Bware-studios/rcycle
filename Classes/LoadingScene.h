@@ -26,7 +26,7 @@ public:
     bool init();
     CREATE_FUNC(LoadingScene);
     
-    bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
+    bool onAssignCCBMemberVariable(cocos2d::Object* target, const char* memberVariableName, Node* node);
 
     
     void time_passes();

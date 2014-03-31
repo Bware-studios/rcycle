@@ -24,8 +24,8 @@ public:
     bool init();
     CREATE_FUNC(OptionsScene);
     
-    void enter(Object *pSender);
-    void back(Object *pSender);
+    void enter(cocos2d::Object *pSender);
+    void back(cocos2d::Object *pSender);
     
 };
 

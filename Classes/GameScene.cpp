@@ -191,10 +191,10 @@ bool GameScene::init() {
     
     
     EventListenerPhysicsContact *e = EventListenerPhysicsContact::create();
-    e->onContactBegin=CC_CALLBACK_2(GameScene::contact_begin,this);
-    e->onContactPreSolve=CC_CALLBACK_3(GameScene::contact_presolve,this);
-    e->onContactPostSolve=CC_CALLBACK_3(GameScene::contact_postsolve,this);
-    e->onContactSeperate=CC_CALLBACK_2(GameScene::contact_separate,this);
+    e->onContactBegin=CC_CALLBACK_1(GameScene::contact_begin,this);
+    e->onContactPreSolve=CC_CALLBACK_2(GameScene::contact_presolve,this);
+    e->onContactPostSolve=CC_CALLBACK_2(GameScene::contact_postsolve,this);
+    e->onContactSeperate=CC_CALLBACK_1(GameScene::contact_separate,this);
     
     
     EventDispatcher *edispatcher = this->getEventDispatcher();
@@ -278,7 +278,7 @@ bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVa
 }
 
 
-bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
+bool GameScene::contact_begin(const PhysicsContact& contact)
 {
     LOG_COLLISION("contact...");
     PhysicsShape *s1 = contact.getShapeA();
@@ -330,19 +330,19 @@ bool GameScene::contact_begin(EventCustom* event, const PhysicsContact& contact)
     return true;
 }
 
-bool GameScene::contact_presolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPreSolve& solve)
+bool GameScene::contact_presolve(const PhysicsContact& contact,const PhysicsContactPreSolve& solve)
 {
 //    LOG("pre solve...");
     return true;
 }
 
-void GameScene::contact_postsolve(EventCustom* event, const PhysicsContact& contact,const PhysicsContactPostSolve& solve)
+void GameScene::contact_postsolve(const PhysicsContact& contact,const PhysicsContactPostSolve& solve)
 {
 //    LOG("post solve...");
 }
 
 
-void GameScene::contact_separate(EventCustom* event, const PhysicsContact& contact)
+void GameScene::contact_separate(const PhysicsContact& contact)
 {
     LOG_COLLISION("separate... [%d]",5);
  //   Log_msg("COL", "separate %d o",5);
@@ -498,16 +498,16 @@ void GameScene::update(float deltat)
 }
 
 
-void GameScene::draw()
-{
-//    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
-//    DrawPrimitives::drawRect(Point(20,20),Point(300,40));
-    if (touch_down) {
-        DrawPrimitives::setDrawColor4F(0.0, 1.0, 0, 1.0);
-        DrawPrimitives::drawLine(Point(0,touch_pos.y), Point(480,touch_pos.y));
-        DrawPrimitives::drawLine(Point(touch_pos.x,0), Point(touch_pos.x,320));
-    }
-}
+//void GameScene::draw()
+//{
+////    DrawPrimitives::setDrawColor4F(1.0, 0, 0, 1.0);
+////    DrawPrimitives::drawRect(Point(20,20),Point(300,40));
+//    if (touch_down) {
+//        DrawPrimitives::setDrawColor4F(0.0, 1.0, 0, 1.0);
+//        DrawPrimitives::drawLine(Point(0,touch_pos.y), Point(480,touch_pos.y));
+//        DrawPrimitives::drawLine(Point(touch_pos.x,0), Point(touch_pos.x,320));
+//    }
+//}
 
 void GameScene::action_pause(Object *o,Control::EventType e)
 {

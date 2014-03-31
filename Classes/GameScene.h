@@ -47,18 +47,18 @@ public:
     static GameScene *thegamescene;
 
     // SelectorResolver
-    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName);
-    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName);
-    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName);
+    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Object * pTarget, const char* pSelectorName);
+    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Object * pTarget, const char* pSelectorName);
+    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Object * pTarget, const char* pSelectorName);
 
     // VariableAsigner
-    virtual bool onAssignCCBMemberVariable(Object* target, const char* memberVariableName, Node* node);
+    virtual bool onAssignCCBMemberVariable(cocos2d::Object* target, const char* memberVariableName, Node* node);
 
     // contactlistener
-    bool contact_begin(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact);
-    bool contact_presolve(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPreSolve& solve);
-    void contact_postsolve(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPostSolve& solve);
-    void contact_separate(cocos2d::EventCustom* event, const cocos2d::PhysicsContact& contact);
+    bool contact_begin(const cocos2d::PhysicsContact& contact);
+    bool contact_presolve(const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPreSolve& solve);
+    void contact_postsolve(const cocos2d::PhysicsContact& contact,const cocos2d::PhysicsContactPostSolve& solve);
+    void contact_separate(const cocos2d::PhysicsContact& contact);
     
     // touchlistener
     bool touch_began(cocos2d::Touch *t,cocos2d::Event *e);
@@ -78,7 +78,7 @@ public:
     
     void time_passes();
     void update(float deltat);
-    void draw();
+//    void draw();
 
     void action_pause(cocos2d::Object *o,cocos2d::extension::Control::EventType e);
     void action_resume(cocos2d::Object *o);
