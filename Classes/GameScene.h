@@ -47,12 +47,12 @@ public:
     static GameScene *thegamescene;
 
     // SelectorResolver
-    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Object * pTarget, const char* pSelectorName);
-    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Object * pTarget, const char* pSelectorName);
-    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Object * pTarget, const char* pSelectorName);
+    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
+    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
+    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
 
     // VariableAsigner
-    virtual bool onAssignCCBMemberVariable(cocos2d::Object* target, const char* memberVariableName, Node* node);
+    virtual bool onAssignCCBMemberVariable(cocos2d::Ref* target, const char* memberVariableName, Node* node);
 
     // contactlistener
     bool contact_begin(const cocos2d::PhysicsContact& contact);
@@ -80,9 +80,9 @@ public:
     void update(float deltat);
 //    void draw();
 
-    void action_pause(cocos2d::Object *o,cocos2d::extension::Control::EventType e);
-    void action_resume(cocos2d::Object *o);
-    void action_quit(cocos2d::Object *o);
+    void action_pause(cocos2d::Ref *o,cocos2d::extension::Control::EventType e);
+    void action_resume(cocos2d::Ref *o);
+    void action_quit(cocos2d::Ref *o);
 
     
     void game_end();
@@ -105,12 +105,12 @@ public:
     cocos2d::Sprite *touch_cursorsprite;
     cocos2d::PhysicsBody *touch_cursorbody;
     
-    cocos2d::LabelTTF *score1;
+    cocos2d::Label *score1;
 
-    cocos2d::LabelTTF *score_1;
-    cocos2d::LabelTTF *score_2;
-    cocos2d::LabelTTF *score_3;
-    cocos2d::LabelTTF *score_4;
+    cocos2d::Label *score_1;
+    cocos2d::Label *score_2;
+    cocos2d::Label *score_3;
+    cocos2d::Label *score_4;
 
     cocos2d::Menu *pause_menu;
     

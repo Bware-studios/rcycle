@@ -1,0 +1,12 @@
+da6879bf621f7318afec8caf07ca4a9b a9377ab6cf30608cff17035426c9ea48 ffffffffffffffffffffffffffffffff 102 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app
+00000000533a53e70000000000000498 1da9cb7c29f53aebaac5da2df32494fc ffffffffffffffffffffffffffffffff 8 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/PkgInfo
+00000000533a53e70000000000000498 1da9cb7c29f53aebaac5da2df32494fc ffffffffffffffffffffffffffffffff 1544 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Info.plist
+e610e1e1f2145ca2afe36cf8bde8c6bb 40857c983d6dd3df4e0d8292669c74ee ffffffffffffffffffffffffffffffff 7982396 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/MacOS/rcycle Mac
+00000000533a53e70000000000021e19 edd7b3529a949dbc4838342fc151335e ffffffffffffffffffffffffffffffff 138777 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/HelloWorld.png
+00000000533a53e7000000000000157b c1267b8b41d9316bf2cebbfe6765cdcc ffffffffffffffffffffffffffffffff 5499 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseSelected.png
+00000000533a53e700000000000aee1e 1026765cc4bc597d9c4de253d78c2195 ffffffffffffffffffffffffffffffff 716318 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/Icon.icns
+00000000533a53e700000000000018a7 402a5a43b29709cf68b90f47ad0eda12 ffffffffffffffffffffffffffffffff 6311 /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseNormal.png
+bcc64e7e2f8d8d8eeed0a9e6ba2f00c1 c595021e55152ec1527569e143a5f99f ffffffffffffffffffffffffffffffff 41096 /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/main.o
+bcc64e7e2f8d8d8eeed0a9e6ba2f0fe0 9d47a40310a981536162e258ec602ac7 ffffffffffffffffffffffffffffffff 1535760 /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+bcc64e7e2f8d8d8eeed0a9e6ba2f000a 0204098298257ebc72244ea7a58aec66 ffffffffffffffffffffffffffffffff 1100088 /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/AppDelegate.o
+0000000000241c07000000000000014c bcc64e7e7c93c26eeed0a9e6ba2f041e ffffffffffffffffffffffffffffffff 124300 /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch

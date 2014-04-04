@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/2d/TransformUtils.cpp \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/TransformUtils.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCGL.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCPlatformConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCAffineTransform.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCGeometry.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCPlatformDefine.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccMacros.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCConsole.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCStdC.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/kazmath.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/vec2.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/utility.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/vec3.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/mat3.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/mat4.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/quaternion.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/plane.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/aabb.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/ray2.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/ray3.h

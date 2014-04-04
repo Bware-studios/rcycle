@@ -20,7 +20,7 @@ public:
     static bool debug_draw_alfa;
     static bool debug_draw_background;
     static bool debug_draw_outside;
-
+    static float debug_draw_outside_scale;
     
     // physics parameters
     static float physics_g;

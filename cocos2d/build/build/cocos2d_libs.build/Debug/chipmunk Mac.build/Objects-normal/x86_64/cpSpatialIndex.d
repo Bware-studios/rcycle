@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/chipmunk_private.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/chipmunk.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/chipmunk_types.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpVect.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpBB.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpSpatialIndex.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpBody.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpShape.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpPolyShape.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpArbiter.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpConstraint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpPinJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk/cpSpace.h

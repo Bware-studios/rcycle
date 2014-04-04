@@ -23,13 +23,13 @@ bool OptionsScene::init() {
 
 
 
-void OptionsScene::enter(Object *pSender)
+void OptionsScene::enter(Ref *pSender)
 {
     LOG("option1");
 }
 
 
-void OptionsScene::back(Object *pSender)
+void OptionsScene::back(Ref *pSender)
 {
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);

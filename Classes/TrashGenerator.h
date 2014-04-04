@@ -15,7 +15,7 @@
 
 class GameScene;
 
-class TrashGenerator : public cocos2d::Object
+class TrashGenerator : public cocos2d::Ref
 {
 public:
     bool initWithScene(GameScene *pScene);

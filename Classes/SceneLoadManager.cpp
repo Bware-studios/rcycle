@@ -55,7 +55,7 @@ Layer *SceneLoadManager::layerFromFile(const char *pFileName,CCBSelectorResolver
     ccbReader = new CCBReader(loaderLibrary);
 
     
-    Object *owner=dynamic_cast<Object*>(pOwner);
+    Ref *owner=dynamic_cast<Ref*>(pOwner);
     return (Layer *)ccbReader->readNodeGraphFromFile(pFileName,owner);
 }
 
@@ -79,7 +79,7 @@ bool MenuScene::init(const char *ccb_filename)
     return true;
 }
 
-SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName)
+SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Ref * pTarget, const char* pSelectorName)
 {
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "enter", MenuScene::enter);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "back", MenuScene::back);
@@ -90,18 +90,18 @@ SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Object * pTarget, cons
     return NULL;
 }
 
-SEL_CallFuncN MenuScene::onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName)
+SEL_CallFuncN MenuScene::onResolveCCBCCCallFuncSelector(Ref * pTarget, const char* pSelectorName)
 {
     return NULL;
 }
 
-Control::Handler MenuScene::onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName)
+Control::Handler MenuScene::onResolveCCBCCControlSelector(Ref * pTarget, const char* pSelectorName)
 {
     return NULL;
 }
 
 
-bool MenuScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
+bool MenuScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVariableName, Node* pNode)
 {
     LOG_CCB("variable [%s]",pMemberVariableName);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "quit_button", MenuItem *, this->quit_button);
@@ -115,27 +115,27 @@ void MenuScene::completedAnimationSequenceNamed(const char *name)
 }
 
 
-void MenuScene::enter(Object *pSender)
+void MenuScene::enter(Ref *pSender)
 {
     LOG_CCB("Menu scene selector called: enter  Not overriden");
 }
 
-void MenuScene::back(Object *pSender)
+void MenuScene::back(Ref *pSender)
 {
     LOG_CCB("Menu scene selector called: back  Not overriden");
 }
 
-void MenuScene::info(Object *pSender)
+void MenuScene::info(Ref *pSender)
 {
     LOG_CCB("Menu scene selector called: info  Not overriden");
 }
 
-void MenuScene::options(Object *pSender)
+void MenuScene::options(Ref *pSender)
 {
     LOG_CCB("Menu scene selector called: options  Not overriden");
 }
 
-void MenuScene::fame(Object *pSender)
+void MenuScene::fame(Ref *pSender)
 {
     LOG_CCB("Menu scene selector called: fame  Not overriden");
 }

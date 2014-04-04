@@ -189,7 +189,7 @@ bool GameScene::init() {
     addChild(gameLayer,2);
     addChild(frontLayer,10);
     
-    
+
     EventListenerPhysicsContact *e = EventListenerPhysicsContact::create();
     e->onContactBegin=CC_CALLBACK_1(GameScene::contact_begin,this);
     e->onContactPreSolve=CC_CALLBACK_2(GameScene::contact_presolve,this);
@@ -207,6 +207,12 @@ bool GameScene::init() {
     etouch->onTouchCancelled=CC_CALLBACK_2(GameScene::touch_cancelled,this);
     edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
     
+
+    Trash *debugtrash;
+    debugtrash=Trash::create();
+    debugtrash->getPhysicsBody()->setDynamic(false);
+    debugtrash->setPosition(480,160);
+    debugtrash->add_to_layer(backLayer);
     
     generator=TrashGenerator::createWithScene(this);
     generator->retain();
@@ -218,7 +224,11 @@ bool GameScene::init() {
     score1->setString("0");
     gameEndTime=40.0;
     
-    if (Options::debug_draw_outside) this->setScale(0.5);
+    if (Options::debug_draw_outside) {
+        backLayer->setScale(Options::debug_draw_outside_scale);
+        gameLayer->setScale(Options::debug_draw_outside_scale);
+        frontLayer->setScale(Options::debug_draw_outside_scale);
+    }
     
     sound_play_music(game_theme_name);
     
@@ -244,35 +254,35 @@ GameScene *GameScene::create()
 
 
 
-SEL_MenuHandler GameScene::onResolveCCBCCMenuItemSelector(Object * pTarget, const char* pSelectorName)
+SEL_MenuHandler GameScene::onResolveCCBCCMenuItemSelector(Ref * pTarget, const char* pSelectorName)
 {
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_resume", GameScene::action_resume);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_quit", GameScene::action_quit);
     return NULL;
 }
 
-SEL_CallFuncN GameScene::onResolveCCBCCCallFuncSelector(Object * pTarget, const char* pSelectorName)
+SEL_CallFuncN GameScene::onResolveCCBCCCallFuncSelector(Ref * pTarget, const char* pSelectorName)
 {
     return NULL;
 }
 
-Control::Handler GameScene::onResolveCCBCCControlSelector(Object * pTarget, const char* pSelectorName)
+Control::Handler GameScene::onResolveCCBCCControlSelector(Ref * pTarget, const char* pSelectorName)
 {
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "pause_button", GameScene::action_pause);
     return NULL;
 }
 
 
-bool GameScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
+bool GameScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVariableName, Node* pNode)
 {
     LOG_CCB("variable [%s]",pMemberVariableName);
 
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", LabelTTF *, this->score1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Label *, this->score1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", LabelTTF *, this->score_1);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", LabelTTF *, this->score_2);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", LabelTTF *, this->score_3);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", LabelTTF *, this->score_4);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", Label *, this->score_1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", Label *, this->score_2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", Label *, this->score_3);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", Label *, this->score_4);
 
     return true;
 }
@@ -360,7 +370,7 @@ bool GameScene::touch_began(Touch *t,Event *e)
 //    PhysicsShape *selectedshape;
 //    selectedshape=getPhysicsWorld()->getShape(touch_pos);
 
-    PhysicsRectQueryCallbackFunc f;
+    PhysicsQueryRectCallbackFunc f;
     f=std::bind(&GameScene::touch_began_found_object,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3);
     
     getPhysicsWorld()->queryRect(f,Rect(touch_pos.x-10,touch_pos.y-10,20,20), NULL);
@@ -444,7 +454,7 @@ void GameScene::add_trash(int trash_type,int trash_category, Point &position, Ve
 {
     Trash *ts1;
     ts1=Trash::create(trash_type, trash_category);
-    ts1->setPosition(position);
+    ts1->setPosition(position.x,position.y);
     ts1->getPhysicsBody()->setVelocity(v);
     ts1->add_to_layer(gameLayer);
 }
@@ -453,7 +463,7 @@ void GameScene::add_trash(int trash_type,int trash_category, Point &position, Ve
 
 void GameScene::set_recycled(int category, int value)
 {
-    LabelTTF *thelabel;
+    Label *thelabel;
     char labelstring[10];
     if (category==Trash::CAT_ORGANICO) thelabel=score_1;
     if (category==Trash::CAT_PAPEL) thelabel=score_2;
@@ -509,21 +519,21 @@ void GameScene::update(float deltat)
 //    }
 //}
 
-void GameScene::action_pause(Object *o,Control::EventType e)
+void GameScene::action_pause(Ref *o,Control::EventType e)
 {
     LOG_UI("click pause...");
     pause_menu->setVisible(true);
     pause();
 }
 
-void GameScene::action_resume(Object *o)
+void GameScene::action_resume(Ref *o)
 {
     LOG_UI("click resume...");
     pause_menu->setVisible(false);
     resume();
 }
 
-void GameScene::action_quit(Object *o)
+void GameScene::action_quit(Ref *o)
 {
     game_end();
 }

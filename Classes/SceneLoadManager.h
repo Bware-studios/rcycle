@@ -77,21 +77,21 @@ public:
     bool init(const char *ccb_filename);
 
     // SelectorResolver
-    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Object * pTarget, const char* pSelectorName);
-    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Object * pTarget, const char* pSelectorName);
-    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Object * pTarget, const char* pSelectorName);
+    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
+    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
+    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
 
     // VariableAsigner
-    virtual bool onAssignCCBMemberVariable(cocos2d::Object* pTarget, const char* pMemberVariableName, Node* pNode);
+    virtual bool onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, Node* pNode);
 
     // AnimationDelegate
     virtual void completedAnimationSequenceNamed(const char *name);
     
-    virtual void enter(cocos2d::Object *pSender);
-    virtual void back(cocos2d::Object *pSender);
-    virtual void info(cocos2d::Object *pSender);
-    virtual void options(cocos2d::Object *pSender);
-    virtual void fame(cocos2d::Object *pSender);
+    virtual void enter(cocos2d::Ref *pSender);
+    virtual void back(cocos2d::Ref *pSender);
+    virtual void info(cocos2d::Ref *pSender);
+    virtual void options(cocos2d::Ref *pSender);
+    virtual void fame(cocos2d::Ref *pSender);
     
     cocos2d::MenuItem *quit_button;
     

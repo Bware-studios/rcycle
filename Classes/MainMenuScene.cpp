@@ -36,7 +36,7 @@ bool MainMenuScene::init() {
 
 
 
-void MainMenuScene::enter(Object *pSender)
+void MainMenuScene::enter(Ref *pSender)
 {
     LOG("juego");
     Game::create();
@@ -46,28 +46,28 @@ void MainMenuScene::enter(Object *pSender)
 
 
 
-void MainMenuScene::options(Object *pSender)
+void MainMenuScene::options(Ref *pSender)
 {
     auto newscene = OptionsScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
 
 
-void MainMenuScene::info(Object *pSender)
+void MainMenuScene::info(Ref *pSender)
 {
     auto newscene = CreditsScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
 
 
-void MainMenuScene::fame(Object *pSender)
+void MainMenuScene::fame(Ref *pSender)
 {
     auto newscene = FameScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
 
 
-void MainMenuScene::back(Object *pSender)
+void MainMenuScene::back(Ref *pSender)
 {
     Director::getInstance()->end();
 }

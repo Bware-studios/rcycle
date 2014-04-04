@@ -11,11 +11,12 @@
 
 
 bool Options::debug_draw_physics = true;
-bool Options::debug_draw_alfa = false;
-bool Options::debug_draw_background = true;
-bool Options::debug_draw_outside = false;
+bool Options::debug_draw_alfa = true;
+bool Options::debug_draw_background = false;
+bool Options::debug_draw_outside = true;
+float Options::debug_draw_outside_scale = 0.5;
 
 
 // g en pixeles/s^2
 float Options::physics_g = 100.0;
-bool Options::physics_intertrash_collision = false;
+bool Options::physics_intertrash_collision = true;

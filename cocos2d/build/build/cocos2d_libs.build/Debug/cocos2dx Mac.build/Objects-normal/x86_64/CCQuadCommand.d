@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCQuadCommand.cpp \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/renderer/CCQuadCommand.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommand.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCPlatformMacros.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCPlatformConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCPlatformDefine.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccTypes.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCGeometry.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccMacros.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCConsole.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCStdC.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCGL.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/matrix.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../mat4.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../utility.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../vec3.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/CCGLProgram.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/../base/CCRef.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/kazmath.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../vec2.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../mat3.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../quaternion.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../plane.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../aabb.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../ray2.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath/kazmath/GL/../ray3.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommandPool.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccGLStateCache.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../external/xxhash/xxhash.h

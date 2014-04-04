@@ -25,7 +25,7 @@ public:
     bool init();
     CREATE_FUNC(CreditsScene);
     
-    void back(cocos2d::Object *pSender);
+    void back(cocos2d::Ref *pSender);
     
 };
 

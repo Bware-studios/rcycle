@@ -16,9 +16,11 @@ AppDelegate::~AppDelegate()
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();
-    auto eglView = EGLView::getInstance();
-
-    director->setOpenGLView(eglView);
+    auto glview = director->getOpenGLView();
+    if(!glview) {
+        glview = GLView::create("My Game");
+        director->setOpenGLView(glview);
+    }
 	
     // turn on display FPS
     director->setDisplayStats(true);
@@ -30,7 +32,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //
     Size designSize = Size(480, 320);
     Size resourceSize = Size(480, 320);
-    Size screenSize = EGLView::getInstance()->getFrameSize();
+    Size screenSize = glview->getFrameSize();
     
     std::vector<std::string> searchPaths;
     std::vector<std::string> resDirOrders;
@@ -102,7 +104,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    director->setContentScaleFactor(resourceSize.width/designSize.width);
     director->setContentScaleFactor(resourceSize.height/designSize.height);
 
-    EGLView::getInstance()->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::SHOW_ALL);
+    glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::SHOW_ALL);
     
 
     // create a scene. it's an autorelease object

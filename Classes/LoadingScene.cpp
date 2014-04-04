@@ -28,10 +28,10 @@ bool LoadingScene::init() {
 }
 
 
-bool LoadingScene::onAssignCCBMemberVariable(Object* pTarget, const char* pMemberVariableName, Node* pNode)
+bool LoadingScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVariableName, Node* pNode)
 {
 
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "text1", LabelTTF *, this->text1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "text1", Label *, this->text1);
     
     return true;
 }

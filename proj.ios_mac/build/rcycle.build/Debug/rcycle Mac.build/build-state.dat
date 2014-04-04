@@ -1,0 +1,904 @@
+Trcycle Mac
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Info.plist /Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist
+cCpResource /Users/mikel/progs/rcycle/Resources/CloseNormal.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseNormal.png
+cCpResource mac/Icon.icns /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/Icon.icns
+cCpResource /Users/mikel/progs/rcycle/Resources/HelloWorld.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/HelloWorld.png
+cCpResource /Users/mikel/progs/rcycle/Resources/CloseSelected.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseSelected.png
+cProcessPCH++ /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.o /Users/mikel/progs/rcycle/Classes/AppDelegate.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o /Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.o /Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/MacOS/rcycle\ Mac normal x86_64
+cTouch /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c00000000531E4FE800000000000000AA
+t1394495464
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052706B87000000000000044C
+t1383099271
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531E4FE000000000000001DE
+t1394495456
+s478
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000531E4FE00000000000095820
+t1394495456
+s612384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+c00000000531E4FE00000000000268434
+t1394495456
+s2524212
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000531E4FE0000000000002848C
+t1394495456
+s165004
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000531E4FE0000000000008B334
+t1394495456
+s570164
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531E4FE000000000000C9E38
+t1394495456
+s826936
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+c00000000531E4FE0000000000004426C
+t1394495456
+s279148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c0000000052706B88000000000000A564
+t1383099272
+s42340
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+c00000000531E4FE0000000000000BB7C
+t1394495456
+s47996
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000531E4FE00000000000055BC0
+t1394495456
+s351168
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libcurl.dylib
+c00000000531E4FE1000000000000A4C8
+t1394495457
+s42184
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib
+c0000000052706B8900000000000044B8
+t1383099273
+s17592
+
+N/Users/mikel/progs/rcycle/Classes/AppDelegate.cpp
+c00000000533A53E70000000000000558
+t1396331495
+s1368
+
+N/Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp
+c00000000533A53E70000000000000AB2
+t1396331495
+s2738
+
+N/Users/mikel/progs/rcycle/Resources/CloseNormal.png
+c00000000533A53E700000000000018A7
+t1396331495
+s6311
+
+N/Users/mikel/progs/rcycle/Resources/CloseSelected.png
+c00000000533A53E7000000000000157B
+t1396331495
+s5499
+
+N/Users/mikel/progs/rcycle/Resources/HelloWorld.png
+c00000000533A53E70000000000021E19
+t1396331495
+s138777
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion Mac.a
+c00000000533B37DE000000000006BE88
+t1396389854
+s441992
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libbox2d Mac.a
+c00000000533B37A400000000001E5810
+t1396389796
+s1988624
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk Mac.a
+c00000000533B37A400000000000C4AE0
+t1396389796
+s805600
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libcocos2dx Mac.a
+c00000000533B37D7000000000CFD0248
+t1396389847
+s217907784
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libcocos2dx-extensions Mac.a
+c00000000533B37DD000000000149CB38
+t1396389853
+s21613368
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app
+t1396389854
+s102
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Info.plist
+t1396389854
+s1544
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/MacOS/rcycle Mac
+t1396389857
+s7982396
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/PkgInfo
+t1396389854
+s8
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseNormal.png
+t1396389854
+s6311
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseSelected.png
+t1396389854
+s5499
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/HelloWorld.png
+t1396389854
+s138777
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/Icon.icns
+t1396389854
+s716318
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/AppDelegate.o
+t1396389856
+s1100088
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+t1396389856
+s1535760
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/main.o
+t1396389856
+s41096
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/rcycle Mac.LinkFileList
+c00000000533B37DE000000000000015C
+t1396389854
+s348
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/mac/Icon.icns
+c00000000533A53E700000000000AEE1E
+t1396331495
+s716318
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist
+c00000000533A53E70000000000000498
+t1396331495
+s1176
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/mac/Prefix.pch
+c00000000533A53E70000000000000092
+t1396331495
+s146
+
+N/Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp
+c00000000533A53E70000000000000593
+t1396331495
+s1427
+
+N/var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch
+t1396389855
+s124300
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa087fa5e6febb841^22fdfa5e6febb841^---0#1#1#--18"Check dependencies36"45782142-6786-40DD-A606-79603DA5C1E6-
+
+CCompileC build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.o /Users/mikel/progs/rcycle/Classes/AppDelegate.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s418082655.010132
+e418082656.288489
+r1
+xCompileC
+xbuild/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/AppDelegate.o
+x/Users/mikel/progs/rcycle/Classes/AppDelegate.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/Classes/AppDelegate.cpp
+d/Users/mikel/progs/rcycle/Classes/AppDelegate.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/cocos2d.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAction.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCRef.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCPlatformDefine.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCGeometry.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCConsole.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCStdC.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCAffineTransform.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/kazmath.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/vec2.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/utility.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/vec3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/mat3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/mat4.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/quaternion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/plane.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/aabb.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/ray2.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/ray3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCArray.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccCArray.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCGL.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccGLStateCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGLProgram.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScriptSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCCommon.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEvent.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventKeyboard.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCSet.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProtocols.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccTypes.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTexture2D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventDispatcher.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListener.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCVector.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAnimation.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCValue.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionEase.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionTween.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCQuadCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/GL/matrix.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommandPool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDictionary.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/uthash.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCString.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCMap.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCInteger.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCFloat.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDouble.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCBool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCNS.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCData.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCCustomCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGrabber.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCConfiguration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDirector.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventType.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabel.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextureAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCBatchCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLayer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScene.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransition.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMenu.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCGroupCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSprite.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCImage.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCFrustum.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCMaterialManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderMaterial.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerCustom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventCustom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCDevice.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCFileUtils.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCSAXParser.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCThread.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCApplication.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCApplicationProtocol.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/desktop/CCGLView.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCGLViewProtocol.h
+d/Users/mikel/progs/rcycle/cocos2d/external/glfw3/include/mac/glfw3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCShaderCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccShaders.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccUTF8.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNotificationCenter.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProfiling.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCUserDefault.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCVertex.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCIMEDelegate.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCIMEDispatcher.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextureCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerKeyboard.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerMouse.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventMouse.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventAcceleration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerAcceleration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScheduler.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCComponent.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDeprecated.h
+d/Users/mikel/progs/rcycle/Classes/HelloWorldScene.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Compile /Users/mikel/progs/rcycle/Classes/AppDelegate.cpp215"[1mCompileC[0m build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.o [1m/Users/mikel/progs/rcycle/Classes/AppDelegate.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler41b8025f6febb841^8cda49606febb841^---0#0#1#-19%DVTDocumentLocation2@56"file:///Users/mikel/progs/rcycle/Classes/AppDelegate.cpp0000000000000000^3462"[1mCompileC[0m build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.o [1m/Users/mikel/progs/rcycle/Classes/AppDelegate.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/rcycle\ Mac.hmap -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/base -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/physics -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/math/kazmath -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/ui -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/network -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/extensions -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -include /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.dia -c /Users/mikel/progs/rcycle/Classes/AppDelegate.cpp -o /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/AppDelegate.o36"B26E8779-FCE6-4843-A00A-2B49133A5FA3-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CCompileC build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o /Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s418082655.010423
+e418082656.482312
+r1
+xCompileC
+xbuild/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+x/Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp
+d/Users/mikel/progs/rcycle/Classes/HelloWorldScene.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/cocos2d.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAction.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCRef.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCPlatformDefine.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCGeometry.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCConsole.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCStdC.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCAffineTransform.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/kazmath.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/vec2.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/utility.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/vec3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/mat3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/mat4.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/quaternion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/plane.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/aabb.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/ray2.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/ray3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCArray.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccCArray.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCGL.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccGLStateCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGLProgram.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScriptSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCCommon.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEvent.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventKeyboard.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCSet.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProtocols.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccTypes.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTexture2D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventDispatcher.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListener.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCVector.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAnimation.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCValue.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionEase.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionTween.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCQuadCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/GL/matrix.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommandPool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDictionary.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/uthash.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCString.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCMap.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCInteger.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCFloat.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDouble.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCBool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCNS.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCData.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCCustomCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGrabber.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCConfiguration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDirector.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventType.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabel.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextureAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCBatchCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLayer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScene.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransition.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMenu.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCGroupCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSprite.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCImage.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCFrustum.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCMaterialManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderMaterial.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerCustom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventCustom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCDevice.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCFileUtils.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCSAXParser.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCThread.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCApplication.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCApplicationProtocol.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/desktop/CCGLView.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCGLViewProtocol.h
+d/Users/mikel/progs/rcycle/cocos2d/external/glfw3/include/mac/glfw3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCShaderCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccShaders.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccUTF8.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNotificationCenter.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProfiling.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCUserDefault.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCVertex.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCIMEDelegate.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCIMEDispatcher.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextureCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerKeyboard.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerMouse.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventMouse.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventAcceleration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerAcceleration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScheduler.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCComponent.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp223"[1mCompileC[0m build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o [1m/Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler2ac9025f6febb841^ff787b606febb841^---0#0#1#-19%DVTDocumentLocation2@60"file:///Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp0000000000000000^3486"[1mCompileC[0m build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o [1m/Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/rcycle\ Mac.hmap -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/base -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/physics -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/math/kazmath -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/ui -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/network -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/extensions -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -include /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.d --serialize-diagnostics /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.dia -c /Users/mikel/progs/rcycle/Classes/HelloWorldScene.cpp -o /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/HelloWorldScene.o36"29A24EEA-02CF-4C5A-AF4C-B5AB93A07B9C-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CCompileC build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.o /Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s418082655.010732
+e418082656.124527
+r1
+xCompileC
+xbuild/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/main.o
+x/Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp
+d/Users/mikel/progs/rcycle/Classes/AppDelegate.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/cocos2d.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAction.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCRef.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCPlatformDefine.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCGeometry.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCConsole.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCStdC.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCAffineTransform.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/kazmath.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/vec2.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/utility.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/vec3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/mat3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/mat4.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/quaternion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/plane.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/aabb.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/ray2.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/ray3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCArray.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccCArray.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCGL.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccGLStateCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGLProgram.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScriptSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCCommon.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEvent.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventKeyboard.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCSet.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProtocols.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccTypes.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTexture2D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventDispatcher.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListener.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCVector.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAnimation.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCValue.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionEase.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionTween.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCQuadCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/math/kazmath/kazmath/GL/matrix.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderCommandPool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDictionary.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/uthash.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCString.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCMap.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCInteger.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCFloat.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCDouble.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCBool.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCNS.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCData.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCCustomCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGrabber.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCConfiguration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDirector.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventType.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLabel.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextureAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCBatchCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCLayer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScene.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransition.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMenu.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCGroupCommand.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSprite.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCImage.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCFrustum.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCMaterialManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderMaterial.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/renderer/CCRenderer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerCustom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventCustom.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCDevice.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCFileUtils.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCSAXParser.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCThread.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCApplication.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCApplicationProtocol.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/desktop/CCGLView.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCGLViewProtocol.h
+d/Users/mikel/progs/rcycle/cocos2d/external/glfw3/include/mac/glfw3.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCShaderCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccShaders.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccUTF8.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCNotificationCenter.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCProfiling.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCUserDefault.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCVertex.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCIMEDelegate.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCIMEDispatcher.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTextureCache.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerTouch.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerKeyboard.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerMouse.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventMouse.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventAcceleration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCEventListenerAcceleration.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCScheduler.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCComponent.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp171"[1mCompileC[0m build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.o [1mmac/main.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler62d7025f6febb841^b9e11f606febb841^---0#0#1#-19%DVTDocumentLocation2@58"file:///Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp0000000000000000^3399"[1mCompileC[0m build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.o [1mmac/main.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/rcycle\ Mac.hmap -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/base -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/physics -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/math/kazmath -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/ui -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/network -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/extensions -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -include /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.dia -c /Users/mikel/progs/rcycle/proj.ios_mac/mac/main.cpp -o /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/main.o36"F4B93137-32C3-47CD-AD7B-5C1E63A74BBF-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CCpResource /Users/mikel/progs/rcycle/Resources/CloseNormal.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseNormal.png
+s418082654.983404
+e418082654.984696
+r1
+xCpResource
+x/Users/mikel/progs/rcycle/Resources/CloseNormal.png
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseNormal.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseNormal.png169"[1mCpResource[0m /Users/mikel/progs/rcycle/Resources/CloseNormal.png [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseNormal.png[0m02d9fb5e6febb841^261efc5e6febb841^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/mikel/progs/rcycle/bin/debug/mac/rcycle%20Mac.app/Contents/Resources/CloseNormal.png00346c45deffdf42^455"[1mCpResource[0m /Users/mikel/progs/rcycle/Resources/CloseNormal.png [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseNormal.png[0m    cd /Users/mikel/progs/rcycle/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mikel/progs/rcycle/Resources/CloseNormal.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources36"6C87BD90-EDA4-40E8-8113-0CACBFE21A83-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CCpResource /Users/mikel/progs/rcycle/Resources/CloseSelected.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseSelected.png
+s418082654.983830
+e418082654.986130
+r1
+xCpResource
+x/Users/mikel/progs/rcycle/Resources/CloseSelected.png
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseSelected.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Copy /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/CloseSelected.png173"[1mCpResource[0m /Users/mikel/progs/rcycle/Resources/CloseSelected.png [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseSelected.png[0m7446fc5e6febb841^3673fc5e6febb841^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/mikel/progs/rcycle/bin/debug/mac/rcycle%20Mac.app/Contents/Resources/CloseSelected.png00346c45deffdf42^461"[1mCpResource[0m /Users/mikel/progs/rcycle/Resources/CloseSelected.png [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/CloseSelected.png[0m    cd /Users/mikel/progs/rcycle/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mikel/progs/rcycle/Resources/CloseSelected.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources36"9F0AB314-729A-477A-B57C-523CE33C2F19-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CCpResource /Users/mikel/progs/rcycle/Resources/HelloWorld.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/HelloWorld.png
+s418082654.983962
+e418082654.986698
+r1
+xCpResource
+x/Users/mikel/progs/rcycle/Resources/HelloWorld.png
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/HelloWorld.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Copy /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/HelloWorld.png167"[1mCpResource[0m /Users/mikel/progs/rcycle/Resources/HelloWorld.png [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/HelloWorld.png[0mbff3fb5e6febb841^7098fc5e6febb841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/mikel/progs/rcycle/bin/debug/mac/rcycle%20Mac.app/Contents/Resources/HelloWorld.png00346c45deffdf42^452"[1mCpResource[0m /Users/mikel/progs/rcycle/Resources/HelloWorld.png [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/HelloWorld.png[0m    cd /Users/mikel/progs/rcycle/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mikel/progs/rcycle/Resources/HelloWorld.png /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources36"8A6F8D32-FBEE-4C5B-A592-4B5028BA87B8-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CCpResource mac/Icon.icns /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/Icon.icns
+s418082654.983593
+e418082654.993157
+r1
+xCpResource
+xmac/Icon.icns
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/Icon.icns
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Resources/Icon.icns125"[1mCpResource[0m mac/Icon.icns [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/Icon.icns[0m87e1fb5e6febb841^6440fe5e6febb841^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/mikel/progs/rcycle/bin/debug/mac/rcycle%20Mac.app/Contents/Resources/Icon.icns00346c45deffdf42^412"[1mCpResource[0m mac/Icon.icns [1m/Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources/Icon.icns[0m    cd /Users/mikel/progs/rcycle/proj.ios_mac    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mikel/progs/rcycle/proj.ios_mac/mac/Icon.icns /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Resources36"5A4CA9C2-97AB-471C-B4CC-86EB759EE52C-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CLd /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/MacOS/rcycle\ Mac normal x86_64
+s418082656.483264
+e418082657.053089
+r1
+xLd
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/MacOS/rcycle Mac
+xnormal
+xx86_64
+d/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/rcycle Mac.LinkFileList
+d/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/AppDelegate.o
+d/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/HelloWorldScene.o
+d/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle Mac.build/Objects-normal/x86_64/main.o
+d/Users/mikel/progs/rcycle/bin/debug/mac/libbox2d Mac.a
+d/Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk Mac.a
+d/Users/mikel/progs/rcycle/bin/debug/mac/libcocos2dx Mac.a
+d/Users/mikel/progs/rcycle/bin/debug/mac/libcocos2dx-extensions Mac.a
+d/Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion Mac.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libcurl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.A.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/Versions/A/Frameworks/CoreImage.framework/Versions/A/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/Versions/A/Frameworks/ScalableUserInterface.framework/Versions/A/ScalableUserInterface
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AVFoundation.framework/Versions/A/Resources/libAVFAudio.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Link /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/MacOS/rcycle Mac107"[1mLd[0m /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/MacOS/rcycle\ Mac normal x86_6422c67b606febb841^a2970d616febb841^---0#0#1#--1443"[1mLd[0m /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/MacOS/rcycle\ Mac normal x86_64    cd /Users/mikel/progs/rcycle/proj.ios_mac    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/mikel/progs/rcycle/bin/debug/mac -F/Users/mikel/progs/rcycle/bin/debug/mac -filelist /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/rcycle\ Mac.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ /Users/mikel/progs/rcycle/bin/debug/mac/libbox2d\ Mac.a /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a /Users/mikel/progs/rcycle/bin/debug/mac/libcocos2dx\ Mac.a /Users/mikel/progs/rcycle/bin/debug/mac/libcocos2dx-extensions\ Mac.a /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a -lcurl -lz -framework IOKit -framework OpenGL -framework AppKit -framework Foundation -framework CoreGraphics -framework QuartzCore -framework OpenAL -framework AVFoundation -framework AudioToolbox -Xlinker -dependency_info -Xlinker /Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/Objects-normal/x86_64/rcycle\ Mac_dependency_info.dat -o /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/MacOS/rcycle\ Mac36"F6CBAC44-23F0-47A8-8249-3D5C037A9110-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CProcessInfoPlistFile /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Info.plist /Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist
+s418082654.981043
+e418082654.982982
+r1
+xProcessInfoPlistFile
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app/Contents/Info.plist
+x/Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Process /Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist127"[1mProcessInfoPlistFile[0m /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Info.plist [1mmac/Info.plist[0mc03dfb5e6febb841^09a5fb5e6febb841^---0#0#1#-19%DVTDocumentLocation2@60"file:///Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist0000000000000000^459"[1mProcessInfoPlistFile[0m /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Info.plist [1mmac/Info.plist[0m    cd /Users/mikel/progs/rcycle/proj.ios_mac    builtin-infoPlistUtility /Users/mikel/progs/rcycle/proj.ios_mac/mac/Info.plist -genpkginfo /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app/Contents/Info.plist36"C4C2D3FD-AFB1-4BAE-B650-A8B11D5218FF-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CProcessPCH++ /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.993931
+e418082655.009494
+r1
+xProcessPCH++
+x/var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch
+xmac/Prefix.pch
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/proj.ios_mac/mac/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile mac/Prefix.pch264"[1mProcessPCH++[0m /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler2c83fe5e6febb841^116e025f6febb841^---0#0#1#-19%DVTDocumentLocation2@60"file:///Users/mikel/progs/rcycle/proj.ios_mac/mac/Prefix.pch0000000000000000^3493"[1mProcessPCH++[0m /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch mac/Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/proj.ios_mac    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_MAC -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/rcycle\ Mac.hmap -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/base -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/physics -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/math/kazmath -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/ui -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/network -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/extensions -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/../cocos2d/external/glfw3/include/mac -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/proj.ios_mac/build/rcycle.build/Debug/rcycle\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac --serialize-diagnostics /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.d -c /Users/mikel/progs/rcycle/proj.ios_mac/mac/Prefix.pch -o /var/folders/hm/4z9r192j0mqck8s_03gmc79h0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/Prefix-dfkbcrndowhnlzcdkqmjbruubwfq/Prefix.pch.pch36"4058028B-BA2E-469B-A301-C6BCB2EDC4A6-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+
+CTouch /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app
+s418082657.053869
+e418082657.072924
+r1
+xTouch
+x/Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Touch /Users/mikel/progs/rcycle/bin/debug/mac/rcycle Mac.app69"[1mTouch[0m /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app74d40d616febb841^8aab12616febb841^---0#0#1#--194"[1mTouch[0m /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app    cd /Users/mikel/progs/rcycle/proj.ios_mac    /usr/bin/touch -c /Users/mikel/progs/rcycle/bin/debug/mac/rcycle\ Mac.app36"19D7968C-6C03-454A-B44F-8D93042F71ED-
+b55007D1B-6CA1-427A-B9CD-49114FB8D462
+

@@ -13,7 +13,7 @@
 #include "Trash.h"
 #include "GameScene.h"
 
-class Game : public cocos2d::Object
+class Game : public cocos2d::Ref
 {
 public:
     bool init();

@@ -20,7 +20,7 @@ bool CreditsScene::init() {
 }
 
 
-void CreditsScene::back(Object *pSender)
+void CreditsScene::back(Ref *pSender)
 {
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);

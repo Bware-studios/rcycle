@@ -1,0 +1,1435 @@
+Tchipmunk Mac
+v6
+r1
+cCheck dependencies
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c00000000531E4FE800000000000000AA
+t1394495464
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052706B87000000000000044C
+t1383099271
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531E4FE000000000000001DE
+t1394495456
+s478
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk Mac.a
+t2
+s0
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/chipmunk Mac.LinkFileList
+c00000000533B37A40000000000000E42
+t1396389796
+s3650
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/chipmunk.o
+t1396389796
+s38584
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpArbiter.o
+t1396389796
+s38788
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpArray.o
+t1396389796
+s5748
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpBB.o
+t1396389796
+s4288
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpBBTree.o
+t1396389796
+s47324
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpBody.o
+t1396389796
+s38000
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpCollision.o
+t1396389796
+s59844
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpConstraint.o
+t1396389796
+s13852
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o
+t1396389796
+s17744
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpDampedSpring.o
+t1396389796
+s26564
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpGearJoint.o
+t1396389796
+s19940
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpGrooveJoint.o
+t1396389796
+s33032
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpHashSet.o
+t1396389796
+s12552
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpPinJoint.o
+t1396389796
+s27964
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpPivotJoint.o
+t1396389796
+s29188
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpPolyShape.o
+t1396389796
+s40964
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpRatchetJoint.o
+t1396389796
+s19120
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o
+t1396389796
+s18864
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpShape.o
+t1396389796
+s44440
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSimpleMotor.o
+t1396389796
+s17804
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSlideJoint.o
+t1396389796
+s28496
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpace.o
+t1396389796
+s47640
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceComponent.o
+t1396389796
+s35664
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceHash.o
+t1396389796
+s31068
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceQuery.o
+t1396389796
+s30012
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceStep.o
+t1396389796
+s31792
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpatialIndex.o
+t1396389796
+s9588
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSweep1D.o
+t1396389796
+s17988
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpVect.o
+t1396389796
+s9168
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c
+c00000000533A53E600000000000025B8
+t1396331494
+s9656
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c
+c00000000525B1BBA0000000000000781
+t1381702586
+s1921
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c
+c00000000525B1BBA0000000000000ED5
+t1381702586
+s3797
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c
+c00000000525B1BBA0000000000000FC8
+t1381702586
+s4040
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c
+c00000000525B1BBA0000000000000DCF
+t1381702586
+s3535
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c
+c00000000525B1BBA000000000000134F
+t1381702586
+s4943
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c
+c00000000525B1BBA0000000000000F08
+t1381702586
+s3848
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c
+c00000000525B1BBA0000000000000E25
+t1381702586
+s3621
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c
+c00000000525B1BBA0000000000000ED0
+t1381702586
+s3792
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c
+c00000000533A53E60000000000000E2A
+t1396331494
+s3626
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c
+c00000000525B1BBA0000000000000B68
+t1381702586
+s2920
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c
+c00000000525B1BBA0000000000000F7A
+t1381702586
+s3962
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c
+c00000000525B1BBA0000000000002620
+t1381702586
+s9760
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c
+c00000000525B1BBA0000000000000AE2
+t1381702586
+s2786
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c
+c00000000525B1BBA00000000000005CF
+t1381702586
+s1487
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c
+c00000000533A53E60000000000005356
+t1396331494
+s21334
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c
+c00000000525B1BBA0000000000001EB0
+t1381702586
+s7856
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c
+c00000000533A53E60000000000005C14
+t1396331494
+s23572
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c
+c00000000525B1BBA000000000000165C
+t1381702586
+s5724
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c
+c00000000533A53E60000000000002355
+t1396331494
+s9045
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c
+c00000000533A53E60000000000002682
+t1396331494
+s9858
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c
+c00000000525B1BBA0000000000004530
+t1381702586
+s17712
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c
+c00000000525B1BBA0000000000002E80
+t1381702586
+s11904
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c
+c00000000533A53E60000000000003D6A
+t1396331494
+s15722
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c
+c00000000533A53E60000000000002504
+t1396331494
+s9476
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c
+c00000000533A53E600000000000035F2
+t1396331494
+s13810
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c
+c00000000525B1BBA000000000000097B
+t1381702586
+s2427
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c
+c00000000533A53E60000000000001977
+t1396331494
+s6519
+
+N/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c
+c00000000525B1BBA00000000000007D2
+t1381702586
+s2002
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies2a8f1a246febb841^0af71a246febb841^---0#1#1#--18"Check dependencies36"E461E1F3-8C47-49BE-A942-9F355D398CA3-
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.106711
+e418082596.206967
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/chipmunk.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_ffi.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c235"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler096f1b246febb841^f8fc34246febb841^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c0000000000000000^2392"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/chipmunk.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk.o36"A1A1F4FA-CC6C-470B-B1D5-B5BF114F2C67-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.309030
+e418082596.405571
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpArbiter.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c237"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler603c4f246febb841^d4d367246febb841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c0000000000000000^2398"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArbiter.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArbiter.o36"1FAC9A46-A121-4DB7-AB4C-15B8A1E62E85-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.316836
+e418082596.384273
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpArray.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c233"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilere23f51246febb841^cdab62246febb841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c0000000000000000^2386"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpArray.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpArray.o36"2FD13C28-13C8-42DB-8711-438D31384756-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.106010
+e418082596.169227
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpBB.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c227"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerf4311b246febb841^82532b246febb841^---0#0#1#-19%DVTDocumentLocation2@69"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c0000000000000000^2368"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBB.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBB.o36"7B64A21E-0B07-42E2-AE0C-DC901D284EA9-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.106398
+e418082596.211609
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpBBTree.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c235"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerb8561b246febb841^ba2c36246febb841^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c0000000000000000^2392"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBBTree.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBBTree.o36"217F6E1B-932B-42A7-B215-5F54D48D368A-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.106990
+e418082596.199255
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpBody.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c231"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler9e7b1b246febb841^4b0333246febb841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c0000000000000000^2380"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpBody.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpBody.o36"60596D0A-9BF6-46E2-9FA7-24C7FB5CCB0F-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.352093
+e418082596.466269
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpCollision.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+o[1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c:244:10: [0m[0;1;35mwarning: [0m[1mdeclaration shadows a
+o      local variable [-Wshadow][0m
+o                cpVect n = cpvmult(p, 1.0f/(d2 + CPFLOAT_MIN));
+o[0;1;32m                       ^
+o[0m[1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c:236:9: [0m[0;1;30mnote: [0mprevious declaration is
+o      here[0m
+o        cpVect n = cpvnormalize(cpvperp(delta));
+o[0;1;32m               ^
+o[0m1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c241"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerb43d5a246febb841^bc5d77246febb841^-515"[1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c:244:10: [0m[0;1;35mwarning: [0m[1mdeclaration shadows a      local variable [-Wshadow][0m                cpVect n = cpvmult(p, 1.0f/(d2 + CPFLOAT_MIN));[0;1;32m                       ^[0m[1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c:236:9: [0m[0;1;30mnote: [0mprevious declaration is      here[0m        cpVect n = cpvnormalize(cpvperp(delta));[0;1;32m               ^[0m1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@36"Declaration shadows a local variable-418082596#18446744073709551615#0#1(2@28"Previous declaration is here-418082596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@76"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c0000000000000000^235#8#235#8#6289#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@76"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c0000000000000000^243#9#243#9#6520#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@76"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c0000000000000000^2410"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpCollision.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpCollision.o36"71722F36-1C64-4BB8-9751-08BAA9EEF920-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.169606
+e418082596.239152
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpConstraint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c255"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler40852b246febb841^1d3a3d246febb841^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c0000000000000000^2440"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpConstraint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpConstraint.o36"9851C7B5-7C0E-43A5-8156-611F64E80526-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.379636
+e418082596.446039
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c271"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler384b61246febb841^6a2f72246febb841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c0000000000000000^2488"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedRotarySpring.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedRotarySpring.o36"56CC24C9-B74E-4E87-8213-FD9A76DEE48A-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.224643
+e418082596.308522
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpDampedSpring.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c259"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler139d39246febb841^b9fd4e246febb841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c0000000000000000^2452"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpDampedSpring.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpDampedSpring.o36"EA787F19-B1DB-434E-B1B5-0232ED84F781-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.322428
+e418082596.402623
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpGearJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c253"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler83a552246febb841^6a1367246febb841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c0000000000000000^2434"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGearJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGearJoint.o36"32D45928-2C31-42D8-BDBE-96F5D7B78A13-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.227721
+e418082596.321024
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpGrooveJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c257"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler446e3a246febb841^de3b52246febb841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c0000000000000000^2446"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpGrooveJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpGrooveJoint.o36"0A62D4C2-1D05-46B6-A175-DB84356A3EDC-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.308186
+e418082596.379260
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpHashSet.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/prime.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c237"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerff424f246febb841^055361246febb841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c0000000000000000^2398"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpHashSet.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpHashSet.o36"020913A7-9D23-440D-A6B5-27D95EF53B7F-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.209396
+e418082596.295182
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpPinJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c251"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler24b435246febb841^60c74b246febb841^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c0000000000000000^2428"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPinJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPinJoint.o36"DA650E4D-A1FA-4AB9-A266-D4C33A2919E6-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.106198
+e418082596.225437
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpPivotJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c255"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler304b1b246febb841^c4413a246febb841^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c0000000000000000^2440"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpPivotJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPivotJoint.o36"C4D594C5-9FA1-4A6D-8F58-9E96F34BC8F4-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.239445
+e418082596.351830
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpPolyShape.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_unsafe.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c241"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler282b3e246febb841^fc535a246febb841^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c0000000000000000^2410"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpPolyShape.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpPolyShape.o36"10A79FEB-6532-469D-9CBD-83E580971A17-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.373885
+e418082596.442784
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpRatchetJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c259"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler74d25f246febb841^7d5a71246febb841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c0000000000000000^2452"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRatchetJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRatchetJoint.o36"F2D59DE7-61A8-4126-8BB3-842D296EAE84-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.296719
+e418082596.371367
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c267"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerbb0f4c246febb841^f5125f246febb841^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c0000000000000000^2476"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpRotaryLimitJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpRotaryLimitJoint.o36"CEFE9713-3C16-481C-97A2-862140D20F40-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.105849
+e418082596.206188
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpShape.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_unsafe.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c233"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerbb271b246febb841^45d434246febb841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c0000000000000000^2386"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpShape.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpShape.o36"466BB7CE-7D0C-46F5-9234-587AA06026C6-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.107286
+e418082596.181305
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSimpleMotor.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c257"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler5e9d1b246febb841^53952e246febb841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c0000000000000000^2446"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSimpleMotor.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSimpleMotor.o36"64E73D37-4361-4297-8041-3B25F35B871E-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.295173
+e418082596.381342
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSlideJoint.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/util.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c255"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compileree604c246febb841^d39f61246febb841^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c0000000000000000^2440"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/constraints/cpSlideJoint.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSlideJoint.o36"F4DA1E81-6D65-4F3D-A6E5-FFF6F260DB39-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.361706
+e418082596.456591
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpace.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c233"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler4ab45c246febb841^47e374246febb841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c0000000000000000^2386"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpace.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpace.o36"D5C9AF3E-31D0-4EA6-AA52-479E01AC4201-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.181680
+e418082596.280121
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceComponent.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c251"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler397f2f246febb841^03b647246febb841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c0000000000000000^2440"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceComponent.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceComponent.o36"57E0B9F7-DCA8-4E89-85EB-63BBB4CD3187-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.206543
+e418082596.306757
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceHash.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/prime.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c241"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilera0f934246febb841^90874e246febb841^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c0000000000000000^2410"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceHash.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceHash.o36"5A2FEC78-D4D0-43BB-B71C-70892A2B39A9-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.105696
+e418082596.224385
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceQuery.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c243"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler791f1b246febb841^dd7a39246febb841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c0000000000000000^2416"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceQuery.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceQuery.o36"7E3DD2EE-D50F-482B-ACD5-7B540561DB76-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.225748
+e418082596.315575
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpaceStep.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c241"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler54e339246febb841^aad450246febb841^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c0000000000000000^2410"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpaceStep.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpaceStep.o36"EF87F92D-B038-4CD8-8DB8-72B3971C979B-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.382728
+e418082596.438097
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSpatialIndex.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c247"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler6e1362246febb841^522770246febb841^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c0000000000000000^2428"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSpatialIndex.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSpatialIndex.o36"FCEF6FF2-C1C7-4DE5-AE9B-B79A9894EAC3-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.211841
+e418082596.294919
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpSweep1D.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c237"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler335336246febb841^f17f4b246febb841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c0000000000000000^2398"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpSweep1D.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpSweep1D.o36"D0E6DF70-EE2C-42B3-8ABA-0B9A2D9346AB-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CCompileC build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.o /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418082596.280373
+e418082596.359416
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/chipmunk Mac.build/Objects-normal/x86_64/cpVect.o
+x/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_private.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/chipmunk_types.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpVect.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBB.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpatialIndex.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpBody.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpPolyShape.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpArbiter.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpConstraint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPinJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpGearJoint.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h
+d/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/include/chipmunk/cpSpace.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c231"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilere3df47246febb841^04035c246febb841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c0000000000000000^2380"[1mCompileC[0m build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.o [1m/Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wno-deprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/chipmunk\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.dia -c /Users/mikel/progs/rcycle/cocos2d/external/chipmunk/src/cpVect.c -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/cpVect.o36"3F203E15-CF7A-45F8-9FEB-5B6228E8BCD9-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+
+CLibtool /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a normal x86_64
+s418082596.467944
+e418082596.478145
+r1
+xLibtool
+x/Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk Mac.a
+xnormal
+xx86_64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"[1mLibtool[0m /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a normal x86_6488"[1mLibtool[0m /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a normal x86_6476dd77246febb841^d7677a246febb841^---0#0#1#--667"[1mLibtool[0m /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a normal x86_64    cd /Users/mikel/progs/rcycle/cocos2d/build    export MACOSX_DEPLOYMENT_TARGET=10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/mikel/progs/rcycle/bin/debug/mac -filelist /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/chipmunk\ Mac.build/Objects-normal/x86_64/chipmunk\ Mac.LinkFileList -o /Users/mikel/progs/rcycle/bin/debug/mac/libchipmunk\ Mac.a36"EB30088E-84AB-419D-A9E6-EC08B4965A8F-
+b3608BF2C-3157-44CB-90DC-69F3F38B7446
+

@@ -19,4 +19,3 @@ bool GameObject::init()
     
     return true;
 }
-

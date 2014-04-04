@@ -21,7 +21,7 @@ bool FameScene::init() {
 }
 
 
-void FameScene::back(Object *pSender)
+void FameScene::back(Ref *pSender)
 {
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);

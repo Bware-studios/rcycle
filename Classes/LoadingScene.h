@@ -26,7 +26,7 @@ public:
     bool init();
     CREATE_FUNC(LoadingScene);
     
-    bool onAssignCCBMemberVariable(cocos2d::Object* target, const char* memberVariableName, Node* node);
+    bool onAssignCCBMemberVariable(cocos2d::Ref* target, const char* memberVariableName, Node* node);
 
     
     void time_passes();
@@ -35,7 +35,7 @@ public:
 
     void do_init();
     
-    cocos2d::LabelTTF *text1;
+    cocos2d::Label *text1;
     int state;
 
 };

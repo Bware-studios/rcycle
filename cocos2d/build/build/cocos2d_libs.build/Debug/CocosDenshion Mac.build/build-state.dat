@@ -1,0 +1,239 @@
+TCocosDenshion Mac
+v6
+r1
+cCheck dependencies
+cCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c00000000531E4FE800000000000000AA
+t1394495464
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052706B87000000000000044C
+t1383099271
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531E4FE000000000000001DE
+t1394495456
+s478
+
+N/Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion Mac.a
+t2
+s0
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CDAudioManager.o
+t1396389854
+s103972
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CDOpenALSupport.o
+t1396389854
+s14560
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o
+t1396389854
+s51148
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CocosDenshion Mac.LinkFileList
+c00000000533B37DE0000000000000331
+t1396389854
+s817
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CocosDenshion.o
+t1396389854
+s143792
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o
+t1396389854
+s73668
+
+N/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o
+t1396389854
+s43772
+
+N/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m
+c00000000533A53E6000000000000780D
+t1396331494
+s30733
+
+N/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m
+c000000005292761D0000000000002AA4
+t1385330205
+s10916
+
+N/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm
+c00000000533A53E60000000000001445
+t1396331494
+s5189
+
+N/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m
+c00000000533A53E6000000000000CEC6
+t1396331494
+s52934
+
+N/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm
+c000000005292761D0000000000001DE5
+t1385330205
+s7653
+
+N/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m
+c000000005292761D0000000000001663
+t1385330205
+s5731
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies10cc015e6febb841^a531025e6febb841^---0#1#1#--18"Check dependencies36"39C6B2A0-2CCC-40F6-8095-DC83D2E50315-
+
+CCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.009913
+e418082654.494859
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CDAudioManager.o
+x/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m256"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerf19b025e6febb841^abaf7e5e6febb841^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m0000000000000000^3373"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCC_TARGET_OS_MAC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/CocosDenshion\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/.. -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/base -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/physics -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/editor-support -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/ui -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/cocos2d/build/../external -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/storage -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.dia -c /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.m -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDAudioManager.o36"1AD50615-88F7-4C93-9655-DDB15AB61DDF-
+b036331E5-9562-420B-BF69-320464AD567A
+
+CCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.010200
+e418082654.446168
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CDOpenALSupport.o
+x/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m258"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerffb3025e6febb841^0038725e6febb841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m0000000000000000^3379"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCC_TARGET_OS_MAC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/CocosDenshion\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/.. -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/base -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/physics -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/editor-support -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/ui -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/cocos2d/build/../external -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/storage -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.dia -c /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.m -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDOpenALSupport.o36"5B4678CA-9425-4919-9CC3-3D164D1515A6-
+b036331E5-9562-420B-BF69-320464AD567A
+
+CCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.009134
+e418082654.647261
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o
+x/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/include/Export.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm263"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm[0m normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compileraa66025e6febb841^b3b2a55e6febb841^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm0000000000000000^3463"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm[0m normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DCC_TARGET_OS_MAC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/CocosDenshion\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/.. -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/base -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/physics -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/editor-support -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/ui -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/cocos2d/build/../external -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/storage -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.dia -c /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.mm -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CDXMacOSXSupport.o36"19399AC6-ACB8-4457-905A-473B8ADC9C50-
+b036331E5-9562-420B-BF69-320464AD567A
+
+CCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.009550
+e418082654.525642
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/CocosDenshion.o
+x/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m254"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerc287025e6febb841^bc90865e6febb841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m0000000000000000^3367"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCC_TARGET_OS_MAC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/CocosDenshion\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/.. -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/base -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/physics -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/editor-support -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/ui -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/cocos2d/build/../external -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/storage -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.dia -c /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.m -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion.o36"F068941A-BE06-4145-BCA2-5F5294808A4B-
+b036331E5-9562-420B-BF69-320464AD567A
+
+CCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.009326
+e418082654.970941
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o
+x/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/include/Export.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/CCFileUtils.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCPlatformDefine.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccTypes.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCGeometry.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/ccMacros.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCConsole.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCStdC.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/2d/platform/mac/CCGL.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCValue.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/base/CCData.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm265"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm[0m normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compilerab75025e6febb841^b88ff85e6febb841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm0000000000000000^3469"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm[0m normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DCC_TARGET_OS_MAC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/CocosDenshion\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/.. -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/base -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/physics -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/editor-support -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/ui -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/cocos2d/build/../external -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/storage -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.dia -c /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o36"1E790B04-613B-4F92-8202-A3F27B0838E2-
+b036331E5-9562-420B-BF69-320464AD567A
+
+CCompileC build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418082654.008944
+e418082654.493531
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug/CocosDenshion Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o
+x/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h
+d/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m272"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler965b025e6febb841^0c587e5e6febb841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m0000000000000000^3421"[1mCompileC[0m build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o [1m/Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mikel/progs/rcycle/cocos2d/build    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=108 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCC_TARGET_OS_MAC -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/CocosDenshion\ Mac.hmap -I/Users/mikel/progs/rcycle/cocos2d/build/.. -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/base -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/physics -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/math/kazmath -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/editor-support -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/ui -I/Users/mikel/progs/rcycle/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/mikel/progs/rcycle/cocos2d/build/../external -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/storage -I/Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac -I/Users/mikel/progs/rcycle/bin/debug/mac/include -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources/x86_64 -I/Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/DerivedSources -F/Users/mikel/progs/rcycle/bin/debug/mac -MMD -MT dependencies -MF /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.d --serialize-diagnostics /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.dia -c /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.m -o /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/SimpleAudioEngine_objc.o36"6DE91F8B-2C38-42F4-9EB5-60A1AE7242FE-
+b036331E5-9562-420B-BF69-320464AD567A
+
+CLibtool /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a normal x86_64
+s418082654.971566
+e418082654.976946
+r1
+xLibtool
+x/Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion Mac.a
+xnormal
+xx86_64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"[1mLibtool[0m /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a normal x86_6493"[1mLibtool[0m /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a normal x86_6443c5f85e6febb841^6519fa5e6febb841^---0#0#1#--687"[1mLibtool[0m /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a normal x86_64    cd /Users/mikel/progs/rcycle/cocos2d/build    export MACOSX_DEPLOYMENT_TARGET=10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/mikel/progs/rcycle/bin/debug/mac -filelist /Users/mikel/progs/rcycle/cocos2d/build/build/cocos2d_libs.build/Debug/CocosDenshion\ Mac.build/Objects-normal/x86_64/CocosDenshion\ Mac.LinkFileList -o /Users/mikel/progs/rcycle/bin/debug/mac/libCocosDenshion\ Mac.a36"7976E4C4-C82F-493D-B2E9-55DA3B28FB9C-
+b036331E5-9562-420B-BF69-320464AD567A
+

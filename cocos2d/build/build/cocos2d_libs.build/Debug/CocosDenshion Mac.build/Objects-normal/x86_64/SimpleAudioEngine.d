@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine.mm \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include/SimpleAudioEngine.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/audio/include/Export.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/SimpleAudioEngine_objc.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDAudioManager.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CocosDenshion.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDOpenALSupport.h \
+  /Users/mikel/progs/rcycle/cocos2d/cocos/audio/mac/CDXMacOSXSupport.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/CCFileUtils.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCPlatformConfig.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCPlatformDefine.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccTypes.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCGeometry.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/ccMacros.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCConsole.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCStdC.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/2d/platform/mac/CCGL.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCValue.h \
+  /Users/mikel/progs/rcycle/cocos2d/build/../cocos/base/CCData.h

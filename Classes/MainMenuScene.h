@@ -30,11 +30,11 @@ public:
     bool init();
     CREATE_FUNC(MainMenuScene);
     
-    void enter(cocos2d::Object *pSender);
-    void options(cocos2d::Object *pSender);
-    void info(cocos2d::Object *pSender);
-    void fame(cocos2d::Object *pSender);
-    void back(cocos2d::Object *pSender);
+    void enter(cocos2d::Ref *pSender);
+    void options(cocos2d::Ref *pSender);
+    void info(cocos2d::Ref *pSender);
+    void fame(cocos2d::Ref *pSender);
+    void back(cocos2d::Ref *pSender);
 
 };
 
