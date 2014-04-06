@@ -225,9 +225,7 @@ bool GameScene::init() {
     gameEndTime=40.0;
     
     if (Options::debug_draw_outside) {
-        backLayer->setScale(Options::debug_draw_outside_scale);
-        gameLayer->setScale(Options::debug_draw_outside_scale);
-        frontLayer->setScale(Options::debug_draw_outside_scale);
+        this->setScale(Options::debug_draw_outside_scale);
     }
     
     sound_play_music(game_theme_name);
@@ -297,6 +295,7 @@ bool GameScene::contact_begin(const PhysicsContact& contact)
     bool s1_issensor = (s1->getCategoryBitmask() & GameObject::cat_sensor);
     bool s2_issensor = (s2->getCategoryBitmask() & GameObject::cat_sensor);
 
+    LOG_COLLISION("sensors s1 %d : %d s2 %d : %d",s1->getCategoryBitmask(),s1_issensor,s2->getCategoryBitmask(),s2_issensor);
     bool destroys1=false;
     
     if ( s1_issensor && !s2_issensor ) {

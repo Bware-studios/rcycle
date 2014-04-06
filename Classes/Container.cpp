@@ -72,16 +72,20 @@ bool Container::init(int p_trash_category)
     // down
     PhysicsShape *s1;
     s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent),-semiheight), Point(semiwidth-semiindent,-semiheight));
+    s1->setContactTestBitmask(cat_trash);
     s1->setCategoryBitmask(cat_wall|cat_sensor);
+    LOG_COLLISION("fondo cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
     
     // left
     s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,semiheight-verticalindent), Point(-(semiwidth-semiindent),-semiheight));
     s1->setCategoryBitmask(cat_wall);
+    LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
     // right
     s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent), Point(semiwidth-semiindent,-semiheight));
     s1->setCategoryBitmask(cat_wall);
+    LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
 
     if (p_trash_category==Trash::CAT_CRISTAL) {

@@ -25,14 +25,28 @@ bool MainMenuScene::init() {
         //quit_button->setVisible(false);
     }
     
-    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("a2");
+    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("menu");
+
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(2.0),CallFunc::create(CC_CALLBACK_0(MainMenuScene::time_passes, this))));
+
     sound_play_music(menu_theme_name);
 
-    
     return true;
 }
 
 
+
+
+void MainMenuScene::time_passes()
+{
+    int r = 1+(rand()%3);
+    char aname[30];
+    sprintf(aname,"animation_%d",r);
+    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed(aname);
+
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(5.0),CallFunc::create(CC_CALLBACK_0(MainMenuScene::time_passes, this))));
+
+}
 
 
 

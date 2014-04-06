@@ -40,15 +40,18 @@ bool WorldFrame::init()
     PhysicsShape *s1;
     s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-offset), Point(semiwidth,-offset));
     s1->setCategoryBitmask(cat_wall|cat_sensor);
+    s1->setContactTestBitmask(cat_trash);
     body->addShape(s1);
     
     // left
     s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,-offset), Point(-2*semiwidth,height));
     s1->setCategoryBitmask(cat_wall|cat_sensor);
+    s1->setContactTestBitmask(cat_trash);
     body->addShape(s1);
     // right
     s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,-offset), Point(2*semiwidth,height));
     s1->setCategoryBitmask(cat_wall|cat_sensor);
+    s1->setContactTestBitmask(cat_trash);
     body->addShape(s1);
     
     this->setPhysicsBody(body);

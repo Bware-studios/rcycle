@@ -13,7 +13,7 @@
 bool Options::debug_draw_physics = true;
 bool Options::debug_draw_alfa = true;
 bool Options::debug_draw_background = false;
-bool Options::debug_draw_outside = true;
+bool Options::debug_draw_outside = false;
 float Options::debug_draw_outside_scale = 0.5;
 
 

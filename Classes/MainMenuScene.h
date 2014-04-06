@@ -30,6 +30,8 @@ public:
     bool init();
     CREATE_FUNC(MainMenuScene);
     
+    void time_passes();
+    
     void enter(cocos2d::Ref *pSender);
     void options(cocos2d::Ref *pSender);
     void info(cocos2d::Ref *pSender);
