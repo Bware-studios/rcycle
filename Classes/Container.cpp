@@ -8,6 +8,11 @@
 
 #include "Container.h"
 
+#include "Trash.h"
+#include "Game.h"
+
+
+
 USING_NS_CC;
 
 // normal container
@@ -23,9 +28,17 @@ const int x_semiindent = 0;
 const int x_verticalindent = 40;
 
 
+bool Container::init()
+{
+    // common init for all container types
+    GameObject::init();
+    
+    return true;
+}
+
 bool Container::init(int p_trash_category)
 {
-    GameObject::init();
+    // choose category
     trash_category=p_trash_category;
     
     if (p_trash_category==Trash::CAT_CRISTAL) {
@@ -110,21 +123,15 @@ bool Container::init(int p_trash_category)
     return true;
 }
 
-
 Container* Container::create(int p_trash_category)
 {
-    Container *pRet = new Container();
-    if (pRet && pRet->init(p_trash_category))
-    {
-        pRet->autorelease();
-        return pRet;
-    }
-    else
-    {
-        delete pRet;
-        pRet = NULL;
-        return NULL;
-    }
+    Container *pRet;
+    char ccbifilename[50];
+    sprintf(ccbifilename, "Contenedor%d",p_trash_category*0+1);
+    
+    pRet=SceneLoadManager::getInstance()->containerFromFile(ccbifilename);
+    pRet->init(p_trash_category);
+    return pRet;
 }
 
 void Container::add_to_layer(cocos2d::Layer *alayer)
@@ -148,6 +155,8 @@ void Container::destroy(Trash *atrash)
         LOG_COLLISION("container FAILED");
         Game::thegame->trash_failed(atrash->trash_category);
     }
+    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Sube");
+    
 }
 
 

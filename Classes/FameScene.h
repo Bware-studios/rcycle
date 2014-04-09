@@ -14,8 +14,9 @@
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
 
-#include "SceneLoadManager.h"
 #include "MainMenuScene.h"
+#include "SceneLoadManager.h"
+
 
 
 class FameScene : public MenuScene

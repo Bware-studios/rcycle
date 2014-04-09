@@ -22,6 +22,7 @@ SceneLoadManager::SceneLoadManager()
     loaderLibrary->retain();
     loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
     loaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("Container", ContainerLoader::loader());
     ccbReader = new CCBReader(loaderLibrary);
     ccbReader->retain();
 }
@@ -57,6 +58,21 @@ Layer *SceneLoadManager::layerFromFile(const char *pFileName,CCBSelectorResolver
     
     Ref *owner=dynamic_cast<Ref*>(pOwner);
     return (Layer *)ccbReader->readNodeGraphFromFile(pFileName,owner);
+}
+
+
+Container *SceneLoadManager::containerFromFile(const char *pFileName,CCBSelectorResolver *pOwner)
+{
+    
+    auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("Container", ContainerLoader::loader());
+    ccbReader = new CCBReader(loaderLibrary);
+    
+    
+    Ref *owner=dynamic_cast<Ref*>(pOwner);
+    return (Container *)ccbReader->readNodeGraphFromFile(pFileName,owner);
 }
 
 

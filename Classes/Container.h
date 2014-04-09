@@ -11,16 +11,18 @@
 
 #include "Common.h"
 
-#include "Game.h"
-#include "GameScene.h"
-#include "GameObject.h"
-#include "Trash.h"
 
+class GameObject;
+class Trash;
+
+#include "GameObject.h"
 
 class Container : public GameObject
 {
 public:
+    bool init();
     bool init(int p_trash_category);
+    CREATE_FUNC(Container);
     static Container* create(int p_trash_category);
     void add_to_layer(cocos2d::Layer *alayer);
     

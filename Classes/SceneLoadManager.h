@@ -11,8 +11,11 @@
 
 #include "Common.h"
 
+
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
+
+#include "Container.h"
 
 
 
@@ -25,6 +28,9 @@ public:
     static cocosbuilder::CCBAnimationManager *getAnimationManager();
     
     cocos2d::Layer *layerFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
+
+    Container *containerFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
+
     
 private:
     static SceneLoadManager *theInstance;
@@ -114,6 +120,16 @@ public:
 protected:
     CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(GameLayer);
 };
+
+
+
+class ContainerLoader : public cocosbuilder::SpriteLoader {
+public:
+    CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ContainerLoader, loader);
+protected:
+    CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(Container);
+};
+
 
 
 
