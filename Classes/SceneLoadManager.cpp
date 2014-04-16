@@ -72,7 +72,9 @@ Container *SceneLoadManager::containerFromFile(const char *pFileName,CCBSelector
     
     
     Ref *owner=dynamic_cast<Ref*>(pOwner);
-    return (Container *)ccbReader->readNodeGraphFromFile(pFileName,owner);
+    Container *acontainer=(Container *)ccbReader->readNodeGraphFromFile(pFileName,owner);
+    acontainer->setAnimationManager(ccbReader->getAnimationManager());
+    return acontainer;
 }
 
 

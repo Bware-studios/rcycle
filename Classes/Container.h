@@ -11,6 +11,8 @@
 
 #include "Common.h"
 
+#include "cocosbuilder/CocosBuilder.h"
+
 
 class GameObject;
 class Trash;
@@ -24,6 +26,7 @@ public:
     bool init(int p_trash_category);
     CREATE_FUNC(Container);
     static Container* create(int p_trash_category);
+    void setAnimationManager(cocosbuilder::CCBAnimationManager *p_animation_manager);
     void add_to_layer(cocos2d::Layer *alayer);
     
     void destroy(Trash *atrash);
@@ -38,6 +41,8 @@ private:
     
     // para el contenedor de cristal que esta arriba
     cocos2d::Sprite *over_sprite;
+    
+    cocosbuilder::CCBAnimationManager *animation_manager;
 
 };
 

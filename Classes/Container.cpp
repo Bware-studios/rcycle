@@ -134,6 +134,14 @@ Container* Container::create(int p_trash_category)
     return pRet;
 }
 
+
+void Container::setAnimationManager(cocosbuilder::CCBAnimationManager *p_animation_manager)
+{
+    animation_manager=p_animation_manager;
+    animation_manager->retain();
+}
+
+
 void Container::add_to_layer(cocos2d::Layer *alayer)
 {
     if (over_sprite) {
@@ -155,7 +163,7 @@ void Container::destroy(Trash *atrash)
         LOG_COLLISION("container FAILED");
         Game::thegame->trash_failed(atrash->trash_category);
     }
-    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Sube");
+    animation_manager->runAnimationsForSequenceNamed("Sube");
     
 }
 

@@ -181,6 +181,8 @@ bool GameScene::init() {
     c1->add_to_layer(gameLayer);
     //gameLayer->addChild(c1);
 
+
+    
     PhysicsBody *sb1=PhysicsBody::create();
     sb1->setDynamic(false);
     //s1->setPhysicsBody(sb1);
