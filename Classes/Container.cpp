@@ -135,7 +135,7 @@ Container* Container::create(int p_trash_category)
         sprintf(ccbifilename, "Contenedor%d",p_trash_category*0+1);
         pRet=SceneLoadManager::getInstance()->containerFromFile(ccbifilename);
     } else {
-        pRet=new Container();
+        pRet=Container::create();
     }
     pRet->init(p_trash_category);
     return pRet;
