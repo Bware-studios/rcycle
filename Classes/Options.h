@@ -21,6 +21,7 @@ public:
     static bool debug_draw_background;
     static bool debug_draw_outside;
     static float debug_draw_outside_scale;
+    static bool debug_draw_spritesquare;
     
     // physics parameters
     static float physics_g;

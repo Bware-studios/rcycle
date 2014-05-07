@@ -21,7 +21,7 @@ void Log_msg(const char *type,const char *msg, ... );
 #define DEBUG_LOG_GENERAL true
 #define DEBUG_LOG_CCB true
 #define DEBUG_LOG_UI false
-#define DEBUG_LOG_COLLISION true
+#define DEBUG_LOG_COLLISION false
 #define DEBUG_LOG_TRASHGEN true
 #define DEBUG_LOG_RESOLUTION true
 

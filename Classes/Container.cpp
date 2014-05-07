@@ -57,23 +57,27 @@ bool Container::init(int p_trash_category)
     tex1=new Texture2D();
     unsigned short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0xf0ff,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
     tex1->initWithData(texdata, 18, Texture2D::PixelFormat::RGBA4444, 3, 3, Size(3,3));
-//    this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
-    
-    const char *img_name = NULL;
-    if (p_trash_category==Trash::CAT_PLASTICO) {
-        img_name="Contenedores/Contenedor0001.png";
-    } else if (p_trash_category==Trash::CAT_PAPEL) {
-        img_name="Contenedores/Contenedor0002.png";
-    } else if (p_trash_category==Trash::CAT_ORGANICO) {
-        img_name="Contenedores/Contenedor0003.png";
-    } else if (p_trash_category==Trash::CAT_CRISTAL) {
-        img_name="Contenedores/Contenedor0004.png";
-    }
-    if (img_name) {
-        SpriteFrame *sf = SpriteFrameCache::getInstance()->getSpriteFrameByName(img_name);
-        if (sf) this->setDisplayFrame(sf);
-    } else {
+    if (Options::debug_draw_spritesquare) {
+
         this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
+    } else {
+        
+        const char *img_name = NULL;
+        if (p_trash_category==Trash::CAT_PLASTICO) {
+            img_name="Contenedores/Contenedor0001.png";
+        } else if (p_trash_category==Trash::CAT_PAPEL) {
+            img_name="Contenedores/Contenedor0002.png";
+        } else if (p_trash_category==Trash::CAT_ORGANICO) {
+            img_name="Contenedores/Contenedor0003.png";
+        } else if (p_trash_category==Trash::CAT_CRISTAL) {
+            img_name="Contenedores/Contenedor0004.png";
+        }
+        if (img_name) {
+            SpriteFrame *sf = SpriteFrameCache::getInstance()->getSpriteFrameByName(img_name);
+            if (sf) this->setDisplayFrame(sf);
+        } else {
+            this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
+        }
     }
     // body
     PhysicsBody *body=PhysicsBody::create();
@@ -126,10 +130,13 @@ bool Container::init(int p_trash_category)
 Container* Container::create(int p_trash_category)
 {
     Container *pRet;
-    char ccbifilename[50];
-    sprintf(ccbifilename, "Contenedor%d",p_trash_category*0+1);
-    
-    pRet=SceneLoadManager::getInstance()->containerFromFile(ccbifilename);
+    if ( !Options::debug_draw_spritesquare ) {
+        char ccbifilename[50];
+        sprintf(ccbifilename, "Contenedor%d",p_trash_category*0+1);
+        pRet=SceneLoadManager::getInstance()->containerFromFile(ccbifilename);
+    } else {
+        pRet=new Container();
+    }
     pRet->init(p_trash_category);
     return pRet;
 }
@@ -163,11 +170,13 @@ void Container::destroy(Trash *atrash)
         LOG_COLLISION("container FAILED");
         Game::thegame->trash_failed(atrash->trash_category);
     }
+    
+    if (!Options::debug_draw_spritesquare){
     if (rand()%2==0) {
         animation_manager->runAnimationsForSequenceNamed("Baja");
     } else {
         animation_manager->runAnimationsForSequenceNamed("Sube");    
-    }
+    }}
     
 }
 
