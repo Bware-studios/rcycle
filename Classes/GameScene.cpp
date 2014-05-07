@@ -170,6 +170,7 @@ bool GameScene::init() {
     //gameLayer->addChild(c1);
     c1=Container::create(Trash::CAT_PAPEL);
     c1->setPosition(Point(170,35));
+    c1->setPosition(Point(170,150));
     c1->add_to_layer(gameLayer);
     //gameLayer->addChild(c1);
     c1=Container::create(Trash::CAT_PLASTICO);
@@ -210,11 +211,11 @@ bool GameScene::init() {
     edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
     
 
-    Trash *debugtrash;
-    debugtrash=Trash::create();
-    debugtrash->getPhysicsBody()->setDynamic(false);
-    debugtrash->setPosition(480,160);
-    debugtrash->add_to_layer(backLayer);
+//    Trash *debugtrash;
+//    debugtrash=Trash::create();
+//    debugtrash->getPhysicsBody()->setDynamic(false);
+//    debugtrash->setPosition(480,160);
+//    debugtrash->add_to_layer(backLayer);
     
     generator=TrashGenerator::createWithScene(this);
     generator->retain();

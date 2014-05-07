@@ -163,7 +163,11 @@ void Container::destroy(Trash *atrash)
         LOG_COLLISION("container FAILED");
         Game::thegame->trash_failed(atrash->trash_category);
     }
-    animation_manager->runAnimationsForSequenceNamed("Sube");
+    if (rand()%2==0) {
+        animation_manager->runAnimationsForSequenceNamed("Baja");
+    } else {
+        animation_manager->runAnimationsForSequenceNamed("Sube");    
+    }
     
 }
 
