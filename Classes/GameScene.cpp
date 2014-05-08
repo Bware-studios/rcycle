@@ -187,14 +187,13 @@ bool GameScene::init() {
 //    ts1->setPosition(Point(320,200));
 //    ts1->add_to_layer(gameLayer);
     
-    
-    Container *c1;
+    container_sprite=new Container*[container_n];
     int i;
     for (i=0;i<container_n;i++) {
-        c1=Container::create(container_type[i]);
-        c1->setPosition(container_enter_animation_position[i]);
-        c1->add_to_layer(gameLayer);
-        c1->runAction(MoveTo::create(container_enter_animation_duration[i], container_position[i]));
+        container_sprite[i]=Container::create(container_type[i]);
+        container_sprite[i]->setPosition(container_enter_animation_position[i]);
+        container_sprite[i]->add_to_layer(gameLayer);
+        container_sprite[i]->runAction(MoveTo::create(container_enter_animation_duration[i], container_position[i]));
     }
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(3.0),CallFunc::create(CC_CALLBACK_0(GameScene::enter_animation_ended, this))));
     
@@ -518,13 +517,18 @@ void GameScene::set_failed(int category, int value)
 void GameScene::enter_animation_ended()
 {
     generator->start();
-    gameStarted=true;
+    ingame=true;
     gameEndTime=gameTime+40.0;
 
     //this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
     sound_play_music(game_theme_name);
 
+}
+
+void GameScene::finish_animation_ended()
+{
+    game_end();
 }
 
 void GameScene::time_passes()
@@ -536,7 +540,7 @@ void GameScene::update(float deltat)
 {
     gameTime+=deltat;
     
-    if (gameStarted) {
+    if (ingame) {
         int secondsLeftToEnd=(int)(gameEndTime-gameTime);
         if (secondsLeftToEnd<0) secondsLeftToEnd=0;
         if (secondsLeftToEnd!=(int)(gameEndTime-gameTime+deltat)) {
@@ -548,7 +552,8 @@ void GameScene::update(float deltat)
 
         }
         if (gameTime>gameEndTime) {
-            game_end();
+            //game_end();
+            start_finish_animation();
         }
     }
     Scene::update(deltat);
@@ -584,6 +589,18 @@ void GameScene::action_quit(Ref *o)
 {
     game_end();
 }
+
+void GameScene::start_finish_animation()
+{
+    ingame=false;
+    int i;
+    for (i=0;i<container_n;i++) {
+        container_sprite[i]->runAction(MoveTo::create(container_enter_animation_duration[i], container_enter_animation_position[i]));
+    }
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(3.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
+
+}
+
 
 void GameScene::game_end()
 {

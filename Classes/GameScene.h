@@ -76,17 +76,22 @@ public:
     void set_recycled(int category, int value);
     void set_failed(int category, int value);
     
+
+    
     // scheduled events
     void enter_animation_ended();
+    void finish_animation_ended();
     void time_passes();
     void update(float deltat);
 //    void draw();
 
+    
     void action_pause(cocos2d::Ref *o,cocos2d::extension::Control::EventType e);
     void action_resume(cocos2d::Ref *o);
     void action_quit(cocos2d::Ref *o);
 
-    
+
+    void start_finish_animation();
     void game_end();
     
     //void add_random_trash();
@@ -107,6 +112,10 @@ public:
     cocos2d::Sprite *touch_cursorsprite;
     cocos2d::PhysicsBody *touch_cursorbody;
     
+    
+    Container **container_sprite;
+    
+    
     cocos2d::Label *score1;
 
     cocos2d::Label *score_1;
@@ -117,7 +126,7 @@ public:
     cocos2d::Menu *pause_menu;
     
     float gameTime=0.0;
-    bool gameStarted=false;
+    bool ingame=false;
     float gameEndTime;
 };
 
