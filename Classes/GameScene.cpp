@@ -15,8 +15,33 @@ using namespace std;
 using namespace cocosbuilder;
 
 
-//const bool debug_draw_physics = true;
-//const bool debug_draw_alfa = false;
+// description data
+// se puede hacer que se cargue de fichero para tener diferentes niveles
+const int container_n = 4;
+const int container_type[] = {
+    Trash::CAT_ORGANICO,
+    Trash::CAT_PAPEL,
+    Trash::CAT_PLASTICO,
+    Trash::CAT_CRISTAL
+};
+const Point container_position[] = {
+    Point(40,40),
+    Point(170,150),
+    Point(310,40),
+    Point(430,100),
+};
+// animacion de entrada
+const Point container_enter_animation_position[] = {
+    Point(40,-40),
+    Point(170,-150),
+    Point(310,-40),
+    Point(430,-100),
+};
+const float container_enter_animation_duration[] = {
+    1,3,1,1
+};
+
+
 
 
 GameScene *GameScene::thegamescene=NULL;
@@ -164,23 +189,32 @@ bool GameScene::init() {
     
     
     Container *c1;
-    c1=Container::create(Trash::CAT_ORGANICO);
-    c1->setPosition(Point(40,40));
-    c1->add_to_layer(gameLayer);
-    //gameLayer->addChild(c1);
-    c1=Container::create(Trash::CAT_PAPEL);
-    c1->setPosition(Point(170,35));
-    c1->setPosition(Point(170,150));
-    c1->add_to_layer(gameLayer);
-    //gameLayer->addChild(c1);
-    c1=Container::create(Trash::CAT_PLASTICO);
-    c1->setPosition(Point(310,40));
-    c1->add_to_layer(gameLayer);
-    //gameLayer->addChild(c1);
-    c1=Container::create(Trash::CAT_CRISTAL);
-    c1->setPosition(Point(430,100));
-    c1->add_to_layer(gameLayer);
-    //gameLayer->addChild(c1);
+    int i;
+    for (i=0;i<container_n;i++) {
+        c1=Container::create(container_type[i]);
+        c1->setPosition(container_enter_animation_position[i]);
+        c1->add_to_layer(gameLayer);
+        c1->runAction(MoveTo::create(container_enter_animation_duration[i], container_position[i]));
+    }
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(3.0),CallFunc::create(CC_CALLBACK_0(GameScene::enter_animation_ended, this))));
+    
+//    c1=Container::create(Trash::CAT_ORGANICO);
+//    c1->setPosition(Point(40,40));
+//    c1->add_to_layer(gameLayer);
+//    //gameLayer->addChild(c1);
+//    c1=Container::create(Trash::CAT_PAPEL);
+//    c1->setPosition(Point(170,35));
+//    c1->setPosition(Point(170,150));
+//    c1->add_to_layer(gameLayer);
+//    //gameLayer->addChild(c1);
+//    c1=Container::create(Trash::CAT_PLASTICO);
+//    c1->setPosition(Point(310,40));
+//    c1->add_to_layer(gameLayer);
+//    //gameLayer->addChild(c1);
+//    c1=Container::create(Trash::CAT_CRISTAL);
+//    c1->setPosition(Point(430,100));
+//    c1->add_to_layer(gameLayer);
+//    //gameLayer->addChild(c1);
 
 
     
@@ -219,19 +253,14 @@ bool GameScene::init() {
     
     generator=TrashGenerator::createWithScene(this);
     generator->retain();
-    generator->start();
-    
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
 
     score1->setString("0");
-    gameEndTime=40.0;
     
     if (Options::debug_draw_outside) {
         this->setScale(Options::debug_draw_outside_scale);
     }
     
-    sound_play_music(game_theme_name);
     
     return true;
 }
@@ -485,6 +514,19 @@ void GameScene::set_failed(int category, int value)
 }
 
 
+
+void GameScene::enter_animation_ended()
+{
+    generator->start();
+    gameStarted=true;
+    gameEndTime=gameTime+40.0;
+
+    //this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
+
+    sound_play_music(game_theme_name);
+
+}
+
 void GameScene::time_passes()
 {
    // game_end();
@@ -493,18 +535,21 @@ void GameScene::time_passes()
 void GameScene::update(float deltat)
 {
     gameTime+=deltat;
-    int secondsLeftToEnd=(int)(gameEndTime-gameTime);
-    if (secondsLeftToEnd<0) secondsLeftToEnd=0;
-    if (secondsLeftToEnd!=(int)(gameEndTime-gameTime+deltat)) {
-        char labelstring[10];
-        sprintf(labelstring, "%d",secondsLeftToEnd);
-        // para evitar problemas de añadir stl en la compilacion de android
-        //    score1->setString(std::to_string(secondsLeftToEnd));
-        score1->setString(labelstring);
+    
+    if (gameStarted) {
+        int secondsLeftToEnd=(int)(gameEndTime-gameTime);
+        if (secondsLeftToEnd<0) secondsLeftToEnd=0;
+        if (secondsLeftToEnd!=(int)(gameEndTime-gameTime+deltat)) {
+            char labelstring[10];
+            sprintf(labelstring, "%d",secondsLeftToEnd);
+            // para evitar problemas de añadir stl en la compilacion de android
+            //    score1->setString(std::to_string(secondsLeftToEnd));
+            score1->setString(labelstring);
 
-    }
-    if (gameTime>gameEndTime) {
-        game_end();
+        }
+        if (gameTime>gameEndTime) {
+            game_end();
+        }
     }
     Scene::update(deltat);
 }

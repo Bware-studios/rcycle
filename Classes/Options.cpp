@@ -15,7 +15,7 @@ bool Options::debug_draw_alfa = true;
 bool Options::debug_draw_background = false;
 bool Options::debug_draw_outside = false;
 float Options::debug_draw_outside_scale = 0.5;
-bool Options::debug_draw_spritesquare = true;
+bool Options::debug_draw_spritesquare = false;
 
 // g en pixeles/s^2
 float Options::physics_g = 100.0;

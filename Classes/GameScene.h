@@ -76,6 +76,8 @@ public:
     void set_recycled(int category, int value);
     void set_failed(int category, int value);
     
+    // scheduled events
+    void enter_animation_ended();
     void time_passes();
     void update(float deltat);
 //    void draw();
@@ -115,6 +117,7 @@ public:
     cocos2d::Menu *pause_menu;
     
     float gameTime=0.0;
+    bool gameStarted=false;
     float gameEndTime;
 };
 
