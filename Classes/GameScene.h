@@ -79,6 +79,7 @@ public:
 
     
     // scheduled events
+    void enter_movement_ended();
     void enter_animation_ended();
     void finish_animation_ended();
     void time_passes();

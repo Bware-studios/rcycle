@@ -25,21 +25,23 @@ const int container_type[] = {
     Trash::CAT_CRISTAL
 };
 const Point container_position[] = {
-    Point(40,40),
-    Point(170,150),
-    Point(310,40),
-    Point(430,100),
+    Point(40,60+50*0),
+    Point(170,150+50*0),
+    Point(310,60+50*0),
+    Point(430,100+50*0),
 };
 // animacion de entrada
-const Point container_enter_animation_position[] = {
+const Point container_enter_movement_position[] = {
     Point(40,-40),
-    Point(170,-150),
+    Point(170,-40),
     Point(310,-40),
     Point(430,-100),
 };
-const float container_enter_animation_duration[] = {
-    1,3,1,1
+const float container_enter_movement_duration[] = {
+    2,2,2,2
 };
+const float container_delay_to_animation = 1;
+const float container_animation_duration = 1;
 
 
 
@@ -191,11 +193,11 @@ bool GameScene::init() {
     int i;
     for (i=0;i<container_n;i++) {
         container_sprite[i]=Container::create(container_type[i]);
-        container_sprite[i]->setPosition(container_enter_animation_position[i]);
+        container_sprite[i]->setPosition(container_enter_movement_position[i]);
         container_sprite[i]->add_to_layer(gameLayer);
-        container_sprite[i]->runAction(MoveTo::create(container_enter_animation_duration[i], container_position[i]));
+        container_sprite[i]->start_enter_animation(container_enter_movement_position[i], container_position[i]);
     }
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(3.0),CallFunc::create(CC_CALLBACK_0(GameScene::enter_animation_ended, this))));
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(container_delay_to_animation),CallFunc::create(CC_CALLBACK_0(GameScene::enter_animation_ended, this))));
     
 //    c1=Container::create(Trash::CAT_ORGANICO);
 //    c1->setPosition(Point(40,40));
@@ -512,6 +514,14 @@ void GameScene::set_failed(int category, int value)
  
 }
 
+void GameScene::enter_movement_ended()
+{
+//    for (int i=0 ; i<container_n ; i++) {
+//        container_sprite[i]->play_enter_animation();
+//    }
+//    this->runAction(Sequence::createWithTwoActions(DelayTime::create(container_animation_duration),CallFunc::create(CC_CALLBACK_0(GameScene::enter_animation_ended, this))));
+
+}
 
 
 void GameScene::enter_animation_ended()
@@ -595,7 +605,8 @@ void GameScene::start_finish_animation()
     ingame=false;
     int i;
     for (i=0;i<container_n;i++) {
-        container_sprite[i]->runAction(MoveTo::create(container_enter_animation_duration[i], container_enter_animation_position[i]));
+        container_sprite[i]->start_exit_animation(container_enter_movement_position[i]);
+//        ->runAction(MoveTo::create(container_enter_movement_duration[i], container_enter_movement_position[i]));
     }
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(3.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
 

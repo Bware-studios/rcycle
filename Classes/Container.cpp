@@ -17,7 +17,7 @@ USING_NS_CC;
 
 // normal container
 const int normal_semiheight = 40;
-const int normal_semiwidth = 70;
+const int normal_semiwidth = 60;
 const int normal_semiindent = 10;
 const int normal_verticalindent =0;
 
@@ -62,22 +62,22 @@ bool Container::init(int p_trash_category)
         this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
     } else {
         
-        const char *img_name = NULL;
-        if (p_trash_category==Trash::CAT_PLASTICO) {
-            img_name="Contenedores/Contenedor0001.png";
-        } else if (p_trash_category==Trash::CAT_PAPEL) {
-            img_name="Contenedores/Contenedor0002.png";
-        } else if (p_trash_category==Trash::CAT_ORGANICO) {
-            img_name="Contenedores/Contenedor0003.png";
-        } else if (p_trash_category==Trash::CAT_CRISTAL) {
-            img_name="Contenedores/Contenedor0004.png";
-        }
-        if (img_name) {
-            SpriteFrame *sf = SpriteFrameCache::getInstance()->getSpriteFrameByName(img_name);
-            if (sf) this->setDisplayFrame(sf);
-        } else {
-            this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
-        }
+//        const char *img_name = NULL;
+//        if (p_trash_category==Trash::CAT_PLASTICO) {
+//            img_name="Contenedores/Contenedor0001.png";
+//        } else if (p_trash_category==Trash::CAT_PAPEL) {
+//            img_name="Contenedores/Contenedor0002.png";
+//        } else if (p_trash_category==Trash::CAT_ORGANICO) {
+//            img_name="Contenedores/Contenedor0003.png";
+//        } else if (p_trash_category==Trash::CAT_CRISTAL) {
+//            img_name="Contenedores/Contenedor0004.png";
+//        }
+//        if (img_name) {
+//            SpriteFrame *sf = SpriteFrameCache::getInstance()->getSpriteFrameByName(img_name);
+//            if (sf) this->setDisplayFrame(sf);
+//        } else {
+//            this->setDisplayFrame(SpriteFrame::createWithTexture(tex1, Rect(0,0,2*semiwidth,2*semiheight)));
+//        }
     }
     // body
     PhysicsBody *body=PhysicsBody::create();
@@ -171,14 +171,25 @@ void Container::destroy(Trash *atrash)
         Game::thegame->trash_failed(atrash->trash_category);
     }
     
-    if (!Options::debug_draw_spritesquare){
-    if (rand()%2==0) {
-        animation_manager->runAnimationsForSequenceNamed("Baja");
-    } else {
-        animation_manager->runAnimationsForSequenceNamed("Sube");    
-    }}
+//    if (!Options::debug_draw_spritesquare){
+//    if (rand()%2==0) {
+//        animation_manager->runAnimationsForSequenceNamed("Baja");
+//    } else {
+//        animation_manager->runAnimationsForSequenceNamed("Sube");    
+//    }}
     
 }
 
+void Container::start_enter_animation(Point start_postion,Point end_position)
+{
+    this->setPosition(start_postion);
+    animation_manager->runAnimationsForSequenceNamed("Sube");
+    this->runAction(EaseElasticOut::create(MoveTo::create(1, end_position),0.5));
+}
 
+void Container::start_exit_animation(Point end_position)
+{
+    animation_manager->runAnimationsForSequenceNamed("Baja");
+    this->runAction(EaseElasticIn::create(MoveTo::create(1, end_position),0.5));
+}
 

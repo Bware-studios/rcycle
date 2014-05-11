@@ -31,6 +31,9 @@ public:
     
     void destroy(Trash *atrash);
     
+    void start_enter_animation(cocos2d::Point start_postion,cocos2d::Point end_position);
+    void start_exit_animation(cocos2d::Point end_position);
+    
     int trash_category;
     
 private:
