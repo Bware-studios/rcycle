@@ -40,6 +40,7 @@ private:
     int semiheight;
     int semiwidth;
     int semiindent;
+    int offset;
     int verticalindent;
     
     // para el contenedor de cristal que esta arriba

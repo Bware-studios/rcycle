@@ -16,12 +16,13 @@
 USING_NS_CC;
 
 // normal container
-const int normal_semiheight = 40;
+const int normal_semiheight = 80;
 const int normal_semiwidth = 60;
 const int normal_semiindent = 10;
-const int normal_verticalindent =0;
+const int normal_offset = 10;
+const int normal_verticalindent =80;
 
-//  container
+// vidrio container
 const int x_semiheight = 60;
 const int x_semiwidth = 50;
 const int x_semiindent = 0;
@@ -46,11 +47,13 @@ bool Container::init(int p_trash_category)
         semiwidth=x_semiwidth;
         semiindent=x_semiindent;
         verticalindent=x_verticalindent;
+        offset=0;
     } else {
         semiheight=normal_semiheight;
         semiwidth=normal_semiwidth;
         semiindent=normal_semiindent;
         verticalindent=normal_verticalindent;
+        offset=normal_offset;
     }
     
     Texture2D *tex1;
@@ -88,25 +91,25 @@ bool Container::init(int p_trash_category)
     
     // down
     PhysicsShape *s1;
-    s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent),-semiheight), Point(semiwidth-semiindent,-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent)+offset,-semiheight), Point(semiwidth-semiindent-offset,-semiheight));
     s1->setContactTestBitmask(cat_trash);
     s1->setCategoryBitmask(cat_wall|cat_sensor);
     LOG_COLLISION("fondo cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
     
     // left
-    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth,semiheight-verticalindent), Point(-(semiwidth-semiindent),-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(-semiwidth+offset,semiheight-verticalindent), Point(-(semiwidth-semiindent)+offset,-semiheight));
     s1->setCategoryBitmask(cat_wall);
     LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
     // right
-    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent), Point(semiwidth-semiindent,-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset,semiheight-verticalindent), Point(semiwidth-semiindent-offset,-semiheight));
     s1->setCategoryBitmask(cat_wall);
     LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
 
     if (p_trash_category==Trash::CAT_CRISTAL) {
-        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth,semiheight-verticalindent),Point(semiwidth-verticalindent,semiheight));
+        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset,semiheight-verticalindent),Point(semiwidth-verticalindent,semiheight));
         body->addShape(s1);
         s1->setCategoryBitmask(cat_wall);
         s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-verticalindent),semiheight),Point(semiwidth-verticalindent,semiheight));

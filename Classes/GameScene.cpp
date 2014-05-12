@@ -25,17 +25,17 @@ const int container_type[] = {
     Trash::CAT_CRISTAL
 };
 const Point container_position[] = {
-    Point(40,60+50*0),
-    Point(170,150+50*0),
-    Point(310,60+50*0),
-    Point(430,100+50*0),
+    Point(100,60+50*0),
+    Point(200,60+50*0),
+    Point(300,60+50*0),
+    Point(400,100+50*0),
 };
 // animacion de entrada
 const Point container_enter_movement_position[] = {
-    Point(40,-40),
-    Point(170,-40),
-    Point(310,-40),
-    Point(430,-100),
+    Point(100,-40),
+    Point(200,-40),
+    Point(300,-40),
+    Point(400,-100),
 };
 const float container_enter_movement_duration[] = {
     2,2,2,2
@@ -528,7 +528,7 @@ void GameScene::enter_animation_ended()
 {
     generator->start();
     ingame=true;
-    gameEndTime=gameTime+40.0;
+    gameEndTime=gameTime+10.0;
 
     //this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
@@ -608,8 +608,14 @@ void GameScene::start_finish_animation()
         container_sprite[i]->start_exit_animation(container_enter_movement_position[i]);
 //        ->runAction(MoveTo::create(container_enter_movement_duration[i], container_enter_movement_position[i]));
     }
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(3.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
-
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(5.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
+    
+    Sprite *camion;
+    camion=Sprite::create("Camion/camion0007.png");
+    camion->setPosition(600,160);
+    this->addChild(camion);
+    camion->runAction(MoveTo::create(1, Point(240,160)));
+    
 }
 
 
