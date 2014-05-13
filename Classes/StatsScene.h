@@ -22,11 +22,9 @@ public cocosbuilder::CCBSelectorResolver,
 public cocosbuilder::CCBMemberVariableAssigner
 {
 public:
-    ~StatsScene();
-    
     bool init();
-    static StatsScene *create();
-    
+    //static StatsScene *create();
+    CREATE_FUNC(StatsScene);
     
     // SelectorResolver
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
@@ -36,8 +34,14 @@ public:
     // VariableAsigner
     virtual bool onAssignCCBMemberVariable(cocos2d::Ref* target, const char* memberVariableName, Node* node);
     
-    cocos2d::Layer *statsLayer;
+    
+    
+    void action_enter(cocos2d::Ref *pSender);
+    
 
+    cocos2d::Layer *backLayer;
+    cocos2d::Layer *statsLayer;
+    
 
 
 };

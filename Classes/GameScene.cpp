@@ -8,6 +8,11 @@
 
 #include "GameScene.h"
 
+#include "FameScene.h"
+#include "StatsScene.h"
+
+
+
 USING_NS_CC;
 USING_NS_CC_EXT;
 
@@ -610,18 +615,13 @@ void GameScene::start_finish_animation()
     }
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(5.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
     
-    Sprite *camion;
-    camion=Sprite::create("Camion/camion0007.png");
-    camion->setPosition(600,160);
-    this->addChild(camion);
-    camion->runAction(MoveTo::create(1, Point(240,160)));
     
 }
 
 
 void GameScene::game_end()
 {
-    auto newscene = FameScene::create();
+    auto newscene = StatsScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
 

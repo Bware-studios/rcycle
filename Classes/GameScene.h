@@ -17,7 +17,6 @@
 #include "Options.h"
 
 #include "SceneLoadManager.h"
-#include "FameScene.h"
 #include "Trash.h"
 #include "Container.h"
 #include "WorldFrame.h"
