@@ -7,7 +7,7 @@
 //
 
 #include "StatsScene.h"
-
+#include "SceneLoadManager.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -15,6 +15,10 @@ USING_NS_CC_EXT;
 
 bool StatsScene::init() {
     if ( ! Scene::init() ) return false;
+    
+    statsLayer=SceneLoadManager::getInstance()->layerFromFile("StatsLayer",this);
+    
+    return true;
 }
 
 

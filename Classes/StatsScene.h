@@ -36,7 +36,7 @@ public:
     // VariableAsigner
     virtual bool onAssignCCBMemberVariable(cocos2d::Ref* target, const char* memberVariableName, Node* node);
     
-
+    cocos2d::Layer *statsLayer;
 
 
 
