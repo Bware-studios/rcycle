@@ -42,6 +42,15 @@ private:
     int semiindent;
     int offset;
     int verticalindent;
+    int recycled_ok_text_x;
+    int recycled_ok_text_y;
+    int recycled_fail_text_x;
+    int recycled_fail_text_y;
+
+
+    cocos2d::Label *score_ok;
+    cocos2d::Label *score_fail;
+
     
     // para el contenedor de cristal que esta arriba
     cocos2d::Sprite *over_sprite;

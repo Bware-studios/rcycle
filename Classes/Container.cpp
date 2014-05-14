@@ -22,11 +22,21 @@ const int normal_semiindent = 10;
 const int normal_offset = 10;
 const int normal_verticalindent =80;
 
+const int normal_recycled_ok_text_x=-15 ;
+const int normal_recycled_ok_text_y=0;
+const int normal_recycled_fail_text_x=15 ;
+const int normal_recycled_fail_text_y=0 ;
+
 // vidrio container
 const int x_semiheight = 60;
 const int x_semiwidth = 50;
 const int x_semiindent = 0;
 const int x_verticalindent = 40;
+
+const int x_recycled_ok_text_x=-15 ;
+const int x_recycled_ok_text_y=0;
+const int x_recycled_fail_text_x=15 ;
+const int x_recycled_fail_text_y=0 ;
 
 
 bool Container::init()
@@ -48,12 +58,20 @@ bool Container::init(int p_trash_category)
         semiindent=x_semiindent;
         verticalindent=x_verticalindent;
         offset=0;
+        recycled_ok_text_x=x_recycled_ok_text_x;
+        recycled_ok_text_y=x_recycled_ok_text_y;
+        recycled_fail_text_x=x_recycled_fail_text_x;
+        recycled_fail_text_y=x_recycled_fail_text_y;
     } else {
         semiheight=normal_semiheight;
         semiwidth=normal_semiwidth;
         semiindent=normal_semiindent;
         verticalindent=normal_verticalindent;
         offset=normal_offset;
+        recycled_ok_text_x=normal_recycled_ok_text_x;
+        recycled_ok_text_y=normal_recycled_ok_text_y;
+        recycled_fail_text_x=normal_recycled_fail_text_x;
+        recycled_fail_text_y=normal_recycled_fail_text_y;
     }
     
     Texture2D *tex1;
@@ -124,6 +142,17 @@ bool Container::init(int p_trash_category)
         over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0005.png");
         if (Options::debug_draw_alfa) over_sprite->setOpacity(100);
     }
+    
+    
+    Sprite *higersprite = this;
+    if (p_trash_category==Trash::CAT_CRISTAL) higersprite=over_sprite;
+    score_ok = Label::create("0", "MarkerFelt", 30);
+    score_ok->setPosition(recycled_ok_text_x, recycled_ok_text_y);
+    higersprite->addChild(score_ok);
+    score_fail = Label::create("0");
+    score_fail->setPosition(recycled_fail_text_x, recycled_fail_text_y);
+    higersprite->addChild(score_fail);
+    
     
     if (Options::debug_draw_alfa) this->setOpacity(100);
     
