@@ -48,6 +48,15 @@ bool Trash::init(int p_trash_type, int p_trash_category)
 
     this->is_dragable=true;
     
+
+    // para probar las labels
+//    Label *debug_label=Label::create("X","Marker Felt",30);
+//    debug_label->setAlignment(TextHAlignment::CENTER);
+//    debug_label->setVerticalAlignment(TextVAlignment::CENTER);
+//    debug_label->setPosition(32,32);
+//    debug_label->setColor(Color3B(255, 0, 0));
+//    this->addChild(debug_label);
+    
     return true;
 }
 

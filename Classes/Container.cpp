@@ -74,6 +74,9 @@ bool Container::init(int p_trash_category)
         recycled_fail_text_y=normal_recycled_fail_text_y;
     }
     
+    recycled_ok=0;
+    recycled_fail=0;
+    
     Texture2D *tex1;
     tex1=new Texture2D();
     unsigned short texdata[]={0x0f0f,0x0f0f,0x0f0f , 0x0f0f,0xf0ff,0x0f0f , 0x0f0f,0x0f0f,0x0f0f   };
@@ -146,11 +149,13 @@ bool Container::init(int p_trash_category)
     
     Sprite *higersprite = this;
     if (p_trash_category==Trash::CAT_CRISTAL) higersprite=over_sprite;
-    score_ok = Label::create("0", "MarkerFelt", 30);
-    score_ok->setPosition(recycled_ok_text_x, recycled_ok_text_y);
+    score_ok = Label::create("0", "Marker Felt", 30);
+    score_ok->setColor(Color3B(0, 200, 0));
+    score_ok->setPosition(recycled_ok_text_x+semiwidth, recycled_ok_text_y+semiheight);
     higersprite->addChild(score_ok);
-    score_fail = Label::create("0");
-    score_fail->setPosition(recycled_fail_text_x, recycled_fail_text_y);
+    score_fail = Label::create("0", "Marker Felt",30);
+    score_fail->setColor(Color3B(200, 0, 0));
+    score_fail->setPosition(recycled_fail_text_x+semiwidth, recycled_fail_text_y+semiheight);
     higersprite->addChild(score_fail);
     
     

@@ -48,6 +48,10 @@ private:
     int recycled_fail_text_y;
 
 
+    
+    int recycled_ok;
+    int recycled_fail;
+    
     cocos2d::Label *score_ok;
     cocos2d::Label *score_fail;
 
