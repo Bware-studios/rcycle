@@ -40,7 +40,7 @@ void Game::trash_recycled(int category)
 {
     int cat_safe=category%Trash::num_trash_cat;
     wave_recycled[cat_safe]+=1;
-    GameScene::thegamescene->set_recycled(cat_safe, wave_recycled[cat_safe]);
+   // GameScene::thegamescene->set_recycled(cat_safe, wave_recycled[cat_safe]);
 }
 
 

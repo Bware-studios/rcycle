@@ -71,9 +71,9 @@ public:
     // add trhashes interface
     void add_trash(int trash_type,int trash_category, cocos2d::Point &position, cocos2d::Vect &v);
     
-    // counter manipulation
-    void set_recycled(int category, int value);
-    void set_failed(int category, int value);
+    // counter manipulation   moved to container
+//    void set_recycled(int category, int value);
+//    void set_failed(int category, int value);
     
 
     
@@ -118,10 +118,10 @@ public:
     
     cocos2d::Label *score1;
 
-    cocos2d::Label *score_1;
-    cocos2d::Label *score_2;
-    cocos2d::Label *score_3;
-    cocos2d::Label *score_4;
+//    cocos2d::Label *score_1;
+//    cocos2d::Label *score_2;
+//    cocos2d::Label *score_3;
+//    cocos2d::Label *score_4;
 
     cocos2d::Menu *pause_menu;
     

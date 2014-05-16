@@ -314,10 +314,10 @@ bool GameScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
 
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Label *, this->score1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", Label *, this->score_1);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", Label *, this->score_2);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", Label *, this->score_3);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", Label *, this->score_4);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", Label *, this->score_1);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", Label *, this->score_2);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", Label *, this->score_3);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", Label *, this->score_4);
 
     return true;
 }
@@ -497,26 +497,26 @@ void GameScene::add_trash(int trash_type,int trash_category, Point &position, Ve
 
 
 
-void GameScene::set_recycled(int category, int value)
-{
-    Label *thelabel;
-    char labelstring[10];
-    if (category==Trash::CAT_ORGANICO) thelabel=score_1;
-    if (category==Trash::CAT_PAPEL) thelabel=score_2;
-    if (category==Trash::CAT_PLASTICO) thelabel=score_3;
-    if (category==Trash::CAT_CRISTAL) thelabel=score_4;
-
-    sprintf(labelstring, "%d",value);
-    // para evitar problemas de añadir stl en la compilacion de android
-    //    thelabel->setString(std::to_string(value));
-    thelabel->setString(labelstring);
-}
-
-
-void GameScene::set_failed(int category, int value)
-{
- 
-}
+//void GameScene::set_recycled(int category, int value)
+//{
+//    Label *thelabel;
+//    char labelstring[10];
+//    if (category==Trash::CAT_ORGANICO) thelabel=score_1;
+//    if (category==Trash::CAT_PAPEL) thelabel=score_2;
+//    if (category==Trash::CAT_PLASTICO) thelabel=score_3;
+//    if (category==Trash::CAT_CRISTAL) thelabel=score_4;
+//
+//    sprintf(labelstring, "%d",value);
+//    // para evitar problemas de añadir stl en la compilacion de android
+//    //    thelabel->setString(std::to_string(value));
+//    thelabel->setString(labelstring);
+//}
+//
+//
+//void GameScene::set_failed(int category, int value)
+//{
+// 
+//}
 
 void GameScene::enter_movement_ended()
 {

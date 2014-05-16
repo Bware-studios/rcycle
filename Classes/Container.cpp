@@ -148,7 +148,7 @@ bool Container::init(int p_trash_category)
     
     
     Sprite *higersprite = this;
-    if (p_trash_category==Trash::CAT_CRISTAL) higersprite=over_sprite;
+    //if (p_trash_category==Trash::CAT_CRISTAL) higersprite=over_sprite;
     score_ok = Label::create("0", "Marker Felt", 30);
     score_ok->setColor(Color3B(0, 200, 0));
     score_ok->setPosition(recycled_ok_text_x+semiwidth, recycled_ok_text_y+semiheight);
@@ -193,18 +193,26 @@ void Container::add_to_layer(cocos2d::Layer *alayer)
         alayer->addChild(over_sprite,30);
         alayer->addChild(this,10);
     } else {
-        alayer->addChild(this,40);
+//        alayer->addChild(this,40);
+        alayer->addChild(this,10);
     }
 }
 
 void Container::destroy(Trash *atrash)
 {
+    char numberS[10];
     LOG_COLLISION("trash destroyed [c %d t %d]",atrash->trash_category,atrash->trash_type);
     if ( trash_category == atrash->trash_category ) {
         LOG_COLLISION("container MATCH");
+        recycled_ok+=1;
+        sprintf(numberS, "%d",recycled_ok);
+        score_ok->setString(numberS);
         Game::thegame->trash_recycled(trash_category);
     } else {
         LOG_COLLISION("container FAILED");
+        recycled_fail+=1;
+        sprintf(numberS, "%d",recycled_fail);
+        score_fail->setString(numberS);
         Game::thegame->trash_failed(atrash->trash_category);
     }
     
