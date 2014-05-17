@@ -158,7 +158,11 @@ bool Container::init(int p_trash_category)
     score_fail->setPosition(recycled_fail_text_x+semiwidth, recycled_fail_text_y+semiheight);
     higersprite->addChild(score_fail);
     
-    
+    dust=ParticleExplosion::create();
+    dust->setPosition(semiwidth,semiheight);
+    dust->stopSystem();
+    this->addChild(dust);
+
     if (Options::debug_draw_alfa) this->setOpacity(100);
     
     return true;
@@ -215,6 +219,8 @@ void Container::destroy(Trash *atrash)
         score_fail->setString(numberS);
         Game::thegame->trash_failed(atrash->trash_category);
     }
+    
+    dust->resetSystem();
     
 //    if (!Options::debug_draw_spritesquare){
 //    if (rand()%2==0) {

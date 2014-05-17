@@ -55,6 +55,7 @@ private:
     cocos2d::Label *score_ok;
     cocos2d::Label *score_fail;
 
+    cocos2d::ParticleSystem *dust;
     
     // para el contenedor de cristal que esta arriba
     cocos2d::Sprite *over_sprite;

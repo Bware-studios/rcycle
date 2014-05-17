@@ -103,7 +103,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    director->setContentScaleFactor(resourceSize.width/designSize.width);
     director->setContentScaleFactor(resourceSize.height/designSize.height);
 
-    glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::SHOW_ALL);
+    glview->setDesignResolutionSize(designSize.width, designSize.height, /*ResolutionPolicy::SHOW_ALL*/ResolutionPolicy::FIXED_HEIGHT);
     
 
     // create a scene. it's an autorelease object
