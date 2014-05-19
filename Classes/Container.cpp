@@ -154,12 +154,16 @@ bool Container::init(int p_trash_category)
     score_ok->setPosition(recycled_ok_text_x+semiwidth, recycled_ok_text_y+semiheight);
     higersprite->addChild(score_ok);
     score_fail = Label::create("0", "Marker Felt",30);
-    score_fail->setColor(Color3B(200, 0, 0));
+    score_fail->setColor(Color3B(150, 0, 0));
     score_fail->setPosition(recycled_fail_text_x+semiwidth, recycled_fail_text_y+semiheight);
     higersprite->addChild(score_fail);
     
     dust=ParticleExplosion::create();
-    dust->setPosition(semiwidth,semiheight);
+    dust->setAngle(90);
+    dust->setAngleVar(10);
+    dust->setGravity(Point(0,-100));
+    dust->setSpeed(100);
+    dust->setPosition(semiwidth,semiheight*0);
     dust->stopSystem();
     this->addChild(dust);
 
