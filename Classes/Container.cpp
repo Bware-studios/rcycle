@@ -178,7 +178,7 @@ Container* Container::create(int p_trash_category)
     if ( !Options::debug_draw_spritesquare ) {
         char ccbifilename[50];
         sprintf(ccbifilename, "Contenedor%d",p_trash_category*0+1);
-        pRet=SceneLoadManager::getInstance()->containerFromFile(ccbifilename);
+        pRet=dynamic_cast<Container*>(SceneLoadManager::getInstance()->gameObjectFromFile(ccbifilename));
     } else {
         pRet=Container::create();
     }
@@ -187,11 +187,11 @@ Container* Container::create(int p_trash_category)
 }
 
 
-void Container::setAnimationManager(cocosbuilder::CCBAnimationManager *p_animation_manager)
-{
-    animation_manager=p_animation_manager;
-    animation_manager->retain();
-}
+//void Container::setAnimationManager(cocosbuilder::CCBAnimationManager *p_animation_manager)
+//{
+//    animation_manager=p_animation_manager;
+//    animation_manager->retain();
+//}
 
 
 void Container::add_to_layer(cocos2d::Layer *alayer)

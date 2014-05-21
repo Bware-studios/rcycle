@@ -11,6 +11,8 @@
 #include "MainMenuScene.h"
 #include "SceneLoadManager.h"
 
+
+
 USING_NS_CC;
 USING_NS_CC_EXT;
 
@@ -24,12 +26,17 @@ bool StatsScene::init() {
     backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
     this->addChild(backLayer,10);
 
-    Sprite *camion;
-    camion=Sprite::create("Camion/camion0007.png");
-    camion->setPosition(600,160);
-    backLayer->addChild(camion);
-    camion->runAction(MoveTo::create(1, Point(240,160)));
+//    Sprite *camion;
+//    camion=Sprite::create("Camion/camion0007.png");
+//    camion->setPosition(600,160);
+//    backLayer->addChild(camion);
+//    camion->runAction(MoveTo::create(1, Point(240,160)));
 
+    camion=Camion::createFromFile();
+    camion->add_to_layer(statsLayer);
+    camion->start_enter_animation(Point(600,160), Point(240,160));
+    
+    
     return true;
 }
 
@@ -72,9 +79,14 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 
 void StatsScene::action_enter(Ref *pSender)
 {
+    camion->start_exit_animation(Point(-240,160));
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.1),CallFunc::create(CC_CALLBACK_0(StatsScene::event_camion_gone, this))));
+}
+
+void StatsScene::event_camion_gone()
+{
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
-
 
 

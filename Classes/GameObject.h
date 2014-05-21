@@ -10,6 +10,7 @@
 #define __Rcycle__GameObject__
 
 #include "Common.h"
+#include "cocosbuilder/CocosBuilder.h"
 
 
 class GameObject : public cocos2d::Sprite
@@ -24,6 +25,27 @@ public:
     bool is_dragable;
     
 };
+
+
+
+// Base for GameObject with animations loaded from CCB
+//
+class AnimatedGameObject : public GameObject
+{
+public:
+    bool init();
+    CREATE_FUNC(AnimatedGameObject);
+    AnimatedGameObject *create(char *filename);
+    
+    void setAnimationManager(cocosbuilder::CCBAnimationManager *p_animation_manager);
+
+
+protected:
+    cocosbuilder::CCBAnimationManager *animation_manager;
+
+};
+
+
 
 
 

@@ -16,6 +16,7 @@
 #include "cocosbuilder/CocosBuilder.h"
 
 #include "Container.h"
+#include "Camion.h"
 
 
 
@@ -30,6 +31,7 @@ public:
     cocos2d::Layer *layerFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
 
     Container *containerFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
+    AnimatedGameObject *gameObjectFromFile(const char *pFileName,cocosbuilder::CCBSelectorResolver *pOwner=NULL);
 
     
 private:
@@ -146,6 +148,14 @@ public:
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(ContainerLoader, loader);
 protected:
     CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(Container);
+};
+
+
+class CamionLoader : public cocosbuilder::SpriteLoader {
+public:
+    CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(CamionLoader, loader);
+protected:
+    CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(Camion);
 };
 
 

@@ -15,6 +15,7 @@
 #include "cocosbuilder/CocosBuilder.h"
 
 #include "Options.h"
+#include "Camion.h"
 
 
 class StatsScene : public cocos2d::Scene,
@@ -37,11 +38,13 @@ public:
     
     
     void action_enter(cocos2d::Ref *pSender);
+    void event_camion_gone();
     
 
     cocos2d::Layer *backLayer;
     cocos2d::Layer *statsLayer;
     
+    Camion *camion;
 
 
 };

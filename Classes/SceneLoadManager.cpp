@@ -77,6 +77,23 @@ Container *SceneLoadManager::containerFromFile(const char *pFileName,CCBSelector
     return acontainer;
 }
 
+AnimatedGameObject *SceneLoadManager::gameObjectFromFile(const char *pFileName,CCBSelectorResolver *pOwner)
+{
+    
+    auto loaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    loaderLibrary->registerNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
+    loaderLibrary->registerNodeLoader("Container", ContainerLoader::loader());
+    loaderLibrary->registerNodeLoader("Camion", CamionLoader::loader());
+    ccbReader = new CCBReader(loaderLibrary);
+    
+    
+    Ref *owner=dynamic_cast<Ref*>(pOwner);
+    AnimatedGameObject *agameobject=(AnimatedGameObject*)(ccbReader->readNodeGraphFromFile(pFileName,owner));
+    agameobject->setAnimationManager(ccbReader->getAnimationManager());
+    return agameobject;
+}
+
 
 
 bool MenuLayer::init()
