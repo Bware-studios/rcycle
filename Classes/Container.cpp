@@ -38,6 +38,8 @@ const int x_recycled_ok_text_y=0;
 const int x_recycled_fail_text_x=15 ;
 const int x_recycled_fail_text_y=0 ;
 
+const int N_DUST_PARTICLE_SYS=2;
+
 
 bool Container::init()
 {
@@ -158,14 +160,20 @@ bool Container::init(int p_trash_category)
     score_fail->setPosition(recycled_fail_text_x+semiwidth, recycled_fail_text_y+semiheight);
     higersprite->addChild(score_fail);
     
-    dust=ParticleExplosion::create();
-    dust->setAngle(90);
-    dust->setAngleVar(10);
-    dust->setGravity(Point(0,-100));
-    dust->setSpeed(100);
-    dust->setPosition(semiwidth,semiheight*0);
-    dust->stopSystem();
-    this->addChild(dust);
+    next_dust=0;
+    dust=new ParticleSystem*[N_DUST_PARTICLE_SYS];
+    for (int i=0;i<N_DUST_PARTICLE_SYS;i++) {
+        dust[i]=ParticleExplosion::create();
+        dust[i]->setAngle(90);
+        dust[i]->setAngleVar(10);
+        dust[i]->setGravity(Point(0,-100));
+        dust[i]->setSpeed(100);
+        dust[i]->setPosition(semiwidth,semiheight*0);
+        dust[i]->stopSystem();
+        this->addChild(dust[i]);
+    }
+    
+    
 
     if (Options::debug_draw_alfa) this->setOpacity(100);
     
@@ -208,6 +216,7 @@ void Container::add_to_layer(cocos2d::Layer *alayer)
 
 void Container::destroy(Trash *atrash)
 {
+    atrash->play_destroyed_sound();
     char numberS[10];
     LOG_COLLISION("trash destroyed [c %d t %d]",atrash->trash_category,atrash->trash_type);
     if ( trash_category == atrash->trash_category ) {
@@ -224,7 +233,9 @@ void Container::destroy(Trash *atrash)
         Game::thegame->trash_failed(atrash->trash_category);
     }
     
-    dust->resetSystem();
+    
+    dust[next_dust]->resetSystem();
+    next_dust=(next_dust+1)%N_DUST_PARTICLE_SYS;
     
 //    if (!Options::debug_draw_spritesquare){
 //    if (rand()%2==0) {

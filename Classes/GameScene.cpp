@@ -359,7 +359,7 @@ bool GameScene::contact_begin(const PhysicsContact& contact)
                 LOG_COLLISION("destroy in container %p",atrash);
                 gameLayer->removeChild(atrash);
                 //add_random_trash();
-                sound_play_effect(sound_botella1);
+                //sound_play_effect(sound_botella1);
             } else {
                 aborder=dynamic_cast<WorldFrame*>(sother->getBody()->getNode());
                 if (aborder) {

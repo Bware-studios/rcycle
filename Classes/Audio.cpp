@@ -20,7 +20,48 @@ const char *sound_botella1="Sounds/Botella01.wav";
 const char *sound_botella2="Sounds/Botella02.wav";
 const char *sound_botella3="Sounds/Botella03.wav";
 
-const char *sound_slowmotionsong_name="chariots.mp3";
+const char *sound_carton1="Sounds/Cart01.wav";
+const char *sound_carton2="Sounds/Cart02.wav";
+const char *sound_carton3="Sounds/Cart03.wav";
+
+const char *sound_cristal1="Sounds/Cris01.wav";
+const char *sound_cristal2="Sounds/Cris02.wav";
+const char *sound_cristal3="Sounds/Cris03.wav";
+const char *sound_cristal4="Sounds/Cris04.wav";
+
+const char *sound_papel1="Sounds/Papel01.wav";
+const char *sound_papel2="Sounds/Papel02.wav";
+const char *sound_papel3="Sounds/Papel03.wav";
+
+const char *sound_plasticoligero1="Sounds/PlastLig01.wav";
+const char *sound_plasticoligero2="Sounds/PlastLig02.wav";
+const char *sound_plasticoligero3="Sounds/PlastLig03.wav";
+
+const char *sound_plasticomedio1="Sounds/PlastMed01.wav";
+const char *sound_plasticomedio2="Sounds/PlastMed02.wav";
+
+
+const char *sound_group_botella[]={sound_botella1,sound_botella2,sound_botella3};
+const char *sound_group_carton[]={sound_carton1,sound_carton2,sound_carton3};
+const char *sound_group_cristal[]={sound_cristal1,sound_cristal2,sound_cristal3,sound_cristal4};
+const char *sound_group_papel[]={sound_papel1,sound_papel2,sound_papel3};
+const char *sound_group_plasticoligero[]={sound_plasticoligero1,sound_plasticoligero2,sound_plasticoligero3};
+const char *sound_group_plasticomedio[]={sound_plasticomedio1,sound_plasticomedio2};
+
+//const char ***sound_group=new char**[N_SOUND_GROUPS];
+const char **sound_group[]={sound_group_botella,sound_group_carton,sound_group_cristal,sound_group_papel,sound_group_plasticoligero,sound_group_plasticomedio};
+const int sound_group_n[]={3,3,4,3,3,2};
+
+const int id_sound_group_botella=0;
+const int id_sound_group_carton=1;
+const int id_sound_group_cristal=2;
+const int id_sound_group_papel=3;
+const int id_sound_group_plasticoligero=4;
+const int id_sound_group_plasticomedio=5;
+
+
+//const char *sound_slowmotionsong_name="chariots.mp3";
+
 
 SimpleAudioEngine *audio_engine;
 
@@ -30,6 +71,9 @@ bool song_playing=false;
 
 void sound_init() {
     audio_engine=SimpleAudioEngine::getInstance();
+    sound_group[0]=sound_group_botella;
+
+    
 }
 
 
@@ -41,6 +85,11 @@ void sound_preload_all() {
 
 void sound_play_effect(const char *name) {
     audio_engine->playEffect(name);
+}
+
+void sound_play_effect_from_group(int groupid) {
+    int selected=rand()%sound_group_n[groupid];
+    sound_play_effect(sound_group[groupid][selected]);
 }
 
 void sound_play_music(const char *name) {

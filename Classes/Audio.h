@@ -21,10 +21,19 @@ extern const char *sound_botella3;
 
 
 
+extern const int id_sound_group_botella;
+extern const int id_sound_group_carton;
+extern const int id_sound_group_cristal;
+extern const int id_sound_group_papel;
+extern const int id_sound_group_plasticoligero;
+extern const int id_sound_group_plasticomedio;
+
+
 void sound_init();
 void sound_preload_all();
 
 void sound_play_effect(const char *name);
+void sound_play_effect_from_group(int groupid);
 
 void sound_play_music(const char *name);
 void sound_stop_music();

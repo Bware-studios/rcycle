@@ -22,6 +22,7 @@ public:
     CREATE_FUNC(Trash);
     static Trash* create(int p_trash_type, int p_trash_category);
     void add_to_layer(cocos2d::Layer *alayer);
+    void play_destroyed_sound();
     
     int trash_type;
     int trash_category;

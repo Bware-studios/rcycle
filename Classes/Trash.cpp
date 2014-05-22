@@ -8,6 +8,8 @@
 
 #include "Trash.h"
 
+#include "Audio.h"
+
 USING_NS_CC;
 
 
@@ -84,5 +86,17 @@ void Trash::add_to_layer(cocos2d::Layer *alayer)
     alayer->addChild(this,15);
 }
 
+void Trash::play_destroyed_sound()
+{
+    if (trash_category==Trash::CAT_CRISTAL) {
+        sound_play_effect_from_group(id_sound_group_botella);
+    } else if (trash_category==Trash::CAT_PLASTICO) {
+        sound_play_effect_from_group(id_sound_group_plasticoligero);
+    } else if (trash_category==Trash::CAT_ORGANICO) {
+    
+    } else if (trash_category==Trash::CAT_PAPEL) {
+        sound_play_effect_from_group(id_sound_group_carton);
+    }
+}
 
 
