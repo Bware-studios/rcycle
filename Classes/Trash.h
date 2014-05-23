@@ -32,6 +32,7 @@ public:
     static const int CAT_ORGANICO;
     static const int CAT_PAPEL;
     static const int num_trash_cat;
+    static const int max_trash_type_per_cat;
     static const char *trash_cat_names[];
 };
 

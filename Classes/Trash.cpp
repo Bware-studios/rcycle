@@ -14,11 +14,14 @@ USING_NS_CC;
 
 
 const int Trash::num_trash_cat=4;
+const int Trash::max_trash_type_per_cat=5;
 const char *Trash::trash_cat_names[]={"cristal","plastico","organico","papel"};
 const int Trash::CAT_CRISTAL=0;
 const int Trash::CAT_PLASTICO=1;
 const int Trash::CAT_ORGANICO=2;
 const int Trash::CAT_PAPEL=3;
+
+
 
 bool Trash::init()
 {
@@ -88,15 +91,16 @@ void Trash::add_to_layer(cocos2d::Layer *alayer)
 
 void Trash::play_destroyed_sound()
 {
-    if (trash_category==Trash::CAT_CRISTAL) {
-        sound_play_effect_from_group(id_sound_group_botella);
-    } else if (trash_category==Trash::CAT_PLASTICO) {
-        sound_play_effect_from_group(id_sound_group_plasticoligero);
-    } else if (trash_category==Trash::CAT_ORGANICO) {
-    
-    } else if (trash_category==Trash::CAT_PAPEL) {
-        sound_play_effect_from_group(id_sound_group_carton);
-    }
+    sound_play_effect_from_trash(trash_category, trash_type);
+//    if (trash_category==Trash::CAT_CRISTAL) {
+//        sound_play_effect_from_group(id_sound_group_botella);
+//    } else if (trash_category==Trash::CAT_PLASTICO) {
+//        sound_play_effect_from_group(id_sound_group_plasticoligero);
+//    } else if (trash_category==Trash::CAT_ORGANICO) {
+//    
+//    } else if (trash_category==Trash::CAT_PAPEL) {
+//        sound_play_effect_from_group(id_sound_group_carton);
+//    }
 }
 
 

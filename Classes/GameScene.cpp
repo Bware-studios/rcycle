@@ -532,7 +532,7 @@ void GameScene::enter_animation_ended()
 {
     generator->start();
     ingame=true;
-    gameEndTime=gameTime+5.0;
+    gameEndTime=gameTime+32.0;
 
     //this->runAction(Sequence::createWithTwoActions(DelayTime::create(20.0),CallFunc::create(CC_CALLBACK_0(GameScene::time_passes, this))));
 
