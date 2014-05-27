@@ -22,17 +22,18 @@ bool TrashGenerator::initWithScene(GameScene *pScene)
 
 void TrashGenerator::start()
 {
+    running=true;
     time_passes();
 }
 
 void TrashGenerator::stop()
 {
-    
-    
+    running=false;
 }
 
 void TrashGenerator::time_passes()
 {
+    if (!running) return;
     generateRandomTrash();
     theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
 }

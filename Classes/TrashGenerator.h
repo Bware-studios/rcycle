@@ -31,7 +31,9 @@ public:
     void generateRandomTrash();
     bool calculateVelocityToTarget(cocos2d::Vect &v,const cocos2d::Point &start,const float htop,const cocos2d::Point &target);
 
+private:
     GameScene *theScene;
+    bool running;
     
 };
 
