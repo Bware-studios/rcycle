@@ -567,7 +567,7 @@ void GameScene::update(float deltat)
         }
         if (gameTime>gameEndTime) {
             //game_end();
-            
+            generator->stop();
             start_finish_animation();
         }
     }
