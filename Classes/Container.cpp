@@ -143,14 +143,15 @@ bool Container::init(int p_trash_category)
     this->setPhysicsBody(body);
     
     over_sprite=NULL;
-    if (p_trash_category==Trash::CAT_CRISTAL) {
-        over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0005.png");
+    if (p_trash_category==Trash::CAT_CRISTAL || true) { // <<<< ojo
+        over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0010.png");
+        over_sprite->retain();
         if (Options::debug_draw_alfa) over_sprite->setOpacity(100);
     }
     
     
     Sprite *higersprite = this;
-    //if (p_trash_category==Trash::CAT_CRISTAL) higersprite=over_sprite;
+    if (over_sprite) higersprite=over_sprite;
     score_ok = Label::create("0", "Marker Felt", 30);
     score_ok->setColor(Color3B(0, 200, 0));
     score_ok->setPosition(recycled_ok_text_x+semiwidth, recycled_ok_text_y+semiheight);
@@ -204,14 +205,9 @@ Container* Container::create(int p_trash_category)
 
 void Container::add_to_layer(cocos2d::Layer *alayer)
 {
-    if (over_sprite) {
-        over_sprite->setPosition(this->getPosition());
-        alayer->addChild(over_sprite,30);
-        alayer->addChild(this,10);
-    } else {
-//        alayer->addChild(this,40);
-        alayer->addChild(this,10);
-    }
+    // over_sprite cannot be added till start animation ends
+    parent_layer=alayer;
+    alayer->addChild(this,10);
 }
 
 void Container::destroy(Trash *atrash)
@@ -246,15 +242,28 @@ void Container::destroy(Trash *atrash)
     
 }
 
+void Container::enter_animation_ended() {
+    if (over_sprite) {
+        over_sprite->setPosition(this->getPosition());
+        parent_layer->addChild(over_sprite,30);
+        over_sprite->release();
+    }
+}
+
 void Container::start_enter_animation(Point start_postion,Point end_position)
 {
     this->setPosition(start_postion);
     animation_manager->runAnimationsForSequenceNamed("Sube");
-    this->runAction(EaseElasticOut::create(MoveTo::create(1, end_position),0.5));
+    this->runAction(Sequence::createWithTwoActions(EaseElasticOut::create(MoveTo::create(1, end_position),0.5),CallFunc::create(CC_CALLBACK_0(Container::enter_animation_ended, this))));
 }
 
 void Container::start_exit_animation(Point end_position)
 {
+    over_sprite->removeFromParent();
+    for (int i=0;i<N_DUST_PARTICLE_SYS;i++) {
+        dust[i]->stopSystem();
+        dust[i]->removeFromParent();
+    }
     animation_manager->runAnimationsForSequenceNamed("Baja");
     this->runAction(EaseElasticIn::create(MoveTo::create(1, end_position),0.5));
 }

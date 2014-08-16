@@ -31,6 +31,9 @@ public:
     
     void destroy(Trash *atrash);
     
+
+    void enter_animation_ended();
+
     void start_enter_animation(cocos2d::Point start_postion,cocos2d::Point end_position);
     void start_exit_animation(cocos2d::Point end_position);
     
@@ -60,6 +63,7 @@ private:
     
     // para el contenedor de cristal que esta arriba
     cocos2d::Sprite *over_sprite;
+    cocos2d::Layer *parent_layer;
     
 //    cocosbuilder::CCBAnimationManager *animation_manager;
 
