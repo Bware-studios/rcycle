@@ -357,7 +357,7 @@ bool GameScene::contact_begin(const PhysicsContact& contact)
             if (acontainer) {
                 acontainer->destroy(atrash);
                 LOG_COLLISION("destroy in container %p",atrash);
-                gameLayer->removeChild(atrash);
+                //gameLayer->removeChild(atrash);
                 //add_random_trash();
                 //sound_play_effect(sound_botella1);
             } else {
@@ -365,7 +365,7 @@ bool GameScene::contact_begin(const PhysicsContact& contact)
                 if (aborder) {
                     aborder->destroy(atrash);
                     LOG_COLLISION("destroy in border %p",atrash);
-                    gameLayer->removeChild(atrash);
+                    //gameLayer->removeChild(atrash);
                     //add_random_trash();
                 }
             }
@@ -608,6 +608,7 @@ void GameScene::action_quit(Ref *o)
 void GameScene::start_finish_animation()
 {
     ingame=false;
+    Trash::delete_all_trashes();
     int i;
     for (i=0;i<container_n;i++) {
         container_sprite[i]->start_exit_animation(container_enter_movement_position[i]);

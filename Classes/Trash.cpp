@@ -22,6 +22,12 @@ const int Trash::CAT_ORGANICO=2;
 const int Trash::CAT_PAPEL=3;
 
 
+Vector<Trash*> *Trash::trashes = new Vector<Trash*>(30);
+
+//Trash::~Trash() {
+//    trashes->eraseObject(this);
+//}
+
 
 bool Trash::init()
 {
@@ -72,6 +78,7 @@ Trash* Trash::create(int p_trash_type, int p_trash_category)
     if (pRet && pRet->init(p_trash_type,p_trash_category))
     {
         pRet->autorelease();
+        trashes->pushBack(pRet);
         return pRet;
     }
     else
@@ -103,4 +110,19 @@ void Trash::play_destroyed_sound()
 //    }
 }
 
+
+void Trash::destroy() {
+    this->removeFromParent();
+    trashes->eraseObject(this);
+}
+
+void Trash::delete_all_trashes() {
+    Vector<Trash*>::reverse_iterator i = trashes->rbegin();
+    Trash *atrash;
+    while (i != trashes->rend()) {
+        atrash=*i;
+        atrash->destroy();
+        i++;
+    }
+}
 

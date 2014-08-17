@@ -76,6 +76,7 @@ void WorldFrame::add_to_layer(cocos2d::Layer *alayer)
 void WorldFrame::destroy(Trash *atrash)
 {
     Game::thegame->trash_out(atrash->trash_category);
+    atrash->destroy();
 }
 
 

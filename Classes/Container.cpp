@@ -228,7 +228,7 @@ void Container::destroy(Trash *atrash)
         score_fail->setString(numberS);
         Game::thegame->trash_failed(atrash->trash_category);
     }
-    
+    atrash->destroy();
     
     dust[next_dust]->resetSystem();
     next_dust=(next_dust+1)%N_DUST_PARTICLE_SYS;

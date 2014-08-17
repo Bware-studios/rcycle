@@ -17,6 +17,7 @@
 class Trash : public GameObject
 {
 public:
+    //~Trash();
     bool init();
     bool init(int p_trash_type, int p_trash_category);
     CREATE_FUNC(Trash);
@@ -24,8 +25,14 @@ public:
     void add_to_layer(cocos2d::Layer *alayer);
     void play_destroyed_sound();
     
+    void destroy();
+    static void delete_all_trashes();
+    
+    
     int trash_type;
     int trash_category;
+    
+    static cocos2d::Vector<Trash*> *trashes;
     
     static const int CAT_CRISTAL;
     static const int CAT_PLASTICO;
