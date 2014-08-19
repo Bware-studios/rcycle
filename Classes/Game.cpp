@@ -8,6 +8,9 @@
 
 #include "Game.h"
 
+// puntos por cada tipo ok o failed
+int game_score_recycled[] = { 10,10,10,10 };
+int game_score_failed[] = { -10,-10,-10,-10};
 
 
 Game *Game::thegame=NULL;
@@ -32,6 +35,9 @@ bool Game::init()
         total_failed[i]=0;
         total_out[i]=0;
     }
+    
+    wave_score=0;
+    total_score=0;
     return true;
 }
 
@@ -58,9 +64,21 @@ void Game::trash_out(int category)
 }
 
 
+int Game::score(int *ok,int *failed) {
+    int score=0;
+    int i;
+    for (i=0;i<Trash::num_trash_cat;i++) {
+        score+=game_score_recycled[i]*wave_recycled[i];
+        score+=game_score_failed[i]*wave_failed[i];
+    }
+    return score;
+}
+
 void Game::wave_end()
 {
     int i;
+    wave_score=score(wave_recycled, wave_failed);
+    total_score+=wave_score;
     for (i=0; i<Trash::num_trash_cat; i++) {
         total_recycled[i]+=wave_recycled[i];
         total_failed[i]+=wave_failed[i];
