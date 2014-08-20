@@ -30,17 +30,17 @@ const int container_type[] = {
     Trash::CAT_CRISTAL
 };
 const Point container_position[] = {
-    Point(100,60+50*0),
-    Point(200,60+50*0),
-    Point(300,60+50*0),
-    Point(400,100+50*0),
+    Point(100,20),
+    Point(200,20),
+    Point(300,20),
+    Point(400,80+50*0),
 };
 // animacion de entrada
 const Point container_enter_movement_position[] = {
     Point(100,-40),
     Point(200,-40),
     Point(300,-40),
-    Point(400,-100),
+    Point(400,-150),
 };
 const float container_enter_movement_duration[] = {
     2,2,2,2
@@ -614,7 +614,7 @@ void GameScene::start_finish_animation()
         container_sprite[i]->start_exit_animation(container_enter_movement_position[i]);
 //        ->runAction(MoveTo::create(container_enter_movement_duration[i], container_enter_movement_position[i]));
     }
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(5.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
     
     
 }

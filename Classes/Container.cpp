@@ -256,7 +256,7 @@ void Container::start_enter_animation(Point start_postion,Point end_position)
 {
     this->setPosition(start_postion);
     animation_manager->runAnimationsForSequenceNamed("Sube");
-    this->runAction(Sequence::createWithTwoActions(EaseElasticOut::create(MoveTo::create(1, end_position),0.5),CallFunc::create(CC_CALLBACK_0(Container::enter_animation_ended, this))));
+    this->runAction(Sequence::createWithTwoActions(/*EaseElasticOut::create(*/MoveTo::create(0.5, end_position)/*,0.5)*/,CallFunc::create(CC_CALLBACK_0(Container::enter_animation_ended, this))));
 }
 
 void Container::start_exit_animation(Point end_position)
@@ -267,6 +267,6 @@ void Container::start_exit_animation(Point end_position)
         dust[i]->removeFromParent();
     }
     animation_manager->runAnimationsForSequenceNamed("Baja");
-    this->runAction(EaseElasticIn::create(MoveTo::create(1, end_position),0.5));
+    this->runAction(/*EaseElasticIn::create(*/MoveTo::create(0.5, end_position)/*,0.5)*/);
 }
 
