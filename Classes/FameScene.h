@@ -27,6 +27,7 @@ public:
     CREATE_FUNC(FameScene);
     
     void back(cocos2d::Ref *pSender);
+    void exit_animation_finished();
     
 };
 

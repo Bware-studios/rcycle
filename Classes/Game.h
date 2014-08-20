@@ -25,7 +25,7 @@ public:
     void trash_failed(int category);
     void trash_out(int category);
 
-    int score(int *ok,int *failed);
+    int score(int *ok,int *failed,int *outs);
     int score_topass_level(int level);
     
     void wave_end();

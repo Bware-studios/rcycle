@@ -143,11 +143,13 @@ bool Container::init(int p_trash_category)
     this->setPhysicsBody(body);
     
     over_sprite=NULL;
-    if (p_trash_category==Trash::CAT_CRISTAL || true) { // <<<< ojo
+    if (p_trash_category==Trash::CAT_CRISTAL) {
+        over_sprite=Sprite::createWithSpriteFrameName("Contenedores/vidrio0006.png");
+    } else {
         over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0010.png");
-        over_sprite->retain();
-        if (Options::debug_draw_alfa) over_sprite->setOpacity(100);
     }
+    over_sprite->retain();
+    if (Options::debug_draw_alfa) over_sprite->setOpacity(100);
     
     
     Sprite *higersprite = this;
@@ -186,7 +188,7 @@ Container* Container::create(int p_trash_category)
     Container *pRet;
     if ( !Options::debug_draw_spritesquare ) {
         char ccbifilename[50];
-        sprintf(ccbifilename, "Contenedor%d",p_trash_category*0+1);
+        sprintf(ccbifilename, "Contenedor%d",(p_trash_category>0)?1:0);
         pRet=dynamic_cast<Container*>(SceneLoadManager::getInstance()->gameObjectFromFile(ccbifilename));
     } else {
         pRet=Container::create();

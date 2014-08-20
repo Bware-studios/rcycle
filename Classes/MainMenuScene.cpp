@@ -39,6 +39,9 @@ bool MainMenuScene::init() {
 
 void MainMenuScene::time_passes()
 {
+    return;
+    
+    
     int r = 1+(rand()%3);
     char aname[30];
     sprintf(aname,"animation_%d",r);
@@ -53,9 +56,7 @@ void MainMenuScene::time_passes()
 void MainMenuScene::enter(Ref *pSender)
 {
     LOG("juego");
-    Game::create();
-    auto newscene = GameScene::create();
-    Director::getInstance()->replaceScene(newscene);
+    GameScene::enter_game_scene(true);
 }
 
 

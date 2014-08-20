@@ -640,3 +640,13 @@ void GameScene::game_end()
 
 
 
+void GameScene::enter_game_scene(bool newgame)
+{
+    if (newgame) {
+        if (Game::thegame) {Game::thegame->release();}
+        Game::create();
+    }
+    auto newscene = GameScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
+

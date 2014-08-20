@@ -23,8 +23,17 @@ bool FameScene::init() {
 
 void FameScene::back(Ref *pSender)
 {
+
+
+    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("salida");
+    
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.1),CallFunc::create(CC_CALLBACK_0(FameScene::exit_animation_finished, this))));
+
+}
+
+void FameScene::exit_animation_finished()
+{
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
-
 

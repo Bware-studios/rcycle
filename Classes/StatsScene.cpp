@@ -100,8 +100,12 @@ void StatsScene::action_enter(Ref *pSender)
 
 void StatsScene::event_camion_gone()
 {
-    auto newscene = MainMenuScene::create();
-    Director::getInstance()->replaceScene(newscene);
+    if (Game::thegame->get_last_wave_passed()) {
+        GameScene::enter_game_scene(false);
+    } else {
+        auto newscene = MainMenuScene::create();
+        Director::getInstance()->replaceScene(newscene);
+    }
 }
 
 

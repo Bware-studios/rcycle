@@ -44,7 +44,7 @@ public:
     static GameScene *create();
     
     static GameScene *thegamescene;
-
+    
     // SelectorResolver
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
     virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName);
@@ -95,8 +95,9 @@ public:
     void game_end();
     
     //void add_random_trash();
-    
-    
+
+    static void enter_game_scene(bool newgame);
+
     
     cocos2d::Layer *backLayer;
     cocos2d::Layer *gameLayer;
