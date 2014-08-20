@@ -622,6 +622,7 @@ void GameScene::start_finish_animation()
 
 void GameScene::game_end()
 {
+    Game::thegame->wave_end();
     auto newscene = StatsScene::create();
     Director::getInstance()->replaceScene(newscene);
 }

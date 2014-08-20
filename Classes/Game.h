@@ -26,8 +26,15 @@ public:
     void trash_out(int category);
 
     int score(int *ok,int *failed);
-
+    int score_topass_level(int level);
+    
     void wave_end();
+
+    int get_last_wave_score();
+    int get_total_score();
+    int get_last_wave_recycled(int cat);
+    int get_last_wave_failed(int cat);
+    int get_last_wave_passed();
     
     
     // stats
@@ -42,6 +49,7 @@ public:
     int wave_score = 0;
     int total_score = 0;
     int wave_completed = 0;
+    bool wave_passed = false;
     
 };
 

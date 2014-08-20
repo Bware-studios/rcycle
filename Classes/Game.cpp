@@ -36,6 +36,7 @@ bool Game::init()
         total_out[i]=0;
     }
     
+    wave_passed=false;
     wave_score=0;
     total_score=0;
     return true;
@@ -64,7 +65,8 @@ void Game::trash_out(int category)
 }
 
 
-int Game::score(int *ok,int *failed) {
+int Game::score(int *ok,int *failed)
+{
     int score=0;
     int i;
     for (i=0;i<Trash::num_trash_cat;i++) {
@@ -72,6 +74,11 @@ int Game::score(int *ok,int *failed) {
         score+=game_score_failed[i]*wave_failed[i];
     }
     return score;
+}
+
+int Game::score_topass_level(int level)
+{
+    return level*10;
 }
 
 void Game::wave_end()
@@ -87,6 +94,38 @@ void Game::wave_end()
         wave_failed[i]=0;
         wave_out[i]=0;
     }
-    
+    if (wave_score >= score_topass_level(wave_completed+1)) {
+        wave_passed=true;
+    } else {
+        wave_passed=false;
+    }
 }
+
+
+int Game::get_last_wave_score()
+{
+    return wave_score;
+}
+
+int Game::get_total_score()
+{
+    return total_score;
+}
+
+int Game::get_last_wave_recycled(int cat)
+{
+    return wave_recycled[cat];
+}
+
+int Game::get_last_wave_failed(int cat)
+{
+    return wave_failed[cat];
+}
+
+int Game::get_last_wave_passed()
+{
+    return wave_passed;
+}
+
+
 

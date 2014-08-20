@@ -11,8 +11,6 @@
 #include "MainMenuScene.h"
 #include "SceneLoadManager.h"
 
-
-
 USING_NS_CC;
 USING_NS_CC_EXT;
 
@@ -32,8 +30,19 @@ bool StatsScene::init() {
 //    camion=Camion::createFromFile();
 //    camion->add_to_layer(statsLayer);
 //    camion->start_enter_animation(Point(600,160), Point(240,160));
-    
 
+    label_1->setString("...");
+    label_2->setString("...");
+    label_3->setString("...");
+
+    char score_s[40];
+    sprintf(score_s,"Sc: %d",Game::thegame->get_last_wave_score());
+    label_1->setString(score_s);
+
+    sprintf(score_s,"%s",Game::thegame->get_last_wave_passed()?"Pasa":"No pasa" );
+    label_2->setString(score_s);
+    
+    
     return true;
 }
 
@@ -69,6 +78,12 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
     //CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", Label *, this->score_2);
     //CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", Label *, this->score_3);
     //CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", Label *, this->score_4);
+
+    
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t1", Label *, this->label_1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t2", Label *, this->label_2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t3", Label *, this->label_3);
+
     
     return true;
 }

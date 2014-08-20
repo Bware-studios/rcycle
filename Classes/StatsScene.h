@@ -39,6 +39,11 @@ public:
     
     void action_enter(cocos2d::Ref *pSender);
     void event_camion_gone();
+
+    
+    cocos2d::Label *label_1;
+    cocos2d::Label *label_2;
+    cocos2d::Label *label_3;
     
 
     cocos2d::Layer *backLayer;
