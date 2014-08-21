@@ -125,6 +125,8 @@ public:
 //    cocos2d::Label *score_4;
 
     cocos2d::Menu *pause_menu;
+
+    cocos2d::Sprite *fondo_sprite;
     
     float gameTime=0.0;
     bool ingame=false;

@@ -66,9 +66,15 @@ bool GameScene::init() {
     
     if ( ! Scene::initWithPhysics() ) return false;
 
-    backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
     gameLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
+
+    backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
+    fondo_sprite->removeFromParent();
+    if (Options::debug_draw_background) {
+        backLayer->addChild(fondo_sprite);
+    }
+
     
     
     PhysicsWorld *world;
@@ -319,6 +325,9 @@ bool GameScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_3", Label *, this->score_3);
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_4", Label *, this->score_4);
 
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fondo", Sprite  *, this->fondo_sprite);
+
+    
     return true;
 }
 
