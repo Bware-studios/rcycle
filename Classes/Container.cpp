@@ -28,10 +28,13 @@ const int normal_recycled_fail_text_x=15 ;
 const int normal_recycled_fail_text_y=0 ;
 
 // vidrio container
-const int x_semiheight = 60;
-const int x_semiwidth = 50;
-const int x_semiindent = 0;
-const int x_verticalindent = 40;
+const int x_semiheight = 155;
+const int x_semiwidth = 75;
+const int x_semiindent = -17.5;
+const int x_offset = 55;
+const int x_verticalindent = 155;
+const int x_vertical_right_indent = 57;
+const int x_right_extra = 40;
 
 const int x_recycled_ok_text_x=-15 ;
 const int x_recycled_ok_text_y=0;
@@ -59,7 +62,7 @@ bool Container::init(int p_trash_category)
         semiwidth=x_semiwidth;
         semiindent=x_semiindent;
         verticalindent=x_verticalindent;
-        offset=0;
+        offset=x_offset;
         recycled_ok_text_x=x_recycled_ok_text_x;
         recycled_ok_text_y=x_recycled_ok_text_y;
         recycled_fail_text_x=x_recycled_fail_text_x;
@@ -114,7 +117,7 @@ bool Container::init(int p_trash_category)
     
     // down
     PhysicsShape *s1;
-    s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent)+offset,-semiheight), Point(semiwidth-semiindent-offset,-semiheight));
+    s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-semiindent)+offset,-semiheight), Point(semiwidth-semiindent-offset+(p_trash_category==Trash::CAT_CRISTAL?x_right_extra:0),-semiheight));
     s1->setContactTestBitmask(cat_trash);
     s1->setCategoryBitmask(cat_wall|cat_sensor);
     LOG_COLLISION("fondo cat %d",s1->getCategoryBitmask());
@@ -125,17 +128,26 @@ bool Container::init(int p_trash_category)
     s1->setCategoryBitmask(cat_wall);
     LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
     body->addShape(s1);
-    // right
-    s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset,semiheight-verticalindent), Point(semiwidth-semiindent-offset,-semiheight));
-    s1->setCategoryBitmask(cat_wall);
-    LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
-    body->addShape(s1);
-
+    
+    if  (p_trash_category!=Trash::CAT_CRISTAL) {
+        // right
+        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset,semiheight-verticalindent), Point(semiwidth-semiindent-offset,-semiheight));
+        s1->setCategoryBitmask(cat_wall);
+        LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
+        body->addShape(s1);
+    } else {
+        // right
+        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset-semiindent+x_right_extra,semiheight-x_vertical_right_indent), Point(semiwidth-semiindent-offset+x_right_extra,-semiheight));
+        s1->setCategoryBitmask(cat_wall);
+        LOG_COLLISION("otro cat %d",s1->getCategoryBitmask());
+        body->addShape(s1);
+    }
+    
     if (p_trash_category==Trash::CAT_CRISTAL) {
-        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset,semiheight-verticalindent),Point(semiwidth-verticalindent,semiheight));
+        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset-semiindent+x_right_extra,semiheight-x_vertical_right_indent),Point(semiwidth-offset-semiindent-10,semiheight-x_vertical_right_indent));
         body->addShape(s1);
         s1->setCategoryBitmask(cat_wall);
-        s1=PhysicsShapeEdgeSegment::create(Point(-(semiwidth-verticalindent),semiheight),Point(semiwidth-verticalindent,semiheight));
+        s1=PhysicsShapeEdgeSegment::create(Point(semiwidth-offset-semiindent-10,semiheight-x_vertical_right_indent),Point(semiwidth-offset-semiindent-10-20,semiheight-x_vertical_right_indent-20));
         s1->setCategoryBitmask(cat_wall);
         body->addShape(s1);
     }

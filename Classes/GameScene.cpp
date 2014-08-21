@@ -33,7 +33,7 @@ const Point container_position[] = {
     Point(100,20),
     Point(200,20),
     Point(300,20),
-    Point(400,80+50*0),
+    Point(400,50),
 };
 // animacion de entrada
 const Point container_enter_movement_position[] = {

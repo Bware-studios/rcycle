@@ -10,9 +10,9 @@
 
 
 
-bool Options::debug_draw_physics = true;
-bool Options::debug_draw_alfa = true;
-bool Options::debug_draw_background = false;
+bool Options::debug_draw_physics = false;
+bool Options::debug_draw_alfa = false;
+bool Options::debug_draw_background = true;
 bool Options::debug_draw_outside = false;
 float Options::debug_draw_outside_scale = 0.5;
 bool Options::debug_draw_spritesquare = false;
