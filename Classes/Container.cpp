@@ -36,10 +36,10 @@ const int x_verticalindent = 155;
 const int x_vertical_right_indent = 57;
 const int x_right_extra = 40;
 
-const int x_recycled_ok_text_x=-15 ;
-const int x_recycled_ok_text_y=0;
-const int x_recycled_fail_text_x=15 ;
-const int x_recycled_fail_text_y=0 ;
+const int x_recycled_ok_text_x=-5 ;
+const int x_recycled_ok_text_y=-20;
+const int x_recycled_fail_text_x=25 ;
+const int x_recycled_fail_text_y=-20 ;
 
 const int N_DUST_PARTICLE_SYS=2;
 

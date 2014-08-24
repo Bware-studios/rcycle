@@ -65,6 +65,9 @@ public:
     void touch_ended(cocos2d::Touch *t,cocos2d::Event *e);
     void touch_cancelled(cocos2d::Touch *t,cocos2d::Event *e);
     
+    // touch forget
+    void touch_destroy();
+    
     // queryrect callback for touch search
     bool touch_began_found_object(cocos2d::PhysicsWorld&world ,cocos2d::PhysicsShape& shape,void *data);
     

@@ -49,6 +49,9 @@ const float container_delay_to_animation = 1;
 const float container_animation_duration = 1;
 
 
+const float touch_zone_height = 160;
+
+
 
 
 GameScene *GameScene::thegamescene=NULL;
@@ -414,7 +417,12 @@ bool GameScene::touch_began(Touch *t,Event *e)
     touch_pos=this->convertTouchToNodeSpace(t);
 //    PhysicsShape *selectedshape;
 //    selectedshape=getPhysicsWorld()->getShape(touch_pos);
-
+    
+    if (touch_pos.y<320-touch_zone_height) {
+        touch_down=false;
+        return false;
+    }
+    
     PhysicsQueryRectCallbackFunc f;
     f=std::bind(&GameScene::touch_began_found_object,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3);
     
@@ -434,7 +442,10 @@ bool GameScene::touch_began(Touch *t,Event *e)
 //            touch_sprite=NULL;
 //        }
 //    }
-    
+    if (!touch_sprite) {
+        touch_down=false;
+        return false;
+    }
     return true;
 }
 
@@ -443,6 +454,10 @@ void GameScene::touch_moved(Touch *t,Event *e)
 {
     LOG_UI("moved");
     touch_pos=this->convertTouchToNodeSpace(t);
+    if (touch_pos.y<320-touch_zone_height) {
+        touch_down=false;
+        touch_destroy();
+    }
     if (!touch_sprite) return;
 //    touch_sprite->setPosition(Point(old_sprite_pos.x+(touch_pos.x-old_pos.x),old_sprite_pos.y+(touch_pos.y-old_pos.y)));
     touch_cursorsprite->setPosition(touch_pos);
@@ -453,13 +468,7 @@ void GameScene::touch_ended(Touch *t,Event *e)
 {
     LOG_UI("ended");
     touch_down=false;
-    if (touch_sprite) {
-  //      touch_sprite->getPhysicsBody()->setDynamic(true);
-        touch_joint->removeFormWorld();
-        touch_sprite->getPhysicsBody()->setRotationEnable(true);
-    }
-    touch_sprite=NULL;
-    touch_joint=NULL;
+    touch_destroy();
 }
 
 
@@ -467,9 +476,16 @@ void GameScene::touch_cancelled(Touch *t,Event *e)
 {
     LOG_UI("cancelled");
     touch_down=false;
+    touch_destroy();
+}
+
+
+void GameScene::touch_destroy()
+{
     if (touch_sprite) {
-//        touch_sprite->getPhysicsBody()->setDynamic(true);
+        //      touch_sprite->getPhysicsBody()->setDynamic(true);
         touch_joint->removeFormWorld();
+        touch_sprite->getPhysicsBody()->setRotationEnable(true);
     }
     touch_sprite=NULL;
     touch_joint=NULL;
