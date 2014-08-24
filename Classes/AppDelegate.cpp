@@ -13,11 +13,18 @@ AppDelegate::~AppDelegate()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+    Application::Platform platform = Application::getInstance()->getTargetPlatform();
+
+    
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
         glview = GLView::create("My Game");
+        // frame size for mac window
+        if (platform == Application::Platform::OS_MAC) {
+            glview->setFrameSize(1136, 640);
+        }
         director->setOpenGLView(glview);
     }
 	
@@ -36,7 +43,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     std::vector<std::string> searchPaths;
     std::vector<std::string> resDirOrders;
 
-    Application::Platform platform = Application::getInstance()->getTargetPlatform();
     
     if (platform == Application::Platform::OS_IPHONE || platform == Application::Platform::OS_IPAD || platform == Application::Platform::OS_MAC) {
         searchPaths.push_back("publish-ios");
