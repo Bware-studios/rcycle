@@ -70,8 +70,11 @@ bool GameScene::init() {
     if ( ! Scene::initWithPhysics() ) return false;
 
     gameLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
+    gameLayer->setAnchorPoint(Point(0.5,0));
+    gameLayer->setRotation(-30);
+    
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
-
+    
     backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
     fondo_sprite->removeFromParent();
     if (Options::debug_draw_background) {

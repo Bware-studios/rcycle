@@ -22,9 +22,9 @@ const int normal_semiindent = 10;
 const int normal_offset = 10;
 const int normal_verticalindent =80;
 
-const int normal_recycled_ok_text_x=-15 ;
+const int normal_recycled_ok_text_x=5 ;
 const int normal_recycled_ok_text_y=0;
-const int normal_recycled_fail_text_x=15 ;
+const int normal_recycled_fail_text_x=35 ;
 const int normal_recycled_fail_text_y=0 ;
 
 // vidrio container
