@@ -24,10 +24,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
         // frame size for mac window
         if (platform == Application::Platform::OS_MAC) {
             glview->setFrameSize(1136, 640);
+            //glview->setFrameSize(960, 640);
         }
         director->setOpenGLView(glview);
     }
-	
+
+    Point vorig=glview->getVisibleOrigin();
+    printf("visible origin: %f %f\n",vorig.x, vorig.y);
+    Size vsize=glview->getVisibleSize();
+    printf("visible size: %f %f\n",vsize.width, vsize.height);
+    
     // turn on display FPS
     director->setDisplayStats(true);
 
@@ -109,9 +115,19 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    director->setContentScaleFactor(resourceSize.width/designSize.width);
     director->setContentScaleFactor(resourceSize.height/designSize.height);
 
-    glview->setDesignResolutionSize(designSize.width, designSize.height, /*ResolutionPolicy::SHOW_ALL*/ResolutionPolicy::FIXED_HEIGHT);
+    ResolutionPolicy rpolicy=ResolutionPolicy::FIXED_HEIGHT;
+//    ResolutionPolicy rpolicy=ResolutionPolicy::SHOW_ALL;
+//    ResolutionPolicy rpolicy=ResolutionPolicy::NO_BORDER;
+
+    glview->setDesignResolutionSize(designSize.width, designSize.height, rpolicy);
     
 
+    printf("target design resolution: %f %f\n",designSize.width, designSize.height);
+    
+    Size actualDesignSize = glview->getDesignResolutionSize();
+    printf("design resolution final: %f %f\n",actualDesignSize.width, actualDesignSize.height);
+
+    
     // create a scene. it's an autorelease object
     //auto scene= HelloWorld::createScene();
 

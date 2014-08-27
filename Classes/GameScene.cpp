@@ -30,7 +30,7 @@ const int container_type[] = {
     Trash::CAT_CRISTAL
 };
 const Point container_position[] = {
-    Point(100,20),
+    Point(100*0,20),
     Point(200,20),
     Point(300,20),
     Point(400,50),
@@ -70,8 +70,16 @@ bool GameScene::init() {
     if ( ! Scene::initWithPhysics() ) return false;
 
     gameLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
-    gameLayer->setAnchorPoint(Point(0.5,0));
-    gameLayer->setRotation(-30);
+//    gameLayer->setAnchorPoint(Point(0.5,0));
+//    gameLayer->setRotation(-30);
+//    AffineTransform tr1;
+//    tr1.a=1;
+//    tr1.b=0;
+//    tr1.c=0;
+//    tr1.d=1;
+//    tr1.tx=200;
+//    tr1.ty=0;
+//    gameLayer->setAdditionalTransform(tr1);
     
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
     
