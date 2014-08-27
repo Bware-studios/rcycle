@@ -27,6 +27,9 @@ public:
     static float physics_g;
     static bool physics_intertrash_collision;
     
+    // resolution
+    static bool resolution_mac_res_as_android;
+    
 };
 
 

@@ -68,7 +68,7 @@ bool GameScene::init() {
     
     GLView *glview=Director::getInstance()->getOpenGLView();
     Size dr=glview->getDesignResolutionSize();
-    printf("gs dr: %f %f\n",dr.width,dr.height);
+    LOG("gs dr: %f %f",dr.width,dr.height);
     //this->setAnchorPoint(Point(0.5,0));
     //this->ignoreAnchorPointForPosition(false);
     //this->setPosition(Point(dr.width/2,0));

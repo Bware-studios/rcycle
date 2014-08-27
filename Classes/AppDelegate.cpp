@@ -35,19 +35,23 @@ bool AppDelegate::applicationDidFinishLaunching() {
         // frame size for mac window
         if (platform == Application::Platform::OS_MAC) {
             // ipad
-            glview->setFrameSize(1024, 768);
+            //glview->setFrameSize(1024, 768);
+            // ipad hd
+            //glview->setFrameSize(2048, 1536);
             // iphone 5s
             //glview->setFrameSize(1136, 640);
             // iphone 4 retina
             //glview->setFrameSize(960, 640);
+            // generic
+            glview->setFrameSize(960, 640);
         }
         director->setOpenGLView(glview);
     }
 
     Point vorig=glview->getVisibleOrigin();
-    printf("visible origin: %f %f\n",vorig.x, vorig.y);
+    LOG("visible origin: %f %f",vorig.x, vorig.y);
     Size vsize=glview->getVisibleSize();
-    printf("visible size: %f %f\n",vsize.width, vsize.height);
+    LOG("visible size: %f %f",vsize.width, vsize.height);
     
     // turn on display FPS
     director->setDisplayStats(true);
@@ -60,12 +64,22 @@ bool AppDelegate::applicationDidFinishLaunching() {
     Size designSize = Size(480, 320);
     Size resourceSize = Size(480, 320);
     Size screenSize = glview->getFrameSize();
+
+    float content_scale_factor=1;
+    
+    ResolutionPolicy rpolicy=ResolutionPolicy::FIXED_HEIGHT;
+
     
     std::vector<std::string> searchPaths;
     std::vector<std::string> resDirOrders;
 
     
-    if (platform == Application::Platform::OS_IPHONE || platform == Application::Platform::OS_IPAD || platform == Application::Platform::OS_MAC) {
+    
+    
+    if (  platform == Application::Platform::OS_IPHONE
+         || platform == Application::Platform::OS_IPAD
+         || ( platform == Application::Platform::OS_MAC && !Options::resolution_mac_res_as_android) )
+    {
         searchPaths.push_back("publish-ios");
         FileUtils::getInstance()->setSearchPaths(searchPaths);
         if (screenSize.height > 768)
@@ -73,51 +87,71 @@ bool AppDelegate::applicationDidFinishLaunching() {
             LOG_RESOLUTION("ipad hd");
             resourceSize = Size(2048, 1536);
             resDirOrders.push_back("resources-ipadhd");
+            rpolicy=ResolutionPolicy::FIXED_WIDTH;
+            content_scale_factor=4;
         }
         else if (screenSize.height > 640)
         {
             LOG_RESOLUTION("ipad");
-            resourceSize = Size(1536, 768);
+            resourceSize = Size(1024, 768);
             resDirOrders.push_back("resources-ipad");
+            rpolicy=ResolutionPolicy::FIXED_WIDTH;
+            content_scale_factor=2;
         }else if (screenSize.height > 480)
         {
             LOG_RESOLUTION("iphone hd");
             resourceSize = Size(960, 640);
             resDirOrders.push_back("resources-iphonehd");
+            content_scale_factor=2;
         }
         else
         {
             LOG_RESOLUTION("iphone");
             resDirOrders.push_back("resources-iphone");
+            content_scale_factor=1;
         }
 
         FileUtils::getInstance()->setSearchResolutionsOrder(resDirOrders);
 
-    } else if (platform == Application::Platform::OS_ANDROID) {
-        if (screenSize.height > 960)
+    } else if (platform == Application::Platform::OS_ANDROID
+        || ( platform == Application::Platform::OS_MAC && Options::resolution_mac_res_as_android) )
+    {
+        searchPaths.push_back("publish-android");
+        FileUtils::getInstance()->setSearchPaths(searchPaths);
+        if (screenSize.height > 640)
+        {
+            LOG_RESOLUTION("android resources-xlarge");
+            resourceSize = Size(1920, 1280);
+            resDirOrders.push_back("resources-xlarge");
+            rpolicy=ResolutionPolicy::SHOW_ALL;
+        } else if (screenSize.height > 480)
         {
             LOG_RESOLUTION("android resources-large");
             resourceSize = Size(960, 640);
             resDirOrders.push_back("resources-large");
+            rpolicy=ResolutionPolicy::SHOW_ALL;
         }
-        else if (screenSize.height > 480)
+        else if (screenSize.height > 320)
         {
             LOG_RESOLUTION("android resources-medium");
-            resourceSize = Size(720, 480);
+            resourceSize = Size(640, 480);
             resDirOrders.push_back("resources-medium");
+            rpolicy=ResolutionPolicy::SHOW_ALL;
         }
         else
         {
             LOG_RESOLUTION("android resources-small");
-            resourceSize = Size(568, 320);
+            resourceSize = Size(480, 320);
             resDirOrders.push_back("resources-small");
+            rpolicy=ResolutionPolicy::SHOW_ALL;
         }
         
         FileUtils::getInstance()->setSearchResolutionsOrder(resDirOrders);
-        
+        content_scale_factor=resourceSize.height/designSize.height;
     } else {
         LOG_RESOLUTION("cannot determine plataform resolution");
         LOG("Warning platform not supported");
+        content_scale_factor=resourceSize.height/designSize.height;
     }
     
 //    // pon codigo decente para el orden de resoluciones
@@ -128,19 +162,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
     LOG("scale factor (p): %f",resourceSize.height/designSize.height);
     LOG("scale factor: %f",resourceSize.width/designSize.width);
 //    director->setContentScaleFactor(resourceSize.width/designSize.width);
-    director->setContentScaleFactor(resourceSize.height/designSize.height);
+    director->setContentScaleFactor(content_scale_factor);
 
-    ResolutionPolicy rpolicy=ResolutionPolicy::FIXED_HEIGHT;
 //    ResolutionPolicy rpolicy=ResolutionPolicy::SHOW_ALL;
 //    ResolutionPolicy rpolicy=ResolutionPolicy::NO_BORDER;
 
     glview->setDesignResolutionSize(designSize.width, designSize.height, rpolicy);
     
 
-    printf("target design resolution: %f %f\n",designSize.width, designSize.height);
+    LOG("target design resolution: %f %f",designSize.width, designSize.height);
     
     Size actualDesignSize = glview->getDesignResolutionSize();
-    printf("design resolution final: %f %f\n",actualDesignSize.width, actualDesignSize.height);
+    LOG("design resolution final: %f %f",actualDesignSize.width, actualDesignSize.height);
 
     
     // create a scene. it's an autorelease object

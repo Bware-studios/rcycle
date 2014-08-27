@@ -20,3 +20,7 @@ bool Options::debug_draw_spritesquare = false;
 // g en pixeles/s^2
 float Options::physics_g = 100.0;
 bool Options::physics_intertrash_collision = false;
+
+// resolution
+bool Options::resolution_mac_res_as_android = false;
+
