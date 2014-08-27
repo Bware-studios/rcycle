@@ -54,9 +54,9 @@ Point TrashGenerator::randomThrowingTarget(Point &start)
     float x,y;
     y=10;
     if (start.x<100) {
-        x=200+20*(rand()%10);
+        x=200+20*(rand()%10) -240;
     } else {
-        x=150+20*(rand()%3);
+        x=150+20*(rand()%3) -240;
     }
     return Point(x,y);
 }
@@ -64,8 +64,8 @@ Point TrashGenerator::randomThrowingTarget(Point &start)
 Point TrashGenerator::randomThrowingStart()
 {
     float x,y;
-    x=-40;
-    if (rand()%4==0) x=520;
+    x=-40 -240;
+    if (rand()%4==0) x=520 +50 -240;
     y=200;
     return Point(x,y);
 }

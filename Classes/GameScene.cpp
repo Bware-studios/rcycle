@@ -29,18 +29,18 @@ const int container_type[] = {
     Trash::CAT_PLASTICO,
     Trash::CAT_CRISTAL
 };
-const Point container_position[] = {
-    Point(100*0,20),
-    Point(200,20),
-    Point(300,20),
-    Point(400,50),
+Point container_position[] = {
+    Point(-140,20),
+    Point(-40,20),
+    Point(60,20),
+    Point(205,50),
 };
 // animacion de entrada
-const Point container_enter_movement_position[] = {
-    Point(100,-40),
-    Point(200,-40),
-    Point(300,-40),
-    Point(400,-150),
+Point container_enter_movement_position[] = {
+    Point(-140,-40),
+    Point(-40,-40),
+    Point(60,-40),
+    Point(205,-150),
 };
 const float container_enter_movement_duration[] = {
     2,2,2,2
@@ -65,21 +65,36 @@ GameScene::~GameScene()
 bool GameScene::init() {
     GameScene::thegamescene = this;
     
+    GLView *glview=Director::getInstance()->getOpenGLView();
+    Size dr=glview->getDesignResolutionSize();
+    printf("gs dr: %f %f\n",dr.width,dr.height);
+    //this->setAnchorPoint(Point(0.5,0));
+    //this->ignoreAnchorPointForPosition(false);
+    //this->setPosition(Point(dr.width/2,0));
+    //this->setRotation(40);
+    
+    if (dr.width>480) container_position[3].x+=0.5*(dr.width-480);
+    if (dr.width>480) container_enter_movement_position[3].x+=0.5*(dr.width-480);
+    
+    
     LOG("Init GameScene");
     
     if ( ! Scene::initWithPhysics() ) return false;
 
     gameLayer = SceneLoadManager::getInstance()->layerFromFile("GameLayer",this);
 //    gameLayer->setAnchorPoint(Point(0.5,0));
+//    gameLayer->ignoreAnchorPointForPosition(false);
+//    gameLayer->setPosition(Point(dr.width/2,0));
+//    gameLayer->setAnchorPoint(Point(0.5,0));
 //    gameLayer->setRotation(-30);
-//    AffineTransform tr1;
-//    tr1.a=1;
-//    tr1.b=0;
-//    tr1.c=0;
-//    tr1.d=1;
-//    tr1.tx=200;
-//    tr1.ty=0;
-//    gameLayer->setAdditionalTransform(tr1);
+    AffineTransform tr1;
+    tr1.a=1;
+    tr1.b=0;
+    tr1.c=0;
+    tr1.d=1;
+    tr1.tx=dr.width/2;
+    tr1.ty=0;
+    gameLayer->setAdditionalTransform(tr1);
     
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
     

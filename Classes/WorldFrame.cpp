@@ -28,7 +28,7 @@ bool WorldFrame::init()
     
 
     this->setAnchorPoint(Point(0.5,0));
-    this->setPosition(Point(240,0));
+    this->setPosition(Point(0,0));
     
     PhysicsBody *body=PhysicsBody::create();
     body->setDynamic(false);
