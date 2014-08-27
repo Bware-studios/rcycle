@@ -1,3 +1,14 @@
+//
+// Resoluciones de interes
+//
+//
+// iphone classic     480 x 320   << design
+// iphone retina      960 x 640      r x2
+// iphone 5s retina  1136 x 640      r x2
+// ipad   classic    1024 x 768      r x2
+// ipad retinas      2048 x 1536     r x4
+
+
 #include "AppDelegate.h"
 
 USING_NS_CC;
@@ -23,7 +34,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLView::create("My Game");
         // frame size for mac window
         if (platform == Application::Platform::OS_MAC) {
-            glview->setFrameSize(1136, 640);
+            // ipad
+            glview->setFrameSize(1024, 768);
+            // iphone 5s
+            //glview->setFrameSize(1136, 640);
+            // iphone 4 retina
             //glview->setFrameSize(960, 640);
         }
         director->setOpenGLView(glview);
