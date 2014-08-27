@@ -42,6 +42,7 @@ Point container_enter_movement_position[] = {
     Point(60,-40),
     Point(205,-150),
 };
+bool container_position_calculated=false;
 const float container_enter_movement_duration[] = {
     2,2,2,2
 };
@@ -72,10 +73,12 @@ bool GameScene::init() {
     //this->ignoreAnchorPointForPosition(false);
     //this->setPosition(Point(dr.width/2,0));
     //this->setRotation(40);
-    
-    if (dr.width>480) container_position[3].x+=0.5*(dr.width-480);
-    if (dr.width>480) container_enter_movement_position[3].x+=0.5*(dr.width-480);
-    
+
+    if (!container_position_calculated) {
+        if (dr.width>480) container_position[3].x+=0.5*(dr.width-480);
+        if (dr.width>480) container_enter_movement_position[3].x+=0.5*(dr.width-480);
+    }
+    container_position_calculated=true;
     
     LOG("Init GameScene");
     
