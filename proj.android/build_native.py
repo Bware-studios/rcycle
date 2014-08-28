@@ -124,6 +124,18 @@ def copy_resources(app_android_root):
     resources_dir = os.path.join(app_android_root, "../Resources")
     if os.path.isdir(resources_dir):
         copy_files(resources_dir, assets_dir)
+    resources_dir = os.path.abspath("../ccb_rcycle/publish-android")
+    print('rd: '+resources_dir)
+    if os.path.isdir(resources_dir):
+        print('copying cocsbuilder files')
+        copy_files(resources_dir, assets_dir)
+    resources_dir = os.path.abspath("/Users/mikel/Google Drive/bware/rcycler/resources_audio")
+    print('rd: '+resources_dir)
+    if os.path.isdir(resources_dir):
+        print('copying audio files')
+        copy_files(resources_dir, assets_dir)
+
+
 
 def build(ndk_build_param,android_platform,build_mode):
 
