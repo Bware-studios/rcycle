@@ -102,6 +102,7 @@ public:
     virtual void fame(cocos2d::Ref *pSender);
     
     cocos2d::MenuItem *quit_button;
+    cocos2d::Label *text1 = NULL;
     
     MenuLayer *layer;
 };

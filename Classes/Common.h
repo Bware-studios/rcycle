@@ -16,5 +16,7 @@
 #include "Log.h"
 
 
+#define VERSION_STR "beta0 r0"
+
 
 #endif

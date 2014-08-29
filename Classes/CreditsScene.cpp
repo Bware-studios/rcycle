@@ -16,6 +16,7 @@ using namespace cocosbuilder;
 
 bool CreditsScene::init() {
     if ( ! MenuScene::init("CreditsScene") ) return false;
+    this->text1->setString(VERSION_STR);
     return true;
 }
 

@@ -140,6 +140,7 @@ bool MenuScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
 {
     LOG_CCB("variable [%s]",pMemberVariableName);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "quit_button", MenuItem *, this->quit_button);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t1", Label *, this->text1);
     return true;
 }
 
