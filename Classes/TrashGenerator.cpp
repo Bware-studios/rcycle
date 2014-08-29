@@ -35,7 +35,7 @@ void TrashGenerator::time_passes()
 {
     if (!running) return;
     generateRandomTrash();
-    theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
+    theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(0.8),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
 }
 
 int TrashGenerator::randomCategory()

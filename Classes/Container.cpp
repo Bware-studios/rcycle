@@ -157,6 +157,10 @@ bool Container::init(int p_trash_category)
     over_sprite=NULL;
     if (p_trash_category==Trash::CAT_CRISTAL) {
         over_sprite=Sprite::createWithSpriteFrameName("Contenedores/vidrio0006.png");
+    } else if (p_trash_category==Trash::CAT_PLASTICO) {
+        over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor3_0010.png");
+    } else if (p_trash_category==Trash::CAT_ORGANICO) {
+        over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor2_0010.png");
     } else {
         over_sprite=Sprite::createWithSpriteFrameName("Contenedores/Contenedor0010.png");
     }
@@ -200,7 +204,7 @@ Container* Container::create(int p_trash_category)
     Container *pRet;
     if ( !Options::debug_draw_spritesquare ) {
         char ccbifilename[50];
-        sprintf(ccbifilename, "Contenedor%d",(p_trash_category>0)?1:0);
+        sprintf(ccbifilename, "Contenedor%d",p_trash_category);
         pRet=dynamic_cast<Container*>(SceneLoadManager::getInstance()->gameObjectFromFile(ccbifilename));
     } else {
         pRet=Container::create();

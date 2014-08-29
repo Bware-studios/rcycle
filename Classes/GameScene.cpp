@@ -50,7 +50,7 @@ const float container_delay_to_animation = 1;
 const float container_animation_duration = 1;
 
 
-const float touch_zone_height = 160;
+const float touch_zone_height = 360;
 
 
 
@@ -530,6 +530,7 @@ bool GameScene::touch_began_found_object(cocos2d::PhysicsWorld& world ,cocos2d::
     if (touch_sprite->is_dragable) {
         touch_cursorsprite->setPosition(touch_pos);
         touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
+        LOG_UI("joint created max force %f",touch_joint->getMaxForce());
         getPhysicsWorld()->addJoint(touch_joint);
         touch_sprite->getPhysicsBody()->setRotationEnable(false);
     } else {
