@@ -49,9 +49,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     Point vorig=glview->getVisibleOrigin();
-    LOG("visible origin: %f %f",vorig.x, vorig.y);
+    LOG_RESOLUTION("visible origin: %f %f",vorig.x, vorig.y);
     Size vsize=glview->getVisibleSize();
-    LOG("visible size: %f %f",vsize.width, vsize.height);
+    LOG_RESOLUTION("visible size: %f %f",vsize.width, vsize.height);
     
     // turn on display FPS
     director->setDisplayStats(true);
@@ -159,8 +159,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    searchDirs.push_back("resources-iphonehd");
 //    FileUtils::getInstance()->setSearchResolutionsOrder(searchDirs);
 
-    LOG("scale factor (p): %f",resourceSize.height/designSize.height);
-    LOG("scale factor: %f",resourceSize.width/designSize.width);
+    LOG_RESOLUTION("scale factor (p): %f",resourceSize.height/designSize.height);
+    LOG_RESOLUTION("scale factor: %f",resourceSize.width/designSize.width);
 //    director->setContentScaleFactor(resourceSize.width/designSize.width);
     director->setContentScaleFactor(content_scale_factor);
 
@@ -170,10 +170,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     glview->setDesignResolutionSize(designSize.width, designSize.height, rpolicy);
     
 
-    LOG("target design resolution: %f %f",designSize.width, designSize.height);
+    LOG_RESOLUTION("target design resolution: %f %f",designSize.width, designSize.height);
     
     Size actualDesignSize = glview->getDesignResolutionSize();
-    LOG("design resolution final: %f %f",actualDesignSize.width, actualDesignSize.height);
+    LOG_RESOLUTION("design resolution final: %f %f",actualDesignSize.width, actualDesignSize.height);
 
     
     // create a scene. it's an autorelease object

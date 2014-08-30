@@ -68,7 +68,7 @@ bool GameScene::init() {
     
     GLView *glview=Director::getInstance()->getOpenGLView();
     Size dr=glview->getDesignResolutionSize();
-    LOG("gs dr: %f %f",dr.width,dr.height);
+    LOG_RESOLUTION("gs dr: %f %f",dr.width,dr.height);
     //this->setAnchorPoint(Point(0.5,0));
     //this->ignoreAnchorPointForPosition(false);
     //this->setPosition(Point(dr.width/2,0));
@@ -530,6 +530,7 @@ bool GameScene::touch_began_found_object(cocos2d::PhysicsWorld& world ,cocos2d::
     if (touch_sprite->is_dragable) {
         touch_cursorsprite->setPosition(touch_pos);
         touch_joint=PhysicsJointPin::construct(touch_sprite->getPhysicsBody(),touch_cursorbody,touch_pos);
+        touch_joint->setMaxForce(10000000);
         LOG_UI("joint created max force %f",touch_joint->getMaxForce());
         getPhysicsWorld()->addJoint(touch_joint);
         touch_sprite->getPhysicsBody()->setRotationEnable(false);
