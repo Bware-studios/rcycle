@@ -24,6 +24,7 @@ void Log_msg(const char *type,const char *msg, ... );
 #define DEBUG_LOG_COLLISION false
 #define DEBUG_LOG_TRASHGEN false
 #define DEBUG_LOG_RESOLUTION false
+#define DEBUG_LOG_SCORE true
 
 
 
@@ -63,6 +64,11 @@ void Log_msg(const char *type,const char *msg, ... );
 #define LOG_RESOLUTION(...)
 #endif
 
+#if ( DEBUG_LOG && DEBUG_LOG_SCORE )
+#define LOG_SCORE(...) Log_msg("[SC]",__VA_ARGS__)
+#else
+#define LOG_SCORE(...)
+#endif
 
 
 #endif /* defined(__rcycle__Log__) */

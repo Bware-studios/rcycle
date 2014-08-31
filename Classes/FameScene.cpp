@@ -8,6 +8,9 @@
 
 #include "FameScene.h"
 
+#include "Scores.h"
+
+
 USING_NS_CC;
 USING_NS_CC_EXT;
 
@@ -17,6 +20,8 @@ using namespace cocosbuilder;
 
 bool FameScene::init() {
     if ( ! MenuScene::init("FameScene") ) return false;
+
+    Scores::create();
     return true;
 }
 
