@@ -11,6 +11,11 @@
 
 #include "Common.h"
 
+struct scoreitem {
+    std::string name;
+    int score;
+};
+
 
 class Scores : public cocos2d::Ref
 {
@@ -20,10 +25,12 @@ public:
     
     static Scores *thescores;
     
+    void save_file();
     void save_score(std::string aname,int ascore);
 
+    std::string full_file_name;
     cocos2d::ValueMap scoreData;
-    
+    struct scoreitem *high_scores;
     
 };
 
