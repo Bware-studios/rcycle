@@ -57,7 +57,10 @@ bool Scores::init() {
         int i;
         for (i=0;i<num_local_scores;i++) {
             //high_scores[i].name=scoreData["scores"][i];
-            
+            stringstream n1;
+            n1<< "Mikel" << i;
+            high_scores[i].name=n1.str();
+            high_scores[i].score=100*(12-i);
         }
     }
     
@@ -76,16 +79,21 @@ bool Scores::init() {
 void Scores::save_file()
 {
     // set version to save
-    scoreData["v"]=Value(42);
+    scoreData["v"]=Value(1);
 
-    ValueMap &scores=scoreData["scores"].asValueMap();
-    ValueMap *item;
-    
+    ValueMapIntKey scores=*new ValueMapIntKey;
     int i;
     for (i=0;i<num_local_scores;i++) {
-        item=&(scores[i].asValueMap());
+        ValueMap item=*new ValueMap;
+        item["name"]=high_scores[i].name;
+        item["score"]=high_scores[i].score;
+        scores[i]=item;
     }
+    scoreData["scores"]=scores;
+
     
+    
+    printf("4: %d   %s %d \n",scores.count(4),scores[4].asValueMap()["name"].asString().c_str(),scores[4].asValueMap()["score"].asInt());
     
     FileUtils::getInstance()->writeToFile(scoreData, full_file_name.c_str());
 }
