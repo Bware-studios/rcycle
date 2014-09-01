@@ -9,6 +9,7 @@
 #include "Scores.h"
 
 #include <sys/stat.h>
+#include "JSONcodec.h"
 
 
 USING_NS_CC;
@@ -16,7 +17,7 @@ using namespace std;
 
 
 const char *rcycler_dir_name="rcycler";
-const char *score_file_name="scoreData_file.dct";
+const char *score_file_name="scoreData_file.json";
 
 const int num_local_scores = 10;
 
@@ -38,6 +39,8 @@ bool Scores::init() {
     full_file_name = full_dir_name.str()+string(score_file_name);
     LOG_SCORE("scores full filename: %s",full_file_name.c_str());
 
+    Value xx=read_json_file(full_file_name);
+    
     
     // recupera estado de fichero
     scoreData = FileUtils::getInstance()->getValueMapFromFile(full_file_name.c_str());
