@@ -35,11 +35,13 @@ std::string write_json_str(cocos2d::Value *avalue)
     value
 }
 
-void add_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node)
+rapidjson::Value *value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node)
 {
     Value::Type type=avalue->getType();
     switch (type) {
         case Value::Type::NONE :
+            rapidjson::Value *v=new rapidjson::Value();
+            return v;
             break;
         case Value::Type::BYTE :
             break;
