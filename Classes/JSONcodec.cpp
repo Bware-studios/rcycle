@@ -28,6 +28,43 @@ bool write_json_file(cocos2d::Value *avalue, std::string filename)
     
 }
 
+std::string write_json_str(cocos2d::Value *avalue)
+{
+    char cbuf[1024]; rapidjson::MemoryPoolAllocator<> allocator (cbuf, sizeof cbuf);
+    rapidjson::Document jsondoc (&allocator, 256);
+    value
+}
+
+void add_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node)
+{
+    Value::Type type=avalue->getType();
+    switch (type) {
+        case Value::Type::NONE :
+            break;
+        case Value::Type::BYTE :
+            break;
+        case Value::Type::INTEGER :
+            break;
+        case Value::Type::FLOAT :
+            break;
+        case Value::Type::DOUBLE :
+            break;
+        case Value::Type::BOOLEAN :
+            break;
+        case Value::Type::MAP :
+            break;
+        case Value::Type::INT_KEY_MAP :
+            break;
+        case Value::Type::VECTOR :
+            break;
+            
+            
+            
+    }
+    
+}
+
+
 Value read_json_file(std::string filename)
 {
     // stream from filename
