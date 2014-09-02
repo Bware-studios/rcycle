@@ -40,7 +40,7 @@ bool Scores::init() {
     LOG_SCORE("scores full filename: %s",full_file_name.c_str());
 
     Value xx=read_json_file(full_file_name);
-    
+    printf("%s\n",write_json_str(&xx).c_str());
     
     // recupera estado de fichero
     scoreData = FileUtils::getInstance()->getValueMapFromFile(full_file_name.c_str());
