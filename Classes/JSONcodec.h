@@ -14,7 +14,7 @@
 bool write_json_file(cocos2d::Value *avalue, std::string filename);
 std::string write_json_str(cocos2d::Value *avalue);
 rapidjson::Value *value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node);
-void add_value_to_json_node(const char *name, cocos2d::Value *avalue,rapidjson::Value &json_node);
+void fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node);
 
 
 std::string value_to_json_str(cocos2d::Value *avalue);

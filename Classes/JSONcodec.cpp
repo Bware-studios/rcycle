@@ -37,15 +37,17 @@ std::string write_json_str(cocos2d::Value *avalue)
     
     
     
-    jsondoc.SetObject();
-    jsondoc.AddMember("v", 42, allocator);
-    rapidjson::Value xx;
-    xx.SetObject();
-    xx.AddMember("a",3,allocator);
-    xx.AddMember("b",2,allocator);
-    xx.AddMember("c",1,allocator);
-    
-    jsondoc.AddMember("xx", xx, allocator);
+//    jsondoc.SetObject();
+//    jsondoc.AddMember("v", 42, allocator);
+//    rapidjson::Value xx;
+//    xx.SetObject();
+//    xx.AddMember("a",3,allocator);
+//    xx.AddMember("b",2,allocator);
+//    xx.AddMember("c",1,allocator);
+//    
+//    jsondoc.AddMember("xx", xx, allocator);
+
+    fill_value_to_json_node(avalue, jsondoc);
     
     typedef rapidjson::GenericStringBuffer<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<>> StringBuffer;
     StringBuffer buf (&allocator);
@@ -61,9 +63,57 @@ std::string write_json_str(cocos2d::Value *avalue)
 }
 
 
-void add_value_to_json_node(const char *name, cocos2d::Value *avalue,rapidjson::Value &json_node)
+void fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node)
 {
-        
+    Value::Type type=avalue->getType();
+    if (type==Value::Type::NONE) {
+        json_node.SetNull();
+    } else if (type==Value::Type::BYTE) {
+        json_node.SetInt(avalue->asByte());
+    } else if (type==Value::Type::INTEGER) {
+        json_node.SetInt(avalue->asInt());
+    } else if (type==Value::Type::FLOAT) {
+        json_node.SetDouble(avalue->asFloat());
+    } else if (type==Value::Type::DOUBLE) {
+        json_node.SetDouble(avalue->asDouble());
+    } else if (type==Value::Type::BOOLEAN) {
+        json_node.SetBool(avalue->asBool());
+    } else if (type==Value::Type::MAP) {
+        json_node.SetObject();
+        ValueMap &amap=avalue->asValueMap();
+        ValueMap::iterator i;
+        char cbuf[1024]; rapidjson::MemoryPoolAllocator<> allocator (cbuf, sizeof cbuf);
+
+        for (i=amap.begin();i!=amap.end();i++) {
+            rapidjson::Value v;
+            fill_value_to_json_node(&(i->second), v);
+            json_node.AddMember(i->first.c_str(),v,allocator);
+        }
+    } else if (type==Value::Type::INT_KEY_MAP) {
+        json_node.SetObject();
+        ValueMapIntKey &amap=avalue->asIntKeyMap();
+        ValueMapIntKey::iterator i;
+        char cbuf[1024]; rapidjson::MemoryPoolAllocator<> allocator (cbuf, sizeof cbuf);
+        for (i=amap.begin();i!=amap.end();i++) {
+            rapidjson::Value v;
+            fill_value_to_json_node(&(i->second), v);
+            std::stringstream name;
+            name<<i->first;
+            json_node.AddMember(name.str().c_str(),v,allocator);
+        }
+    } else if (type==Value::Type::VECTOR) {
+        json_node.SetArray();
+        ValueVector &amap=avalue->asValueVector();
+        ValueVector::iterator i;
+        char cbuf[1024]; rapidjson::MemoryPoolAllocator<> allocator (cbuf, sizeof cbuf);
+        for (i=amap.begin();i!=amap.end();i++) {
+            rapidjson::Value v;
+            fill_value_to_json_node(&(*i), v);
+            json_node.PushBack(v,allocator);
+        }
+
+    }
+
 }
 
 //rapidjson::Value *value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node)
