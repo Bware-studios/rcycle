@@ -78,6 +78,8 @@ void fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node)
         json_node.SetDouble(avalue->asDouble());
     } else if (type==Value::Type::BOOLEAN) {
         json_node.SetBool(avalue->asBool());
+    } else if (type==Value::Type::STRING) {
+        json_node.SetString(avalue->asString().c_str());
     } else if (type==Value::Type::MAP) {
         json_node.SetObject();
         ValueMap &amap=avalue->asValueMap();
