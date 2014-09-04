@@ -125,6 +125,7 @@ Value read_json_file(std::string filename)
 {
     // stream from filename
     FILE *f=fopen(filename.c_str(),"r");
+    if (!f) return *new Value;
     rapidjson::FileStream fs(f);
 
     // parse

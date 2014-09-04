@@ -90,13 +90,16 @@ void Scores::save_file()
     // set version to save
     scoreData["v"]=Value(1);
     
-    ValueMapIntKey scores=*new ValueMapIntKey;
+//    ValueMapIntKey scores=*new ValueMapIntKey;
+    ValueMap scores=*new ValueMap;
     int i;
     for (i=0;i<num_local_scores;i++) {
         ValueMap item=*new ValueMap;
         item["name"]=high_scores[i].name;
         item["score"]=high_scores[i].score;
-        scores[i]=item;
+        char ns[10];
+        sprintf(ns,"%d",i);
+        scores[ns]=item;
     }
     scoreData["scores"]=scores;
     
