@@ -7,6 +7,7 @@
 //
 
 #include "Game.h"
+#include "Scores.h"
 
 // puntos por cada tipo ok o failed
 int game_score_recycled[] = { 10,10,10,10 };
@@ -100,6 +101,7 @@ void Game::wave_end()
         wave_passed=true;
     } else {
         wave_passed=false;
+        Scores::thescores->save_score("xxxxx", total_score);
     }
 }
 

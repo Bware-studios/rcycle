@@ -51,6 +51,7 @@ bool Scores::init() {
         LOG_SCORE("error not dictionary found");
         scores_dict_loadable=false;
     } else {
+        scoreData = json_value_loaded.asValueMap();
         if ( scoreData.count("v") ) {
             int dict_version=scoreData.at(string("v")).asInt();
             LOG_SCORE("V present v= %d",dict_version);
@@ -61,8 +62,19 @@ bool Scores::init() {
         }
     }
     
-    if (scores_dict_loadable || true) {
+    if (scores_dict_loadable) {
         // cargar scores
+        for (int i=0;i<num_local_scores;i++) {
+            stringstream i_s;
+            i_s<<i;
+            Value scoreitem = scoreData.at("scores").asValueMap().at(i_s.str().c_str());
+            if (scoreitem.getType()==Value::Type::MAP) {
+                ValueMap scoreitemmap = scoreitem.asValueMap();
+                high_scores[i].name=scoreitemmap.at("name").asString();
+                high_scores[i].score=scoreitemmap.at("score").asInt();
+            }
+        }
+    } else {
         int i;
         for (i=0;i<num_local_scores;i++) {
             //high_scores[i].name=scoreData["scores"][i];
@@ -77,7 +89,7 @@ bool Scores::init() {
 
     
     // normalmente no lo grabarias aqui solo para probar
-    save_file();
+  //  save_file();
     
     
 
@@ -111,6 +123,19 @@ void Scores::save_file()
 
 void Scores::save_score(std::string aname,int ascore)
 {
+    int mypos=num_local_scores;
+    while (mypos>0 && high_scores[mypos-1].score<ascore) {
+        mypos-=1;
+        if (mypos<num_local_scores-1) {
+            high_scores[mypos+1].name=high_scores[mypos].name;
+            high_scores[mypos+1].score=high_scores[mypos].score;
+        }
+        if (mypos<num_local_scores) {
+            high_scores[mypos].name=aname;
+            high_scores[mypos].score=ascore;
+            // entrado en la lista
+        }
+    }
     
     save_file();
 }

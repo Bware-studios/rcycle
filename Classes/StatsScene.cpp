@@ -103,6 +103,8 @@ void StatsScene::event_camion_gone()
     if (Game::thegame->get_last_wave_passed()) {
         GameScene::enter_game_scene(false);
     } else {
+//         *field=TextFieldTTF::create(std::string("nombre"), std::string("Marker Felt"), 20);
+        
         auto newscene = MainMenuScene::create();
         Director::getInstance()->replaceScene(newscene);
     }

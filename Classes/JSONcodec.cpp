@@ -91,18 +91,19 @@ void _fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node
         ValueMapIntKey &amap=avalue->asIntKeyMap();
         ValueMapIntKey::iterator i;
       //  char cbuf[1024]; rapidjson::MemoryPoolAllocator<> allocator (cbuf, sizeof cbuf);
-        LOG_SCORE("int valuemap");
-
+        std::string *sname;
         for (i=amap.begin();i!=amap.end();i++) {
             rapidjson::Value v;
-            int j=i->first;
             _fill_value_to_json_node(&(i->second), v, allocator);
-            char xname[50];
+          //  char xname[50];
+          //  name<<i->first;
             std::stringstream name;
             name<<i->first;
-            sprintf(xname, "%d",i->first);
-            LOG_SCORE("%s %s",name.str().c_str(),i->second.getType());
-            json_node.AddMember(xname,v,allocator);
+            //sprintf(xname, "%d",i->first);
+            //printf("[%s]",xname);
+            sname=new std::string(name.str());
+          //  LOG_SCORE("%s %s",name.str().c_str(),i->second.getType());
+            json_node.AddMember(sname->c_str(),v,allocator);
         }
     } else if (type==Value::Type::VECTOR) {
         json_node.SetArray();
