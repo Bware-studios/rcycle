@@ -19,7 +19,7 @@ using namespace std;
 const char *rcycler_dir_name="rcycler";
 const char *score_file_name="scoreData_file.json";
 
-const int num_local_scores = 10;
+const int Scores::num_local_scores = 10;
 
 
 Scores *Scores::thescores = NULL;
@@ -39,29 +39,35 @@ bool Scores::init() {
     full_file_name = full_dir_name.str()+string(score_file_name);
     LOG_SCORE("scores full filename: %s",full_file_name.c_str());
 
-    Value xx=read_json_file(full_file_name);
-    printf("%s\n",write_json_str(&xx).c_str());
+//    Value xx=read_json_file(full_file_name);
+//    printf("%s\n",write_json_str(&xx).c_str());
     
     // recupera estado de fichero
-    scoreData = FileUtils::getInstance()->getValueMapFromFile(full_file_name.c_str());
-    
+    //scoreData = FileUtils::getInstance()->getValueMapFromFile(full_file_name.c_str());
     bool scores_dict_loadable = false;
-    if ( scoreData.count("v") ) {
-        int dict_version=scoreData.at(string("v")).asInt();
-        LOG_SCORE("V present v= %d",dict_version);
-        if (dict_version==1) {
-            LOG_SCORE("loading version 1");
-            scores_dict_loadable=true;
+
+    Value json_value_loaded = read_json_file(full_file_name);
+    if ( json_value_loaded.getType()!=Value::Type::MAP ) {
+        LOG_SCORE("error not dictionary found");
+        scores_dict_loadable=false;
+    } else {
+        if ( scoreData.count("v") ) {
+            int dict_version=scoreData.at(string("v")).asInt();
+            LOG_SCORE("V present v= %d",dict_version);
+            if (dict_version==1) {
+                LOG_SCORE("loading version 1");
+                scores_dict_loadable=true;
+            }
         }
     }
-
-    if (scores_dict_loadable) {
+    
+    if (scores_dict_loadable || true) {
         // cargar scores
         int i;
         for (i=0;i<num_local_scores;i++) {
             //high_scores[i].name=scoreData["scores"][i];
             stringstream n1;
-            n1<< "Mikel" << i;
+            n1<< "Mikel" << (i+1);
             high_scores[i].name=n1.str();
             high_scores[i].score=100*(12-i);
         }
@@ -83,7 +89,7 @@ void Scores::save_file()
 {
     // set version to save
     scoreData["v"]=Value(1);
-
+    
     ValueMapIntKey scores=*new ValueMapIntKey;
     int i;
     for (i=0;i<num_local_scores;i++) {
@@ -93,12 +99,10 @@ void Scores::save_file()
         scores[i]=item;
     }
     scoreData["scores"]=scores;
-
     
-    
-    printf("4: %d   %s %d \n",scores.count(4),scores[4].asValueMap()["name"].asString().c_str(),scores[4].asValueMap()["score"].asInt());
-    
-    FileUtils::getInstance()->writeToFile(scoreData, full_file_name.c_str());
+    //printf("4: %d   %s %d \n",scores.count(4),scores[4].asValueMap()["name"].asString().c_str(),scores[4].asValueMap()["score"].asInt());
+    Value raiz=Value(scoreData);
+    write_json_file(&raiz, full_file_name);
 }
 
 

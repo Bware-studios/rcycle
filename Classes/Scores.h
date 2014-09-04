@@ -30,6 +30,8 @@ public:
 
     std::string full_file_name;
     cocos2d::ValueMap scoreData;
+    
+    const static int num_local_scores;
     struct scoreitem *high_scores;
     
 };

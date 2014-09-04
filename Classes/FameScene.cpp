@@ -21,7 +21,14 @@ using namespace cocosbuilder;
 bool FameScene::init() {
     if ( ! MenuScene::init("FameScene") ) return false;
 
-    Scores::create();
+    Scores *sc=Scores::create();
+    
+    for (int i=0; i<Scores::num_local_scores; i++) {
+        scores_text<< (i+1) << ".\t" << sc->high_scores[i].name << "\t...\t" << sc->high_scores[i].score << "\n";
+    }
+    
+    text1->setString(scores_text.str().c_str());
+    
     return true;
 }
 

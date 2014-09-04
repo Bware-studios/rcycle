@@ -103,6 +103,7 @@ public:
     
     cocos2d::MenuItem *quit_button;
     cocos2d::Label *text1 = NULL;
+    cocos2d::Label *text2 = NULL;
     
     MenuLayer *layer;
 };

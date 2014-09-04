@@ -13,12 +13,15 @@
 
 bool write_json_file(cocos2d::Value *avalue, std::string filename);
 std::string write_json_str(cocos2d::Value *avalue);
-rapidjson::Value *value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node);
-void fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node, rapidjson::Value::AllocatorType &allocator);
+
+// interna
+void _fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node, rapidjson::Value::AllocatorType &allocator);
 
 
-std::string value_to_json_str(cocos2d::Value *avalue);
+
 
 cocos2d::Value read_json_file(std::string filename);
-cocos2d::Value json_node_to_value(const rapidjson::Value &json_node);
+
+// interna
+cocos2d::Value _json_node_to_value(const rapidjson::Value &json_node);
 
