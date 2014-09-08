@@ -26,6 +26,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 	../../Classes/Trash.cpp \
 	../../Classes/TrashGenerator.cpp \
 	../../Classes/WorldFrame.cpp \
+	../../Classes/Scores.cpp \
+	../../Classes/JSONcodec.cpp \
 
 
 
