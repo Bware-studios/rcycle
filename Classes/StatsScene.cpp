@@ -103,10 +103,24 @@ void StatsScene::event_camion_gone()
     if (Game::thegame->get_last_wave_passed()) {
         GameScene::enter_game_scene(false);
     } else {
+        Size s=Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
         field=cocos2d::ui::TextField::create();
-        field->setPlaceHolder("xxx");
+        field->setPosition(Point(s.width/2,s.height*.8));
+        field->setAnchorPoint(Point(0.5,0));
+        field->setMaxLength(20);
         
-        this->addChild(field);
+        field->setPlaceHolder("write your name");
+        field->setColor(Color3B(255,0,0));
+        this->addChild(field,100);
+        
+        
+        
+        Label *l1=Label::create("Your name?", "Helvetica", 20);
+        l1->setPosition(Point(s.width/2,s.height*.95));
+        l1->setColor(Color3B(0,0,0));
+        this->addChild(l1,100);
+        
+        field->attachWithIME();
         
 //         *field=TextFieldTTF::create(std::string("nombre"), std::string("Marker Felt"), 20);
         
