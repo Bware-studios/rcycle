@@ -24,6 +24,14 @@ const int Scores::num_local_scores = 10;
 
 Scores *Scores::thescores = NULL;
 
+Scores *Scores::getInstance()
+{
+    if (thescores==NULL) {
+        Scores::create();
+    }
+    return thescores;
+}
+
 
 bool Scores::init() {
     Scores::thescores=this;

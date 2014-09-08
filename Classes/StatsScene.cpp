@@ -13,7 +13,7 @@
 
 USING_NS_CC;
 USING_NS_CC_EXT;
-
+using namespace cocos2d::ui;
 
 bool StatsScene::init() {
     if ( ! Scene::init() ) return false;
@@ -103,10 +103,15 @@ void StatsScene::event_camion_gone()
     if (Game::thegame->get_last_wave_passed()) {
         GameScene::enter_game_scene(false);
     } else {
+        field=cocos2d::ui::TextField::create();
+        field->setPlaceHolder("xxx");
+        
+        this->addChild(field);
+        
 //         *field=TextFieldTTF::create(std::string("nombre"), std::string("Marker Felt"), 20);
         
-        auto newscene = MainMenuScene::create();
-        Director::getInstance()->replaceScene(newscene);
+        //auto newscene = MainMenuScene::create();
+        //Director::getInstance()->replaceScene(newscene);
     }
 }
 

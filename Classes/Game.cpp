@@ -101,7 +101,7 @@ void Game::wave_end()
         wave_passed=true;
     } else {
         wave_passed=false;
-        Scores::thescores->save_score("xxxxx", total_score);
+        Scores::getInstance()->save_score("xxxxx", total_score);
     }
 }
 

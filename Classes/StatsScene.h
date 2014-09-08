@@ -11,6 +11,7 @@
 
 #include "Common.h"
 
+#include "CocosGUI.h"
 //#include "cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
 
@@ -51,6 +52,7 @@ public:
     
     Camion *camion;
 
+    cocos2d::ui::TextField *field;
 
 };
 

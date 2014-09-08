@@ -25,6 +25,8 @@ public:
     
     static Scores *thescores;
     
+    static Scores *getInstance();
+    
     void save_file();
     void save_score(std::string aname,int ascore);
 
