@@ -111,6 +111,9 @@ void StatsScene::event_camion_gone()
         
         field->setPlaceHolder("write your name");
         field->setColor(Color3B(255,0,0));
+        
+        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
+        
         this->addChild(field,100);
         
         
@@ -128,5 +131,17 @@ void StatsScene::event_camion_gone()
         //Director::getInstance()->replaceScene(newscene);
     }
 }
+
+void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFieldEventType event)
+{
+    printf("textfield event\n");
+    if (event==ui::TextFieldEventType::TEXTFIELD_EVENT_INSERT_TEXT) {
+        printf("insert %d\n",event);
+    } else {
+        printf("e: %d\n",event);
+    }
+    
+}
+
 
 

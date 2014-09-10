@@ -41,6 +41,9 @@ public:
     void action_enter(cocos2d::Ref *pSender);
     void event_camion_gone();
 
+    // listen to textfield
+    void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event);
+    
     
     cocos2d::Label *label_1;
     cocos2d::Label *label_2;
