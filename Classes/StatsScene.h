@@ -37,9 +37,12 @@ public:
     virtual bool onAssignCCBMemberVariable(cocos2d::Ref* target, const char* memberVariableName, Node* node);
     
     
+    void start_exit_animation();
     
     void action_enter(cocos2d::Ref *pSender);
     void event_camion_gone();
+
+    bool enter_player_name_for_record_if_needed();
 
     // listen to textfield
     void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event);
@@ -56,6 +59,9 @@ public:
     Camion *camion;
 
     cocos2d::ui::TextField *field;
+    
+    bool going_back_to_game;
+    bool first_exit_pressed;
 
 };
 

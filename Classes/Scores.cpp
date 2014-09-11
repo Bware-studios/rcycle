@@ -129,6 +129,21 @@ void Scores::save_file()
 }
 
 
+bool Scores::would_achieve_high_score(int ascore)
+{
+    if (ascore>high_scores[num_local_scores-1].score) {
+        return true;
+    }
+    return false;
+}
+
+
+std::string Scores::predicted_player_name()
+{
+    return string("Mikel");
+}
+
+
 void Scores::save_score(std::string aname,int ascore)
 {
     int mypos=num_local_scores;

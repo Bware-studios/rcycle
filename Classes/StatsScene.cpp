@@ -11,6 +11,8 @@
 #include "MainMenuScene.h"
 #include "SceneLoadManager.h"
 
+#include "Scores.h"
+
 USING_NS_CC;
 USING_NS_CC_EXT;
 using namespace cocos2d::ui;
@@ -42,6 +44,11 @@ bool StatsScene::init() {
     sprintf(score_s,"%s",Game::thegame->get_last_wave_passed()?"Pasa":"No pasa" );
     label_2->setString(score_s);
     
+    sprintf(score_s,"total: %d",Game::thegame->get_total_score());
+    label_3->setString(score_s);
+
+    
+    first_exit_pressed=false;
     
     return true;
 }
@@ -89,20 +96,50 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 }
 
 
-void StatsScene::action_enter(Ref *pSender)
+void StatsScene::start_exit_animation()
 {
-    
     SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("salida");
-
     //camion->start_exit_animation(Point(-240,160));
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.1),CallFunc::create(CC_CALLBACK_0(StatsScene::event_camion_gone, this))));
+
+}
+
+
+void StatsScene::action_enter(Ref *pSender)
+{
+    if (!first_exit_pressed) {  // primera vez del boton   vuelta al juego o saca el record
+        if (Game::thegame->get_last_wave_passed()) {
+            going_back_to_game=true;
+            start_exit_animation();
+        } else {
+            bool record_achieved;
+            record_achieved=enter_player_name_for_record_if_needed();
+            if (!record_achieved) {
+                start_exit_animation();
+            }
+        }
+    } else {
+        start_exit_animation();
+    }
 }
 
 void StatsScene::event_camion_gone()
 {
-    if (Game::thegame->get_last_wave_passed()) {
+    if (going_back_to_game) {
         GameScene::enter_game_scene(false);
     } else {
+        auto newscene = MainMenuScene::create();
+        Director::getInstance()->replaceScene(newscene);
+    }
+}
+
+
+bool StatsScene::enter_player_name_for_record_if_needed() {
+    int thescore=Game::thegame->get_last_wave_passed();
+    if ( Scores::getInstance()->would_achieve_high_score(thescore) ) {
+        std::string playername;
+        playername=Scores::getInstance()->predicted_player_name();
+
         Size s=Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
         field=cocos2d::ui::TextField::create();
         field->setPosition(Point(s.width/2,s.height*.8));
@@ -110,6 +147,7 @@ void StatsScene::event_camion_gone()
         field->setMaxLength(20);
         
         field->setPlaceHolder("write your name");
+        field->setText(playername);
         field->setColor(Color3B(255,0,0));
         
         field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
@@ -124,19 +162,24 @@ void StatsScene::event_camion_gone()
         this->addChild(l1,100);
         
         field->attachWithIME();
+
         
-//         *field=TextFieldTTF::create(std::string("nombre"), std::string("Marker Felt"), 20);
         
-        //auto newscene = MainMenuScene::create();
-        //Director::getInstance()->replaceScene(newscene);
+        return true;
+    } else {
+        // no pedimos nombre porque no ha hecho record
+        return false;
     }
 }
 
-void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFieldEventType event)
+
+void StatsScene::text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event)
 {
     printf("textfield event\n");
-    if (event==ui::TextFieldEventType::TEXTFIELD_EVENT_INSERT_TEXT) {
+    if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_INSERT_TEXT) {
         printf("insert %d\n",event);
+    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DETACH_WITH_IME) {
+        printf("detach %d\n",event);
     } else {
         printf("e: %d\n",event);
     }

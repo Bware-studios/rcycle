@@ -29,7 +29,9 @@ public:
     
     void save_file();
     void save_score(std::string aname,int ascore);
-
+    bool would_achieve_high_score(int ascore);
+    std::string predicted_player_name();
+    
     std::string full_file_name;
     cocos2d::ValueMap scoreData;
     
