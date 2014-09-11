@@ -41,7 +41,7 @@ bool StatsScene::init() {
     sprintf(score_s,"Sc: %d",Game::thegame->get_last_wave_score());
     label_1->setString(score_s);
 
-    sprintf(score_s,"%s",Game::thegame->get_last_wave_passed()?"Pasa":"No pasa" );
+    sprintf(score_s,"[ %s ]",Game::thegame->get_last_wave_passed()?"Pasa":"No pasa" );
     label_2->setString(score_s);
     
     sprintf(score_s,"total: %d",Game::thegame->get_total_score());
@@ -96,6 +96,14 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 }
 
 
+void StatsScene::save_hisg_score_and_exit() {
+    Scores *thescores=Scores::getInstance();
+    thescores->set_player_name(field->getStringValue());
+    thescores->save_score();
+    start_exit_animation();
+}
+
+
 void StatsScene::start_exit_animation()
 {
     SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("salida");
@@ -119,7 +127,7 @@ void StatsScene::action_enter(Ref *pSender)
             }
         }
     } else {
-        start_exit_animation();
+        save_hisg_score_and_exit();
     }
 }
 
@@ -135,10 +143,10 @@ void StatsScene::event_camion_gone()
 
 
 bool StatsScene::enter_player_name_for_record_if_needed() {
-    int thescore=Game::thegame->get_last_wave_passed();
-    if ( Scores::getInstance()->would_achieve_high_score(thescore) ) {
+    bool high_score_achieved=Game::thegame->get_high_score_achieved();
+    if ( high_score_achieved ) {
         std::string playername;
-        playername=Scores::getInstance()->predicted_player_name();
+        playername=Scores::getInstance()->get_player_name();
 
         Size s=Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
         field=cocos2d::ui::TextField::create();
@@ -147,7 +155,9 @@ bool StatsScene::enter_player_name_for_record_if_needed() {
         field->setMaxLength(20);
         
         field->setPlaceHolder("write your name");
-        field->setText(playername);
+        if (!playername.empty()) {
+            field->setText(playername);
+        }
         field->setColor(Color3B(255,0,0));
         
         field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
@@ -180,6 +190,7 @@ void StatsScene::text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEven
         printf("insert %d\n",event);
     } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DETACH_WITH_IME) {
         printf("detach %d\n",event);
+        save_hisg_score_and_exit() ;
     } else {
         printf("e: %d\n",event);
     }

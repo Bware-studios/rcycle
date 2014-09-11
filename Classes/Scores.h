@@ -26,9 +26,12 @@ public:
     static Scores *thescores;
     
     static Scores *getInstance();
-    
+
+    void set_player_name(std::string name);
+    std::string get_player_name();
+
     void save_file();
-    void save_score(std::string aname,int ascore);
+    bool save_score();
     bool would_achieve_high_score(int ascore);
     std::string predicted_player_name();
     
@@ -37,6 +40,7 @@ public:
     
     const static int num_local_scores;
     struct scoreitem *high_scores;
+    std::string player_name = "";
     
 };
 

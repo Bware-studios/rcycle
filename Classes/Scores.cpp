@@ -10,6 +10,7 @@
 
 #include <sys/stat.h>
 #include "JSONcodec.h"
+#include "Game.h"
 
 
 USING_NS_CC;
@@ -71,6 +72,10 @@ bool Scores::init() {
     }
     
     if (scores_dict_loadable) {
+        if (scoreData.count("name")) {
+            player_name=scoreData.at("name").asString();
+        }
+        
         // cargar scores
         for (int i=0;i<num_local_scores;i++) {
             stringstream i_s;
@@ -93,9 +98,7 @@ bool Scores::init() {
         }
     }
     
-    
-
-    
+        
     // normalmente no lo grabarias aqui solo para probar
   //  save_file();
     
@@ -104,11 +107,25 @@ bool Scores::init() {
     return true;
 }
 
+void Scores::set_player_name(std::string name)
+{
+    player_name=name;
+}
+
+std::string Scores::get_player_name()
+{
+    return player_name;
+}
+
 
 void Scores::save_file()
 {
     // set version to save
     scoreData["v"]=Value(1);
+
+    if (!player_name.empty()) {
+        scoreData["name"]=Value(player_name);
+    }
     
 //    ValueMapIntKey scores=*new ValueMapIntKey;
     ValueMap scores=*new ValueMap;
@@ -129,23 +146,11 @@ void Scores::save_file()
 }
 
 
-bool Scores::would_achieve_high_score(int ascore)
+bool Scores::save_score()
 {
-    if (ascore>high_scores[num_local_scores-1].score) {
-        return true;
-    }
-    return false;
-}
-
-
-std::string Scores::predicted_player_name()
-{
-    return string("Mikel");
-}
-
-
-void Scores::save_score(std::string aname,int ascore)
-{
+    player_name=Scores::getInstance()->get_player_name();
+    int ascore=Game::thegame->get_total_score();
+    bool high_score=false;
     int mypos=num_local_scores;
     while (mypos>0 && high_scores[mypos-1].score<ascore) {
         mypos-=1;
@@ -154,14 +159,25 @@ void Scores::save_score(std::string aname,int ascore)
             high_scores[mypos+1].score=high_scores[mypos].score;
         }
         if (mypos<num_local_scores) {
-            high_scores[mypos].name=aname;
+            high_scores[mypos].name=player_name.c_str();
             high_scores[mypos].score=ascore;
             // entrado en la lista
+            high_score=true;
         }
     }
     
     save_file();
+    return high_score;
 }
 
+
+
+bool Scores::would_achieve_high_score(int ascore)
+{
+    if (ascore>high_scores[num_local_scores-1].score) {
+        return true;
+    }
+    return false;
+}
 
 

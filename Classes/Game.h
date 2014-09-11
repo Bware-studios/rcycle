@@ -35,7 +35,8 @@ public:
     int get_last_wave_recycled(int cat);
     int get_last_wave_failed(int cat);
     int get_last_wave_passed();
-    
+    bool get_high_score_achieved();
+
     
     // stats
     int *wave_recycled;
@@ -50,6 +51,9 @@ public:
     int total_score = 0;
     int wave_completed = 0;
     bool wave_passed = false;
+    
+    
+    bool high_score_achieved = false;
     
 };
 

@@ -38,7 +38,7 @@ public:
     
     
     void start_exit_animation();
-    
+    void save_hisg_score_and_exit();
     void action_enter(cocos2d::Ref *pSender);
     void event_camion_gone();
 

@@ -658,7 +658,8 @@ void GameScene::action_resume(Ref *o)
 
 void GameScene::action_quit(Ref *o)
 {
-    game_end();
+//    game_end();
+    game_aborted();
 }
 
 void GameScene::start_finish_animation()
@@ -680,6 +681,12 @@ void GameScene::game_end()
 {
     Game::thegame->wave_end();
     auto newscene = StatsScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
+
+void GameScene::game_aborted()
+{
+    auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
 

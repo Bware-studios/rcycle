@@ -76,6 +76,7 @@ int Game::score(int *ok,int *failed,int *outs)
         score+=game_score_failed[i]*failed[i];
         score+=game_score_out[i]*outs[i];
     }
+    if (score<0) score=0;
     return score;
 }
 
@@ -101,7 +102,10 @@ void Game::wave_end()
         wave_passed=true;
     } else {
         wave_passed=false;
-        Scores::getInstance()->save_score("xxxxx", total_score);
+        if (Scores::getInstance()->would_achieve_high_score(total_score)) {
+            high_score_achieved=true;
+        }
+     //   Scores::getInstance()->save_score_if("xxxxx", total_score);
     }
 }
 
@@ -129,6 +133,11 @@ int Game::get_last_wave_failed(int cat)
 int Game::get_last_wave_passed()
 {
     return wave_passed;
+}
+
+bool Game::get_high_score_achieved()
+{
+    return high_score_achieved;
 }
 
 

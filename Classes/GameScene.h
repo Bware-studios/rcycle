@@ -96,6 +96,7 @@ public:
 
     void start_finish_animation();
     void game_end();
+    void game_aborted();
     
     //void add_random_trash();
 
