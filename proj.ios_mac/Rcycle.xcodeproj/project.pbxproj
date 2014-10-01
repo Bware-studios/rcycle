@@ -62,6 +62,8 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		970CA241192D4AB900093608 /* Camion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 970CA23F192D4AB900093608 /* Camion.cpp */; };
 		970CA242192D4AB900093608 /* Camion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 970CA23F192D4AB900093608 /* Camion.cpp */; };
+		9736823319DCA6CC00AB8AE9 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */; };
+		9736823419DCA6CC00AB8AE9 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */; };
 		9759F66E19B3900B00F59A5C /* Scores.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9759F66D19B3900B00F59A5C /* Scores.cpp */; };
 		9759F66F19B3900B00F59A5C /* Scores.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9759F66D19B3900B00F59A5C /* Scores.cpp */; };
 		97684A2718EB7080008AFE58 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97684A1818EB7080008AFE58 /* Audio.cpp */; };
@@ -305,6 +307,8 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		970CA23F192D4AB900093608 /* Camion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camion.cpp; path = ../Classes/Camion.cpp; sourceTree = "<group>"; };
 		970CA240192D4AB900093608 /* Camion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camion.h; path = ../Classes/Camion.h; sourceTree = "<group>"; };
+		9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelpScene.cpp; path = ../Classes/HelpScene.cpp; sourceTree = "<group>"; };
+		9736823719DCA6DB00AB8AE9 /* HelpScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelpScene.h; path = ../Classes/HelpScene.h; sourceTree = "<group>"; };
 		9759F66D19B3900B00F59A5C /* Scores.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scores.cpp; path = ../Classes/Scores.cpp; sourceTree = "<group>"; };
 		9759F67019B3902700F59A5C /* Scores.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Scores.h; path = ../Classes/Scores.h; sourceTree = "<group>"; };
 		97684A1818EB7080008AFE58 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Audio.cpp; path = ../Classes/Audio.cpp; sourceTree = "<group>"; };
@@ -447,6 +451,8 @@
 				97684A4818EB708C008AFE58 /* TrashGenerator.h */,
 				97684A1D18EB7080008AFE58 /* CreditsScene.cpp */,
 				97684A1E18EB7080008AFE58 /* CreditsScene.h */,
+				9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */,
+				9736823719DCA6DB00AB8AE9 /* HelpScene.h */,
 				97684A1F18EB7080008AFE58 /* FameScene.cpp */,
 				97684A2018EB7080008AFE58 /* FameScene.h */,
 				97684A2118EB7080008AFE58 /* Game.cpp */,
@@ -812,6 +818,7 @@
 				97684A4D18EB708C008AFE58 /* LoadingScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				9759F66E19B3900B00F59A5C /* Scores.cpp in Sources */,
+				9736823319DCA6CC00AB8AE9 /* HelpScene.cpp in Sources */,
 				97684A4F18EB708C008AFE58 /* Log.cpp in Sources */,
 				97684A5B18EB708C008AFE58 /* Trash.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
@@ -855,6 +862,7 @@
 				97684A5818EB708C008AFE58 /* OptionsScene.cpp in Sources */,
 				97684A2E18EB7080008AFE58 /* FameScene.cpp in Sources */,
 				97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */,
+				9736823419DCA6CC00AB8AE9 /* HelpScene.cpp in Sources */,
 				97684A3418EB7080008AFE58 /* GameScene.cpp in Sources */,
 				97684A3018EB7080008AFE58 /* Game.cpp in Sources */,
 				97684A5E18EB708C008AFE58 /* TrashGenerator.cpp in Sources */,

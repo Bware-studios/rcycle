@@ -63,8 +63,12 @@ void MainMenuScene::enter(Ref *pSender)
 
 void MainMenuScene::options(Ref *pSender)
 {
-    auto newscene = OptionsScene::create();
+//    auto newscene = OptionsScene::create();
+//    Director::getInstance()->replaceScene(newscene);
+
+    auto newscene = HelpScene::create();
     Director::getInstance()->replaceScene(newscene);
+
 }
 
 

@@ -18,6 +18,7 @@
 #include "CreditsScene.h"
 #include "OptionsScene.h"
 #include "FameScene.h"
+#include "HelpScene.h"
 
 #include "Game.h"
 #include "GameScene.h"
