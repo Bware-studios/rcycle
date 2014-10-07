@@ -22,6 +22,65 @@
 USING_NS_CC;
 
 
+bool JSONFileLoader::init()
+{
+    loaded=false;
+    filename="";
+    valueData=Value();
+    return true;
+}
+
+void JSONFileLoader::setFileName(const char *name)
+{
+    filename=name;
+}
+
+bool JSONFileLoader::load()
+{
+    valueData=read_json_file(filename);
+    return true;
+}
+
+Value &JSONFileLoader::getContent()
+{
+    return valueData;
+}
+
+
+
+bool JSONFileSaver::init()
+{
+    filename="";
+    valueData=Value();
+    return true;
+}
+
+void JSONFileSaver::setFileName(const char *name)
+{
+    filename=name;
+}
+
+bool JSONFileSaver::save()
+{
+    write_json_file(&valueData,filename);
+    return true;
+}
+
+Value &JSONFileSaver::getContent()
+{
+    return valueData;
+}
+
+void JSONFileSaver::setContent(Value thecontent)
+{
+    valueData=thecontent;
+}
+
+
+
+
+
+
 
 bool write_json_file(cocos2d::Value *avalue, std::string filename)
 {

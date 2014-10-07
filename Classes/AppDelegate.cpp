@@ -11,6 +11,8 @@
 
 #include "AppDelegate.h"
 
+#include "JSONcodec.h"
+
 USING_NS_CC;
 
 using namespace std;
@@ -175,6 +177,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
     Size actualDesignSize = glview->getDesignResolutionSize();
     LOG_RESOLUTION("design resolution final: %f %f",actualDesignSize.width, actualDesignSize.height);
 
+    
+
+    
+    JSONFileSaver *persistence=JSONFileSaver::create();
+    persistence->setFileName("prueba");
+    persistence->setContent(Value(ValueMap()));
+    Value &v=persistence->getContent();
+    v.asValueMap()["prueba"]=Value(4);
+    persistence->save();
     
     // create a scene. it's an autorelease object
     //auto scene= HelloWorld::createScene();
