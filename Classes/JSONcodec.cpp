@@ -10,6 +10,7 @@
 #include "JSONcodec.h"
 
 #include <stdio.h>
+#include <sys/stat.h>
 
 #include "json/document.h"
 #include "json/filestream.h"
@@ -20,6 +21,9 @@
 #include <fstream>
 
 USING_NS_CC;
+using namespace std;
+
+const char *rcycler_dir_name="rcycler";
 
 
 bool JSONFileLoader::init()
@@ -32,7 +36,11 @@ bool JSONFileLoader::init()
 
 void JSONFileLoader::setFileName(const char *name)
 {
-    filename=name;
+    stringstream full_dir_name;
+    full_dir_name << FileUtils::getInstance()->getWritablePath().c_str() << "/" << rcycler_dir_name << "/";
+    mkdir(full_dir_name.str().c_str(),0777);
+    string full_file_name=full_dir_name.str()+string(name);
+    filename=full_file_name;
 }
 
 bool JSONFileLoader::load()
@@ -57,7 +65,11 @@ bool JSONFileSaver::init()
 
 void JSONFileSaver::setFileName(const char *name)
 {
-    filename=name;
+    stringstream full_dir_name;
+    full_dir_name << FileUtils::getInstance()->getWritablePath().c_str() << "/" << rcycler_dir_name << "/";
+    mkdir(full_dir_name.str().c_str(),0777);
+    string full_file_name=full_dir_name.str()+string(name);
+    filename=full_file_name;
 }
 
 bool JSONFileSaver::save()

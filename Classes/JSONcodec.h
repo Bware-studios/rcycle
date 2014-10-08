@@ -11,6 +11,7 @@
 
 #include "json/document.h"
 
+extern const char *rcycler_dir_name;
 
 
 

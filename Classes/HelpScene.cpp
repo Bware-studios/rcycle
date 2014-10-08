@@ -17,14 +17,26 @@ using namespace cocosbuilder;
 bool HelpScene::init() {
     if ( ! MenuScene::init("Instructions") ) return false;
     
+    startGameAfterHelp=false;
+    
     return true;
 }
+
+void HelpScene::setStartGameAfterHelp(bool start)
+{
+    startGameAfterHelp=start;
+}
+
 
 
 void HelpScene::back(Ref *pSender)
 {
-    auto newscene = MainMenuScene::create();
-    Director::getInstance()->replaceScene(newscene);
+    if (startGameAfterHelp) {
+        GameScene::enter_game_scene(true);
+    } else {
+        auto newscene = MainMenuScene::create();
+        Director::getInstance()->replaceScene(newscene);
+    }
 }
 
 

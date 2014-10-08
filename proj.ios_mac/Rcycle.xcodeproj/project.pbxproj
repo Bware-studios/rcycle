@@ -109,6 +109,8 @@
 		97C8834B18EF639B003518DB /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834718EF639B003518DB /* Sounds */; };
 		97EFAC9319B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
 		97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
+		97FF430E19E4A0FB00FCAE83 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */; };
+		97FF430F19E4A0FB00FCAE83 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -352,6 +354,8 @@
 		97C8834718EF639B003518DB /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Sounds"; sourceTree = "<group>"; };
 		97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JSONcodec.cpp; path = ../Classes/JSONcodec.cpp; sourceTree = "<group>"; };
 		97EFAC9719B5116B00E56BB3 /* JSONcodec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONcodec.h; path = ../Classes/JSONcodec.h; sourceTree = "<group>"; };
+		97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Preferences.cpp; path = ../Classes/Preferences.cpp; sourceTree = "<group>"; };
+		97FF431219E4A10F00FCAE83 /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = ../Classes/Preferences.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -473,6 +477,8 @@
 				9759F67019B3902700F59A5C /* Scores.h */,
 				97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */,
 				97EFAC9719B5116B00E56BB3 /* JSONcodec.h */,
+				97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */,
+				97FF431219E4A10F00FCAE83 /* Preferences.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -829,6 +835,7 @@
 				97684A2B18EB7080008AFE58 /* CreditsScene.cpp in Sources */,
 				97684A2D18EB7080008AFE58 /* FameScene.cpp in Sources */,
 				97684A3318EB7080008AFE58 /* GameScene.cpp in Sources */,
+				97FF430E19E4A0FB00FCAE83 /* Preferences.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				97684A5F18EB708C008AFE58 /* WorldFrame.cpp in Sources */,
 				978E09561921EFBD00ACDDCB /* StatsScene.cpp in Sources */,
@@ -853,6 +860,7 @@
 				97684A2A18EB7080008AFE58 /* Container.cpp in Sources */,
 				97684A6018EB708C008AFE58 /* WorldFrame.cpp in Sources */,
 				97684A5C18EB708C008AFE58 /* Trash.cpp in Sources */,
+				97FF430F19E4A0FB00FCAE83 /* Preferences.cpp in Sources */,
 				97684A5218EB708C008AFE58 /* MainMenuScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				97684A5018EB708C008AFE58 /* Log.cpp in Sources */,

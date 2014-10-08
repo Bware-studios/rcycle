@@ -17,7 +17,7 @@ USING_NS_CC;
 using namespace std;
 
 
-const char *rcycler_dir_name="rcycler";
+//const char *rcycler_dir_name="rcycler";
 const char *score_file_name="scoreData_file.json";
 
 const int Scores::num_local_scores = 10;

@@ -24,9 +24,12 @@ class HelpScene : public MenuScene
 public:
     bool init();
     CREATE_FUNC(HelpScene);
+    void setStartGameAfterHelp(bool start);
     
     void back(cocos2d::Ref *pSender);
     
+private:
+    bool startGameAfterHelp;
 };
 
 

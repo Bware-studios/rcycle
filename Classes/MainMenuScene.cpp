@@ -7,6 +7,7 @@
 //
 
 #include "MainMenuScene.h"
+#include "Preferences.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -56,7 +57,14 @@ void MainMenuScene::time_passes()
 void MainMenuScene::enter(Ref *pSender)
 {
     LOG("juego");
-    GameScene::enter_game_scene(true);
+    int n = Preferences::getInstance()->setOneMoreGameStarted();
+    if (n<Options::autohelp_n_firsttimes_show+1) {
+        auto newscene = HelpScene::create();
+        newscene->setStartGameAfterHelp(true);
+        Director::getInstance()->replaceScene(newscene);
+    } else {
+        GameScene::enter_game_scene(true);
+    }
 }
 
 

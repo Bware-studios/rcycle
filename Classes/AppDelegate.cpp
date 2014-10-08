@@ -11,7 +11,7 @@
 
 #include "AppDelegate.h"
 
-#include "JSONcodec.h"
+#include "Preferences.h"
 
 USING_NS_CC;
 
@@ -179,13 +179,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     
 
+    Preferences::getInstance()->setPlayerName("Noseeee");
+
     
-    JSONFileSaver *persistence=JSONFileSaver::create();
-    persistence->setFileName("prueba");
-    persistence->setContent(Value(ValueMap()));
-    Value &v=persistence->getContent();
-    v.asValueMap()["prueba"]=Value(4);
-    persistence->save();
+    printf("Playe name: %s <<<<<<<<<<<<<<<< \n",Preferences::getInstance()->getPlayerName().c_str());
     
     // create a scene. it's an autorelease object
     //auto scene= HelloWorld::createScene();
