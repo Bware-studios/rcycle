@@ -331,6 +331,8 @@ SEL_MenuHandler GameScene::onResolveCCBCCMenuItemSelector(Ref * pTarget, const c
 {
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_resume", GameScene::action_resume);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_quit", GameScene::action_quit);
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "pause_button", GameScene::m_action_pause);
+
     return NULL;
 }
 
@@ -648,6 +650,14 @@ void GameScene::action_pause(Ref *o,Control::EventType e)
     pause_menu->setVisible(true);
     pause();
 }
+
+void GameScene::m_action_pause(Ref *o)
+{
+    LOG_UI("click pause...");
+    pause_menu->setVisible(true);
+    pause();
+}
+
 
 void GameScene::action_resume(Ref *o)
 {

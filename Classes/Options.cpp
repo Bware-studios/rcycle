@@ -24,5 +24,6 @@ bool Options::physics_intertrash_collision = false;
 // resolution
 bool Options::resolution_mac_res_as_android = false;
 
-// auto help
+// UI
 int Options::autohelp_n_firsttimes_show = 5;
+int Options::settings_button_show = true;

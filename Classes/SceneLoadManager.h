@@ -99,9 +99,11 @@ public:
     virtual void back(cocos2d::Ref *pSender);
     virtual void info(cocos2d::Ref *pSender);
     virtual void options(cocos2d::Ref *pSender);
+    virtual void help(cocos2d::Ref *pSender);
     virtual void fame(cocos2d::Ref *pSender);
     
     cocos2d::MenuItem *quit_button;
+    cocos2d::MenuItem *settings_button;
     cocos2d::Label *text1 = NULL;
     cocos2d::Label *text2 = NULL;
     

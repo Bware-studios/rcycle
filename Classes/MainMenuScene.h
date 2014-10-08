@@ -35,6 +35,7 @@ public:
     
     void enter(cocos2d::Ref *pSender);
     void options(cocos2d::Ref *pSender);
+    void help(cocos2d::Ref *pSender);
     void info(cocos2d::Ref *pSender);
     void fame(cocos2d::Ref *pSender);
     void back(cocos2d::Ref *pSender);

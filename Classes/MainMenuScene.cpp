@@ -21,9 +21,14 @@ bool MainMenuScene::init() {
     Application::Platform platform = Application::getInstance()->getTargetPlatform();
     if ( platform == Application::Platform::OS_IPAD ||
          platform == Application::Platform::OS_IPHONE
-       // || platform == Application::Platform::OS_MAC
+        // || platform == Application::Platform::OS_MAC
         ) {
         //quit_button->setVisible(false);
+        quit_button->removeFromParent();
+    }
+    
+    if ( Options::settings_button_show==false ) {
+        settings_button->removeFromParent();
     }
     
     SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("menu");
@@ -71,12 +76,15 @@ void MainMenuScene::enter(Ref *pSender)
 
 void MainMenuScene::options(Ref *pSender)
 {
-//    auto newscene = OptionsScene::create();
-//    Director::getInstance()->replaceScene(newscene);
+    auto newscene = OptionsScene::create();
+    Director::getInstance()->replaceScene(newscene);
+}
 
+void MainMenuScene::help(Ref *pSender)
+{
     auto newscene = HelpScene::create();
     Director::getInstance()->replaceScene(newscene);
-
+    
 }
 
 

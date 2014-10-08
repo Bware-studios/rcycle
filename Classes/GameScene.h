@@ -90,6 +90,7 @@ public:
 
     
     void action_pause(cocos2d::Ref *o,cocos2d::extension::Control::EventType e);
+    void m_action_pause(cocos2d::Ref *o);
     void action_resume(cocos2d::Ref *o);
     void action_quit(cocos2d::Ref *o);
 

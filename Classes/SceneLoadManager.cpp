@@ -120,6 +120,7 @@ SEL_MenuHandler MenuScene::onResolveCCBCCMenuItemSelector(Ref * pTarget, const c
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "back", MenuScene::back);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "info", MenuScene::info);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "options", MenuScene::options);
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "help", MenuScene::help);
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "fame", MenuScene::fame);
     
     return NULL;
@@ -140,6 +141,7 @@ bool MenuScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
 {
     LOG_CCB("variable [%s]",pMemberVariableName);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "quit_button", MenuItem *, this->quit_button);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "settings_button", MenuItem *, this->settings_button);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t1", Label *, this->text1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t2", Label *, this->text2);
     return true;
@@ -170,6 +172,11 @@ void MenuScene::info(Ref *pSender)
 void MenuScene::options(Ref *pSender)
 {
     LOG_CCB("Menu scene selector called: options  Not overriden");
+}
+
+void MenuScene::help(Ref *pSender)
+{
+    LOG_CCB("Menu scene selector called: help  Not overriden");
 }
 
 void MenuScene::fame(Ref *pSender)

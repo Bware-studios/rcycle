@@ -30,8 +30,10 @@ public:
     // resolution
     static bool resolution_mac_res_as_android;
     
-    // auto help
+    // UI
     static int autohelp_n_firsttimes_show;
+    static int settings_button_show;
+    
     
 };
 
