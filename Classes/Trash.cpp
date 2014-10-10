@@ -45,7 +45,7 @@ bool Trash::init(int p_trash_type, int p_trash_category)
     sprintf(img_name,"trashs/basura_%s%d.png",trash_cat_names[trash_category],p_trash_type+1);
     
     this->setDisplayFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(img_name));
-    PhysicsBody *body=PhysicsBody::createCircle(24,PhysicsMaterial(0,0.1,0.5));
+    PhysicsBody *body=PhysicsBody::createCircle(30,PhysicsMaterial(0,0.1,0.5));
     
     body->setCategoryBitmask(cat_trash);
     if (Options::physics_intertrash_collision) {

@@ -498,7 +498,6 @@ void GameScene::touch_moved(Touch *t,Event *e)
 void GameScene::touch_ended(Touch *t,Event *e)
 {
     LOG_UI("ended");
-    touch_down=false;
     touch_destroy();
 }
 
@@ -506,13 +505,13 @@ void GameScene::touch_ended(Touch *t,Event *e)
 void GameScene::touch_cancelled(Touch *t,Event *e)
 {
     LOG_UI("cancelled");
-    touch_down=false;
     touch_destroy();
 }
 
 
 void GameScene::touch_destroy()
 {
+    touch_down=false;
     if (touch_sprite) {
         //      touch_sprite->getPhysicsBody()->setDynamic(true);
         touch_joint->removeFormWorld();
@@ -675,6 +674,7 @@ void GameScene::action_quit(Ref *o)
 void GameScene::start_finish_animation()
 {
     ingame=false;
+    touch_destroy();
     Trash::delete_all_trashes();
     int i;
     for (i=0;i<container_n;i++) {

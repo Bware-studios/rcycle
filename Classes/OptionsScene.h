@@ -27,6 +27,11 @@ public:
     void enter(cocos2d::Ref *pSender);
     void back(cocos2d::Ref *pSender);
     
+    void selected_prueba(cocos2d::Ref *pSender);
+    void selected_tog(cocos2d::Ref *pSender);
+    void selected_tog1(cocos2d::Ref *pSender);
+    void selected_tog2(cocos2d::Ref *pSender);
+    
 };
 
 #endif /* defined(__Rcycle__OptionsScene__) */

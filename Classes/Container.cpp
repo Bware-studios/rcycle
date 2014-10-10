@@ -183,12 +183,22 @@ bool Container::init(int p_trash_category)
     dust=new ParticleSystem*[N_DUST_PARTICLE_SYS];
     for (int i=0;i<N_DUST_PARTICLE_SYS;i++) {
         dust[i]=ParticleExplosion::create();
+        //dust[i]->setRotation(-90);
         dust[i]->setAngle(90);
-        dust[i]->setAngleVar(10);
-        dust[i]->setGravity(Point(0,-100));
-        dust[i]->setSpeed(100);
+        dust[i]->setAngleVar(8);
+        dust[i]->setGravity(Point(0,-1000));
+        dust[i]->setSpeed(500);
+        dust[i]->setSpeedVar(20);
         dust[i]->setPosition(semiwidth,semiheight*0);
         dust[i]->stopSystem();
+        dust[i]->setDuration(0.1);
+        dust[i]->setLife(.5);
+        dust[i]->setLifeVar(.25);
+        dust[i]->setEmissionRate(100);
+        dust[i]->setStartColor(Color4F(0, 0, 0, 1));
+        dust[i]->setStartColorVar(Color4F(0, 0, 0, 0.5));
+        dust[i]->setEndColor(Color4F(0, 0, 0, 0.2));
+        dust[i]->setEndColorVar(Color4F(0, 0, 0, 0.1));
         this->addChild(dust[i]);
     }
     
