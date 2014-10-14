@@ -11,6 +11,7 @@
 #include <sys/stat.h>
 #include "JSONcodec.h"
 #include "Game.h"
+#include "Net.h"
 
 #include <curl/curl.h>
 
@@ -99,24 +100,12 @@ bool Scores::init() {
         }
     }
     
+    Net::getInstance();
+    
         
     // normalmente no lo grabarias aqui solo para probar
   //  save_file();
     
-    CURL *curl;
-    CURLcode res;
-    curl_global_init(CURL_GLOBAL_DEFAULT);
-    curl = curl_easy_init();
-    curl_easy_setopt(curl, CURLOPT_URL, "https://bwnet-bwmki.rhcloud.com/api/rcycle/get_version.php");
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-    res = curl_easy_perform(curl);
-    if(res != CURLE_OK) {
-        printf("curl_easy_perform() failed: %s\n",
-                curl_easy_strerror(res));
-    }
-    printf("curl ok");
-    curl_easy_cleanup(curl);
     return true;
 }
 
