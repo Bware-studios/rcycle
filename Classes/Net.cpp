@@ -8,6 +8,8 @@
 
 
 #include "Net.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 #include "JSONcodec.h"
 
@@ -49,10 +51,17 @@ bool Net::init()
     printf("curl ok");
     curl_easy_cleanup(curl);
 
+    netthread=thread(&Net::run,this);
     
     return true;
 }
 
 
-
+void Net::run()
+{
+    while (1) {
+        printf("running in thread...\n");
+        sleep(1);
+    }
+}
 

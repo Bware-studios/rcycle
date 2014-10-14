@@ -10,7 +10,7 @@
 #define __Rcycle__Net__
 
 #include "Common.h"
-
+#include <thread>
 
 
 class Net : public cocos2d::Ref
@@ -23,6 +23,11 @@ public:
     
     static Net *getInstance();
 
+    void run();
+    
+    
+    std::thread netthread;
+    
 };
 
 #endif /* defined(__Rcycle__Net__) */
