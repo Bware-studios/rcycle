@@ -17,7 +17,7 @@
 USING_NS_CC;
 using namespace std;
 
-
+using namespace network;
 
 
 bool WebRequest::init()
@@ -101,6 +101,19 @@ bool Net::init()
 
 void Net::getURL(char *url)
 {
+    HttpRequest *request = new HttpRequest();
+    request->setUrl("https://bwnet-bwmki.rhcloud.com/api/rcycle/get_version.php");
+    request->setRequestType(HttpRequest::Type::GET);
+    request->setResponseCallback(this,httpresponse_selector(Net::http_completed));
+    //request->setResponseCallback(this,CC_CALLBACK_1(Net::http_completed, this, this));
+    
+//                                 CC_CALLBACK_0 (Net::http_completed, this) );
+    
+    
+    HttpClient *http_client=HttpClient::getInstance();
+    http_client->send(request);
+    
+    
     WebRequest *req;
     req=WebRequest::createWithNet(this);
     req->getURL(url);
@@ -114,5 +127,15 @@ void Net::run()
         printf("running in thread...\n");
         sleep(1);
     }
+}
+
+void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
+{
+    vector<char> *datav= response->getResponseData();
+    string data(datav->begin(),datav->end());
+    
+    printf("== http completado....  ==-----------------------\n");
+    printf("e: %d \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
+    printf("d: %s ----\n",data.c_str());
 }
 

@@ -13,6 +13,8 @@
 #include <thread>
 #include <curl/curl.h>
 
+#include "network/HttpClient.h"
+
 class Net;
 
 class WebRequest : public cocos2d::Ref
@@ -47,6 +49,7 @@ public:
 
     void getURL(char *url);
 
+    void http_completed(Ref *psender,cocos2d::network::HttpResponse *response);
     
     void run();
 
