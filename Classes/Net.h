@@ -53,6 +53,12 @@ public:
     
     void run();
 
+    
+    void bwnet_register();
+    void bwnet_register_completed();
+    
+    
+    
     CURLM *curl_multi_handle;
     
     WebRequest *areq;

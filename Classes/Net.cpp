@@ -20,6 +20,10 @@ using namespace std;
 using namespace network;
 
 
+//const char *bwnet_baseurl="http://bwnet-rhcloud.com/rcycle/api";
+const char *bwnet_baseurl="http://localhost/~mikel/bwnet/rcycle/api";
+
+
 bool WebRequest::init()
 {
     netmgr=NULL;
@@ -138,4 +142,29 @@ void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
     printf("e: %d \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
     printf("d: %s ----\n",data.c_str());
 }
+
+
+void Net::bwnet_register()
+{
+    HttpRequest *request = new HttpRequest();
+    stringstream req_url=string(bwnet_baseurl)+string();
+    request->setUrl();
+    request->setRequestType(HttpRequest::Type::GET);
+    request->setResponseCallback(this,httpresponse_selector(Net::http_completed));
+    
+}
+
+void Net::bwnet_register_completed()
+{
+    
+    
+}
+
+
+
+
+
+
+
+
 
