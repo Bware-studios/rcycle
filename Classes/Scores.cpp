@@ -11,7 +11,9 @@
 #include <sys/stat.h>
 #include "JSONcodec.h"
 #include "Game.h"
+#include "Net.h"
 
+#include <curl/curl.h>
 
 USING_NS_CC;
 using namespace std;
@@ -98,12 +100,12 @@ bool Scores::init() {
         }
     }
     
+    Net::getInstance()->getURL("");
+    
         
     // normalmente no lo grabarias aqui solo para probar
   //  save_file();
     
-    
-
     return true;
 }
 
