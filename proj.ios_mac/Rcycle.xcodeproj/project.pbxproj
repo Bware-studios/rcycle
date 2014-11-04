@@ -103,6 +103,8 @@
 		978E09561921EFBD00ACDDCB /* StatsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 978E09541921EFBD00ACDDCB /* StatsScene.cpp */; };
 		978E09571921EFBD00ACDDCB /* StatsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 978E09541921EFBD00ACDDCB /* StatsScene.cpp */; };
 		9795FAAD19AE679B00476A07 /* publish-android in Resources */ = {isa = PBXBuildFile; fileRef = 9795FAAC19AE679B00476A07 /* publish-android */; };
+		97B378511A0854C000AC7EF5 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B3784F1A0854C000AC7EF5 /* Preferences.cpp */; };
+		97B378521A0854C000AC7EF5 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B3784F1A0854C000AC7EF5 /* Preferences.cpp */; };
 		97C8834418EF6384003518DB /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834318EF6384003518DB /* publish-ios */; };
 		97C8834518EF6384003518DB /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834318EF6384003518DB /* publish-ios */; };
 		97C8834818EF639B003518DB /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834618EF639B003518DB /* Music */; };
@@ -354,13 +356,14 @@
 		978E09551921EFBD00ACDDCB /* StatsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsScene.h; path = ../Classes/StatsScene.h; sourceTree = "<group>"; };
 		9795FAAC19AE679B00476A07 /* publish-android */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-android"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-android"; sourceTree = "<group>"; };
 		97A2537A19DE74B100C87404 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../cocos2d/external/curl/prebuilt/ios/libcurl.a; sourceTree = "<group>"; };
+		97B3784F1A0854C000AC7EF5 /* Preferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Preferences.cpp; path = ../Classes/Preferences.cpp; sourceTree = "<group>"; };
+		97B378501A0854C000AC7EF5 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = ../Classes/Preferences.h; sourceTree = "<group>"; };
 		97C8834318EF6384003518DB /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
 		97C8834618EF639B003518DB /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Music; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Music"; sourceTree = "<group>"; };
 		97C8834718EF639B003518DB /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Sounds"; sourceTree = "<group>"; };
 		97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JSONcodec.cpp; path = ../Classes/JSONcodec.cpp; sourceTree = "<group>"; };
 		97EFAC9719B5116B00E56BB3 /* JSONcodec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONcodec.h; path = ../Classes/JSONcodec.h; sourceTree = "<group>"; };
 		97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Preferences.cpp; path = ../Classes/Preferences.cpp; sourceTree = "<group>"; };
-		97FF431219E4A10F00FCAE83 /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = ../Classes/Preferences.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -440,6 +443,8 @@
 				97684A1A18EB7080008AFE58 /* Common.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
+				97B3784F1A0854C000AC7EF5 /* Preferences.cpp */,
+				97B378501A0854C000AC7EF5 /* Preferences.h */,
 				97684A3F18EB708C008AFE58 /* Options.cpp */,
 				97684A4018EB708C008AFE58 /* Options.h */,
 				97684A3918EB708C008AFE58 /* Log.cpp */,
@@ -482,13 +487,8 @@
 				9759F67019B3902700F59A5C /* Scores.h */,
 				97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */,
 				97EFAC9719B5116B00E56BB3 /* JSONcodec.h */,
-<<<<<<< HEAD
-				97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */,
-				97FF431219E4A10F00FCAE83 /* Preferences.h */,
-=======
 				971E051219ECFED80057A11C /* Net.cpp */,
 				971E051719ECFEEA0057A11C /* Net.h */,
->>>>>>> bwnet
 			);
 			name = Classes;
 			path = ../classes;
@@ -842,6 +842,7 @@
 				970CA241192D4AB900093608 /* Camion.cpp in Sources */,
 				97684A3118EB7080008AFE58 /* GameObject.cpp in Sources */,
 				97684A5518EB708C008AFE58 /* Options.cpp in Sources */,
+				97B378511A0854C000AC7EF5 /* Preferences.cpp in Sources */,
 				97684A2918EB7080008AFE58 /* Container.cpp in Sources */,
 				971E051319ECFED80057A11C /* Net.cpp in Sources */,
 				97684A2B18EB7080008AFE58 /* CreditsScene.cpp in Sources */,
@@ -880,6 +881,7 @@
 				97684A2818EB7080008AFE58 /* Audio.cpp in Sources */,
 				971E051419ECFED80057A11C /* Net.cpp in Sources */,
 				9759F66F19B3900B00F59A5C /* Scores.cpp in Sources */,
+				97B378521A0854C000AC7EF5 /* Preferences.cpp in Sources */,
 				97684A5818EB708C008AFE58 /* OptionsScene.cpp in Sources */,
 				97684A2E18EB7080008AFE58 /* FameScene.cpp in Sources */,
 				97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */,
