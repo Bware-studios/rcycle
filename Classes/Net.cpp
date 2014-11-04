@@ -11,7 +11,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include "Preferences.h"
 #include "JSONcodec.h"
+
 
 
 USING_NS_CC;
@@ -22,56 +24,6 @@ using namespace network;
 
 //const char *bwnet_baseurl="http://bwnet-rhcloud.com/rcycle/api";
 const char *bwnet_baseurl="http://localhost/~mikel/bwnet/rcycle/api";
-
-
-bool WebRequest::init()
-{
-    netmgr=NULL;
-    return true;
-}
-
-WebRequest *WebRequest::createWithNet(Net *thenetmngr)
-{
-    WebRequest *req=WebRequest::create();
-    if (req) {
-        req->setNetMgr(thenetmngr);
-    }
-    return req;
-}
-
-void WebRequest::setNetMgr(Net *mgr)
-{
-    netmgr=mgr;
-}
-
-void WebRequest::getURL(const char *url)
-{
-    theurl=url;
-    thethread=thread(&WebRequest::get_request,this);
-}
-
-
-void WebRequest::get_request()
-{
-    CURL *curl;
-    CURLM *curlm = netmgr->curl_multi_handle;
-    CURLcode res;
-    curl = curl_easy_init();
-    curl_easy_setopt(curl, CURLOPT_URL, "https://bwnet-bwmki.rhcloud.com/api/rcycle/get_version.php");
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-    curl_multi_add_handle(curlm, curl);
-    curl_easy_perform(curl);
-  //  res = curl_multi_perform(curl,&still_running);
-    if(res != CURLE_OK) {
-        printf("curl_easy_perform() failed: %s\n",
-               curl_easy_strerror(res));
-    }
-    printf("curl ok");
-    curl_easy_cleanup(curl);
-}
-
-
 
 
 
@@ -88,18 +40,22 @@ Net *Net::getInstance()
 
 bool Net::init()
 {
+    LOG_NET("net init...");
+
     Net::thenet=this;
     Net::thenet->retain();
     
-    Net::thenet->bwnet_register();
+    bwnet_registered=false;
+    bwnet_id=Preferences::getInstance()->getBwnetId();
+    if (bwnet_id.empty()) {
+        LOG_NET("calling register");
+        bwnet_register();
+    } else {
+        LOG_NET("found register id %s",bwnet_id.c_str());
+        bwnet_registered=true;
+    }
     
-    curl_global_init(CURL_GLOBAL_ALL);
-    curl_multi_handle=curl_multi_init();
-    
-    
-    printf("net init...\n");
 
-    //netthread=thread(&Net::run,this);
     
     return true;
 }
@@ -118,12 +74,6 @@ void Net::getURL(char *url)
     HttpClient *http_client=HttpClient::getInstance();
     http_client->send(request);
     
-    
-    WebRequest *req;
-    req=WebRequest::createWithNet(this);
-    req->getURL(url);
-    areq=req;
-    req->retain();
 }
 
 void Net::run()
@@ -160,7 +110,9 @@ void Net::bwnet_register()
 void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 {
     if ( response->isSucceed() ) {
-        cout<<"register response : "<<response->getResponseData()<<"\n";
+        vector <char>* r= response->getResponseData();
+        string a(r->begin(),r->end());
+        cout<<"register response : "<< a <<"\n";
     } else {
         cout<<"register failed\n";
     }

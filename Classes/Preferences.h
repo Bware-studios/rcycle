@@ -26,6 +26,13 @@ public:
     std::string getPlayerName();
     void setPlayerName(std::string pname);
     
+    std::string getBwnetId();
+    void setBwnetId(std::string id);
+
+    bool getNetActivated();
+    void setNetActivated(bool activated);
+
+    
     int getNumGamesStarted();
     int setOneMoreGameStarted();
     

@@ -25,7 +25,7 @@ void Log_msg(const char *type,const char *msg, ... );
 #define DEBUG_LOG_TRASHGEN false
 #define DEBUG_LOG_RESOLUTION false
 #define DEBUG_LOG_SCORE true
-
+#define DEBUG_LOG_NET true
 
 
 #if ( DEBUG_LOG && DEBUG_LOG_GENERAL )
@@ -68,6 +68,12 @@ void Log_msg(const char *type,const char *msg, ... );
 #define LOG_SCORE(...) Log_msg("[SC]",__VA_ARGS__)
 #else
 #define LOG_SCORE(...)
+#endif
+
+#if ( DEBUG_LOG && DEBUG_LOG_NET )
+#define LOG_NET(...) Log_msg("[NET]",__VA_ARGS__)
+#else
+#define LOG_NET(...)
 #endif
 
 

@@ -100,9 +100,9 @@ bool Scores::init() {
         }
     }
     
-    Net::getInstance()->getURL("");
+   // Net::getInstance()->getURL("");
+    Net::getInstance();
     
-        
     // normalmente no lo grabarias aqui solo para probar
   //  save_file();
     

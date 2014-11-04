@@ -53,6 +53,42 @@ void Preferences::setPlayerName(string pname)
     save();
 }
 
+std::string Preferences::getBwnetId()
+{
+    string bwnetid;
+    try {
+        bwnetid=prefsData.at("BwnetId").asString();
+        return bwnetid;
+    } catch (exception& e) {
+        return string("");
+    }
+}
+
+void Preferences::setBwnetId(std::string id)
+{
+    prefsData["BwnetId"]=id;
+    save();
+}
+
+bool Preferences::getNetActivated()
+{
+    bool activated;
+    try {
+        activated=prefsData.at("NetActive").asBool();
+        return activated;
+    } catch (exception& e) {
+        return true;
+    }
+}
+
+void Preferences::setNetActivated(bool activated)
+{
+    prefsData["NetActive"]=activated;
+    save();
+}
+
+
+
 int Preferences::getNumGamesStarted()
 {
     try {
