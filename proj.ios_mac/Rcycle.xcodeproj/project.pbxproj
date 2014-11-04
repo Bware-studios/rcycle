@@ -114,7 +114,6 @@
 		97EFAC9319B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
 		97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
 		97FF430E19E4A0FB00FCAE83 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */; };
-		97FF430F19E4A0FB00FCAE83 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -866,6 +865,7 @@
 				97684A3218EB7080008AFE58 /* GameObject.cpp in Sources */,
 				97684A2C18EB7080008AFE58 /* CreditsScene.cpp in Sources */,
 				97684A5A18EB708C008AFE58 /* SceneLoadManager.cpp in Sources */,
+				97B378521A0854C000AC7EF5 /* Preferences.cpp in Sources */,
 				97684A5618EB708C008AFE58 /* Options.cpp in Sources */,
 				978E09571921EFBD00ACDDCB /* StatsScene.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
@@ -873,7 +873,6 @@
 				97684A2A18EB7080008AFE58 /* Container.cpp in Sources */,
 				97684A6018EB708C008AFE58 /* WorldFrame.cpp in Sources */,
 				97684A5C18EB708C008AFE58 /* Trash.cpp in Sources */,
-				97FF430F19E4A0FB00FCAE83 /* Preferences.cpp in Sources */,
 				97684A5218EB708C008AFE58 /* MainMenuScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				97684A5018EB708C008AFE58 /* Log.cpp in Sources */,
@@ -881,7 +880,6 @@
 				97684A2818EB7080008AFE58 /* Audio.cpp in Sources */,
 				971E051419ECFED80057A11C /* Net.cpp in Sources */,
 				9759F66F19B3900B00F59A5C /* Scores.cpp in Sources */,
-				97B378521A0854C000AC7EF5 /* Preferences.cpp in Sources */,
 				97684A5818EB708C008AFE58 /* OptionsScene.cpp in Sources */,
 				97684A2E18EB7080008AFE58 /* FameScene.cpp in Sources */,
 				97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */,

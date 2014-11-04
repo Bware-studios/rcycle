@@ -55,7 +55,7 @@ public:
 
     
     void bwnet_register();
-    void bwnet_register_completed();
+    void bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response);
     
     
     

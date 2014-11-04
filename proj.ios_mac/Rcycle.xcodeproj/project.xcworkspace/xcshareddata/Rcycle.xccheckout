@@ -22,7 +22,7 @@
 		<key>2A0252CEB94C4063006FE487B7B2A598A5614D17</key>
 		<string>../../..</string>
 		<key>852ED3691A47A99B0D19C820A500AE9772B2A44E</key>
-		<string>../../../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:Bware-studios/rcycle.git</string>
@@ -38,7 +38,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>852ED3691A47A99B0D19C820A500AE9772B2A44E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>..</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

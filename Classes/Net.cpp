@@ -91,6 +91,7 @@ bool Net::init()
     Net::thenet=this;
     Net::thenet->retain();
     
+    Net::thenet->bwnet_register();
     
     curl_global_init(CURL_GLOBAL_ALL);
     curl_multi_handle=curl_multi_init();
@@ -139,7 +140,7 @@ void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
     string data(datav->begin(),datav->end());
     
     printf("== http completado....  ==-----------------------\n");
-    printf("e: %d \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
+    printf("e: %ld \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
     printf("d: %s ----\n",data.c_str());
 }
 
@@ -147,17 +148,22 @@ void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 void Net::bwnet_register()
 {
     HttpRequest *request = new HttpRequest();
-    stringstream req_url=string(bwnet_baseurl)+string();
-    request->setUrl();
+    stringstream req_url;
+    req_url << bwnet_baseurl << "/" << "register.php";
+    request->setUrl(req_url.str().c_str());
     request->setRequestType(HttpRequest::Type::GET);
-    request->setResponseCallback(this,httpresponse_selector(Net::http_completed));
-    
+    request->setResponseCallback(this,httpresponse_selector(Net::bwnet_register_completed));
+    HttpClient *http_client=HttpClient::getInstance();
+    http_client->send(request);
 }
 
-void Net::bwnet_register_completed()
+void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 {
-    
-    
+    if ( response->isSucceed() ) {
+        cout<<"register response : "<<response->getResponseData()<<"\n";
+    } else {
+        cout<<"register failed\n";
+    }
 }
 
 
