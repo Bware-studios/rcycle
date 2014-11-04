@@ -62,6 +62,8 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		970CA241192D4AB900093608 /* Camion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 970CA23F192D4AB900093608 /* Camion.cpp */; };
 		970CA242192D4AB900093608 /* Camion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 970CA23F192D4AB900093608 /* Camion.cpp */; };
+		971E051319ECFED80057A11C /* Net.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971E051219ECFED80057A11C /* Net.cpp */; };
+		971E051419ECFED80057A11C /* Net.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 971E051219ECFED80057A11C /* Net.cpp */; };
 		9736823319DCA6CC00AB8AE9 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */; };
 		9736823419DCA6CC00AB8AE9 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */; };
 		9759F66E19B3900B00F59A5C /* Scores.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9759F66D19B3900B00F59A5C /* Scores.cpp */; };
@@ -309,6 +311,8 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		970CA23F192D4AB900093608 /* Camion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camion.cpp; path = ../Classes/Camion.cpp; sourceTree = "<group>"; };
 		970CA240192D4AB900093608 /* Camion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camion.h; path = ../Classes/Camion.h; sourceTree = "<group>"; };
+		971E051219ECFED80057A11C /* Net.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Net.cpp; path = ../Classes/Net.cpp; sourceTree = "<group>"; };
+		971E051719ECFEEA0057A11C /* Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Net.h; path = ../Classes/Net.h; sourceTree = "<group>"; };
 		9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelpScene.cpp; path = ../Classes/HelpScene.cpp; sourceTree = "<group>"; };
 		9736823719DCA6DB00AB8AE9 /* HelpScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelpScene.h; path = ../Classes/HelpScene.h; sourceTree = "<group>"; };
 		9759F66D19B3900B00F59A5C /* Scores.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scores.cpp; path = ../Classes/Scores.cpp; sourceTree = "<group>"; };
@@ -349,6 +353,7 @@
 		978E09541921EFBD00ACDDCB /* StatsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StatsScene.cpp; path = ../Classes/StatsScene.cpp; sourceTree = "<group>"; };
 		978E09551921EFBD00ACDDCB /* StatsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsScene.h; path = ../Classes/StatsScene.h; sourceTree = "<group>"; };
 		9795FAAC19AE679B00476A07 /* publish-android */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-android"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-android"; sourceTree = "<group>"; };
+		97A2537A19DE74B100C87404 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../cocos2d/external/curl/prebuilt/ios/libcurl.a; sourceTree = "<group>"; };
 		97C8834318EF6384003518DB /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
 		97C8834618EF639B003518DB /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Music; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Music"; sourceTree = "<group>"; };
 		97C8834718EF639B003518DB /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Sounds"; sourceTree = "<group>"; };
@@ -477,8 +482,13 @@
 				9759F67019B3902700F59A5C /* Scores.h */,
 				97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */,
 				97EFAC9719B5116B00E56BB3 /* JSONcodec.h */,
+<<<<<<< HEAD
 				97FF430D19E4A0FB00FCAE83 /* Preferences.cpp */,
 				97FF431219E4A10F00FCAE83 /* Preferences.h */,
+=======
+				971E051219ECFED80057A11C /* Net.cpp */,
+				971E051719ECFEEA0057A11C /* Net.h */,
+>>>>>>> bwnet
 			);
 			name = Classes;
 			path = ../classes;
@@ -527,6 +537,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97A2537A19DE74B100C87404 /* libcurl.a */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -832,6 +843,7 @@
 				97684A3118EB7080008AFE58 /* GameObject.cpp in Sources */,
 				97684A5518EB708C008AFE58 /* Options.cpp in Sources */,
 				97684A2918EB7080008AFE58 /* Container.cpp in Sources */,
+				971E051319ECFED80057A11C /* Net.cpp in Sources */,
 				97684A2B18EB7080008AFE58 /* CreditsScene.cpp in Sources */,
 				97684A2D18EB7080008AFE58 /* FameScene.cpp in Sources */,
 				97684A3318EB7080008AFE58 /* GameScene.cpp in Sources */,
@@ -866,6 +878,7 @@
 				97684A5018EB708C008AFE58 /* Log.cpp in Sources */,
 				97684A4E18EB708C008AFE58 /* LoadingScene.cpp in Sources */,
 				97684A2818EB7080008AFE58 /* Audio.cpp in Sources */,
+				971E051419ECFED80057A11C /* Net.cpp in Sources */,
 				9759F66F19B3900B00F59A5C /* Scores.cpp in Sources */,
 				97684A5818EB708C008AFE58 /* OptionsScene.cpp in Sources */,
 				97684A2E18EB7080008AFE58 /* FameScene.cpp in Sources */,
@@ -958,7 +971,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "/opt2/cocos/cocos2d-x-3/projects/rcycle/cocos2d/external/curl/prebuilt/ios";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -989,7 +1002,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "/opt2/cocos/cocos2d-x-3/projects/rcycle/cocos2d/external/curl/prebuilt/ios";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
