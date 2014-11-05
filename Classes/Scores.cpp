@@ -25,6 +25,28 @@ const char *score_file_name="scoreData_file.json";
 const int Scores::num_local_scores = 10;
 
 
+bool ScoreItem::init()
+{
+    name=string("");
+    score=0;
+    own=true;
+    return true;
+}
+
+ScoreItem* ScoreItem::create(const char *pname,int pscore,bool pown)
+{
+    ScoreItem *pRet = create();
+    if (pRet==NULL) return pRet;
+    pRet->name=string(pname);
+    pRet->score=pscore;
+    pRet->own=pown;
+    return pRet;
+}
+
+
+
+
+
 Scores *Scores::thescores = NULL;
 
 Scores *Scores::getInstance()

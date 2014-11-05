@@ -213,6 +213,24 @@ Value read_json_file(std::string filename)
     return result;
 }
 
+cocos2d::Value read_json_string(std::string jsondata)
+{
+    if (jsondata.empty()) return *new Value;
+    // stream from string
+    
+    // parse
+    rapidjson::Document jsondoc;
+    jsondoc.Parse<0>(jsondata.c_str());
+    if (jsondoc.HasParseError()) {
+        LOG_SCORE("error");
+        LOG_SCORE("%d %s",jsondoc.GetErrorOffset(),jsondoc.GetParseError());
+        return Value();
+    }
+    
+    Value result=_json_node_to_value(jsondoc);
+    return result;
+}
+
 
 cocos2d::Value _json_node_to_value(const rapidjson::Value &json_node)
 {

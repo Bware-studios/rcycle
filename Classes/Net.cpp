@@ -109,13 +109,26 @@ void Net::bwnet_register()
 
 void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 {
-    if ( response->isSucceed() ) {
-        vector <char>* r= response->getResponseData();
-        string a(r->begin(),r->end());
-        cout<<"register response : "<< a <<"\n";
-    } else {
+    if (!response->isSucceed() ) {
         cout<<"register failed\n";
+        return;
     }
+    
+    vector <char>* r= response->getResponseData();
+    string a(r->begin(),r->end());
+    Value responsedata = read_json_string(a);
+    
+    if (responsedata.getType()!=Value::Type::MAP) {
+        cout<<"not map";
+    }
+    ValueMap responsemap = responsedata.asValueMap();
+    
+    cout<<"data : "<< a <<"\n";
+    cout<<"status : "<< responsemap.at("status").asString() <<"\n";
+    cout<<"id : "<< responsemap.at("id").asString() <<"\n";
+
+    
+    
 }
 
 

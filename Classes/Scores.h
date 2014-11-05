@@ -11,9 +11,25 @@
 
 #include "Common.h"
 
+
+class ScoreItem : public cocos2d::Ref
+{
+public:
+    bool init();
+    CREATE_FUNC(ScoreItem);
+    ScoreItem *create(const char *pname,int pscore,bool pown);
+    
+    std::string name;
+    int score;
+    bool own;
+    
+};
+
 struct scoreitem {
     std::string name;
     int score;
+    bool own;
+    // pongo aqui la fecha... ?
 };
 
 

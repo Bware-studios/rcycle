@@ -55,6 +55,9 @@ void _fill_value_to_json_node(cocos2d::Value *avalue,rapidjson::Value &json_node
 
 cocos2d::Value read_json_file(std::string filename);
 
+cocos2d::Value read_json_string(std::string jsondata);
+
+
 // interna
 cocos2d::Value _json_node_to_value(const rapidjson::Value &json_node);
 
