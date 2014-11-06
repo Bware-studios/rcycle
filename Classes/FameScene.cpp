@@ -21,12 +21,22 @@ using namespace cocosbuilder;
 bool FameScene::init() {
     if ( ! MenuScene::init("FameScene") ) return false;
 
-    Scores *sc=Scores::create();
+    Scores *sc=Scores::getInstance();
+    ValueVector topscores = sc->local_top_scores;
+    ValueVector::iterator j;
+    int i;
     
-    for (int i=0; i<Scores::num_local_scores; i++) {
-        scores_text<< (i+1) << ".\t" << sc->high_scores[i].name << "\t...\t" << sc->high_scores[i].score << "\n";
+    for (i=1,j=topscores.begin() ; j!=topscores.end() ; j++,i++) {
+        ValueMap ascore;
+        ascore = j->asValueMap();
+        scores_text<<i<<".\t" << ascore.at("name").asString() << "\t...\t" << ascore.at("score").asString() << "\n";
     }
     
+//    for (int i=0; i<Scores::num_local_scores; i++) {
+//        scores_text<< (i+1) << ".\t" << sc->high_scores[i].name << "\t...\t" << sc->high_scores[i].score << "\n";
+//    }
+    
+//    printf("%s\n",scores_text.str().c_str());
     text1->setString(scores_text.str().c_str());
     
     return true;

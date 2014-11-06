@@ -52,7 +52,13 @@ public:
     std::string predicted_player_name();
     
     std::string full_file_name;
-    cocos2d::ValueMap scoreData;
+    //cocos2d::ValueMap scoreData;
+    
+    
+    cocos2d::ValueVector local_top_scores;
+    cocos2d::ValueMap scores_to_send;
+    cocos2d::ValueMap scores_sending;
+
     
     const static int num_local_scores;
     struct scoreitem *high_scores;

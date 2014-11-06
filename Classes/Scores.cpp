@@ -79,6 +79,8 @@ bool Scores::init() {
     //scoreData = FileUtils::getInstance()->getValueMapFromFile(full_file_name.c_str());
     bool scores_dict_loadable = false;
 
+    ValueMap scoreData;
+    
     Value json_value_loaded = read_json_file(full_file_name);
     if ( json_value_loaded.getType()!=Value::Type::MAP ) {
         LOG_SCORE("error not dictionary found");
@@ -96,33 +98,47 @@ bool Scores::init() {
     }
     
     if (scores_dict_loadable) {
-        if (scoreData.count("name")) {
-            player_name=scoreData.at("name").asString();
-        }
+//        if (scoreData.count("name")) {
+//            player_name=scoreData.at("name").asString();
+//        }
         
         // cargar scores
-        for (int i=0;i<num_local_scores;i++) {
-            stringstream i_s;
-            i_s<<i;
-            Value scoreitem = scoreData.at("scores").asValueMap().at(i_s.str().c_str());
-            if (scoreitem.getType()==Value::Type::MAP) {
-                ValueMap scoreitemmap = scoreitem.asValueMap();
-                high_scores[i].name=scoreitemmap.at("name").asString();
-                high_scores[i].score=scoreitemmap.at("score").asInt();
-            }
-        }
+        local_top_scores=scoreData.at("scores").asValueVector();
+//        for (int i=0;i<num_local_scores;i++) {
+//            stringstream i_s;
+//            i_s<<i;
+//            Value scoreitem = scoreData.at("scores").asValueMap().at(i_s.str().c_str());
+//            if (scoreitem.getType()==Value::Type::MAP) {
+//                ValueMap scoreitemmap = scoreitem.asValueMap();
+//                high_scores[i].name=scoreitemmap.at("name").asString();
+//                high_scores[i].score=scoreitemmap.at("score").asInt();
+//            }
+//        }
     } else {
+        // no hay fichero de records generar
+
         int i;
         for (i=0;i<num_local_scores;i++) {
             //high_scores[i].name=scoreData["scores"][i];
             stringstream n1;
             n1<< "Mikel" << (i+1);
-            high_scores[i].name=n1.str();
-            high_scores[i].score=100*(12-i);
+            ValueMap ascore;
+            ascore["name"]=Value(n1.str());
+            ascore["score"]=Value(100*(12-i));
+//            high_scores[i].name=n1.str();
+//            high_scores[i].score=100*(12-i);
+            local_top_scores.push_back(Value(ascore));
         }
+        
     }
+
+    // #### CAMBIAR LO ANTERIOR A QUE CARGUE A LOCAL_TOP_SCORES y quitar scoreData
+    // #### DONE
+    
     
    // Net::getInstance()->getURL("");
+    
+    
     Net::getInstance();
     
     // normalmente no lo grabarias aqui solo para probar
@@ -144,25 +160,30 @@ std::string Scores::get_player_name()
 
 void Scores::save_file()
 {
+    ValueMap scoreData;
+    // #### SCORE_DATA que sea una variable local de essta para salvar local_top_scores
+    
     // set version to save
     scoreData["v"]=Value(1);
 
-    if (!player_name.empty()) {
-        scoreData["name"]=Value(player_name);
-    }
+//    if (!player_name.empty()) {
+//        scoreData["name"]=Value(player_name);
+//    }
     
 //    ValueMapIntKey scores=*new ValueMapIntKey;
-    ValueMap scores=*new ValueMap;
-    int i;
-    for (i=0;i<num_local_scores;i++) {
-        ValueMap item=*new ValueMap;
-        item["name"]=high_scores[i].name;
-        item["score"]=high_scores[i].score;
-        char ns[10];
-        sprintf(ns,"%d",i);
-        scores[ns]=item;
-    }
-    scoreData["scores"]=scores;
+
+    
+//    ValueMap scores=*new ValueMap;
+//    int i;
+//    for (i=0;i<num_local_scores;i++) {
+//        ValueMap item=*new ValueMap;
+//        item["name"]=high_scores[i].name;
+//        item["score"]=high_scores[i].score;
+//        char ns[10];
+//        sprintf(ns,"%d",i);
+//        scores[ns]=item;
+//    }
+    scoreData["scores"]=local_top_scores;
     
     //printf("4: %d   %s %d \n",scores.count(4),scores[4].asValueMap()["name"].asString().c_str(),scores[4].asValueMap()["score"].asInt());
     Value raiz=Value(scoreData);
@@ -172,6 +193,8 @@ void Scores::save_file()
 
 bool Scores::save_score()
 {
+    
+    // #### CAMBIAR A ACTUALIZAR local_top_scores
     player_name=Scores::getInstance()->get_player_name();
     int ascore=Game::thegame->get_total_score();
     bool high_score=false;
@@ -191,6 +214,15 @@ bool Scores::save_score()
     }
     
     save_file();
+    
+    // #### GUARDAR NUEVO EN TO SEND
+    
+    // #### SI NO ESTOY ESPERANDO RESPUESTA
+    // #### MOVER TO_SEND A SENDING Y BOORAR TO_SEND
+    // #### ENVIAR
+    
+    
+    
     return high_score;
 }
 
@@ -203,5 +235,7 @@ bool Scores::would_achieve_high_score(int ascore)
     }
     return false;
 }
+
+// #### HACER RECIBIR localtopscores DE LA RED
 
 
