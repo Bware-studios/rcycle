@@ -12,6 +12,7 @@
 #include "JSONcodec.h"
 #include "Game.h"
 #include "Net.h"
+#include "Preferences.h"
 
 #include <curl/curl.h>
 
@@ -195,9 +196,21 @@ bool Scores::save_score()
 {
     
     // #### CAMBIAR A ACTUALIZAR local_top_scores
-    player_name=Scores::getInstance()->get_player_name();
+    //player_name=Scores::getInstance()->get_player_name();
+    player_name=Preferences::getInstance()->getPlayerName();
+
     int ascore=Game::thegame->get_total_score();
     bool high_score=false;
+    
+    
+    ValueVector::reverse_iterator i;
+    for (i=local_top_scores.rbegin() ; i!=local_top_scores.rend() && i->asValueMap().at("score").asInt()<ascore ; i++ ) {
+
+        local_top_scores.insert(i,*new Value(* new ValueMap()));
+
+    
+    }
+    
     int mypos=num_local_scores;
     while (mypos>0 && high_scores[mypos-1].score<ascore) {
         mypos-=1;

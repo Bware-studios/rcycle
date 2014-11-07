@@ -12,6 +12,7 @@
 #include "SceneLoadManager.h"
 
 #include "Scores.h"
+#include "Preferences.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -146,8 +147,9 @@ bool StatsScene::enter_player_name_for_record_if_needed() {
     bool high_score_achieved=Game::thegame->get_high_score_achieved();
     if ( high_score_achieved ) {
         std::string playername;
-        playername=Scores::getInstance()->get_player_name();
-
+        //playername=Scores::getInstance()->get_player_name();
+        playername=Preferences::getInstance()->getPlayerName();
+        
         Size s=Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
         field=cocos2d::ui::TextField::create();
         field->setPosition(Point(s.width/2,s.height*.8));
