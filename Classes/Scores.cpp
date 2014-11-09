@@ -16,6 +16,7 @@
 
 #include <curl/curl.h>
 
+
 USING_NS_CC;
 using namespace std;
 
@@ -205,26 +206,34 @@ bool Scores::save_score()
     
     ValueVector::reverse_iterator i;
     for (i=local_top_scores.rbegin() ; i!=local_top_scores.rend() && i->asValueMap().at("score").asInt()<ascore ; i++ ) {
-
-        local_top_scores.insert(i,*new Value(* new ValueMap()));
-
-    
+        //ValueMap si=i->asValueMap();
+        //printf("buscando... %s %d\n",si.at("name").asString().c_str(),si.at("score").asInt());
     }
     
-    int mypos=num_local_scores;
-    while (mypos>0 && high_scores[mypos-1].score<ascore) {
-        mypos-=1;
-        if (mypos<num_local_scores-1) {
-            high_scores[mypos+1].name=high_scores[mypos].name;
-            high_scores[mypos+1].score=high_scores[mypos].score;
-        }
-        if (mypos<num_local_scores) {
-            high_scores[mypos].name=player_name.c_str();
-            high_scores[mypos].score=ascore;
-            // entrado en la lista
-            high_score=true;
-        }
+    if (i!=local_top_scores.rbegin()) {
+        high_score=true;
     }
+    ValueMap newscore;
+    newscore["name"]=Value(player_name);
+    newscore["score"]=Value(ascore);
+    
+    local_top_scores.insert(i.base(), Value(newscore));
+    local_top_scores.pop_back();
+    
+//    int mypos=num_local_scores;
+//    while (mypos>0 && high_scores[mypos-1].score<ascore) {
+//        mypos-=1;
+//        if (mypos<num_local_scores-1) {
+//            high_scores[mypos+1].name=high_scores[mypos].name;
+//            high_scores[mypos+1].score=high_scores[mypos].score;
+//        }
+//        if (mypos<num_local_scores) {
+//            high_scores[mypos].name=player_name.c_str();
+//            high_scores[mypos].score=ascore;
+//            // entrado en la lista
+//            high_score=true;
+//        }
+//    }
     
     save_file();
     
@@ -243,7 +252,9 @@ bool Scores::save_score()
 
 bool Scores::would_achieve_high_score(int ascore)
 {
-    if (ascore>high_scores[num_local_scores-1].score) {
+    ValueMap lastscore=local_top_scores.back().asValueMap();
+    
+    if (ascore>lastscore.at("score").asInt()) {
         return true;
     }
     return false;
