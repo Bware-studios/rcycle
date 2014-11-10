@@ -163,32 +163,10 @@ std::string Scores::get_player_name()
 void Scores::save_file()
 {
     ValueMap scoreData;
-    // #### SCORE_DATA que sea una variable local de essta para salvar local_top_scores
-    
-    // set version to save
     scoreData["v"]=Value(1);
-
-//    if (!player_name.empty()) {
-//        scoreData["name"]=Value(player_name);
-//    }
-    
-//    ValueMapIntKey scores=*new ValueMapIntKey;
-
-    
-//    ValueMap scores=*new ValueMap;
-//    int i;
-//    for (i=0;i<num_local_scores;i++) {
-//        ValueMap item=*new ValueMap;
-//        item["name"]=high_scores[i].name;
-//        item["score"]=high_scores[i].score;
-//        char ns[10];
-//        sprintf(ns,"%d",i);
-//        scores[ns]=item;
-//    }
     scoreData["scores"]=local_top_scores;
-    
-    //printf("4: %d   %s %d \n",scores.count(4),scores[4].asValueMap()["name"].asString().c_str(),scores[4].asValueMap()["score"].asInt());
     Value raiz=Value(scoreData);
+
     write_json_file(&raiz, full_file_name);
 }
 
