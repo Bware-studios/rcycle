@@ -23,6 +23,7 @@ using namespace std;
 
 //const char *rcycler_dir_name="rcycler";
 const char *score_file_name="scoreData_file.json";
+const char *tosend_file_name="score_to_send_file.json";
 
 const int Scores::num_local_scores = 10;
 
@@ -64,31 +65,23 @@ bool Scores::init() {
     Scores::thescores=this;
     Scores::thescores->retain();
     
-    high_scores = new struct scoreitem[num_local_scores];
     
     LOG_SCORE("init called");
-
-    stringstream full_dir_name;
-    full_dir_name << FileUtils::getInstance()->getWritablePath().c_str() << "/" << rcycler_dir_name << "/";
-    mkdir(full_dir_name.str().c_str(),0777);
-    full_file_name = full_dir_name.str()+string(score_file_name);
-    LOG_SCORE("scores full filename: %s",full_file_name.c_str());
-
-//    Value xx=read_json_file(full_file_name);
-//    printf("%s\n",write_json_str(&xx).c_str());
     
     // recupera estado de fichero
-    //scoreData = FileUtils::getInstance()->getValueMapFromFile(full_file_name.c_str());
     bool scores_dict_loadable = false;
+
+    JSONFileLoader *fileloader = JSONFileLoader::create();
+    fileloader->setFileName(score_file_name);
 
     ValueMap scoreData;
     
-    Value json_value_loaded = read_json_file(full_file_name);
-    if ( json_value_loaded.getType()!=Value::Type::MAP ) {
+    scores_dict_loadable=fileloader->load();
+    if ( ! scores_dict_loadable ) {
         LOG_SCORE("error not dictionary found");
-        scores_dict_loadable=false;
     } else {
-        scoreData = json_value_loaded.asValueMap();
+        scoreData = fileloader->getContent().asValueMap();
+        scores_dict_loadable=false;
         if ( scoreData.count("v") ) {
             int dict_version=scoreData.at(string("v")).asInt();
             LOG_SCORE("V present v= %d",dict_version);
@@ -100,45 +93,21 @@ bool Scores::init() {
     }
     
     if (scores_dict_loadable) {
-//        if (scoreData.count("name")) {
-//            player_name=scoreData.at("name").asString();
-//        }
-        
-        // cargar scores
         local_top_scores=scoreData.at("scores").asValueVector();
-//        for (int i=0;i<num_local_scores;i++) {
-//            stringstream i_s;
-//            i_s<<i;
-//            Value scoreitem = scoreData.at("scores").asValueMap().at(i_s.str().c_str());
-//            if (scoreitem.getType()==Value::Type::MAP) {
-//                ValueMap scoreitemmap = scoreitem.asValueMap();
-//                high_scores[i].name=scoreitemmap.at("name").asString();
-//                high_scores[i].score=scoreitemmap.at("score").asInt();
-//            }
-//        }
     } else {
         // no hay fichero de records generar
 
         int i;
         for (i=0;i<num_local_scores;i++) {
-            //high_scores[i].name=scoreData["scores"][i];
             stringstream n1;
             n1<< "Mikel" << (i+1);
             ValueMap ascore;
             ascore["name"]=Value(n1.str());
             ascore["score"]=Value(100*(12-i));
-//            high_scores[i].name=n1.str();
-//            high_scores[i].score=100*(12-i);
             local_top_scores.push_back(Value(ascore));
         }
         
     }
-
-    // #### CAMBIAR LO ANTERIOR A QUE CARGUE A LOCAL_TOP_SCORES y quitar scoreData
-    // #### DONE
-    
-    
-   // Net::getInstance()->getURL("");
     
     
     Net::getInstance();
@@ -162,20 +131,21 @@ std::string Scores::get_player_name()
 
 void Scores::save_file()
 {
+    JSONFileSaver *filesaver = JSONFileSaver::create();
+    filesaver->setFileName(score_file_name);
+    
     ValueMap scoreData;
     scoreData["v"]=Value(1);
     scoreData["scores"]=local_top_scores;
-    Value raiz=Value(scoreData);
+    filesaver->setContent(Value(scoreData));
 
-    write_json_file(&raiz, full_file_name);
+    filesaver->save();
 }
 
 
 bool Scores::save_score()
 {
     
-    // #### CAMBIAR A ACTUALIZAR local_top_scores
-    //player_name=Scores::getInstance()->get_player_name();
     player_name=Preferences::getInstance()->getPlayerName();
 
     int ascore=Game::thegame->get_total_score();
@@ -198,24 +168,20 @@ bool Scores::save_score()
     local_top_scores.insert(i.base(), Value(newscore));
     local_top_scores.pop_back();
     
-//    int mypos=num_local_scores;
-//    while (mypos>0 && high_scores[mypos-1].score<ascore) {
-//        mypos-=1;
-//        if (mypos<num_local_scores-1) {
-//            high_scores[mypos+1].name=high_scores[mypos].name;
-//            high_scores[mypos+1].score=high_scores[mypos].score;
-//        }
-//        if (mypos<num_local_scores) {
-//            high_scores[mypos].name=player_name.c_str();
-//            high_scores[mypos].score=ascore;
-//            // entrado en la lista
-//            high_score=true;
-//        }
-//    }
     
     save_file();
     
     // #### GUARDAR NUEVO EN TO SEND
+    const char *newname = newscore["name"].asString().c_str();
+    const int oldscore = scores_to_send[newname].asValueMap()["score"].asInt();
+    if (oldscore<ascore) {
+        scores_to_send[newname]=Value(newscore);
+    }
+    JSONFileSaver *filesaver = JSONFileSaver::create();
+    filesaver->setFileName(tosend_file_name);
+    filesaver->setContent(Value(scores_to_send));
+    filesaver->save();
+    
     
     // #### SI NO ESTOY ESPERANDO RESPUESTA
     // #### MOVER TO_SEND A SENDING Y BOORAR TO_SEND

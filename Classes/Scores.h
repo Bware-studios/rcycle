@@ -51,7 +51,6 @@ public:
     bool would_achieve_high_score(int ascore);
     std::string predicted_player_name();
     
-    std::string full_file_name;
     //cocos2d::ValueMap scoreData;
     
     
@@ -61,7 +60,7 @@ public:
 
     
     const static int num_local_scores;
-    struct scoreitem *high_scores;
+    //struct scoreitem *high_scores;
     std::string player_name = "";
     
 };
