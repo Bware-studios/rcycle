@@ -89,9 +89,15 @@ void JSONFileSaver::setContent(Value thecontent)
 }
 
 
+cocos2d::Value JSONcodec::JSONToValue(std::string ajsonstr)
+{
+    return read_json_string(ajsonstr);
+}
 
-
-
+std::string JSONcodec::valueToJSON(cocos2d::Value avalue)
+{
+    return write_json_str(&avalue);
+}
 
 
 bool write_json_file(cocos2d::Value *avalue, std::string filename)

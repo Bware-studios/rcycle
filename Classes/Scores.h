@@ -51,6 +51,8 @@ public:
 
     void check_and_send_scores();
 
+    void received_scores(cocos2d::Value scores);
+    
     bool would_achieve_high_score(int ascore);
     std::string predicted_player_name();
     

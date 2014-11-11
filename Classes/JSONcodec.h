@@ -41,6 +41,11 @@ private:
     cocos2d::Value valueData;
 };
 
+class JSONcodec {
+public:
+    static cocos2d::Value JSONToValue(std::string ajsonstr);
+    static std::string valueToJSON(cocos2d::Value avalue);
+};
 
 
 

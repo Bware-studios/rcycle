@@ -219,6 +219,16 @@ void Scores::check_and_send_scores()
 }
 
 
+// #### HACER RECIBIR localtopscores DE LA RED
+
+void Scores::received_scores(cocos2d::Value scores)
+{
+    if ( scores.getType() == Value::Type::VECTOR) {
+        local_top_scores=scores.asValueVector();
+    }
+}
+
+
 bool Scores::would_achieve_high_score(int ascore)
 {
     ValueMap lastscore=local_top_scores.back().asValueMap();
@@ -229,6 +239,5 @@ bool Scores::would_achieve_high_score(int ascore)
     return false;
 }
 
-// #### HACER RECIBIR localtopscores DE LA RED
 
 
