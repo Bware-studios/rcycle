@@ -45,6 +45,8 @@ bool Net::init()
     Net::thenet=this;
     Net::thenet->retain();
     
+    bwnet_request_waiting=false;
+
     bwnet_registered=false;
     bwnet_id=Preferences::getInstance()->getBwnetId();
     if (bwnet_id.empty()) {
@@ -55,7 +57,6 @@ bool Net::init()
         bwnet_registered=true;
     }
     
-
     
     return true;
 }
@@ -92,6 +93,17 @@ void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
     printf("== http completado....  ==-----------------------\n");
     printf("e: %ld \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
     printf("d: %s ----\n",data.c_str());
+}
+
+bool Net::waiting_for_register()
+{
+    return !bwnet_registered;
+}
+
+bool Net::waiting_for_request()
+{
+    return false;
+    //return bwnet_request_waiting;
 }
 
 

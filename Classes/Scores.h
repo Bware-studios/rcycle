@@ -48,10 +48,12 @@ public:
 
     void save_file();
     bool save_score();
+
+    void check_and_send_scores();
+
     bool would_achieve_high_score(int ascore);
     std::string predicted_player_name();
     
-    //cocos2d::ValueMap scoreData;
     
     
     cocos2d::ValueVector local_top_scores;

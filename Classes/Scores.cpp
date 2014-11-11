@@ -24,6 +24,7 @@ using namespace std;
 //const char *rcycler_dir_name="rcycler";
 const char *score_file_name="scoreData_file.json";
 const char *tosend_file_name="score_to_send_file.json";
+const char *sending_file_name="score_sending_file.json";
 
 const int Scores::num_local_scores = 10;
 
@@ -182,16 +183,40 @@ bool Scores::save_score()
     filesaver->setContent(Value(scores_to_send));
     filesaver->save();
     
-    
-    // #### SI NO ESTOY ESPERANDO RESPUESTA
-    // #### MOVER TO_SEND A SENDING Y BOORAR TO_SEND
-    // #### ENVIAR
-    
-    
+    check_and_send_scores();
     
     return high_score;
 }
 
+// check sending files and sent or wait
+void Scores::check_and_send_scores()
+{
+    // hay algo que enviar?
+    if ( scores_to_send.size()==0 ) return;
+    
+    // #### SI NO ESTOY ESPERANDO RESPUESTA
+    // #### MOVER TO_SEND A SENDING Y BOORAR TO_SEND
+    // #### ENVIAR
+    if ( ! Net::getInstance()->waiting_for_request() ) {
+        JSONFileSaver *filesaver = JSONFileSaver::create();
+        scores_sending=scores_to_send;
+        filesaver = JSONFileSaver::create();
+        filesaver->setFileName(sending_file_name);
+        filesaver->setContent(Value(scores_sending));
+        filesaver->save();
+
+        scores_to_send=ValueMap();
+        filesaver = JSONFileSaver::create();
+        filesaver->setFileName(tosend_file_name);
+        filesaver->setContent(Value(scores_to_send));
+        filesaver->save();
+
+        
+        // enviar scores_sending
+    }
+
+    
+}
 
 
 bool Scores::would_achieve_high_score(int ascore)
