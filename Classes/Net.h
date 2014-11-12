@@ -41,6 +41,12 @@ public:
     void bwnet_register();
     void bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response);
     
+    void bwnet_send_scores(cocos2d::ValueMap scores);
+    void bwnet_send_scores_completed(Ref *psender,cocos2d::network::HttpResponse *response);
+
+    void bwnet_request_scores();
+    void bwnet_request_scores_completed(Ref *psender,cocos2d::network::HttpResponse *response);
+
     
     std::string bwnet_id;
     bool bwnet_registered;

@@ -145,6 +145,44 @@ void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *
 
 
 
+void Net::bwnet_send_scores(cocos2d::ValueMap scores)
+{
+    HttpRequest *request = new HttpRequest();
+    stringstream req_url;
+    
+    req_url << bwnet_baseurl << "/" << "post_scores.php";
+    request->setUrl(req_url.str().c_str());
+    request->setRequestType(HttpRequest::Type::POST);
+
+    stringstream post_data;
+    post_data << "id=" << bwnet_id << "&" << "scores=" << JSONcodec::valueToJSON(Value(scores));
+    string post_data_str=post_data.str();
+    request->setRequestData(post_data_str.c_str(),post_data_str.length());
+    
+    
+    request->setResponseCallback(this,httpresponse_selector(Net::bwnet_send_scores_completed));
+    HttpClient *http_client=HttpClient::getInstance();
+    http_client->send(request);
+    
+}
+
+void Net::bwnet_send_scores_completed(Ref *psender,cocos2d::network::HttpResponse *response)
+{
+    
+}
+
+void Net::bwnet_request_scores()
+{
+    
+}
+
+void Net::bwnet_request_scores_completed(Ref *psender,cocos2d::network::HttpResponse *response)
+{
+    
+}
+
+
+
 
 
 
