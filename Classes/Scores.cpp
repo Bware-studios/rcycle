@@ -131,12 +131,17 @@ bool Scores::init() {
         ValueMap valuemap_loaded=value_loaded.asValueMap();
         ValueMap::iterator i;
         for (i=valuemap_loaded.begin() ; i!=valuemap_loaded.end() ; i++ ) {
-            ValueMap v=scores_to_send[i->first].asValueMap();
-            if (v["score"].asInt()<i->second.asInt()) {
-                ValueMap nuevo;
-                nuevo["name"]=v["name"];
-                nuevo["score"]=i->second.asInt();
-                scores_to_send[i->first]=nuevo;
+            Value vtosend = scores_to_send[i->first];
+            if ( vtosend.getType()==Value::Type::NONE ) {
+                scores_to_send[i->first]=Value(i->second);
+            } else {
+                ValueMap vmtosend = vtosend.asValueMap();
+                if (vmtosend["score"].asInt()<i->second.asValueMap().at("score").asInt()) {
+                    ValueMap nuevo;
+                    nuevo["name"]=vmtosend["name"];
+                    nuevo["score"]=i->second.asValueMap().at("score").asInt();
+                    scores_to_send[i->first]=nuevo;
+                }
             }
         }
     }
@@ -243,8 +248,7 @@ void Scores::check_and_send_scores()
         filesaver->setContent(Value(scores_to_send));
         filesaver->save();
 
-        
-        // enviar scores_sending
+        Net::getInstance()->bwnet_send_scores(scores_sending);
     }
 
     

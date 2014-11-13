@@ -13,6 +13,7 @@
 
 #include "Preferences.h"
 #include "JSONcodec.h"
+#include "Scores.h"
 
 
 
@@ -163,11 +164,38 @@ void Net::bwnet_send_scores(cocos2d::ValueMap scores)
     HttpClient *http_client=HttpClient::getInstance();
     http_client->send(request);
     
+    bwnet_request_waiting=true;
+    
 }
 
 void Net::bwnet_send_scores_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 {
+    bwnet_request_waiting=false;
+    if (!response->isSucceed() ) {
+        LOG_NET("send scores failed");
+        return;
+    }
+    vector <char>* r= response->getResponseData();
+    string a(r->begin(),r->end());
+    Value responsedata = read_json_string(a);
     
+    if (responsedata.getType()!=Value::Type::MAP) {
+        LOG_NET("send scores received not map");
+        return;
+    }
+
+    
+    ValueMap responsemap = responsedata.asValueMap();
+
+    
+    LOG_NET("data : %s",a.c_str());
+    LOG_NET("status : %s",responsemap.at("status").asString().c_str());
+
+    
+    Value scores = responsemap.at("scores");
+    
+    Scores::getInstance()->received_scores(scores);
+
 }
 
 void Net::bwnet_request_scores()
