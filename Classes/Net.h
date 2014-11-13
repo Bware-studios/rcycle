@@ -28,12 +28,10 @@ public:
     
     static Net *getInstance();
 
-    void getURL(char *url);
+//    void getURL(char *url);
 
-    void http_completed(Ref *psender,cocos2d::network::HttpResponse *response);
+//    void http_completed(Ref *psender,cocos2d::network::HttpResponse *response);
     
-    void run();
-
 
     bool waiting_for_register();
     bool waiting_for_request();

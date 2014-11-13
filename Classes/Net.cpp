@@ -61,39 +61,32 @@ bool Net::init()
     return true;
 }
 
-void Net::getURL(char *url)
-{
-    HttpRequest *request = new HttpRequest();
-    request->setUrl("https://bwnet-bwmki.rhcloud.com/api/rcycle/get_version.php");
-    request->setRequestType(HttpRequest::Type::GET);
-    request->setResponseCallback(this,httpresponse_selector(Net::http_completed));
-    //request->setResponseCallback(this,CC_CALLBACK_1(Net::http_completed, this, this));
-    
-//                                 CC_CALLBACK_0 (Net::http_completed, this) );
-    
-    
-    HttpClient *http_client=HttpClient::getInstance();
-    http_client->send(request);
-    
-}
+//void Net::getURL(char *url)
+//{
+//    HttpRequest *request = new HttpRequest();
+//    request->setUrl("https://bwnet-bwmki.rhcloud.com/api/rcycle/get_version.php");
+//    request->setRequestType(HttpRequest::Type::GET);
+//    request->setResponseCallback(this,httpresponse_selector(Net::http_completed));
+//    //request->setResponseCallback(this,CC_CALLBACK_1(Net::http_completed, this, this));
+//    
+////                                 CC_CALLBACK_0 (Net::http_completed, this) );
+//    
+//    
+//    HttpClient *http_client=HttpClient::getInstance();
+//    http_client->send(request);
+//    
+//}
 
-void Net::run()
-{
-    while (1) {
-        printf("running in thread...\n");
-        sleep(1);
-    }
-}
 
-void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
-{
-    vector<char> *datav= response->getResponseData();
-    string data(datav->begin(),datav->end());
-    
-    printf("== http completado....  ==-----------------------\n");
-    printf("e: %ld \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
-    printf("d: %s ----\n",data.c_str());
-}
+//void Net::http_completed(Ref *psender,cocos2d::network::HttpResponse *response)
+//{
+//    vector<char> *datav= response->getResponseData();
+//    string data(datav->begin(),datav->end());
+//    
+//    printf("== http completado....  ==-----------------------\n");
+//    printf("e: %ld \n %s ----\n",response->getResponseCode(),response->getErrorBuffer());
+//    printf("d: %s ----\n",data.c_str());
+//}
 
 bool Net::waiting_for_register()
 {
@@ -122,7 +115,7 @@ void Net::bwnet_register()
 void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 {
     if (!response->isSucceed() ) {
-        cout<<"register failed\n";
+        LOG_NET("register failed");
         return;
     }
     
@@ -131,16 +124,22 @@ void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *
     Value responsedata = read_json_string(a);
     
     if (responsedata.getType()!=Value::Type::MAP) {
-        cout<<"not map";
+        LOG_NET("not map");
+        // timeout to try again...
+        return;
     }
+    
+    bwnet_registered=true;
+    
     ValueMap responsemap = responsedata.asValueMap();
+    string registered_id = responsemap.at("id").asString();
     
-    cout<<"data : "<< a <<"\n";
-    cout<<"status : "<< responsemap.at("status").asString() <<"\n";
-    cout<<"id : "<< responsemap.at("id").asString() <<"\n";
+    
+    LOG_NET("data : %s",a.c_str());
+    LOG_NET("status : %s",responsemap.at("status").asString().c_str());
+    LOG_NET("id : %s",registered_id.c_str());
 
-    
-    
+    Preferences::getInstance()->setBwnetId(registered_id);
 }
 
 

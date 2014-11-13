@@ -111,6 +111,39 @@ bool Scores::init() {
     }
     
     
+    
+    // recuepera los ficheros y si habia scores pendientes envialos
+    Value value_loaded;
+    fileloader = JSONFileLoader::create();
+    fileloader->setFileName(tosend_file_name);
+    fileloader->load();
+    value_loaded=fileloader->getContent();
+    if (value_loaded.getType()==Value::Type::MAP) {
+        scores_to_send=value_loaded.asValueMap();
+    }
+
+    fileloader = JSONFileLoader::create();
+    fileloader->setFileName(sending_file_name);
+    fileloader->load();
+    value_loaded=fileloader->getContent();
+    
+    if (value_loaded.getType()==Value::Type::MAP) {
+        ValueMap valuemap_loaded=value_loaded.asValueMap();
+        ValueMap::iterator i;
+        for (i=valuemap_loaded.begin() ; i!=valuemap_loaded.end() ; i++ ) {
+            ValueMap v=scores_to_send[i->first].asValueMap();
+            if (v["score"].asInt()<i->second.asInt()) {
+                ValueMap nuevo;
+                nuevo["name"]=v["name"];
+                nuevo["score"]=i->second.asInt();
+                scores_to_send[i->first]=nuevo;
+            }
+        }
+    }
+    check_and_send_scores();
+    
+    
+    
     Net::getInstance();
     
     // normalmente no lo grabarias aqui solo para probar
@@ -146,7 +179,6 @@ void Scores::save_file()
 
 bool Scores::save_score()
 {
-    
     player_name=Preferences::getInstance()->getPlayerName();
 
     int ascore=Game::thegame->get_total_score();
