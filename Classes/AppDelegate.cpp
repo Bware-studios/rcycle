@@ -12,6 +12,7 @@
 #include "AppDelegate.h"
 
 #include "Preferences.h"
+#include "Scores.h"
 
 USING_NS_CC;
 
@@ -192,6 +193,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene2);
+    
+    
+    Scores::getInstance();
 
     return true;
 }

@@ -56,6 +56,7 @@ bool Net::init()
     } else {
         LOG_NET("found register id %s",bwnet_id.c_str());
         bwnet_registered=true;
+        bwnet_request_scores();
     }
     
     
@@ -141,6 +142,7 @@ void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *
     LOG_NET("id : %s",registered_id.c_str());
 
     Preferences::getInstance()->setBwnetId(registered_id);
+    bwnet_request_scores();
 }
 
 
@@ -200,11 +202,50 @@ void Net::bwnet_send_scores_completed(Ref *psender,cocos2d::network::HttpRespons
 
 void Net::bwnet_request_scores()
 {
+    HttpRequest *request = new HttpRequest();
+    stringstream req_url;
+    
+    string bwnetid = Preferences::getInstance()->getBwnetId();
+
+    req_url << bwnet_baseurl << "/" << "get_scores.php" << "?id=" << bwnetid;
+    request->setUrl(req_url.str().c_str());
+    request->setRequestType(HttpRequest::Type::GET);
+    
+    request->setResponseCallback(this,httpresponse_selector(Net::bwnet_request_scores_completed));
+    HttpClient *http_client=HttpClient::getInstance();
+    http_client->send(request);
+    
+    bwnet_request_waiting=true;
     
 }
 
 void Net::bwnet_request_scores_completed(Ref *psender,cocos2d::network::HttpResponse *response)
 {
+    bwnet_request_waiting=false;
+    if (!response->isSucceed() ) {
+        LOG_NET("request scores failed");
+        return;
+    }
+    vector <char>* r= response->getResponseData();
+    string a(r->begin(),r->end());
+    Value responsedata = read_json_string(a);
+    
+    if (responsedata.getType()!=Value::Type::MAP) {
+        LOG_NET("send scores received not map");
+        return;
+    }
+    
+    
+    ValueMap responsemap = responsedata.asValueMap();
+    
+    
+    LOG_NET("data : %s",a.c_str());
+    LOG_NET("status : %s",responsemap.at("status").asString().c_str());
+    
+    
+    Value scores = responsemap.at("scores");
+    
+    Scores::getInstance()->received_scores(scores);
     
 }
 
