@@ -11,7 +11,6 @@
 
 #include "Common.h"
 #include <thread>
-#include <curl/curl.h>
 
 #include "network/HttpClient.h"
 

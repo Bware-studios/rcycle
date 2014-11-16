@@ -14,7 +14,6 @@
 #include "Net.h"
 #include "Preferences.h"
 
-#include <curl/curl.h>
 
 
 USING_NS_CC;
@@ -101,10 +100,10 @@ bool Scores::init() {
         int i;
         for (i=0;i<num_local_scores;i++) {
             stringstream n1;
-            n1<< "Mikel" << (i+1);
+            n1<< "Mikel";
             ValueMap ascore;
             ascore["name"]=Value(n1.str());
-            ascore["score"]=Value(100*(12-i));
+            ascore["score"]=Value(1*(10-i));
             local_top_scores.push_back(Value(ascore));
         }
         
@@ -267,6 +266,7 @@ void Scores::received_scores(cocos2d::Value scores)
 
 bool Scores::would_achieve_high_score(int ascore)
 {
+    if ( local_top_scores.size()==0 ) return true;
     ValueMap lastscore=local_top_scores.back().asValueMap();
     
     if (ascore>lastscore.at("score").asInt()) {

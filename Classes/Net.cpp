@@ -23,8 +23,8 @@ using namespace std;
 using namespace network;
 
 
-//const char *bwnet_baseurl="http://bwnet-rhcloud.com/rcycle/api";
-const char *bwnet_baseurl="http://localhost/~mikel/bwnet/rcycle/api";
+const char *bwnet_baseurl="http://bwnet-bwmki.rhcloud.com/rcycle/api";
+//const char *bwnet_baseurl="http://localhost/~mikel/bwnet/rcycle/api";
 
 
 
