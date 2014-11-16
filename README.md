@@ -10,9 +10,7 @@ the game
 
 ## to do ##
 
-- detectar salida de objeto por los bordes
-- poner que el juego empiece y acabe por tiempo al menos una oleada
+- reaccionar a los errores de las peticiones web
+- arreglar el cambio de nombre al poner record en mac
+- compilar correctamente para ios
 
-- hacer clase para juntar las estadisticas de una oleada
-- dibujar en los contenedores las estadisticas
-- hacer que las basuras se generen

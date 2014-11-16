@@ -314,6 +314,7 @@
 		970CA240192D4AB900093608 /* Camion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camion.h; path = ../Classes/Camion.h; sourceTree = "<group>"; };
 		971E051219ECFED80057A11C /* Net.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Net.cpp; path = ../Classes/Net.cpp; sourceTree = "<group>"; };
 		971E051719ECFEEA0057A11C /* Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Net.h; path = ../Classes/Net.h; sourceTree = "<group>"; };
+		972E4B221A196E3E00BDCA15 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelpScene.cpp; path = ../Classes/HelpScene.cpp; sourceTree = "<group>"; };
 		9736823719DCA6DB00AB8AE9 /* HelpScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelpScene.h; path = ../Classes/HelpScene.h; sourceTree = "<group>"; };
 		9759F66D19B3900B00F59A5C /* Scores.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scores.cpp; path = ../Classes/Scores.cpp; sourceTree = "<group>"; };
@@ -522,6 +523,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				972E4B221A196E3E00BDCA15 /* README.md */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,

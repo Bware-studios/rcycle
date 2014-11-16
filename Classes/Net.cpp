@@ -195,7 +195,10 @@ void Net::bwnet_send_scores_completed(Ref *psender,cocos2d::network::HttpRespons
 
     
     Value scores = responsemap.at("scores");
-    
+    if (responsemap.at("status").asInt()<0) {
+        // ha devuelto error...
+        return;
+    }
     Scores::getInstance()->received_scores(scores);
 
 }
@@ -244,7 +247,10 @@ void Net::bwnet_request_scores_completed(Ref *psender,cocos2d::network::HttpResp
     
     
     Value scores = responsemap.at("scores");
-    
+    if (responsemap.at("status").asInt()<0) {
+        // ha devuelto error...
+        return;
+    }
     Scores::getInstance()->received_scores(scores);
     
 }
