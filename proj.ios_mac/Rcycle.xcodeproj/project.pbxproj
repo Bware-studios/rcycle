@@ -972,7 +972,20 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "/opt2/cocos/cocos2d-x-3/projects/rcycle/cocos2d/external/curl/prebuilt/ios";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../cocos2d/external/curl/prebuilt/ios",
+					"$(SRCROOT)/../cocos2d/external/png/prebuilt/ios",
+					"$(SRCROOT)/../cocos2d/external/**",
+				);
+				"OTHER_LDFLAGS[arch=arm64]" = (
+					"-lcurl_arm64",
+					"-lpng_arm64",
+					"-lwebp_arm64",
+					"-ltiff_arm64",
+					"-ljpeg_arm64",
+					"-lfreetype_arm64",
+					"-lwebsockets_arm64",
+				);
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1003,7 +1016,20 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "/opt2/cocos/cocos2d-x-3/projects/rcycle/cocos2d/external/curl/prebuilt/ios";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../cocos2d/external/curl/prebuilt/ios",
+					"$(SRCROOT)/../cocos2d/external/png/prebuilt/ios",
+					"$(SRCROOT)/../cocos2d/external/**",
+				);
+				"OTHER_LDFLAGS[arch=arm64]" = (
+					"-lcurl_arm64",
+					"-lpng_arm64",
+					"-ljpeg_arm64",
+					"-ltiff_arm64",
+					"-lwebp_arm64",
+					"-lfreetype_arm64",
+					"-lwebsockets_arm64",
+				);
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
