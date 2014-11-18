@@ -14,6 +14,19 @@
 #include "Preferences.h"
 #include "Scores.h"
 
+
+extern "C"{
+    size_t fwrite$UNIX2003( const void *a, size_t b, size_t c, FILE *d )
+    {
+        return fwrite(a, b, c, d);
+    }
+    char* strerror$UNIX2003( int errnum )
+    {
+        return strerror(errnum);
+    }
+}
+
+
 USING_NS_CC;
 
 using namespace std;
