@@ -261,6 +261,15 @@ void Scores::received_scores(cocos2d::Value scores)
     if ( scores.getType() == Value::Type::VECTOR) {
         local_top_scores=scores.asValueVector();
     }
+    
+    // borrar el fichero sending
+    JSONFileSaver *filesaver;
+    scores_sending=ValueMap();
+    filesaver = JSONFileSaver::create();
+    filesaver->setFileName(sending_file_name);
+    filesaver->setContent(Value(scores_sending));
+    filesaver->save();
+
 }
 
 
