@@ -30,6 +30,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 	../../Classes/Scores.cpp \
 	../../Classes/JSONcodec.cpp \
 	../../Classes/Preferences.cpp \
+	../../Classes/Net.cpp \
 
 
 
@@ -54,5 +55,6 @@ $(call import-module,extensions)
 $(call import-module,ui)
 $(call import-module,audio/android)
 $(call import-module,Box2D)
+#$(call import-module,curl)
 $(call import-module,editor-support/cocosbuilder)
 $(call import-module,editor-support/cocostudio)
