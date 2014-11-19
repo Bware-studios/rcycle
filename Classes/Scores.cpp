@@ -156,15 +156,7 @@ bool Scores::init() {
     return true;
 }
 
-void Scores::set_player_name(std::string name)
-{
-    player_name=name;
-}
 
-std::string Scores::get_player_name()
-{
-    return player_name;
-}
 
 
 void Scores::save_file()
@@ -183,8 +175,6 @@ void Scores::save_file()
 
 bool Scores::save_score()
 {
-    player_name=Preferences::getInstance()->getPlayerName();
-
     int ascore=Game::thegame->get_total_score();
     bool high_score=false;
     
@@ -199,7 +189,7 @@ bool Scores::save_score()
         high_score=true;
     }
     ValueMap newscore;
-    newscore["name"]=Value(player_name);
+    newscore["name"]=Value(Preferences::getInstance()->getPlayerName());
     newscore["score"]=Value(ascore);
     
     local_top_scores.insert(i.base(), Value(newscore));

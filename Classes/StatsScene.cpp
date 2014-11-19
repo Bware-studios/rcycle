@@ -99,7 +99,7 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 
 void StatsScene::save_hisg_score_and_exit() {
     Scores *thescores=Scores::getInstance();
-    thescores->set_player_name(field->getStringValue());
+    Preferences::getInstance()->setPlayerName(field->getStringValue());
     thescores->save_score();
     start_exit_animation();
 }
@@ -145,6 +145,8 @@ void StatsScene::event_camion_gone()
 
 bool StatsScene::enter_player_name_for_record_if_needed() {
     bool high_score_achieved=Game::thegame->get_high_score_achieved();
+    
+    high_score_achieved=1;
     if ( high_score_achieved ) {
         std::string playername;
         //playername=Scores::getInstance()->get_player_name();

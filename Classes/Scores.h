@@ -43,9 +43,6 @@ public:
     
     static Scores *getInstance();
 
-    void set_player_name(std::string name);
-    std::string get_player_name();
-
     void save_file();
     bool save_score();
 
@@ -65,7 +62,6 @@ public:
     
     const static int num_local_scores;
     //struct scoreitem *high_scores;
-    std::string player_name = "";
     
 };
 
