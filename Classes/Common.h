@@ -18,7 +18,7 @@
 
 
 
-#define VERSION_STR "beta0 r0"
+#define VERSION_STR "beta0 r1"
 #define CREDITS_STR "Mikel: Programming\nIñigo: Art and Animation\nDavid: Music and Sound\nSilvia: Beta testing"
 
 
