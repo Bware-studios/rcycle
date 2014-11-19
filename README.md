@@ -11,11 +11,14 @@ the game
 ## to do ##
 
 - reaccionar a los errores de las peticiones web
-- arreglar el cambio de nombre al poner record en mac
-- compilar correctamente para ios
+- en concreto a que si te dice que no acepta el registro hacer uno nuevo o algo asi
+
 
 
 ## cocos2d-x version ##
+
+Ojo esta compilando en una copia no se puede actualizar el cocos del proyecto desde el git
+Habria que regenerar el proyecto
 
 funciona en este cocos2d-x
 

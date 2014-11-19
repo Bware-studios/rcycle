@@ -166,7 +166,7 @@ bool StatsScene::enter_player_name_for_record_if_needed() {
         }
         field->setColor(Color3B(255,0,0));
         
-//        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
+        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
         
         this->addChild(field,100);
         
