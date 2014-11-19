@@ -116,7 +116,9 @@ void StatsScene::start_exit_animation()
 
 void StatsScene::action_enter(Ref *pSender)
 {
+    printf("action enter \n");
     if (!first_exit_pressed) {  // primera vez del boton   vuelta al juego o saca el record
+        first_exit_pressed=true;
         if (Game::thegame->get_last_wave_passed()) {
             going_back_to_game=true;
             start_exit_animation();
@@ -164,7 +166,7 @@ bool StatsScene::enter_player_name_for_record_if_needed() {
         }
         field->setColor(Color3B(255,0,0));
         
-        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
+//        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
         
         this->addChild(field,100);
         
@@ -194,7 +196,11 @@ void StatsScene::text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEven
         printf("insert %d\n",event);
     } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DETACH_WITH_IME) {
         printf("detach %d\n",event);
-        save_hisg_score_and_exit() ;
+        //save_hisg_score_and_exit() ;
+    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_ATTACH_WITH_IME) {
+        printf("atach %d\n",event);
+    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DELETE_BACKWARD) {
+        printf("delete %d\n",event);
     } else {
         printf("e: %d\n",event);
     }
