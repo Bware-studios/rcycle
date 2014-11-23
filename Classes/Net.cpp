@@ -17,6 +17,10 @@
 
 
 
+float bwnet_register_retry_interval=30.0;
+int bwnet_register_retry_ntries=3;
+
+
 USING_NS_CC;
 using namespace std;
 
@@ -48,6 +52,7 @@ bool Net::init()
     
     bwnet_request_waiting=false;
 
+    bwnet_num_register_failed=0;
     bwnet_registered=false;
     bwnet_id=Preferences::getInstance()->getBwnetId();
     if (bwnet_id.empty()) {
@@ -99,6 +104,23 @@ bool Net::waiting_for_request()
 {
     return false;
     //return bwnet_request_waiting;
+}
+
+
+void Net::timeout_and_retry_to_register()
+{
+    // poner un evento de timeout independientemente de este
+    // porque entiendo que este se cancela si se para la escena
+    //theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(0.8),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
+}
+
+
+void Net::try_to_register()
+{
+    if (bwnet_num_register_failed>=bwnet_register_retry_ntries) {
+        // desisitir
+    }
+    bwnet_register();
 }
 
 

@@ -35,6 +35,10 @@ public:
     bool waiting_for_register();
     bool waiting_for_request();
 
+    void timeout_and_retry_to_register();
+    void try_to_register();
+    
+    
     void bwnet_register();
     void bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *response);
     
@@ -47,6 +51,8 @@ public:
     
     std::string bwnet_id;
     bool bwnet_registered;
+    
+    int bwnet_num_register_failed;
     
     bool bwnet_request_waiting;
 
