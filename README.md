@@ -11,8 +11,11 @@ the game
 ## to do ##
 
 - reaccionar a los errores de las peticiones web
-- en concreto a que si te dice que no acepta el registro hacer uno nuevo o algo asi
+    reintentar el registro hecho (falta que si el registro le dice que no pero eso no deberia pasar)
+    reintentar subir records o podria dejarlo en que ya los va a subir la proxima vez que se lance
+    reintentar el get records no tiene especial sentido
 
+- el sonido sigue sonando en la pausa
 
 
 ## cocos2d-x version ##

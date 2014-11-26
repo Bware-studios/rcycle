@@ -17,7 +17,7 @@
 
 
 
-float bwnet_register_retry_interval=30.0;
+float bwnet_register_retry_interval=10.0;
 int bwnet_register_retry_ntries=3;
 
 
@@ -64,6 +64,9 @@ bool Net::init()
         bwnet_request_scores();
     }
     
+    // ojo esto esta solo para probar el timeout
+    //timeout_and_retry_to_register();
+    
     
     return true;
 }
@@ -109,17 +112,28 @@ bool Net::waiting_for_request()
 
 void Net::timeout_and_retry_to_register()
 {
-    // poner un evento de timeout independientemente de este
-    // porque entiendo que este se cancela si se para la escena
-    //theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(0.8),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
+    bwnet_num_register_failed+=1;
+    
+    Director *director=Director::getInstance();
+    Scheduler *scheduler=director->getScheduler();
+    const ccSchedulerFunc cb = CC_CALLBACK_1(Net::scheduled_try_to_register,this);
+    scheduler->schedule(cb, this, 1,0,bwnet_register_retry_interval, false, string("register_timeout"));
+}
+
+// esto lo tendria que poner como un lambda function
+void Net::scheduled_try_to_register(float dt)
+{
+    try_to_register();
 }
 
 
 void Net::try_to_register()
 {
-    if (bwnet_num_register_failed>=bwnet_register_retry_ntries) {
+    if (bwnet_num_register_failed>bwnet_register_retry_ntries) {
         // desisitir
+        return;
     }
+    LOG_NET("register retry %d",bwnet_num_register_failed);
     bwnet_register();
 }
 
@@ -140,6 +154,7 @@ void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *
 {
     if (!response->isSucceed() ) {
         LOG_NET("register failed");
+        timeout_and_retry_to_register();
         return;
     }
     
@@ -149,7 +164,7 @@ void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *
     
     if (responsedata.getType()!=Value::Type::MAP) {
         LOG_NET("not map");
-        // timeout to try again...
+        timeout_and_retry_to_register();
         return;
     }
     
@@ -158,6 +173,9 @@ void Net::bwnet_register_completed(Ref *psender,cocos2d::network::HttpResponse *
     ValueMap responsemap = responsedata.asValueMap();
     string registered_id = responsemap.at("id").asString();
     
+
+    // poner reaccion a si te devuelve que no
+    // pero en principio esto no pasa
     
     LOG_NET("data : %s",a.c_str());
     LOG_NET("status : %s",responsemap.at("status").asString().c_str());

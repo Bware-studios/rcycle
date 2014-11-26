@@ -35,7 +35,9 @@ public:
     bool waiting_for_register();
     bool waiting_for_request();
 
+    
     void timeout_and_retry_to_register();
+    void scheduled_try_to_register(float dt);
     void try_to_register();
     
     
