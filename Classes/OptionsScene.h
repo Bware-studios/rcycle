@@ -31,6 +31,10 @@ public:
     void selected_tog(cocos2d::Ref *pSender);
     void selected_tog1(cocos2d::Ref *pSender);
     void selected_tog2(cocos2d::Ref *pSender);
+
+    void selected_trash_collision(cocos2d::Ref *pSender);
+    void selected_no_trash_collision(cocos2d::Ref *pSender);
+
     
 };
 
