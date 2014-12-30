@@ -17,6 +17,12 @@ the game
 
 - el sonido sigue sonando en la pausa
 
+- ajustar el texto de los top scores
+- poner opcion para ocultar el menu settings
+- asegurarse de las opciones del menu settings tengan sentido y funcionen
+- fijar puntuaciones
+- mejorar presentacion de las pantallas de final de oleada
+
 
 ## cocos2d-x version ##
 
