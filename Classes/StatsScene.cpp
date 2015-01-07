@@ -14,6 +14,8 @@
 #include "Scores.h"
 #include "Preferences.h"
 
+#include "Dialogo.h"
+
 USING_NS_CC;
 USING_NS_CC_EXT;
 using namespace cocos2d::ui;
@@ -48,6 +50,9 @@ bool StatsScene::init() {
     sprintf(score_s,"total: %d",Game::thegame->get_total_score());
     label_3->setString(score_s);
 
+    
+    Dialogo *d=Dialogo::create();
+    addChild(d);
     
     first_exit_pressed=false;
     

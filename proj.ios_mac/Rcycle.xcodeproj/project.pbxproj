@@ -113,6 +113,8 @@
 		97C8834B18EF639B003518DB /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834718EF639B003518DB /* Sounds */; };
 		97EFAC9319B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
 		97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
+		97FDCC6B1A574C71006B3F0A /* Dialogo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FDCC691A574C71006B3F0A /* Dialogo.cpp */; };
+		97FDCC6C1A574C71006B3F0A /* Dialogo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FDCC691A574C71006B3F0A /* Dialogo.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -363,6 +365,8 @@
 		97C8834718EF639B003518DB /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Sounds"; sourceTree = "<group>"; };
 		97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JSONcodec.cpp; path = ../Classes/JSONcodec.cpp; sourceTree = "<group>"; };
 		97EFAC9719B5116B00E56BB3 /* JSONcodec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONcodec.h; path = ../Classes/JSONcodec.h; sourceTree = "<group>"; };
+		97FDCC691A574C71006B3F0A /* Dialogo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Dialogo.cpp; path = ../Classes/Dialogo.cpp; sourceTree = "<group>"; };
+		97FDCC6A1A574C71006B3F0A /* Dialogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dialogo.h; path = ../Classes/Dialogo.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -454,6 +458,8 @@
 				97684A3C18EB708C008AFE58 /* MainMenuScene.h */,
 				97684A2518EB7080008AFE58 /* GameScene.cpp */,
 				97684A2618EB7080008AFE58 /* GameScene.h */,
+				97FDCC691A574C71006B3F0A /* Dialogo.cpp */,
+				97FDCC6A1A574C71006B3F0A /* Dialogo.h */,
 				978E09541921EFBD00ACDDCB /* StatsScene.cpp */,
 				978E09551921EFBD00ACDDCB /* StatsScene.h */,
 				97684A4118EB708C008AFE58 /* OptionsScene.cpp */,
@@ -678,7 +684,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -856,6 +862,7 @@
 				97684A2718EB7080008AFE58 /* Audio.cpp in Sources */,
 				97EFAC9319B5115300E56BB3 /* JSONcodec.cpp in Sources */,
 				97684A5918EB708C008AFE58 /* SceneLoadManager.cpp in Sources */,
+				97FDCC6B1A574C71006B3F0A /* Dialogo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,6 +881,7 @@
 				97684A2A18EB7080008AFE58 /* Container.cpp in Sources */,
 				97684A6018EB708C008AFE58 /* WorldFrame.cpp in Sources */,
 				97684A5C18EB708C008AFE58 /* Trash.cpp in Sources */,
+				97FDCC6C1A574C71006B3F0A /* Dialogo.cpp in Sources */,
 				97684A5218EB708C008AFE58 /* MainMenuScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				97684A5018EB708C008AFE58 /* Log.cpp in Sources */,
@@ -1179,7 +1187,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "rcycle" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
