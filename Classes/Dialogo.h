@@ -18,6 +18,18 @@ public:
     bool init();
     CREATE_FUNC(Dialogo);
     
+    void setParent(cocos2d::Node *p);
+    
+    void enter();
+    void dismiss();
+    
+    
+    static void try_a_dialog();
+    
+private:
+    cocos2d::Node *parent = NULL;
+    std::string maintext = "Dialogo";
+    
 };
 
 #endif /* defined(__Rcycle__Dialogo__) */

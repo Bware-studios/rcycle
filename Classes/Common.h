@@ -14,6 +14,7 @@
 
 #include "Options.h"
 #include "Log.h"
+#include "Dialogo.h"
 
 
 

@@ -305,6 +305,7 @@ bool GameScene::init() {
         this->setScale(Options::debug_draw_outside_scale);
     }
     
+    
     return true;
 }
 
