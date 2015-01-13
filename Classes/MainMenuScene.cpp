@@ -90,8 +90,9 @@ void MainMenuScene::help(Ref *pSender)
 
 void MainMenuScene::info(Ref *pSender)
 {
-    auto newscene = CreditsScene::create();
-    Director::getInstance()->replaceScene(newscene);
+    Dialogo::try_a_dialog();
+//    auto newscene = CreditsScene::create();
+//    Director::getInstance()->replaceScene(newscene);
 }
 
 

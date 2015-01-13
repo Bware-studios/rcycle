@@ -24,6 +24,10 @@ public:
     void dismiss();
     
     
+    bool event_touchbegan(cocos2d::Touch* touch,cocos2d::Event *e);
+    void event_touchended(cocos2d::Touch* touch,cocos2d::Event *e);
+
+    
     static void try_a_dialog();
     
 private:
