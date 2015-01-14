@@ -90,8 +90,11 @@ void MainMenuScene::help(Ref *pSender)
 
 void MainMenuScene::info(Ref *pSender)
 {
-    Dialogo::try_a_dialog();
-//    auto newscene = CreditsScene::create();
+   // Dialogo::info_dialog("Important information here\nbe warned\nand think about it", "OK");
+     Dialogo::question_dialog("di algo", "OK");
+    //Dialogo::yes_no_dialog("Decide\nser o no ser?", "Ser", "No ser");
+
+    //    auto newscene = CreditsScene::create();
 //    Director::getInstance()->replaceScene(newscene);
 }
 

@@ -8,6 +8,10 @@
 
 #include "Dialogo.h"
 
+
+const char *dialogo_font_name="Marker Felt";
+const int dialogo_font_size=24;
+
 USING_NS_CC;
 
 bool Dialogo::init()
@@ -19,11 +23,34 @@ bool Dialogo::init()
 }
 
 
-void Dialogo::setParent(cocos2d::Node *p)
+void Dialogo::setContainer(cocos2d::Node *p)
 {
     assert(p!=NULL);
     parent=p;
 }
+
+
+void Dialogo::setMainText(std::string text)
+{
+    maintext=text;
+}
+
+void Dialogo::setMainButtonName(std::string text)
+{
+    mainbutton=text;
+}
+
+void Dialogo::setSecondButtonName(std::string text)
+{
+    secondbutton=text;
+}
+
+
+void Dialogo::setTextResponseListener()
+{
+    showtextfield=true;
+}
+
 
 
 void Dialogo::enter()
@@ -47,14 +74,54 @@ void Dialogo::enter()
     back->setPosition(Point(0,0));
     addChild(back,20);
     
-    Label *l1 = Label::create(maintext, "Marker Felt", 20);
-    l1->setPosition(Point(0,0));
+    Label *l1 = Label::create(maintext, dialogo_font_name, dialogo_font_size);
+    l1->setPosition(Point(0,s.height*0.25));
+    l1->setAlignment(kCCTextAlignmentCenter);
     addChild(l1,30);
 
-    auto ap=this->getAnchorPoint();
-    auto pap=parent->getAnchorPoint();
-    std::cout<<"anchor: "<<ap.x <<","<<ap.y<<"\n";
-    std::cout<<"p anchor: "<<pap.x <<","<<pap.y<<"\n";
+    
+    Menu *m1 = Menu::create();
+    m1->setPosition(Point(0,-s.height*.25));
+    
+    MenuItemLabel *mi1=MenuItemLabel::create(Label::create(mainbutton,dialogo_font_name, dialogo_font_size),CC_CALLBACK_1(Dialogo::event_mainbutton,this));
+    mi1->setPosition(Point(100,0));
+    m1->addChild(mi1);
+    
+    if ( ! secondbutton.empty() ) {
+        MenuItemLabel *mi2=MenuItemLabel::create(Label::create(secondbutton,dialogo_font_name, dialogo_font_size),CC_CALLBACK_1(Dialogo::event_secondbutton,this));
+        mi2->setPosition(Point(-100,0));
+        m1->addChild(mi2);
+    }
+    
+    
+    addChild(m1,30);
+    
+    
+    if (showtextfield) {
+
+        field=cocos2d::ui::TextField::create();
+        field->setPosition(Point(0,0));
+        field->setAnchorPoint(Point(0.5,0));
+        field->setMaxLength(20);
+        
+        field->setPlaceHolder("write your name");
+        field->setColor(Color3B(255,0,0));
+        
+//        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
+        
+        this->addChild(field,35);
+
+        
+        
+    }
+    
+    
+    
+    
+//    auto ap=this->getAnchorPoint();
+//    auto pap=parent->getAnchorPoint();
+//    std::cout<<"anchor: "<<ap.x <<","<<ap.y<<"\n";
+//    std::cout<<"p anchor: "<<pap.x <<","<<pap.y<<"\n";
 
 
     setPosition(Point(s.width/2,s.height/2));
@@ -68,7 +135,6 @@ void Dialogo::enter()
     tl->onTouchEnded=CC_CALLBACK_2(Dialogo::event_touchended, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(tl,this);
 
-
 }
 
 void Dialogo::dismiss()
@@ -76,6 +142,21 @@ void Dialogo::dismiss()
     removeFromParent();
 }
 
+
+
+void Dialogo::event_mainbutton(cocos2d::Ref* psender)
+{
+    printf("but1\n");
+    
+    dismiss();
+}
+
+void Dialogo::event_secondbutton(cocos2d::Ref* psender)
+{
+    printf("but2\n");
+
+    dismiss();
+}
 
 
 bool Dialogo::event_touchbegan(cocos2d::Touch* touch,cocos2d::Event *e)
@@ -91,11 +172,49 @@ void Dialogo::event_touchended(cocos2d::Touch* touch,cocos2d::Event *e)
 
 
 
+void Dialogo::info_dialog(std::string text,std::string b1)
+{
+    Scene *s=Director::getInstance()->getRunningScene();
+    Dialogo *d1 = Dialogo::create();
+    d1->setContainer(s);
+    d1->setMainText(text);
+    d1->setMainButtonName(b1);
+    d1->enter();
+    
+}
+
+void Dialogo::question_dialog(std::string text,std::string b1)
+{
+    Scene *s=Director::getInstance()->getRunningScene();
+    Dialogo *d1 = Dialogo::create();
+    d1->setContainer(s);
+    d1->setMainText(text);
+    d1->setMainButtonName(b1);
+    d1->setTextResponseListener();
+    d1->enter();
+    
+}
+
+void Dialogo::yes_no_dialog(std::string text,std::string b1,std::string b2)
+{
+    Scene *s=Director::getInstance()->getRunningScene();
+    Dialogo *d1 = Dialogo::create();
+    d1->setContainer(s);
+    d1->setMainText(text);
+    d1->setMainButtonName(b1);
+    d1->setSecondButtonName(b2);
+    d1->enter();
+    
+}
+
+
+
+
 void Dialogo::try_a_dialog()
 {
     Scene *s=Director::getInstance()->getRunningScene();
     Dialogo *d1 = Dialogo::create();
-    d1->setParent(s);
+    d1->setContainer(s);
     d1->enter();
     
 }
