@@ -21,6 +21,7 @@ public:
     
     void setContainer(cocos2d::Node *p);
     void setMainText(std::string text);
+    void setTextPlaceholder(std::string text);
     void setMainButtonName(std::string text);
     void setSecondButtonName(std::string text);
     
@@ -38,7 +39,7 @@ public:
 
     
     static void info_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int)> callback);
-    static void question_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int,std::string)> callback);
+    static void question_dialog(std::string text,std::string placeholder,std::string b1,std::function<void(Dialogo*,int,std::string)> callback);
     static void yes_no_dialog(std::string text,std::string b1,std::string b2,std::function<void(Dialogo*,int)> callback);
     static void try_a_dialog();
     
@@ -47,7 +48,8 @@ private:
     std::string maintext = "Dialogo";
     std::string mainbutton = "OK";
     std::string secondbutton = "";
-    
+    std::string placeholder = "write";
+
     cocos2d::ui::TextField *field = NULL;
     bool showtextfield = false;
     

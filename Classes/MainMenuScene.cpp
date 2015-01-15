@@ -91,7 +91,7 @@ void MainMenuScene::help(Ref *pSender)
 void MainMenuScene::info(Ref *pSender)
 {
     // Dialogo::info_dialog("Important information here\nbe warned\nand think about it", "OK",CC_CALLBACK_2(MainMenuScene::try_callback,this));
-     Dialogo::question_dialog("di algo", "OK",CC_CALLBACK_3(MainMenuScene::try_text_callback,this));
+     Dialogo::question_dialog("di algo","write your name", "OK",CC_CALLBACK_3(MainMenuScene::try_text_callback,this));
     // Dialogo::yes_no_dialog("Decide\nser o no ser?", "Ser", "No ser",CC_CALLBACK_2(MainMenuScene::try_callback,this));
 
     //    auto newscene = CreditsScene::create();

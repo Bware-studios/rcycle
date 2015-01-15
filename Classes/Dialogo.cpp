@@ -35,6 +35,11 @@ void Dialogo::setMainText(std::string text)
     maintext=text;
 }
 
+void Dialogo::setTextPlaceholder(std::string text)
+{
+    placeholder=text;
+}
+
 void Dialogo::setMainButtonName(std::string text)
 {
     mainbutton=text;
@@ -89,8 +94,11 @@ void Dialogo::enter()
     Menu *m1 = Menu::create();
     m1->setPosition(Point(0,-s.height*.25));
     
-    MenuItemLabel *mi1=MenuItemLabel::create(Label::create(mainbutton,dialogo_font_name, dialogo_font_size),CC_CALLBACK_1(Dialogo::event_mainbutton,this));
+    Label *lm1=Label::create(mainbutton,dialogo_font_name, dialogo_font_size);
+    MenuItemLabel *mi1=MenuItemLabel::create(lm1,CC_CALLBACK_1(Dialogo::event_mainbutton,this));
     mi1->setPosition(Point(100,0));
+    addChild(m1,30);
+
     m1->addChild(mi1);
     
     if ( ! secondbutton.empty() ) {
@@ -98,9 +106,6 @@ void Dialogo::enter()
         mi2->setPosition(Point(-100,0));
         m1->addChild(mi2);
     }
-    
-    
-    addChild(m1,30);
     
     
     if (showtextfield) {
@@ -116,7 +121,7 @@ void Dialogo::enter()
         field->setAnchorPoint(Point(0.5,0.5));
         field->setMaxLength(26);
         
-        field->setPlaceHolder("|");
+        field->setPlaceHolder(placeholder);
         field->setColor(Color3B(255,0,0));
         
 //        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
@@ -125,7 +130,7 @@ void Dialogo::enter()
         
         this->addChild(field,35);
 
-        
+
         
     }
     
@@ -140,6 +145,7 @@ void Dialogo::enter()
 
     setPosition(Point(s.width/2,s.height/2));
     parent->addChild(this);
+    field->attachWithIME();
 
 
 
@@ -208,12 +214,13 @@ void Dialogo::info_dialog(std::string text,std::string b1,std::function<void(Dia
     
 }
 
-void Dialogo::question_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int,std::string)> callback)
+void Dialogo::question_dialog(std::string text,std::string placeholder,std::string b1,std::function<void(Dialogo*,int,std::string)> callback)
 {
     Scene *s=Director::getInstance()->getRunningScene();
     Dialogo *d1 = Dialogo::create();
     d1->setContainer(s);
     d1->setMainText(text);
+    d1->setTextPlaceholder(placeholder);
     d1->setMainButtonName(b1);
     d1->setTextResponseListener(callback);
     d1->enter();
