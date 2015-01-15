@@ -40,6 +40,9 @@ public:
     void fame(cocos2d::Ref *pSender);
     void back(cocos2d::Ref *pSender);
 
+    void try_callback(Dialogo *sender, int b);
+    void try_text_callback(Dialogo *sender, int b,std::string texto);
+    
 };
 
 

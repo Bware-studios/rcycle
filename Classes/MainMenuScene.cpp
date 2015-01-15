@@ -90,12 +90,23 @@ void MainMenuScene::help(Ref *pSender)
 
 void MainMenuScene::info(Ref *pSender)
 {
-   // Dialogo::info_dialog("Important information here\nbe warned\nand think about it", "OK");
-     Dialogo::question_dialog("di algo", "OK");
-    //Dialogo::yes_no_dialog("Decide\nser o no ser?", "Ser", "No ser");
+    // Dialogo::info_dialog("Important information here\nbe warned\nand think about it", "OK",CC_CALLBACK_2(MainMenuScene::try_callback,this));
+     Dialogo::question_dialog("di algo", "OK",CC_CALLBACK_3(MainMenuScene::try_text_callback,this));
+    // Dialogo::yes_no_dialog("Decide\nser o no ser?", "Ser", "No ser",CC_CALLBACK_2(MainMenuScene::try_callback,this));
 
     //    auto newscene = CreditsScene::create();
 //    Director::getInstance()->replaceScene(newscene);
+}
+
+void MainMenuScene::try_callback(Dialogo *sender, int b)
+{
+    printf("has salido con el boton %d\n",b);
+}
+
+
+void MainMenuScene::try_text_callback(Dialogo *sender, int b,std::string texto)
+{
+    printf("has salido con el boton %d respuests %s\n",b,texto.c_str());
 }
 
 

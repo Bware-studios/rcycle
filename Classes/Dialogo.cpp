@@ -45,9 +45,14 @@ void Dialogo::setSecondButtonName(std::string text)
     secondbutton=text;
 }
 
-
-void Dialogo::setTextResponseListener()
+void Dialogo::setButtonResponseListener(std::function<void(Dialogo*,int)> callback)
 {
+    finish_callback_buttons_listener=callback;
+}
+
+void Dialogo::setTextResponseListener(std::function<void(Dialogo*,int,std::string)> callback)
+{
+    finish_callback_text_listener=callback;
     showtextfield=true;
 }
 
@@ -76,7 +81,8 @@ void Dialogo::enter()
     
     Label *l1 = Label::create(maintext, dialogo_font_name, dialogo_font_size);
     l1->setPosition(Point(0,s.height*0.25));
-    l1->setAlignment(kCCTextAlignmentCenter);
+    if (showtextfield) l1->setPosition(Point(0,s.height*0.35));
+    l1->setAlignment(TextHAlignment::CENTER);
     addChild(l1,30);
 
     
@@ -98,16 +104,24 @@ void Dialogo::enter()
     
     
     if (showtextfield) {
+        LayerColor *tfback;
+        tfback=LayerColor::create(Color4B(255,255,255,255), s.width*.7,s.height*.15 );
+        tfback->setAnchorPoint(Point(0.5,0.5));
+        tfback->ignoreAnchorPointForPosition(false);
+        tfback->setPosition(Point(0,s.height*.20));
+        addChild(tfback,25);
 
         field=cocos2d::ui::TextField::create();
-        field->setPosition(Point(0,0));
-        field->setAnchorPoint(Point(0.5,0));
-        field->setMaxLength(20);
+        field->setPosition(Point(0,s.height*.20));
+        field->setAnchorPoint(Point(0.5,0.5));
+        field->setMaxLength(26);
         
-        field->setPlaceHolder("write your name");
+        field->setPlaceHolder("|");
         field->setColor(Color3B(255,0,0));
         
 //        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
+        
+        field->setFocused(true);
         
         this->addChild(field,35);
 
@@ -147,14 +161,24 @@ void Dialogo::dismiss()
 void Dialogo::event_mainbutton(cocos2d::Ref* psender)
 {
     printf("but1\n");
-    
+    if (finish_callback_buttons_listener) {
+        finish_callback_buttons_listener(this,1);
+    }
+    if (showtextfield && finish_callback_text_listener) {
+        finish_callback_text_listener(this,1,field->getStringValue());
+    }
     dismiss();
 }
 
 void Dialogo::event_secondbutton(cocos2d::Ref* psender)
 {
     printf("but2\n");
-
+    if (finish_callback_buttons_listener) {
+        finish_callback_buttons_listener(this,2);
+    }
+    if (showtextfield && finish_callback_text_listener) {
+        finish_callback_text_listener(this,2,field->getStringValue());
+    }
     dismiss();
 }
 
@@ -172,30 +196,31 @@ void Dialogo::event_touchended(cocos2d::Touch* touch,cocos2d::Event *e)
 
 
 
-void Dialogo::info_dialog(std::string text,std::string b1)
+void Dialogo::info_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int)> callback)
 {
     Scene *s=Director::getInstance()->getRunningScene();
     Dialogo *d1 = Dialogo::create();
     d1->setContainer(s);
     d1->setMainText(text);
     d1->setMainButtonName(b1);
+    d1->setButtonResponseListener(callback);
     d1->enter();
     
 }
 
-void Dialogo::question_dialog(std::string text,std::string b1)
+void Dialogo::question_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int,std::string)> callback)
 {
     Scene *s=Director::getInstance()->getRunningScene();
     Dialogo *d1 = Dialogo::create();
     d1->setContainer(s);
     d1->setMainText(text);
     d1->setMainButtonName(b1);
-    d1->setTextResponseListener();
+    d1->setTextResponseListener(callback);
     d1->enter();
     
 }
 
-void Dialogo::yes_no_dialog(std::string text,std::string b1,std::string b2)
+void Dialogo::yes_no_dialog(std::string text,std::string b1,std::string b2,std::function<void(Dialogo*,int)> callback)
 {
     Scene *s=Director::getInstance()->getRunningScene();
     Dialogo *d1 = Dialogo::create();
@@ -203,6 +228,7 @@ void Dialogo::yes_no_dialog(std::string text,std::string b1,std::string b2)
     d1->setMainText(text);
     d1->setMainButtonName(b1);
     d1->setSecondButtonName(b2);
+    d1->setButtonResponseListener(callback);
     d1->enter();
     
 }

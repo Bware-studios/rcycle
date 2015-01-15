@@ -24,8 +24,8 @@ public:
     void setMainButtonName(std::string text);
     void setSecondButtonName(std::string text);
     
-    //void setButtonResponseListener();
-    void setTextResponseListener();
+    void setButtonResponseListener(std::function<void(Dialogo*,int)> callback);
+    void setTextResponseListener(std::function<void(Dialogo*,int,std::string)> callback);
     
     void enter();
     void dismiss();
@@ -37,9 +37,9 @@ public:
     void event_touchended(cocos2d::Touch* touch,cocos2d::Event *e);
 
     
-    static void info_dialog(std::string text,std::string b1);
-    static void question_dialog(std::string text,std::string b1);
-    static void yes_no_dialog(std::string text,std::string b1,std::string b2);
+    static void info_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int)> callback);
+    static void question_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int,std::string)> callback);
+    static void yes_no_dialog(std::string text,std::string b1,std::string b2,std::function<void(Dialogo*,int)> callback);
     static void try_a_dialog();
     
 private:
@@ -50,6 +50,9 @@ private:
     
     cocos2d::ui::TextField *field = NULL;
     bool showtextfield = false;
+    
+    std::function<void(Dialogo*,int)> finish_callback_buttons_listener =NULL;
+    std::function<void(Dialogo*,int,std::string)> finish_callback_text_listener =NULL;
     
 };
 
