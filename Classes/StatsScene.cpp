@@ -104,7 +104,6 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 
 void StatsScene::save_hisg_score_and_exit() {
     Scores *thescores=Scores::getInstance();
-    Preferences::getInstance()->setPlayerName(field->getStringValue());
     thescores->save_score();
     start_exit_animation();
 }
@@ -159,30 +158,11 @@ bool StatsScene::enter_player_name_for_record_if_needed() {
         //playername=Scores::getInstance()->get_player_name();
         playername=Preferences::getInstance()->getPlayerName();
 
-        Dialogo::question_dialog("High score achieved","write your name", "OK",CC_CALLBACK_3(StatsScene::event_exit_from_name_dialog,this));
+        Dialogo::question_dialog("High score achieved","write your name",playername, "OK",CC_CALLBACK_3(StatsScene::event_exit_from_name_dialog,this));
         return true;
     } else {
         return false;
     }
-}
-
-
-void StatsScene::text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event)
-{
-    printf("textfield event\n");
-    if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_INSERT_TEXT) {
-        printf("insert %d\n",event);
-    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DETACH_WITH_IME) {
-        printf("detach %d\n",event);
-        //save_hisg_score_and_exit() ;
-    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_ATTACH_WITH_IME) {
-        printf("atach %d\n",event);
-    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DELETE_BACKWARD) {
-        printf("delete %d\n",event);
-    } else {
-        printf("e: %d\n",event);
-    }
-    
 }
 
 

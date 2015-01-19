@@ -11,8 +11,10 @@
 
 const char *dialogo_font_name="Marker Felt";
 const int dialogo_font_size=25;
+const int dialogo_min_priority = 1000;
 
 USING_NS_CC;
+using namespace cocos2d::ui;
 
 bool Dialogo::init()
 {
@@ -38,6 +40,11 @@ void Dialogo::setMainText(std::string text)
 void Dialogo::setTextPlaceholder(std::string text)
 {
     placeholder=text;
+}
+
+void Dialogo::setTextContent(std::string text)
+{
+    field_content=text;
 }
 
 void Dialogo::setMainButtonName(std::string text)
@@ -82,13 +89,13 @@ void Dialogo::enter()
     back->setAnchorPoint(Point(0.5,0.5));
     back->ignoreAnchorPointForPosition(false);
     back->setPosition(Point(0,0));
-    addChild(back,20);
+    addChild(back,dialogo_min_priority+20);
     
     Label *l1 = Label::create(maintext, dialogo_font_name, dialogo_font_size);
     l1->setPosition(Point(0,s.height*0.25));
     if (showtextfield) l1->setPosition(Point(0,s.height*0.35));
     l1->setAlignment(TextHAlignment::CENTER);
-    addChild(l1,30);
+    addChild(l1,dialogo_min_priority+30);
 
     
     Menu *m1 = Menu::create();
@@ -97,7 +104,7 @@ void Dialogo::enter()
     MenuItemLabel *mi1=MenuItemLabel::create(lm1,CC_CALLBACK_1(Dialogo::event_mainbutton,this));
     mi1->setPosition(Point(100,0));
     mi1->setColor(Color3B(0, 0, 0));
-    addChild(m1,30);
+    addChild(m1,dialogo_min_priority+30);
 
     m1->addChild(mi1);
     
@@ -115,7 +122,7 @@ void Dialogo::enter()
         tfback->setAnchorPoint(Point(0.5,0.5));
         tfback->ignoreAnchorPointForPosition(false);
         tfback->setPosition(Point(0,s.height*.20));
-        addChild(tfback,25);
+        addChild(tfback,dialogo_min_priority+25);
 
         field=cocos2d::ui::TextField::create();
         field->setPosition(Point(0,s.height*.20));
@@ -125,11 +132,15 @@ void Dialogo::enter()
         field->setPlaceHolder(placeholder);
         field->setColor(Color3B(255,0,0));
         
-//        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
+        if (!field_content.empty()) {
+            field->setText(field_content);
+        }
+        
+        field->addEventListenerTextField(this,textfieldeventselector(Dialogo::text_field_event));
         
         field->setFocused(true);
         
-        this->addChild(field,35);
+        this->addChild(field,dialogo_min_priority+35);
 
 
         
@@ -145,7 +156,7 @@ void Dialogo::enter()
 
 
     setPosition(Point(s.width/2,s.height/2));
-    parent->addChild(this);
+    parent->addChild(this,dialogo_min_priority);
     field->attachWithIME();
 
 
@@ -200,6 +211,27 @@ void Dialogo::event_touchended(cocos2d::Touch* touch,cocos2d::Event *e)
 }
 
 
+void Dialogo::text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event)
+{
+    printf("textfield event\n");
+    if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_INSERT_TEXT) {
+        printf("insert %d\n",event);
+    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DETACH_WITH_IME) {
+        printf("detach %d\n",event);
+        //save_hisg_score_and_exit() ;
+    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_ATTACH_WITH_IME) {
+        printf("atach %d\n",event);
+    } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DELETE_BACKWARD) {
+        printf("delete %d\n",event);
+    } else {
+        printf("e: %d\n",event);
+    }
+    
+}
+
+
+
+
 
 
 
@@ -215,13 +247,14 @@ void Dialogo::info_dialog(std::string text,std::string b1,std::function<void(Dia
     
 }
 
-void Dialogo::question_dialog(std::string text,std::string placeholder,std::string b1,std::function<void(Dialogo*,int,std::string)> callback)
+void Dialogo::question_dialog(std::string text,std::string placeholder,std::string default_text,std::string b1,std::function<void(Dialogo*,int,std::string)> callback)
 {
     Scene *s=Director::getInstance()->getRunningScene();
     Dialogo *d1 = Dialogo::create();
     d1->setContainer(s);
     d1->setMainText(text);
     d1->setTextPlaceholder(placeholder);
+    d1->setTextContent(default_text);
     d1->setMainButtonName(b1);
     d1->setTextResponseListener(callback);
     d1->enter();

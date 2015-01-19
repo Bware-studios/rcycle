@@ -46,7 +46,7 @@ public:
     bool enter_player_name_for_record_if_needed();
 
     // listen to textfield
-    void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event);
+    //void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event);
     
     
     cocos2d::Label *label_1;

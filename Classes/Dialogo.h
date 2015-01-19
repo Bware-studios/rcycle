@@ -22,6 +22,7 @@ public:
     void setContainer(cocos2d::Node *p);
     void setMainText(std::string text);
     void setTextPlaceholder(std::string text);
+    void setTextContent(std::string text);
     void setMainButtonName(std::string text);
     void setSecondButtonName(std::string text);
     
@@ -36,10 +37,11 @@ public:
 
     bool event_touchbegan(cocos2d::Touch* touch,cocos2d::Event *e);
     void event_touchended(cocos2d::Touch* touch,cocos2d::Event *e);
+    void text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event);
 
     
     static void info_dialog(std::string text,std::string b1,std::function<void(Dialogo*,int)> callback);
-    static void question_dialog(std::string text,std::string placeholder,std::string b1,std::function<void(Dialogo*,int,std::string)> callback);
+    static void question_dialog(std::string text,std::string placeholder,std::string default_text,std::string b1,std::function<void(Dialogo*,int,std::string)> callback);
     static void yes_no_dialog(std::string text,std::string b1,std::string b2,std::function<void(Dialogo*,int)> callback);
     static void try_a_dialog();
     
@@ -49,6 +51,7 @@ private:
     std::string mainbutton = "OK";
     std::string secondbutton = "";
     std::string placeholder = "write";
+    std::string field_content;
 
     cocos2d::ui::TextField *field = NULL;
     bool showtextfield = false;
