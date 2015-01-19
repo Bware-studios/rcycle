@@ -122,20 +122,15 @@ void StatsScene::start_exit_animation()
 void StatsScene::action_enter(Ref *pSender)
 {
     printf("action enter \n");
-    if (!first_exit_pressed) {  // primera vez del boton   vuelta al juego o saca el record
-        first_exit_pressed=true;
-        if (Game::thegame->get_last_wave_passed()) {
-            going_back_to_game=true;
-            start_exit_animation();
-        } else {
-            bool record_achieved;
-            record_achieved=enter_player_name_for_record_if_needed();
-            if (!record_achieved) {
-                start_exit_animation();
-            }
-        }
+    if (Game::thegame->get_last_wave_passed()) {
+        going_back_to_game=true;
+        start_exit_animation();
     } else {
-        save_hisg_score_and_exit();
+        bool record_achieved;
+        record_achieved=enter_player_name_for_record_if_needed();
+        if (!record_achieved) {
+            start_exit_animation();
+        }
     }
 }
 
@@ -149,7 +144,13 @@ void StatsScene::event_camion_gone()
     }
 }
 
+void StatsScene::event_exit_from_name_dialog(Dialogo* d, int b,std::string name)
+{
+    Preferences::getInstance()->setPlayerName(name);
+    save_hisg_score_and_exit();
+}
 
+// return true if entered dialog
 bool StatsScene::enter_player_name_for_record_if_needed() {
     bool high_score_achieved=Game::thegame->get_high_score_achieved();
     
@@ -157,37 +158,10 @@ bool StatsScene::enter_player_name_for_record_if_needed() {
         std::string playername;
         //playername=Scores::getInstance()->get_player_name();
         playername=Preferences::getInstance()->getPlayerName();
-        
-        Size s=Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
-        field=cocos2d::ui::TextField::create();
-        field->setPosition(Point(s.width/2,s.height*.8));
-        field->setAnchorPoint(Point(0.5,0));
-        field->setMaxLength(20);
-        
-        field->setPlaceHolder("write your name");
-        if (!playername.empty()) {
-            field->setText(playername);
-        }
-        field->setColor(Color3B(255,0,0));
-        
-        field->addEventListenerTextField(this,textfieldeventselector(StatsScene::text_field_event));
-        
-        this->addChild(field,100);
-        
-        
-        
-        Label *l1=Label::create("Your name?", "Helvetica", 20);
-        l1->setPosition(Point(s.width/2,s.height*.95));
-        l1->setColor(Color3B(0,0,0));
-        this->addChild(l1,100);
-        
-        field->attachWithIME();
 
-        
-        
+        Dialogo::question_dialog("High score achieved","write your name", "OK",CC_CALLBACK_3(StatsScene::event_exit_from_name_dialog,this));
         return true;
     } else {
-        // no pedimos nombre porque no ha hecho record
         return false;
     }
 }

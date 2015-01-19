@@ -10,7 +10,7 @@
 
 
 const char *dialogo_font_name="Marker Felt";
-const int dialogo_font_size=24;
+const int dialogo_font_size=25;
 
 USING_NS_CC;
 
@@ -93,16 +93,17 @@ void Dialogo::enter()
     
     Menu *m1 = Menu::create();
     m1->setPosition(Point(0,-s.height*.25));
-    
     Label *lm1=Label::create(mainbutton,dialogo_font_name, dialogo_font_size);
     MenuItemLabel *mi1=MenuItemLabel::create(lm1,CC_CALLBACK_1(Dialogo::event_mainbutton,this));
     mi1->setPosition(Point(100,0));
+    mi1->setColor(Color3B(0, 0, 0));
     addChild(m1,30);
 
     m1->addChild(mi1);
     
     if ( ! secondbutton.empty() ) {
         MenuItemLabel *mi2=MenuItemLabel::create(Label::create(secondbutton,dialogo_font_name, dialogo_font_size),CC_CALLBACK_1(Dialogo::event_secondbutton,this));
+        mi2->setColor(Color3B(0, 0, 0));
         mi2->setPosition(Point(-100,0));
         m1->addChild(mi2);
     }

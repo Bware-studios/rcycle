@@ -41,7 +41,8 @@ public:
     void save_hisg_score_and_exit();
     void action_enter(cocos2d::Ref *pSender);
     void event_camion_gone();
-
+    void event_exit_from_name_dialog(Dialogo* d, int b,std::string name);
+    
     bool enter_player_name_for_record_if_needed();
 
     // listen to textfield
