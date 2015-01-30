@@ -37,6 +37,11 @@ bool FameScene::init() {
 //    }
     
 //    printf("%s\n",scores_text.str().c_str());
+    text1->setFontSize(20);
+    text1->setWidth(200);
+    text1->setHeight(200);
+    text1->setRotation(15);
+    text1->setAlignment(TextHAlignment::CENTER);
     text1->setString(scores_text.str().c_str());
     
     return true;

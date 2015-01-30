@@ -106,6 +106,7 @@ public:
     cocos2d::MenuItem *settings_button;
     cocos2d::Label *text1 = NULL;
     cocos2d::Label *text2 = NULL;
+    cocos2d::Label *text3 = NULL;
     cocos2d::Menu *menu = NULL;
     
     MenuLayer *layer;
