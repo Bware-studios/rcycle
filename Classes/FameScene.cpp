@@ -26,10 +26,14 @@ bool FameScene::init() {
     ValueVector::iterator j;
     int i;
     
+
     for (i=1,j=topscores.begin() ; j!=topscores.end() ; j++,i++) {
         ValueMap ascore;
         ascore = j->asValueMap();
-        scores_text<<i<<".\t" << ascore.at("name").asString() << "\t...\t" << ascore.at("score").asString() << "\n";
+//        scores_text<<i<<".\t" << ascore.at("name").asString() << "\t...\t" << ascore.at("score").asString() << "\n";
+        scores_i_text<<i<<"\n";
+        scores_name_text<<ascore.at("name").asString()<<"\n";
+        scores_score_text<<ascore.at("score").asString()<<"\n";
     }
     
 //    for (int i=0; i<Scores::num_local_scores; i++) {
@@ -37,12 +41,19 @@ bool FameScene::init() {
 //    }
     
 //    printf("%s\n",scores_text.str().c_str());
-    text1->setFontSize(20);
-    text1->setWidth(200);
-    text1->setHeight(200);
-    text1->setRotation(15);
-    text1->setAlignment(TextHAlignment::CENTER);
-    text1->setString(scores_text.str().c_str());
+//    text1->setFontSize(20);
+//    text1->setWidth(200);
+//    text1->setHeight(200);
+//    text1->setRotation(15);
+//    text1->setAlignment(TextHAlignment::CENTER);
+//    text1->setString(scores_text.str().c_str());
+  
+    text1->setString(scores_i_text.str().c_str());
+    text2->setString(scores_name_text.str().c_str());
+    text3->setString(scores_score_text.str().c_str());
+    //    text1->setString(scores_text.str().c_str());
+    //    text1->setString(scores_text.str().c_str());
+    
     
     return true;
 }

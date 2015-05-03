@@ -24,6 +24,7 @@ public:
     void trash_recycled(int category);
     void trash_failed(int category);
     void trash_out(int category);
+    void update_partial_score();
 
     int score(int *ok,int *failed,int *outs);
     int score_topass_level(int level);
@@ -48,6 +49,7 @@ public:
     int *total_out;
 
     int wave_score = 0;
+    int partial_score = 0;
     int total_score = 0;
     int wave_completed = 0;
     bool wave_passed = false;

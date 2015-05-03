@@ -29,7 +29,9 @@ public:
     void back(cocos2d::Ref *pSender);
     void exit_animation_finished();
     
-    std::ostringstream scores_text;
+    std::ostringstream scores_i_text;
+    std::ostringstream scores_name_text;
+    std::ostringstream scores_score_text;
     
 };
 

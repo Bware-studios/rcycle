@@ -40,6 +40,7 @@ bool Game::init()
     
     wave_passed=false;
     wave_score=0;
+    partial_score=0;
     total_score=0;
     return true;
 }
@@ -49,6 +50,7 @@ void Game::trash_recycled(int category)
 {
     int cat_safe=category%Trash::num_trash_cat;
     wave_recycled[cat_safe]+=1;
+    update_partial_score();
    // GameScene::thegamescene->set_recycled(cat_safe, wave_recycled[cat_safe]);
 }
 
@@ -57,6 +59,7 @@ void Game::trash_failed(int category)
 {
     int cat_safe=category%Trash::num_trash_cat;
     wave_failed[cat_safe]+=1;
+    update_partial_score();
 }
 
 
@@ -64,8 +67,14 @@ void Game::trash_out(int category)
 {
     int cat_safe=category%Trash::num_trash_cat;
     wave_out[cat_safe]+=1;
+    update_partial_score();
 }
 
+void Game::update_partial_score()
+{
+    partial_score=score(wave_recycled, wave_failed, wave_out);
+    // cambia el dibujo ?
+}
 
 int Game::score(int *ok,int *failed,int *outs)
 {

@@ -102,11 +102,10 @@
 		97684A6018EB708C008AFE58 /* WorldFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97684A4918EB708C008AFE58 /* WorldFrame.cpp */; };
 		978E09561921EFBD00ACDDCB /* StatsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 978E09541921EFBD00ACDDCB /* StatsScene.cpp */; };
 		978E09571921EFBD00ACDDCB /* StatsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 978E09541921EFBD00ACDDCB /* StatsScene.cpp */; };
-		9795FAAD19AE679B00476A07 /* publish-android in Resources */ = {isa = PBXBuildFile; fileRef = 9795FAAC19AE679B00476A07 /* publish-android */; };
+		97970A1F1AF42EBC00899D1F /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97970A1E1AF42EBC00899D1F /* publish-ios */; };
+		97970A201AF42EBC00899D1F /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97970A1E1AF42EBC00899D1F /* publish-ios */; };
 		97B378511A0854C000AC7EF5 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B3784F1A0854C000AC7EF5 /* Preferences.cpp */; };
 		97B378521A0854C000AC7EF5 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B3784F1A0854C000AC7EF5 /* Preferences.cpp */; };
-		97C8834418EF6384003518DB /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834318EF6384003518DB /* publish-ios */; };
-		97C8834518EF6384003518DB /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834318EF6384003518DB /* publish-ios */; };
 		97C8834818EF639B003518DB /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834618EF639B003518DB /* Music */; };
 		97C8834918EF639B003518DB /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834618EF639B003518DB /* Music */; };
 		97C8834A18EF639B003518DB /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834718EF639B003518DB /* Sounds */; };
@@ -356,11 +355,10 @@
 		97684A4A18EB708C008AFE58 /* WorldFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldFrame.h; path = ../Classes/WorldFrame.h; sourceTree = "<group>"; };
 		978E09541921EFBD00ACDDCB /* StatsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StatsScene.cpp; path = ../Classes/StatsScene.cpp; sourceTree = "<group>"; };
 		978E09551921EFBD00ACDDCB /* StatsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsScene.h; path = ../Classes/StatsScene.h; sourceTree = "<group>"; };
-		9795FAAC19AE679B00476A07 /* publish-android */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-android"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-android"; sourceTree = "<group>"; };
+		97970A1E1AF42EBC00899D1F /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../../ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
 		97A2537A19DE74B100C87404 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../cocos2d/external/curl/prebuilt/ios/libcurl.a; sourceTree = "<group>"; };
 		97B3784F1A0854C000AC7EF5 /* Preferences.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Preferences.cpp; path = ../Classes/Preferences.cpp; sourceTree = "<group>"; };
 		97B378501A0854C000AC7EF5 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = ../Classes/Preferences.h; sourceTree = "<group>"; };
-		97C8834318EF6384003518DB /* publish-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "publish-ios"; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/ccb_rcycle/publish-ios"; sourceTree = "<group>"; };
 		97C8834618EF639B003518DB /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Music; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Music"; sourceTree = "<group>"; };
 		97C8834718EF639B003518DB /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../../Users/mikel/Google Drive/bware/rcycler/resources_audio/Sounds"; sourceTree = "<group>"; };
 		97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JSONcodec.cpp; path = ../Classes/JSONcodec.cpp; sourceTree = "<group>"; };
@@ -469,9 +467,9 @@
 				97684A4718EB708C008AFE58 /* TrashGenerator.cpp */,
 				97684A4818EB708C008AFE58 /* TrashGenerator.h */,
 				97684A1D18EB7080008AFE58 /* CreditsScene.cpp */,
-				97684A1E18EB7080008AFE58 /* CreditsScene.h */,
 				9736823219DCA6CC00AB8AE9 /* HelpScene.cpp */,
 				9736823719DCA6DB00AB8AE9 /* HelpScene.h */,
+				97684A1E18EB7080008AFE58 /* CreditsScene.h */,
 				97684A1F18EB7080008AFE58 /* FameScene.cpp */,
 				97684A2018EB7080008AFE58 /* FameScene.h */,
 				97684A2118EB7080008AFE58 /* Game.cpp */,
@@ -612,10 +610,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9795FAAC19AE679B00476A07 /* publish-android */,
+				97970A1E1AF42EBC00899D1F /* publish-ios */,
 				97C8834618EF639B003518DB /* Music */,
 				97C8834718EF639B003518DB /* Sounds */,
-				97C8834318EF6384003518DB /* publish-ios */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -800,7 +797,7 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
-				97C8834418EF6384003518DB /* publish-ios in Resources */,
+				97970A1F1AF42EBC00899D1F /* publish-ios in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
@@ -821,8 +818,7 @@
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
-				9795FAAD19AE679B00476A07 /* publish-android in Resources */,
-				97C8834518EF6384003518DB /* publish-ios in Resources */,
+				97970A201AF42EBC00899D1F /* publish-ios in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 				97C8834B18EF639B003518DB /* Sounds in Resources */,
 			);
