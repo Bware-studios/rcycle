@@ -54,6 +54,7 @@ public:
     int wave_completed = 0;
     bool wave_passed = false;
     
+    int score_target;
     
     bool high_score_achieved = false;
     

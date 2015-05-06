@@ -78,6 +78,8 @@ public:
 //    void set_recycled(int category, int value);
 //    void set_failed(int category, int value);
     
+    
+    void update_score_display();
 
     
     // scheduled events
@@ -123,7 +125,8 @@ public:
     
     
     cocos2d::Label *score1;
-
+    cocos2d::Label *score2;
+    
 //    cocos2d::Label *score_1;
 //    cocos2d::Label *score_2;
 //    cocos2d::Label *score_3;

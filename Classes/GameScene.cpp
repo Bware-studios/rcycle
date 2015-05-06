@@ -107,7 +107,14 @@ bool GameScene::init() {
         backLayer->addChild(fondo_sprite);
     }
 
-    
+    score2=Label::create("0 / 0", score1->getFontName(), score1->getFontSize());
+    score2->setPosition(Point(470,312));
+    score2->setVerticalAlignment(score1->getVerticalAlignment());
+    score2->setAlignment(CCTextAlignment::RIGHT);
+    score2->setColor(score1->getColor());
+    score2->setAnchorPoint(Point(1,1));
+    frontLayer->addChild(score2);
+    update_score_display();
     
     PhysicsWorld *world;
     world=this->getPhysicsWorld();
@@ -551,6 +558,15 @@ void GameScene::add_trash(int trash_type,int trash_category, Point &position, Ve
     ts1->setPosition(position.x,position.y);
     ts1->getPhysicsBody()->setVelocity(v);
     ts1->add_to_layer(gameLayer);
+}
+
+
+
+void GameScene::update_score_display()
+{
+    char sstr[100];
+    sprintf(sstr,"%d / %d",Game::thegame->partial_score,Game::thegame->score_target);
+    score2->setString(sstr);
 }
 
 

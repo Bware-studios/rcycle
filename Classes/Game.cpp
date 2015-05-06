@@ -38,6 +38,7 @@ bool Game::init()
         total_out[i]=0;
     }
     
+    score_target=score_topass_level(wave_completed+1);
     wave_passed=false;
     wave_score=0;
     partial_score=0;
@@ -74,6 +75,7 @@ void Game::update_partial_score()
 {
     partial_score=score(wave_recycled, wave_failed, wave_out);
     // cambia el dibujo ?
+    GameScene::thegamescene->update_score_display();
 }
 
 int Game::score(int *ok,int *failed,int *outs)
@@ -109,6 +111,9 @@ void Game::wave_end()
     }
     if (wave_score >= score_topass_level(wave_completed+1)) {
         wave_passed=true;
+
+        score_target=score_topass_level(wave_completed+1);
+
     } else {
         wave_passed=false;
         if (Scores::getInstance()->would_achieve_high_score(total_score)) {
@@ -117,7 +122,6 @@ void Game::wave_end()
      //   Scores::getInstance()->save_score_if("xxxxx", total_score);
     }
 }
-
 
 int Game::get_last_wave_score()
 {
