@@ -26,6 +26,7 @@ public:
     void trash_out(int category);
     void update_partial_score();
 
+    int unbound_score(int *ok,int *failed,int *outs);
     int score(int *ok,int *failed,int *outs);
     int score_topass_level(int level);
     

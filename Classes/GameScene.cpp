@@ -564,9 +564,16 @@ void GameScene::add_trash(int trash_type,int trash_category, Point &position, Ve
 
 void GameScene::update_score_display()
 {
+    int partial=Game::thegame->partial_score;
+    int target=Game::thegame->score_target;
     char sstr[100];
-    sprintf(sstr,"%d / %d",Game::thegame->partial_score,Game::thegame->score_target);
+    sprintf(sstr,"%d / %d",partial,target);
     score2->setString(sstr);
+    if (partial>=target) {
+        score2->setColor(Color3B(0,255,0));
+    } else {
+        score2->setColor(Color3B(255,0,0));
+    }
 }
 
 

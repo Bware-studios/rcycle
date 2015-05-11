@@ -21,7 +21,7 @@ bool Game::init()
 {
     Game::thegame=this;
     Game::thegame->retain();
-    
+
     wave_recycled=new int[Trash::num_trash_cat];
     wave_failed=new int[Trash::num_trash_cat];
     wave_out=new int[Trash::num_trash_cat];
@@ -73,12 +73,12 @@ void Game::trash_out(int category)
 
 void Game::update_partial_score()
 {
-    partial_score=score(wave_recycled, wave_failed, wave_out);
+    partial_score=unbound_score(wave_recycled, wave_failed, wave_out);
     // cambia el dibujo ?
     GameScene::thegamescene->update_score_display();
 }
 
-int Game::score(int *ok,int *failed,int *outs)
+int Game::unbound_score(int *ok,int *failed,int *outs)
 {
     int score=0;
     int i;
@@ -87,6 +87,12 @@ int Game::score(int *ok,int *failed,int *outs)
         score+=game_score_failed[i]*failed[i];
         score+=game_score_out[i]*outs[i];
     }
+    return score;
+}
+
+int Game::score(int *ok,int *failed,int *outs)
+{
+    int score=unbound_score(ok, failed, outs);
     if (score<0) score=0;
     return score;
 }
@@ -109,10 +115,12 @@ void Game::wave_end()
         wave_failed[i]=0;
         wave_out[i]=0;
     }
-    if (wave_score >= score_topass_level(wave_completed+1)) {
+    if (wave_score >= score_target /*score_topass_level(wave_completed+1)*/ ) {
         wave_passed=true;
+        wave_completed+=1;
 
         score_target=score_topass_level(wave_completed+1);
+        partial_score=0;
 
     } else {
         wave_passed=false;

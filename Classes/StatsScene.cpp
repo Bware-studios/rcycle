@@ -40,14 +40,27 @@ bool StatsScene::init() {
     label_2->setString("...");
     label_3->setString("...");
 
+    label_1->setFontSize(10);
+    label_1->setAlignment(CCTextAlignment::CENTER);
+    label_2->setFontSize(10);
+    label_2->setAlignment(CCTextAlignment::CENTER);
+    label_3->setFontSize(10);
+    label_3->setAlignment(CCTextAlignment::CENTER);
+    
+    bool passed = Game::thegame->get_last_wave_passed();
+    char target_s[30];
     char score_s[40];
-    sprintf(score_s,"Sc: %d",Game::thegame->get_last_wave_score());
+    if (!passed) {
+        sprintf(target_s,"need %d",Game::thegame->score_target);
+    }
+    sprintf(score_s,"Score: %d\n%s",Game::thegame->get_last_wave_score(),passed?"":target_s);
     label_1->setString(score_s);
 
-    sprintf(score_s,"[ %s ]",Game::thegame->get_last_wave_passed()?"Pasa":"No pasa" );
+    sprintf(score_s,"Level %d\n%s",Game::thegame->wave_completed+(passed?0:1),passed?"OK":"Failed" );
+    label_2->setColor(passed?Color3B(0, 255, 0):Color3B(255, 0, 0));
     label_2->setString(score_s);
     
-    sprintf(score_s,"total: %d",Game::thegame->get_total_score());
+    sprintf(score_s,"Total: %d",Game::thegame->get_total_score());
     label_3->setString(score_s);
 
     
