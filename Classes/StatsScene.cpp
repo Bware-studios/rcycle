@@ -56,7 +56,7 @@ bool StatsScene::init() {
     sprintf(score_s,"Score: %d\n%s",Game::thegame->get_last_wave_score(),passed?"":target_s);
     label_1->setString(score_s);
 
-    sprintf(score_s,"Level %d\n%s",Game::thegame->wave_completed+(passed?0:1),passed?"OK":"Failed" );
+    sprintf(score_s,"Lvl %d %s",Game::thegame->wave_completed+(passed?0:1),passed?"ok":"failed" );
     label_2->setColor(passed?Color3B(0, 255, 0):Color3B(255, 0, 0));
     label_2->setString(score_s);
     
