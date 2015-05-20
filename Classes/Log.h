@@ -18,14 +18,14 @@ void Log_msg(const char *type,const char *msg, ... );
 // master switch
 #define DEBUG_LOG true
 // log types switches
-#define DEBUG_LOG_GENERAL true
+#define DEBUG_LOG_GENERAL false
 #define DEBUG_LOG_CCB false
 #define DEBUG_LOG_UI false
 #define DEBUG_LOG_COLLISION false
 #define DEBUG_LOG_TRASHGEN false
 #define DEBUG_LOG_RESOLUTION false
-#define DEBUG_LOG_SCORE true
-#define DEBUG_LOG_NET true
+#define DEBUG_LOG_SCORE false
+#define DEBUG_LOG_NET false
 
 
 #if ( DEBUG_LOG && DEBUG_LOG_GENERAL )

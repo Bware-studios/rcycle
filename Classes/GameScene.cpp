@@ -108,7 +108,7 @@ bool GameScene::init() {
     }
 
     score2=Label::create("0 / 0", score1->getFontName(), score1->getFontSize());
-    score2->setPosition(Point(470,312));
+    score2->setPosition(Point(dr.width-10,312));
     score2->setVerticalAlignment(score1->getVerticalAlignment());
     score2->setAlignment(CCTextAlignment::RIGHT);
     score2->setColor(score1->getColor());

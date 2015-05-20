@@ -45,7 +45,9 @@ void LoadingScene::time_passes()
     state+=1;
     switch (state) {
         case 1:
-            text1->setString("more loading...");
+            text1->setString("Loading...");
+            reschedule=false;
+            start();
             break;
         case 2:
             text1->setString("importing...");

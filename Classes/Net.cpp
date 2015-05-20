@@ -284,7 +284,11 @@ void Net::bwnet_request_scores_completed(Ref *psender,cocos2d::network::HttpResp
     
     LOG_NET("data : %s",a.c_str());
     LOG_NET("status : %s",responsemap.at("status").asString().c_str());
-    
+    if (responsemap.at("status").asInt()!=0) {
+        LOG_NET("id not recognized register again");
+        bwnet_register();
+        return;
+    }
     
     Value scores = responsemap.at("scores");
     if (responsemap.at("status").asInt()<0) {
