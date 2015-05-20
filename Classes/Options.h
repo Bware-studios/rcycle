@@ -33,7 +33,8 @@ public:
     // UI
     static int autohelp_n_firsttimes_show;
     static int settings_button_show;
-    
+    static bool quit_is_valid_end;
+
     
 };
 

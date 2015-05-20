@@ -691,8 +691,11 @@ void GameScene::action_resume(Ref *o)
 
 void GameScene::action_quit(Ref *o)
 {
-    game_end();
-//    game_aborted();
+    if (Options::quit_is_valid_end) {
+        game_end();
+    } else {
+        game_aborted();
+    }
 }
 
 void GameScene::start_finish_animation()

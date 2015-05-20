@@ -27,3 +27,4 @@ bool Options::resolution_mac_res_as_android = false;
 // UI
 int Options::autohelp_n_firsttimes_show = 5;
 int Options::settings_button_show = true;
+bool Options::quit_is_valid_end = true;
