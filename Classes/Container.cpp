@@ -282,7 +282,15 @@ void Container::start_enter_animation(Point start_postion,Point end_position)
 {
     this->setPosition(start_postion);
     animation_manager->runAnimationsForSequenceNamed("Sube");
-    this->runAction(Sequence::createWithTwoActions(/*EaseElasticOut::create(*/MoveTo::create(0.5, end_position)/*,0.5)*/,CallFunc::create(CC_CALLBACK_0(Container::enter_animation_ended, this))));
+
+    float move_time=0.166;
+    if (trash_category==Trash::CAT_CRISTAL) {
+        move_time=0.333;
+    }
+    
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(.5),CallFunc::create(CC_CALLBACK_0(Container::enter_animation_ended, this))));
+    this->runAction(MoveTo::create(move_time, end_position));
+    
 }
 
 void Container::start_exit_animation(Point end_position)
@@ -292,7 +300,15 @@ void Container::start_exit_animation(Point end_position)
         dust[i]->stopSystem();
         dust[i]->removeFromParent();
     }
+
+    float wait_time=0.260;
+    float move_time=0.166;
+    if (trash_category==Trash::CAT_CRISTAL) {
+        wait_time=0;
+        move_time=0.333;
+    }
+    
     animation_manager->runAnimationsForSequenceNamed("Baja");
-    this->runAction(/*EaseElasticIn::create(*/MoveTo::create(0.5, end_position)/*,0.5)*/);
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(wait_time),/*EaseElasticIn::create(*/MoveTo::create(move_time, end_position)/*,0.5)*/));
 }
 
