@@ -11,9 +11,12 @@
 
 // puntos por cada tipo ok o failed
 int game_score_recycled[] = { 10,10,10,10 };
-int game_score_failed[] = { -1,-1,-1,-1 };
-int game_score_out[] = { 0,0,0,0 };
+int game_score_failed[] = { -5,-5,-5,-5 };
+int game_score_out[] = { -1,-1,-1,-1 };
 
+
+int game_score_needed_for_level[] = {50,100,150,200,250,300};
+int game_score_needed_for_level_size = 5;
 
 Game *Game::thegame=NULL;
 
@@ -84,8 +87,13 @@ int Game::unbound_score(int *ok,int *failed,int *outs)
     int i;
     for (i=0;i<Trash::num_trash_cat;i++) {
         score+=game_score_recycled[i]*ok[i];
-        score+=game_score_failed[i]*failed[i];
-        score+=game_score_out[i]*outs[i];
+        if (Options::easy_game_for_debug) {
+            score+=-1*failed[i];
+            score+=-1*outs[i];
+        } else {
+            score+=game_score_failed[i]*failed[i];
+            score+=game_score_out[i]*outs[i];
+        }
     }
     return score;
 }
@@ -99,7 +107,15 @@ int Game::score(int *ok,int *failed,int *outs)
 
 int Game::score_topass_level(int level)
 {
-    return level*10;
+    int levelpos=level-1;
+    if (levelpos>=game_score_needed_for_level_size) {
+        levelpos=game_score_needed_for_level_size-1;
+    }
+    int scoretarget = game_score_needed_for_level[levelpos];
+    if ( Options::easy_game_for_debug) {
+        scoretarget/=10;
+    }
+    return scoretarget;
 }
 
 void Game::wave_end()

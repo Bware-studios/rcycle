@@ -35,6 +35,8 @@ public:
     static int settings_button_show;
     static bool quit_is_valid_end;
     
+    //game
+    static bool easy_game_for_debug;
 };
 
 

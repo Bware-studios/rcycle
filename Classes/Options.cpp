@@ -29,3 +29,5 @@ int Options::autohelp_n_firsttimes_show = 5;
 int Options::settings_button_show = false;
 bool Options::quit_is_valid_end = false;
 
+// game
+bool Options::easy_game_for_debug = false;
