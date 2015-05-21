@@ -170,15 +170,20 @@ bool Container::init(int p_trash_category)
     
     Sprite *higersprite = this;
     if (over_sprite) higersprite=over_sprite;
-    score_ok = Label::create("0", "Marker Felt", 30);
-    score_ok->setColor(Color3B(0, 200, 0));
-    score_ok->setPosition(recycled_ok_text_x+semiwidth, recycled_ok_text_y+semiheight);
-    higersprite->addChild(score_ok);
-    score_fail = Label::create("0", "Marker Felt",30);
-    score_fail->setColor(Color3B(150, 0, 0));
-    score_fail->setPosition(recycled_fail_text_x+semiwidth, recycled_fail_text_y+semiheight);
-    higersprite->addChild(score_fail);
     
+    score_ok=NULL;
+    score_fail=NULL;
+    if (Options::container_show_score) {
+        score_ok = Label::create("0", "Marker Felt", 30);
+        score_ok->setColor(Color3B(0, 200, 0));
+        score_ok->setPosition(recycled_ok_text_x+semiwidth, recycled_ok_text_y+semiheight);
+        higersprite->addChild(score_ok);
+        score_fail = Label::create("0", "Marker Felt",30);
+        score_fail->setColor(Color3B(150, 0, 0));
+        score_fail->setPosition(recycled_fail_text_x+semiwidth, recycled_fail_text_y+semiheight);
+        higersprite->addChild(score_fail);
+    }
+        
     next_dust=0;
     dust=new ParticleSystem*[N_DUST_PARTICLE_SYS];
     for (int i=0;i<N_DUST_PARTICLE_SYS;i++) {
@@ -247,13 +252,17 @@ void Container::destroy(Trash *atrash)
         LOG_COLLISION("container MATCH");
         recycled_ok+=1;
         sprintf(numberS, "%d",recycled_ok);
-        score_ok->setString(numberS);
+        if (Options::container_show_score) {
+            score_ok->setString(numberS);
+        }
         Game::thegame->trash_recycled(trash_category);
     } else {
         LOG_COLLISION("container FAILED");
         recycled_fail+=1;
         sprintf(numberS, "%d",recycled_fail);
-        score_fail->setString(numberS);
+        if (Options::container_show_score) {
+            score_fail->setString(numberS);
+        }
         Game::thegame->trash_failed(atrash->trash_category);
     }
     atrash->destroy();

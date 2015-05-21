@@ -28,6 +28,7 @@ bool Options::resolution_mac_res_as_android = false;
 int Options::autohelp_n_firsttimes_show = 5;
 int Options::settings_button_show = false;
 bool Options::quit_is_valid_end = false;
+bool Options::container_show_score = false;
 
 // game
 bool Options::easy_game_for_debug = false;

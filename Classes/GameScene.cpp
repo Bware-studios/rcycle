@@ -30,9 +30,9 @@ const int container_type[] = {
     Trash::CAT_CRISTAL
 };
 Point container_position[] = {
-    Point(-140,20),
-    Point(-40,20),
-    Point(60,20),
+    Point(-140,10),
+    Point(-40,10),
+    Point(60,10),
     Point(205,50),
 };
 // animacion de entrada

@@ -34,6 +34,7 @@ public:
     static int autohelp_n_firsttimes_show;
     static int settings_button_show;
     static bool quit_is_valid_end;
+    static bool container_show_score;
     
     //game
     static bool easy_game_for_debug;
