@@ -59,7 +59,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
             // iphone 4 retina
             //glview->setFrameSize(960, 640);
             // generic
-            glview->setFrameSize(960, 640);
+            glview->setFrameSize(1136, 640);
         }
         director->setOpenGLView(glview);
     }
