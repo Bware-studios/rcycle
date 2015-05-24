@@ -106,13 +106,13 @@
 		97970A201AF42EBC00899D1F /* publish-ios in Resources */ = {isa = PBXBuildFile; fileRef = 97970A1E1AF42EBC00899D1F /* publish-ios */; };
 		97B378511A0854C000AC7EF5 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B3784F1A0854C000AC7EF5 /* Preferences.cpp */; };
 		97B378521A0854C000AC7EF5 /* Preferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B3784F1A0854C000AC7EF5 /* Preferences.cpp */; };
+		97BD209D1B1284A000717534 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F06EF81B122E1A0030625C /* Images.xcassets */; };
 		97C8834818EF639B003518DB /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834618EF639B003518DB /* Music */; };
 		97C8834918EF639B003518DB /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834618EF639B003518DB /* Music */; };
 		97C8834A18EF639B003518DB /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834718EF639B003518DB /* Sounds */; };
 		97C8834B18EF639B003518DB /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 97C8834718EF639B003518DB /* Sounds */; };
 		97EFAC9319B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
 		97EFAC9419B5115300E56BB3 /* JSONcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EFAC9219B5115300E56BB3 /* JSONcodec.cpp */; };
-		97F06EF91B122E1A0030625C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F06EF81B122E1A0030625C /* Images.xcassets */; };
 		97FDCC6B1A574C71006B3F0A /* Dialogo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FDCC691A574C71006B3F0A /* Dialogo.cpp */; };
 		97FDCC6C1A574C71006B3F0A /* Dialogo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97FDCC691A574C71006B3F0A /* Dialogo.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -276,7 +276,7 @@
 		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* rcycle iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rcycle iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* DragTheTrash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragTheTrash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 		503AE10417EB98FF00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = mac/Prefix.pch; sourceTree = "<group>"; };
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		5087E76F17EB910900C73F5D /* rcycle Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rcycle Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5087E76F17EB910900C73F5D /* DragTheTrash Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DragTheTrash Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5087E77217EB970100C73F5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5087E77317EB970100C73F5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5087E77417EB970100C73F5D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -502,8 +502,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* rcycle iOS.app */,
-				5087E76F17EB910900C73F5D /* rcycle Mac.app */,
+				1D6058910D05DD3D006BFB54 /* DragTheTrash.app */,
+				5087E76F17EB910900C73F5D /* DragTheTrash Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -627,9 +627,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* rcycle iOS */ = {
+		1D6058900D05DD3D006BFB54 /* DragTheTrash */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "rcycle iOS" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DragTheTrash" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -644,14 +644,14 @@
 				1AC6FB2B180E99E1004C840B /* PBXTargetDependency */,
 				1AC6FB2D180E99E1004C840B /* PBXTargetDependency */,
 			);
-			name = "rcycle iOS";
+			name = DragTheTrash;
 			productName = iphone;
-			productReference = 1D6058910D05DD3D006BFB54 /* rcycle iOS.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* DragTheTrash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5087E73D17EB910900C73F5D /* rcycle Mac */ = {
+		5087E73D17EB910900C73F5D /* DragTheTrash Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "rcycle Mac" */;
+			buildConfigurationList = 5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "DragTheTrash Mac" */;
 			buildPhases = (
 				5087E74817EB910900C73F5D /* Resources */,
 				5087E75617EB910900C73F5D /* Sources */,
@@ -666,9 +666,9 @@
 				1AC6FB1A180E9959004C840B /* PBXTargetDependency */,
 				1AC6FB1C180E9959004C840B /* PBXTargetDependency */,
 			);
-			name = "rcycle Mac";
+			name = "DragTheTrash Mac";
 			productName = iphone;
-			productReference = 5087E76F17EB910900C73F5D /* rcycle Mac.app */;
+			productReference = 5087E76F17EB910900C73F5D /* DragTheTrash Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -684,7 +684,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DragTheTrash" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -704,8 +704,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* rcycle iOS */,
-				5087E73D17EB910900C73F5D /* rcycle Mac */,
+				1D6058900D05DD3D006BFB54 /* DragTheTrash */,
+				5087E73D17EB910900C73F5D /* DragTheTrash Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -789,7 +789,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C8834818EF639B003518DB /* Music in Resources */,
-				97F06EF91B122E1A0030625C /* Images.xcassets in Resources */,
+				97BD209D1B1284A000717534 /* Images.xcassets in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -996,6 +996,7 @@
 					"-lfreetype_arm64",
 					"-lwebsockets_arm64",
 				);
+				PRODUCT_NAME = DragTheTrash;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1042,6 +1043,7 @@
 					"-lfreetype_arm64",
 					"-lwebsockets_arm64",
 				);
+				PRODUCT_NAME = DragTheTrash;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1075,6 +1077,7 @@
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "DragTheTrash Mac";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -1103,6 +1106,7 @@
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "DragTheTrash Mac";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -1173,7 +1177,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "rcycle iOS" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DragTheTrash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -1182,7 +1186,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "rcycle Mac" */ = {
+		5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "DragTheTrash Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5087E76D17EB910900C73F5D /* Debug */,
@@ -1191,7 +1195,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Rcycle" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DragTheTrash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

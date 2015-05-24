@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:rcycle.xcodeproj">
+      location = "self:/Users/mikel/progs/rcycle/rcycle.git/proj.ios_mac/DragTheTrash.xcodeproj">
    </FileRef>
 </Workspace>
