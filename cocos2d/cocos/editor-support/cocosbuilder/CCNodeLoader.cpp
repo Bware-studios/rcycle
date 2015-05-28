@@ -6,6 +6,7 @@
 #include "CCBAnimationManager.h"
 #include "CCNode+CCBRelativePositioning.h"
 
+#include <iostream>
 
 using namespace std;
 using namespace cocos2d;
@@ -574,6 +575,8 @@ SpriteFrame * NodeLoader::parsePropTypeSpriteFrame(Node * pNode, Node * pParent,
     std::string spriteSheet = ccbReader->readCachedString();
     std::string spriteFile = ccbReader->readCachedString();
     
+    std::cout <<"spriteframe... "<<spriteSheet<<" || "<<spriteFile<<"\n";
+    
     SpriteFrame *spriteFrame = NULL;
     if (spriteFile.length() != 0)
     {
@@ -606,6 +609,7 @@ SpriteFrame * NodeLoader::parsePropTypeSpriteFrame(Node * pNode, Node * pParent,
         }
     }
     
+    std::cout << ((spriteFrame)?"No nulo":"NULL") << "\n" ;
     return spriteFrame;
 }
 
