@@ -193,7 +193,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     
 
-    Preferences::getInstance()->setPlayerName("Noseeee");
+    Preferences::getInstance()->setPlayerName("");
 
     
     printf("Playe name: %s <<<<<<<<<<<<<<<< \n",Preferences::getInstance()->getPlayerName().c_str());

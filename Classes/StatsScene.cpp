@@ -133,7 +133,7 @@ void StatsScene::start_exit_animation()
 
 void StatsScene::action_enter(Ref *pSender)
 {
-    printf("action enter \n");
+    //printf("action enter \n");
     if (Game::thegame->get_last_wave_passed()) {
         going_back_to_game=true;
         start_exit_animation();

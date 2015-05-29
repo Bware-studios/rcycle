@@ -20,7 +20,7 @@ bool Dialogo::init()
 {
     Layer::init();
     
-    printf("dialogo.. init...\n");
+    //printf("dialogo.. init...\n");
     return true;
 }
 
@@ -178,7 +178,7 @@ void Dialogo::dismiss()
 
 void Dialogo::event_mainbutton(cocos2d::Ref* psender)
 {
-    printf("but1\n");
+    //printf("but1\n");
     if (finish_callback_buttons_listener) {
         finish_callback_buttons_listener(this,1);
     }
@@ -190,7 +190,7 @@ void Dialogo::event_mainbutton(cocos2d::Ref* psender)
 
 void Dialogo::event_secondbutton(cocos2d::Ref* psender)
 {
-    printf("but2\n");
+    //printf("but2\n");
     if (finish_callback_buttons_listener) {
         finish_callback_buttons_listener(this,2);
     }
@@ -213,18 +213,18 @@ void Dialogo::event_touchended(cocos2d::Touch* touch,cocos2d::Event *e)
 
 void Dialogo::text_field_event(cocos2d::Ref*sender,cocos2d::ui::TextFiledEventType event)
 {
-    printf("textfield event\n");
+    //printf("textfield event\n");
     if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_INSERT_TEXT) {
-        printf("insert %d\n",event);
+       // printf("insert %d\n",event);
     } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DETACH_WITH_IME) {
-        printf("detach %d\n",event);
+       // printf("detach %d\n",event);
         //save_hisg_score_and_exit() ;
     } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_ATTACH_WITH_IME) {
-        printf("atach %d\n",event);
+       // printf("atach %d\n",event);
     } else if (event==ui::TextFiledEventType::TEXTFIELD_EVENT_DELETE_BACKWARD) {
-        printf("delete %d\n",event);
+       // printf("delete %d\n",event);
     } else {
-        printf("e: %d\n",event);
+       // printf("e: %d\n",event);
     }
     
 }
