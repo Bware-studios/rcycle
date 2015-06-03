@@ -193,10 +193,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     
 
-    Preferences::getInstance()->setPlayerName("");
+    Preferences::getInstance()->setPlayerName("Player");
 
     
-    printf("Playe name: %s <<<<<<<<<<<<<<<< \n",Preferences::getInstance()->getPlayerName().c_str());
+    //printf("Playe name: %s <<<<<<<<<<<<<<<< \n",Preferences::getInstance()->getPlayerName().c_str());
     
     // create a scene. it's an autorelease object
     //auto scene= HelloWorld::createScene();
