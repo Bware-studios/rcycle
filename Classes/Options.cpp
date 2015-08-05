@@ -32,3 +32,4 @@ bool Options::container_show_score = false;
 
 // game
 bool Options::easy_game_for_debug = false;
+int Options::num_fails_to_end = 3;

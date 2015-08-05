@@ -74,6 +74,8 @@ bool GameScene::init() {
     //this->setPosition(Point(dr.width/2,0));
     //this->setRotation(40);
 
+    Game::thegame->setScene(this);
+    
     if (!container_position_calculated) {
         if (dr.width>480) container_position[3].x+=0.5*(dr.width-480);
         if (dr.width>480) container_enter_movement_position[3].x+=0.5*(dr.width-480);
@@ -697,6 +699,14 @@ void GameScene::action_quit(Ref *o)
         game_aborted();
     }
 }
+
+
+void GameScene::game_has_ended_by_fails()
+{
+    LOG_SCORE("GameScene::game_has_ended_by_fails() <<<<<<<<<<<");
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(GameScene::start_finish_animation, this))));
+}
+
 
 void GameScene::start_finish_animation()
 {

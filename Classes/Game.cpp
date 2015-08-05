@@ -45,13 +45,21 @@ bool Game::init()
     wave_passed=false;
     wave_score=0;
     partial_score=0;
+    wave_n_fails=0;
     total_score=0;
     return true;
+}
+
+void Game::setScene(GameScene *scene)
+{
+    thescene=scene;
 }
 
 
 void Game::trash_recycled(int category)
 {
+    if (wave_n_fails >= Options::num_fails_to_end) return;
+        
     int cat_safe=category%Trash::num_trash_cat;
     wave_recycled[cat_safe]+=1;
     update_partial_score();
@@ -61,17 +69,32 @@ void Game::trash_recycled(int category)
 
 void Game::trash_failed(int category)
 {
+    if (wave_n_fails >= Options::num_fails_to_end) return;
+
     int cat_safe=category%Trash::num_trash_cat;
     wave_failed[cat_safe]+=1;
     update_partial_score();
+    one_wave_fail();
 }
 
 
 void Game::trash_out(int category)
 {
+    if (wave_n_fails >= Options::num_fails_to_end) return;
+
     int cat_safe=category%Trash::num_trash_cat;
     wave_out[cat_safe]+=1;
     update_partial_score();
+    one_wave_fail();
+}
+
+void Game::one_wave_fail()
+{
+    wave_n_fails+=1;
+    LOG_SCORE("%d fails !!!!!!",wave_n_fails);
+    if (wave_n_fails >= Options::num_fails_to_end) {
+        thescene->game_has_ended_by_fails();
+    }
 }
 
 void Game::update_partial_score()
@@ -131,6 +154,7 @@ void Game::wave_end()
         wave_failed[i]=0;
         wave_out[i]=0;
     }
+    wave_n_fails=0;
     if (wave_score >= score_target /*score_topass_level(wave_completed+1)*/ ) {
         wave_passed=true;
         wave_completed+=1;

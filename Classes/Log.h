@@ -24,8 +24,8 @@ void Log_msg(const char *type,const char *msg, ... );
 #define DEBUG_LOG_COLLISION false
 #define DEBUG_LOG_TRASHGEN false
 #define DEBUG_LOG_RESOLUTION false
-#define DEBUG_LOG_SCORE false
-#define DEBUG_LOG_NET false
+#define DEBUG_LOG_SCORE true
+#define DEBUG_LOG_NET true
 
 
 #if ( DEBUG_LOG && DEBUG_LOG_GENERAL )

@@ -38,6 +38,7 @@ public:
     
     //game
     static bool easy_game_for_debug;
+    static int num_fails_to_end;
 };
 
 

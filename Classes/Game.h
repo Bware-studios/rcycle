@@ -13,17 +13,22 @@
 #include "Trash.h"
 #include "GameScene.h"
 
+class GameScene;
+
 class Game : public cocos2d::Ref
 {
 public:
     bool init();
     CREATE_FUNC(Game);
     
+    void setScene(GameScene *scene);
+    
     static Game *thegame;
     
     void trash_recycled(int category);
     void trash_failed(int category);
     void trash_out(int category);
+    void one_wave_fail();
     void update_partial_score();
 
     int unbound_score(int *ok,int *failed,int *outs);
@@ -39,6 +44,8 @@ public:
     int get_last_wave_passed();
     bool get_high_score_achieved();
 
+    // scene to notify
+    GameScene *thescene;
     
     // stats
     int *wave_recycled;
@@ -49,6 +56,8 @@ public:
     int *total_failed;
     int *total_out;
 
+    int wave_n_fails = 0;
+    
     int wave_score = 0;
     int partial_score = 0;
     int total_score = 0;

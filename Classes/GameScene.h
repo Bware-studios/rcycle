@@ -96,6 +96,9 @@ public:
     void action_resume(cocos2d::Ref *o);
     void action_quit(cocos2d::Ref *o);
 
+    // from game
+    void game_has_ended_by_fails();
+    
 
     void start_finish_animation();
     void game_end();

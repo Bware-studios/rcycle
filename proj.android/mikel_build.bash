@@ -1,6 +1,6 @@
 
 # o el que sea en el ordenador
-export NDK_ROOT=/opt2/local/android-ndk-r9d
+export NDK_ROOT=/opt2/android-ndk-r9d
 
 
 android_targetid=4
