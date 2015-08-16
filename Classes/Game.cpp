@@ -10,9 +10,12 @@
 #include "Scores.h"
 
 // puntos por cada tipo ok o failed
-int game_score_recycled[] = { 10,10,10,10 };
-int game_score_failed[] = { -5,-5,-5,-5 };
-int game_score_out[] = { -1,-1,-1,-1 };
+//int game_score_recycled[] = { 10,10,10,10 };
+//int game_score_failed[] = { -5,-5,-5,-5 };
+//int game_score_out[] = { -1,-1,-1,-1 };
+int game_score_recycled[] = { 1,1,1,1 };
+int game_score_failed[] = { 0,0,0,0 };
+int game_score_out[] = { 0,0,0,0 };
 
 
 int game_score_needed_for_level[] = {50,100,150,200,250,300};
@@ -91,6 +94,7 @@ void Game::trash_out(int category)
 void Game::one_wave_fail()
 {
     wave_n_fails+=1;
+    thescene->update_score_fails(wave_n_fails);
     LOG_SCORE("%d fails !!!!!!",wave_n_fails);
     if (wave_n_fails >= Options::num_fails_to_end) {
         thescene->game_has_ended_by_fails();

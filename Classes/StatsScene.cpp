@@ -53,7 +53,8 @@ bool StatsScene::init() {
     if (!passed) {
         sprintf(target_s,"need %d",Game::thegame->score_target);
     }
-    sprintf(score_s,"Score: %d\n%s",Game::thegame->get_last_wave_score(),passed?"":target_s);
+    //sprintf(score_s,"Score: %d\n%s",Game::thegame->get_last_wave_score(),passed?"":target_s);
+    sprintf(score_s,"Score: %d",Game::thegame->get_last_wave_score()/*,passed?"":target_s*/);
     label_1->setString(score_s);
 
     sprintf(score_s,"Lvl %d %s",Game::thegame->wave_completed+(passed?0:1),passed?"ok":"failed" );

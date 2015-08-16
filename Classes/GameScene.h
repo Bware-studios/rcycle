@@ -80,7 +80,7 @@ public:
     
     
     void update_score_display();
-
+    void update_score_fails(int nfails);
     
     // scheduled events
     void enter_movement_ended();
@@ -129,6 +129,12 @@ public:
     
     cocos2d::Label *score1;
     cocos2d::Label *score2;
+
+    cocos2d::Sprite *fail1;
+    cocos2d::Sprite *fail2;
+    cocos2d::Sprite *fail3;
+    cocos2d::Sprite **failsprite;
+    
     
 //    cocos2d::Label *score_1;
 //    cocos2d::Label *score_2;

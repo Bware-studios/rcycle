@@ -20,6 +20,7 @@ using namespace std;
 using namespace cocosbuilder;
 
 
+
 // description data
 // se puede hacer que se cargue de fichero para tener diferentes niveles
 const int container_n = 4;
@@ -102,7 +103,14 @@ bool GameScene::init() {
     gameLayer->setAdditionalTransform(tr1);
     
     frontLayer = SceneLoadManager::getInstance()->layerFromFile("FrontLayer",this);
-    
+    failsprite = (Sprite**)malloc(sizeof(Sprite*)*Options::num_fails_to_end);
+    failsprite[0]=fail1;
+    failsprite[1]=fail2;
+    failsprite[2]=fail3;
+    for (int i=0;i<Options::num_fails_to_end;i++) {
+        failsprite[i]->setVisible(false);
+    }
+         
     backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
     fondo_sprite->removeFromParent();
     if (Options::debug_draw_background) {
@@ -110,11 +118,11 @@ bool GameScene::init() {
     }
 
     score2=Label::create("0 / 0", score1->getFontName(), score1->getFontSize());
-    score2->setPosition(Point(dr.width-10,dr.height-8));
+    score2->setPosition(Point(dr.width/2,dr.height-8));
     score2->setVerticalAlignment(score1->getVerticalAlignment());
     score2->setAlignment(CCTextAlignment::RIGHT);
     score2->setColor(score1->getColor());
-    score2->setAnchorPoint(Point(1,1));
+    score2->setAnchorPoint(Point(.5,1));
     frontLayer->addChild(score2);
     update_score_display();
     
@@ -363,6 +371,10 @@ bool GameScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
     LOG_CCB("variable [%s]",pMemberVariableName);
 
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score1", Label *, this->score1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fail1", Sprite *, this->fail1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fail2", Sprite *, this->fail2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fail3", Sprite *, this->fail3);
+
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", Label *, this->score_1);
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", Label *, this->score_2);
@@ -569,7 +581,8 @@ void GameScene::update_score_display()
     int partial=Game::thegame->partial_score;
     int target=Game::thegame->score_target;
     char sstr[100];
-    sprintf(sstr,"%d / %d",partial,target);
+//    sprintf(sstr,"%d / %d",partial,target);
+    sprintf(sstr,"%d",partial);
     score2->setString(sstr);
     if (partial>=target) {
         score2->setColor(Color3B(0,255,0));
@@ -578,6 +591,14 @@ void GameScene::update_score_display()
     }
 }
 
+void GameScene::update_score_fails(int nfails)
+{
+    int ifail = nfails-1;
+    if (ifail>= Options::num_fails_to_end) return;
+    failsprite[ifail]->setScale(4, 4);
+    failsprite[ifail]->runAction(ScaleTo::create(.25, 1.0));
+    failsprite[ifail]->setVisible(true);
+}
 
 
 //void GameScene::set_recycled(int category, int value)
