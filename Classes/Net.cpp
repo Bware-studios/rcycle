@@ -233,6 +233,7 @@ void Net::bwnet_send_scores_completed(Ref *psender,cocos2d::network::HttpRespons
     LOG_NET("data : %s",a.c_str());
     LOG_NET("status : %s",responsemap.at("status").asString().c_str());
 
+    // si el scores devuelve -1 aqui hay que reaccionar
     
     Value scores = responsemap.at("scores");
     if (responsemap.at("status").asInt()<0) {

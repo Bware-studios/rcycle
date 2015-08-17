@@ -176,6 +176,7 @@ void Scores::save_file()
 bool Scores::save_score()
 {
     int ascore=Game::thegame->get_total_score();
+    int alevel=Game::thegame->get_last_wave_reached();
     bool high_score=false;
     
     
@@ -191,6 +192,7 @@ bool Scores::save_score()
     ValueMap newscore;
     newscore["name"]=Value(Preferences::getInstance()->getPlayerName());
     newscore["score"]=Value(ascore);
+    newscore["level"]=Value(alevel);
     
     local_top_scores.insert(i.base(), Value(newscore));
     local_top_scores.pop_back();

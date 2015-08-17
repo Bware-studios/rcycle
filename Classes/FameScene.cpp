@@ -33,7 +33,11 @@ bool FameScene::init() {
 //        scores_text<<i<<".\t" << ascore.at("name").asString() << "\t...\t" << ascore.at("score").asString() << "\n";
         scores_i_text<<i<<"\n";
         scores_name_text<<ascore.at("name").asString()<<"\n";
-        scores_score_text<<ascore.at("score").asString()<<"\n";
+        scores_score_text<<ascore.at("score").asString();
+        if (ascore.count("level")!=0) {
+            scores_score_text<<" L"<<ascore.at("level").asString();
+        }
+        scores_score_text<<"\n";
     }
     
 //    for (int i=0; i<Scores::num_local_scores; i++) {
