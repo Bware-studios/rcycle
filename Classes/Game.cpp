@@ -158,12 +158,11 @@ void Game::wave_end()
         wave_failed[i]=0;
         wave_out[i]=0;
     }
-    wave_n_fails=0;
-    if (wave_score >= score_target /*score_topass_level(wave_completed+1)*/ ) {
+    if ( wave_n_fails < Options::num_fails_to_end  /*wave_score >= score_target */ ) {
         wave_passed=true;
         wave_completed+=1;
 
-        score_target=score_topass_level(wave_completed+1);
+        //score_target=score_topass_level(wave_completed+1);
         partial_score=0;
 
     } else {
@@ -173,6 +172,7 @@ void Game::wave_end()
         }
      //   Scores::getInstance()->save_score_if("xxxxx", total_score);
     }
+    wave_n_fails=0;
 }
 
 int Game::get_last_wave_score()
