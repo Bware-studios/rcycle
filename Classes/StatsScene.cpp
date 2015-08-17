@@ -116,7 +116,7 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 }
 
 
-void StatsScene::save_hisg_score_and_exit() {
+void StatsScene::save_high_score_and_exit() {
     Scores *thescores=Scores::getInstance();
     thescores->save_score();
     start_exit_animation();
@@ -160,7 +160,7 @@ void StatsScene::event_camion_gone()
 void StatsScene::event_exit_from_name_dialog(Dialogo* d, int b,std::string name)
 {
     Preferences::getInstance()->setPlayerName(name);
-    save_hisg_score_and_exit();
+    save_high_score_and_exit();
 }
 
 // return true if entered dialog
