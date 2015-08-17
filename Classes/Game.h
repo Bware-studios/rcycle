@@ -38,6 +38,7 @@ public:
     void wave_end();
 
     int get_last_wave_score();
+    int get_last_wave_reached();
     int get_total_score();
     int get_last_wave_recycled(int cat);
     int get_last_wave_failed(int cat);

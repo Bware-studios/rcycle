@@ -180,6 +180,11 @@ int Game::get_last_wave_score()
     return wave_score;
 }
 
+int Game::get_last_wave_reached()
+{
+    return wave_completed;
+}
+
 int Game::get_total_score()
 {
     return total_score;
