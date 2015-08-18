@@ -634,7 +634,7 @@ void GameScene::enter_movement_ended()
 
 void GameScene::enter_animation_ended()
 {
-    generator->start();
+    generator->startforlevel(Game::thegame->get_current_wave());
     ingame=true;
     gameEndTime=gameTime+32.0;
 

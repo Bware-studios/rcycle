@@ -33,3 +33,13 @@ bool Options::container_show_score = false;
 // game
 bool Options::easy_game_for_debug = false;
 int Options::num_fails_to_end = 3;
+
+// generator
+float Options::lambda0 = .2 ;
+float Options::lambdam = .2 ;
+float Options::tmax = 2.0;
+float Options::p20 = .1 ;
+float Options::p2m = .1 ;
+bool Options::randomtime = true ;
+
+

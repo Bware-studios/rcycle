@@ -145,6 +145,11 @@ int Game::score_topass_level(int level)
     return scoretarget;
 }
 
+int Game::get_current_wave()
+{
+    return wave_completed;
+}
+
 void Game::wave_end()
 {
     int i;

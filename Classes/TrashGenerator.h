@@ -21,9 +21,11 @@ public:
     bool initWithScene(GameScene *pScene);
     static TrashGenerator* createWithScene(GameScene *pScene);
 
-    void start();
+    void startforlevel(int l);
     void stop();
+    void wait_time();
     void time_passes();
+    void generate();
     int randomCategory();
     int randomType(int category);
     cocos2d::Point randomThrowingTarget(cocos2d::Point &start);
@@ -34,6 +36,11 @@ public:
 private:
     GameScene *theScene;
     bool running;
+    
+    int level;
+    
+    float lambda ;
+    float p2 ;
     
 };
 

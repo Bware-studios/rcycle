@@ -35,6 +35,7 @@ public:
     int score(int *ok,int *failed,int *outs);
     int score_topass_level(int level);
     
+    int get_current_wave();
     void wave_end();
 
     int get_last_wave_score();

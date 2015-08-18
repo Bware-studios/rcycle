@@ -39,6 +39,14 @@ public:
     //game
     static bool easy_game_for_debug;
     static int num_fails_to_end;
+    
+    //generator
+    static float lambda0;
+    static float lambdam;
+    static float tmax;
+    static float p20;
+    static float p2m;
+    static bool randomtime;
 };
 
 

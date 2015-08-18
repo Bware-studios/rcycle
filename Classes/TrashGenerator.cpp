@@ -14,15 +14,23 @@ USING_NS_CC;
 bool TrashGenerator::initWithScene(GameScene *pScene)
 {
     theScene = pScene;
-    
+    level=0;
+    int t0=std::time(NULL);
+    srand(t0);
     return true;
 }
 
 
 
-void TrashGenerator::start()
+void TrashGenerator::startforlevel(int l)
 {
+    level=l;
     running=true;
+    
+    lambda= Options::lambda0 + l*Options::lambdam ;
+    p2= Options::p20 + l*Options::p2m ;
+
+    //printf("trash generator intiated for wave: %d  lambda=%f  p2=%.4f\n",l,lambda,p2);
     time_passes();
 }
 
@@ -31,11 +39,40 @@ void TrashGenerator::stop()
     running=false;
 }
 
+void TrashGenerator::wait_time()
+{
+    float t;
+    if (Options::randomtime) {
+        float u = rand()*1.0/RAND_MAX;
+        t=-1.0*log(u)/lambda;
+        t=t>Options::tmax?Options::tmax:t;
+    } else {
+        t=1.0/lambda;
+    }
+
+    //printf("t=%f\n",t);
+    
+    theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(t),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
+}
+
 void TrashGenerator::time_passes()
 {
     if (!running) return;
+    generate();
+    wait_time();
+}
+
+void TrashGenerator::generate()
+{
+    //printf("generate ...");
+    float u = rand()*1.0/RAND_MAX;
+    if (u<p2) {
+        generateRandomTrash();
+        //printf("double");
+        
+    }
+    //printf("\n");
     generateRandomTrash();
-    theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(0.8),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
 }
 
 int TrashGenerator::randomCategory()
