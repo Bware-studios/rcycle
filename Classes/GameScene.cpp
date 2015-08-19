@@ -110,7 +110,10 @@ bool GameScene::init() {
     for (int i=0;i<Options::num_fails_to_end;i++) {
         failsprite[i]->setVisible(false);
     }
-         
+    for (int j=0;j<Game::thegame->wave_n_fails;j++) {
+        failsprite[j]->setVisible(true);
+    }
+    
     backLayer = LayerColor::create(Color4B(255,255,255,Options::debug_draw_background?255:0));
     fondo_sprite->removeFromParent();
     if (Options::debug_draw_background) {

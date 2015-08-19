@@ -33,18 +33,20 @@ bool Options::container_show_score = false;
 // game
 bool Options::easy_game_for_debug = false;
 int Options::num_fails_to_end = 3;
+bool Options::fails_persist = true;
+bool Options::one_fail_bonus_per_level = false;
 
 // generator
-float Options::lambda0 = .2 ;
+float Options::lambda0 = .8 ;
 float Options::lambdam = .2 ;
 float Options::rnd_tmax = 4.0;
 float Options::rnd_tmin = .2;
-float Options::p20 = .1 ;
+float Options::p20 = .05 ;
 float Options::p2m = .1 ;
 bool Options::randomtime = false ;
 
 bool Options::first_boost = true ;
-float Options::first_boost_time = 15.0 ;
-float Options::first_boost_lambda = 1.5 ;
+float Options::first_boost_time = 20.0 ;
+float Options::first_boost_lambda = .4 ;
 
 

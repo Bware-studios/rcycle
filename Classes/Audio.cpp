@@ -15,7 +15,7 @@ using namespace CocosDenshion;
 
 
 const char *game_theme_name="Music/Main_theme.mp3";
-const char *menu_theme_name="Music/rc_menu.mp3";
+const char *menu_theme_name="Music/Rcycler_menu.mp3";
 
 
 const char *sound_botella1="Sounds/Botella01.wav";

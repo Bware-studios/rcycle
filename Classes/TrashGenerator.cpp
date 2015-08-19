@@ -78,12 +78,14 @@ void TrashGenerator::generate()
     //printf("generate ...");
     float u = rand()*1.0/RAND_MAX;
     if (u<p2) {
-        generateRandomTrash();
+        generateRandomTrash(-1);
+        generateRandomTrash(1);
         //printf("double");
         
-    }
+    } else {
     //printf("\n");
-    generateRandomTrash();
+        generateRandomTrash(0);
+    }
 }
 
 int TrashGenerator::randomCategory()
@@ -109,24 +111,31 @@ Point TrashGenerator::randomThrowingTarget(Point &start)
     return Point(x,y);
 }
 
-Point TrashGenerator::randomThrowingStart()
+Point TrashGenerator::randomThrowingStart(int side)
 {
+    float xleft = -40 -240;
+    float xright = 520 +50 -240;
     float x,y;
-    x=-40 -240;
-    if (rand()%4==0) x=520 +50 -240;
+
+    x=xleft;
+    if (side>0) { x=xright; }
+    if (side==0) {
+        if (rand()%4==0) x=xright;
+    }
+    
     y=200;
     return Point(x,y);
 }
 
 
-
-void TrashGenerator::generateRandomTrash()
+//side -1 izquierda 1 derecha 0 random
+void TrashGenerator::generateRandomTrash(int side)
 {
     int rcat,rtype;
     Point ps,pe;
     rcat=randomCategory();
     rtype=randomType(rcat);
-    ps=randomThrowingStart();
+    ps=randomThrowingStart(side);
     pe=randomThrowingTarget(ps);
     Vect v((ps.x<100?200:-200),50); // default velocity
     if (!calculateVelocityToTarget(v, ps, 280, pe)) {

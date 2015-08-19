@@ -39,7 +39,9 @@ public:
     //game
     static bool easy_game_for_debug;
     static int num_fails_to_end;
-    
+    static bool fails_persist;
+    static bool one_fail_bonus_per_level;
+//    static bool one_fail
     //generator
     static float lambda0;
     static float lambdam;

@@ -177,7 +177,13 @@ void Game::wave_end()
         }
      //   Scores::getInstance()->save_score_if("xxxxx", total_score);
     }
-    wave_n_fails=0;
+    if (!Options::fails_persist) {
+        wave_n_fails=0;
+    } else if (Options::one_fail_bonus_per_level) {
+        wave_n_fails-=1;
+        wave_n_fails=(wave_n_fails<0)?0:wave_n_fails;
+    }
+    
 }
 
 int Game::get_last_wave_score()
