@@ -27,10 +27,11 @@ void TrashGenerator::startforlevel(int l)
     level=l;
     running=true;
     
+    first_boost=false;
     lambda= Options::lambda0 + l*Options::lambdam ;
     p2= Options::p20 + l*Options::p2m ;
 
-    //printf("trash generator intiated for wave: %d  lambda=%f  p2=%.4f\n",l,lambda,p2);
+    printf("trash generator intiated for wave: %d  lambda=%f  p2=%.4f\n",l,lambda,p2);
     time_passes();
 }
 
@@ -44,13 +45,14 @@ void TrashGenerator::wait_time()
     float t;
     if (Options::randomtime) {
         float u = rand()*1.0/RAND_MAX;
-        t=-1.0*log(u)/lambda;
-        t=t>Options::tmax?Options::tmax:t;
+        t=log(u)*1.0/-lambda;
+        t=(t>Options::rnd_tmax)?Options::rnd_tmax:t;
+        t=(t<Options::rnd_tmin)?Options::rnd_tmin:t;
+//        printf("u=%f lambda=%f t=%f\n",u,lambda,t);
     } else {
         t=1.0/lambda;
     }
 
-    //printf("t=%f\n",t);
     
     theScene->runAction(Sequence::createWithTwoActions(DelayTime::create(t),CallFunc::create(CC_CALLBACK_0(TrashGenerator::time_passes, this))));
 }
@@ -58,6 +60,15 @@ void TrashGenerator::wait_time()
 void TrashGenerator::time_passes()
 {
     if (!running) return;
+
+    if (!first_boost && Options::first_boost) {
+        if (GameScene::thegamescene->getGameTime()>Options::first_boost_time) {
+            printf("boooost\n");
+            first_boost=true;
+            lambda+=Options::first_boost_lambda;
+        }
+    }
+    
     generate();
     wait_time();
 }

@@ -42,6 +42,7 @@ private:
     float lambda ;
     float p2 ;
     
+    bool first_boost;
 };
 
 

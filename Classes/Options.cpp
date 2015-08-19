@@ -37,9 +37,14 @@ int Options::num_fails_to_end = 3;
 // generator
 float Options::lambda0 = .2 ;
 float Options::lambdam = .2 ;
-float Options::tmax = 2.0;
+float Options::rnd_tmax = 4.0;
+float Options::rnd_tmin = .2;
 float Options::p20 = .1 ;
 float Options::p2m = .1 ;
-bool Options::randomtime = true ;
+bool Options::randomtime = false ;
+
+bool Options::first_boost = true ;
+float Options::first_boost_time = 15.0 ;
+float Options::first_boost_lambda = 1.5 ;
 
 

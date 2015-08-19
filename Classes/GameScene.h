@@ -108,6 +108,9 @@ public:
 
     static void enter_game_scene(bool newgame);
 
+    //provide time to others  (for generator)
+    float getGameTime();
+    
     
     cocos2d::Layer *backLayer;
     cocos2d::Layer *gameLayer;

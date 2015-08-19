@@ -781,3 +781,9 @@ void GameScene::enter_game_scene(bool newgame)
     Director::getInstance()->replaceScene(newscene);
 }
 
+float GameScene::getGameTime()
+{
+    return gameTime;
+}
+
+

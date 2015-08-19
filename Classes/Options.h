@@ -43,10 +43,14 @@ public:
     //generator
     static float lambda0;
     static float lambdam;
-    static float tmax;
+    static float rnd_tmax;
+    static float rnd_tmin;
     static float p20;
     static float p2m;
     static bool randomtime;
+    static bool first_boost;
+    static float first_boost_time;
+    static float first_boost_lambda;
 };
 
 
