@@ -152,8 +152,9 @@ void StatsScene::event_camion_gone()
     if (going_back_to_game) {
         GameScene::enter_game_scene(false);
     } else {
-        auto newscene = MainMenuScene::create();
-        Director::getInstance()->replaceScene(newscene);
+        //auto newscene = MainMenuScene::create();
+        //Director::getInstance()->replaceScene(newscene);
+        GameScene::enter_game_scene(true);
     }
 }
 
