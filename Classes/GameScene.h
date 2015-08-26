@@ -132,6 +132,7 @@ public:
     
     cocos2d::Label *score1;
     cocos2d::Label *score2;
+    cocos2d::Label *score3;
 
     cocos2d::Sprite *fail1;
     cocos2d::Sprite *fail2;
@@ -151,6 +152,8 @@ public:
     float gameTime=0.0;
     bool ingame=false;
     float gameEndTime;
+    
+    int best_score_for_display;
 };
 
 

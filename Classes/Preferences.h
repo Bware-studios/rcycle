@@ -36,6 +36,9 @@ public:
     int getNumGamesStarted();
     int setOneMoreGameStarted();
     
+    int getBestScore();
+    bool setIfBestScore(int score);
+    
     
 private:
     void load();

@@ -108,6 +108,26 @@ int Preferences::setOneMoreGameStarted()
     return num;
 }
 
+int Preferences::getBestScore()
+{
+    try {
+        int num=prefsData.at("BestScore").asInt();
+        return num;
+    } catch (exception& e) {
+        return 0;
+    }
+}
+
+bool Preferences::setIfBestScore(int score)
+{
+    int best = getBestScore();
+    if ( score > best ) {
+        prefsData["BestScore"] = score;
+        return true;
+    }
+    return false;
+}
+
 void Preferences::load()
 {
     JSONFileLoader *prefs_file = JSONFileLoader::create();

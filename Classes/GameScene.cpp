@@ -11,6 +11,8 @@
 #include "FameScene.h"
 #include "StatsScene.h"
 
+#include "Preferences.h"
+
 
 
 USING_NS_CC;
@@ -120,13 +122,24 @@ bool GameScene::init() {
         backLayer->addChild(fondo_sprite);
     }
 
-    score2=Label::create("0 / 0", score1->getFontName(), score1->getFontSize());
-    score2->setPosition(Point(dr.width/2,dr.height-8));
+    score2=Label::create("0", score1->getFontName(), score1->getFontSize()-5);
+    score2->setPosition(Point(dr.width-10,dr.height-8));
     score2->setVerticalAlignment(score1->getVerticalAlignment());
-    score2->setAlignment(CCTextAlignment::RIGHT);
+    score2->setAlignment(CCTextAlignment::CENTER);
     score2->setColor(score1->getColor());
-    score2->setAnchorPoint(Point(.5,1));
+    score2->setAnchorPoint(Point(1,1));
+
+    score3=Label::create("Best 0", score1->getFontName(), score1->getFontSize()-15);
+    score3->setPosition(Point(dr.width-10,dr.height-40));
+    score3->setVerticalAlignment(score1->getVerticalAlignment());
+    score3->setAlignment(CCTextAlignment::CENTER);
+    score3->setColor(score1->getColor());
+    score3->setAnchorPoint(Point(1,1));
+
     frontLayer->addChild(score2);
+    frontLayer->addChild(score3);
+
+    best_score_for_display = Preferences::getInstance()->getBestScore();
     update_score_display();
     
     PhysicsWorld *world;
@@ -587,11 +600,13 @@ void GameScene::update_score_display()
 //    sprintf(sstr,"%d / %d",partial,target);
     sprintf(sstr,"%d",partial);
     score2->setString(sstr);
-    if (partial>=target) {
-        score2->setColor(Color3B(0,255,0));
-    } else {
-        score2->setColor(Color3B(255,0,0));
-    }
+    sprintf(sstr,"Best %d",best_score_for_display);
+    score3->setString(sstr);
+//    if (partial>=target) {
+//        score2->setColor(Color3B(0,255,0));
+//    } else {
+//        score2->setColor(Color3B(255,0,0));
+//    }
 }
 
 void GameScene::update_score_fails(int nfails)
