@@ -596,9 +596,10 @@ void GameScene::update_score_display()
 {
     int partial=Game::thegame->partial_score;
     int target=Game::thegame->score_target;
+    int acumulated=partial+Game::thegame->total_score;
     char sstr[100];
 //    sprintf(sstr,"%d / %d",partial,target);
-    sprintf(sstr,"%d",partial);
+    sprintf(sstr,"%d",acumulated);
     score2->setString(sstr);
     sprintf(sstr,"Best %d",best_score_for_display);
     score3->setString(sstr);

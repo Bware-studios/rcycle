@@ -139,6 +139,7 @@ void StatsScene::action_enter(Ref *pSender)
         going_back_to_game=true;
         start_exit_animation();
     } else {
+        Preferences::getInstance()->setIfBestScore(Game::thegame->total_score);
         bool record_achieved;
         record_achieved=enter_player_name_for_record_if_needed();
         if (!record_achieved) {
