@@ -30,6 +30,8 @@ int Options::settings_button_show = false;
 bool Options::quit_is_valid_end = false;
 bool Options::container_show_score = false;
 
+bool Options::online_scores = true;
+
 // game
 bool Options::easy_game_for_debug = false;
 int Options::num_fails_to_end = 3;

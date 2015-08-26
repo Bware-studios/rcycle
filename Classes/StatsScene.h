@@ -62,7 +62,7 @@ public:
     cocos2d::ui::TextField *field;
     
     bool going_back_to_game;
-    bool first_exit_pressed;
+    //bool first_exit_pressed;
 
 };
 

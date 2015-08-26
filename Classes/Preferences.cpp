@@ -123,6 +123,7 @@ bool Preferences::setIfBestScore(int score)
     int best = getBestScore();
     if ( score > best ) {
         prefsData["BestScore"] = score;
+        save();
         return true;
     }
     return false;

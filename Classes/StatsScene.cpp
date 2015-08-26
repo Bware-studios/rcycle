@@ -68,7 +68,7 @@ bool StatsScene::init() {
     Dialogo *d=Dialogo::create();
     addChild(d);
     
-    first_exit_pressed=false;
+    //first_exit_pressed=false;
     
     return true;
 }
@@ -140,11 +140,16 @@ void StatsScene::action_enter(Ref *pSender)
         start_exit_animation();
     } else {
         Preferences::getInstance()->setIfBestScore(Game::thegame->total_score);
-        bool record_achieved;
-        record_achieved=enter_player_name_for_record_if_needed();
-        if (!record_achieved) {
-            start_exit_animation();
-        }
+            if ( Options::online_scores ) {
+        
+                bool record_achieved;
+                record_achieved=enter_player_name_for_record_if_needed();
+                if (!record_achieved) {
+                    start_exit_animation();
+                }
+            } else {
+                start_exit_animation();
+            }
     }
 }
 
