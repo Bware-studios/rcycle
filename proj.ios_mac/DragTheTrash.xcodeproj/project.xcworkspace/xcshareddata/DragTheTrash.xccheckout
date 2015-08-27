@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>ACD8BA7F-281D-461F-8835-6644C62F0B92</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>DragTheTrash</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2A0252CEB94C4063006FE487B7B2A598A5614D17</key>
 		<string>github.com:Bware-studios/rcycle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>proj.ios_mac/DragTheTrash.xcodeproj/project.xcworkspace</string>
+	<string>proj.ios_mac/DragTheTrash.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2A0252CEB94C4063006FE487B7B2A598A5614D17</key>

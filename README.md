@@ -7,8 +7,8 @@ the game
 ## last to do ##
 
 - poner best en el marcador (hecho)
-- quitar high scores onlines
-- poner boton de replay rapido
+- quitar high scores onlines (hecho)
+- poner boton de replay rapido 
 - corregir error de final de destruccion de objetos o algo raro
 - poner algun sonido extra
 

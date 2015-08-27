@@ -208,7 +208,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->runWithScene(scene2);
     
     
-    Scores::getInstance();
+    //Scores::getInstance();
 
     return true;
 }

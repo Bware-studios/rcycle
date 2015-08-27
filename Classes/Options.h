@@ -36,7 +36,7 @@ public:
     static bool quit_is_valid_end;
     static bool container_show_score;
     
-    static bool online_scores;
+//    static bool online_scores;
     
     //game
     static bool easy_game_for_debug;

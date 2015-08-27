@@ -172,9 +172,9 @@ void Game::wave_end()
 
     } else {
         wave_passed=false;
-        if (Scores::getInstance()->would_achieve_high_score(total_score)) {
-            high_score_achieved=true;
-        }
+//        if (Scores::getInstance()->would_achieve_high_score(total_score)) {
+//            high_score_achieved=true;
+//        }
      //   Scores::getInstance()->save_score_if("xxxxx", total_score);
     }
     if (!Options::fails_persist) {
