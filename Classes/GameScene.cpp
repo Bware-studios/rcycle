@@ -63,6 +63,7 @@ GameScene *GameScene::thegamescene=NULL;
 GameScene::~GameScene()
 {
     generator->release();
+    GameScene::thegamescene=NULL;
 }
 
 
@@ -581,6 +582,14 @@ bool GameScene::touch_began_found_object(cocos2d::PhysicsWorld& world ,cocos2d::
 }
 
 
+void GameScene::enter_background()
+{
+    if (thegamescene) {
+        thegamescene->m_action_pause(NULL);
+    }
+}
+
+
 void GameScene::add_trash(int trash_type,int trash_category, Point &position, Vect &v)
 {
     Trash *ts1;
@@ -713,6 +722,7 @@ void GameScene::action_pause(Ref *o,Control::EventType e)
 {
     LOG_UI("click pause...");
     pause_menu->setVisible(true);
+    sound_pause_music();
     pause();
 }
 
@@ -720,6 +730,7 @@ void GameScene::m_action_pause(Ref *o)
 {
     LOG_UI("click pause...");
     pause_menu->setVisible(true);
+    sound_pause_music();
     pause();
 }
 
@@ -728,6 +739,7 @@ void GameScene::action_resume(Ref *o)
 {
     LOG_UI("click resume...");
     pause_menu->setVisible(false);
+    sound_resume_music();
     resume();
 }
 
@@ -744,6 +756,7 @@ void GameScene::action_quit(Ref *o)
 void GameScene::game_has_ended_by_fails()
 {
     LOG_SCORE("GameScene::game_has_ended_by_fails() <<<<<<<<<<<");
+    sound_stop_music();
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(GameScene::start_finish_animation, this))));
 }
 

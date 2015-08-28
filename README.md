@@ -10,8 +10,8 @@ the game
 - quitar high scores onlines (hecho)
 - poner boton de replay rapido 
 - corregir error de final de destruccion de objetos o algo raro
-- poner algun sonido extra
-
+- poner algun sonido extra (hecho)
+- error de sonido en la pausa (hecho mayormente el menu podria mejorarse)
 
 
 

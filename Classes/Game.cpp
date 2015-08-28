@@ -74,6 +74,8 @@ void Game::trash_failed(int category)
 {
     if (wave_n_fails >= Options::num_fails_to_end) return;
 
+    sound_play_effect(sound_botella2);
+    
     int cat_safe=category%Trash::num_trash_cat;
     wave_failed[cat_safe]+=1;
     update_partial_score();

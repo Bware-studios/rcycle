@@ -39,7 +39,7 @@ void sound_play_effect_from_trash(int cat, int type);
 
 void sound_play_music(const char *name);
 void sound_stop_music();
-
-
+void sound_pause_music();
+void sound_resume_music();
 
 #endif /* defined(__Rcycle__Audio__) */

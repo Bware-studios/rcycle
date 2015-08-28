@@ -71,6 +71,9 @@ public:
     // queryrect callback for touch search
     bool touch_began_found_object(cocos2d::PhysicsWorld&world ,cocos2d::PhysicsShape& shape,void *data);
     
+    // background notification
+    static void enter_background();
+    
     // add trhashes interface
     void add_trash(int trash_type,int trash_category, cocos2d::Point &position, cocos2d::Vect &v);
     

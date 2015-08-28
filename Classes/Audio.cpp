@@ -125,14 +125,31 @@ void sound_play_effect_from_trash(int cat, int type) {
 
 void sound_play_music(const char *name) {
     if (song_playing) sound_stop_music();
-    song_id=audio_engine->playEffect(name);
+//    song_id=audio_engine->playEffect(name);
+    audio_engine->playBackgroundMusic(name,true);
     song_playing=true;
 }
 
 void sound_stop_music() {
     if (song_playing) {
-        audio_engine->stopEffect(song_id);
+//        audio_engine->stopEffect(song_id);
+        audio_engine->stopBackgroundMusic();
     }
     song_playing=false;
+}
+
+void sound_pause_music() {
+    if (song_playing) {
+        //        audio_engine->stopEffect(song_id);
+        audio_engine->pauseBackgroundMusic();
+    }
+    //song_playing=false;
+}
+
+void sound_resume_music() {
+    if (song_playing) {
+        //        audio_engine->stopEffect(song_id);
+        audio_engine->resumeBackgroundMusic();
+    }
 }
 
