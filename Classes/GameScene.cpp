@@ -780,12 +780,14 @@ void GameScene::start_finish_animation()
 void GameScene::game_end()
 {
     Game::thegame->wave_end();
+    sound_stop_music();
     auto newscene = StatsScene::create();
     Director::getInstance()->replaceScene(newscene);
 }
 
 void GameScene::game_aborted()
 {
+    sound_stop_music();
     auto newscene = MainMenuScene::create();
     Director::getInstance()->replaceScene(newscene);
 }

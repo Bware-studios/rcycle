@@ -70,6 +70,9 @@ bool StatsScene::init() {
     
     //first_exit_pressed=false;
     
+    sound_play_effect(sound_entrada_camion);
+
+    
     return true;
 }
 
@@ -128,6 +131,7 @@ void StatsScene::start_exit_animation()
     SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("salida");
     //camion->start_exit_animation(Point(-240,160));
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.1),CallFunc::create(CC_CALLBACK_0(StatsScene::event_camion_gone, this))));
+    sound_play_effect(sound_salida_camion);
 
 }
 

@@ -15,6 +15,10 @@
 extern const char *game_theme_name;
 extern const char *menu_theme_name;
 
+extern const char *sound_entrada_camion;
+extern const char *sound_salida_camion;
+
+
 extern const char *sound_botella1;
 extern const char *sound_botella2;
 extern const char *sound_botella3;

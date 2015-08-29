@@ -18,6 +18,11 @@ const char *game_theme_name="Music/Main_theme.mp3";
 const char *menu_theme_name="Music/Rcycler_menu.mp3";
 
 
+const char *sound_entrada_camion="Sounds/entrada_camion.wav";
+const char *sound_salida_camion="Sounds/salida_camion.wav";
+
+
+
 const char *sound_botella1="Sounds/Botella01.wav";
 const char *sound_botella2="Sounds/Botella02.wav";
 const char *sound_botella3="Sounds/Botella03.wav";
