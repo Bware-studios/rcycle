@@ -18,7 +18,7 @@ void Log_msg(const char *type,const char *msg, ... );
 // master switch
 #define DEBUG_LOG true
 // log types switches
-#define DEBUG_LOG_GENERAL false
+#define DEBUG_LOG_GENERAL true
 #define DEBUG_LOG_CCB false
 #define DEBUG_LOG_UI false
 #define DEBUG_LOG_COLLISION false

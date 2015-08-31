@@ -19,7 +19,7 @@ bool LoadingScene::init() {
 
     state=0;
     
-    this->runAction(Sequence::createWithTwoActions(DelayTime::create(0.1),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
+    this->runAction(Sequence::createWithTwoActions(DelayTime::create(0.2),CallFunc::create(CC_CALLBACK_0(LoadingScene::time_passes, this))));
 //    this->schedule(schedule_selector(LoadingScene::time_passes),1.0);
 
     do_init();
@@ -85,6 +85,7 @@ void LoadingScene::do_init()
 //    sf_cache->addSpriteFramesWithFile("botones.plist");
     sound_init();
     sound_preload_all();
+    LOG("preloading sounds...");
 }
 
 

@@ -91,6 +91,7 @@ SimpleAudioEngine *audio_engine;
 
 int song_id;
 bool song_playing=false;
+bool song_playing_menu=false;
 
 
 void sound_init() {
@@ -102,8 +103,12 @@ void sound_init() {
 
 
 void sound_preload_all() {
-    audio_engine->preloadEffect(game_theme_name);
-    audio_engine->preloadEffect(menu_theme_name);
+    audio_engine->preloadBackgroundMusic(game_theme_name);
+    audio_engine->preloadBackgroundMusic(menu_theme_name);
+
+    audio_engine->preloadEffect(sound_entrada_camion);
+    audio_engine->preloadEffect(sound_salida_camion);
+
     //audio_engine->preloadEffect(sound_explosion_name);
     for (int i=0;i<sound_n_groups;i++) {
         for (int j=0;j<sound_group_n[i];j++) {
@@ -129,10 +134,14 @@ void sound_play_effect_from_trash(int cat, int type) {
 
 
 void sound_play_music(const char *name) {
-    if (song_playing) sound_stop_music();
+    if (song_playing_menu) return;
+    if (song_playing) {
+        sound_stop_music();
+    }
 //    song_id=audio_engine->playEffect(name);
     audio_engine->playBackgroundMusic(name,true);
     song_playing=true;
+    song_playing_menu = (name==menu_theme_name);
 }
 
 void sound_stop_music() {
@@ -141,6 +150,7 @@ void sound_stop_music() {
         audio_engine->stopBackgroundMusic();
     }
     song_playing=false;
+    song_playing_menu=false;
 }
 
 void sound_pause_music() {

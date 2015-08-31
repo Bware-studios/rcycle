@@ -340,6 +340,9 @@ bool GameScene::init() {
     }
     
     
+    sound_stop_music();
+
+    
     return true;
 }
 
