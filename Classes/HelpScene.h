@@ -30,6 +30,8 @@ public:
     
 private:
     bool startGameAfterHelp;
+    
+    int state;
 };
 
 

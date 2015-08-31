@@ -15,9 +15,12 @@ using namespace std;
 using namespace cocosbuilder;
 
 bool HelpScene::init() {
-    if ( ! MenuScene::init("Instructions") ) return false;
+    if ( ! MenuScene::init("Instructions-2") ) return false;
     
     startGameAfterHelp=false;
+    
+    state=0;
+    SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Organico");
     
     return true;
 }
@@ -31,11 +34,20 @@ void HelpScene::setStartGameAfterHelp(bool start)
 
 void HelpScene::back(Ref *pSender)
 {
-    if (startGameAfterHelp) {
-        GameScene::enter_game_scene(true);
+    state+=1;
+    if (state==1) {
+        SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Papel");
+    } else if (state==2) {
+        SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Plastico");
+    } else if (state==3) {
+        SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Vidrio");
     } else {
-        auto newscene = MainMenuScene::create();
-        Director::getInstance()->replaceScene(newscene);
+        if (startGameAfterHelp) {
+            GameScene::enter_game_scene(true);
+        } else {
+            auto newscene = MainMenuScene::create();
+            Director::getInstance()->replaceScene(newscene);
+        }
     }
 }
 
