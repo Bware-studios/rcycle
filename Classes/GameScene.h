@@ -101,7 +101,8 @@ public:
 
     // from game
     void game_has_ended_by_fails();
-    
+    void game_has_ended_by_time();
+    void game_has_ended();
 
     void start_finish_animation();
     void game_end();

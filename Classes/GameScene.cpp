@@ -701,9 +701,7 @@ void GameScene::update(float deltat)
 
         }
         if (gameTime>gameEndTime) {
-            //game_end();
-            generator->stop();
-            start_finish_animation();
+            game_has_ended_by_time();
         }
     }
     Scene::update(deltat);
@@ -759,15 +757,29 @@ void GameScene::action_quit(Ref *o)
 void GameScene::game_has_ended_by_fails()
 {
     LOG_SCORE("GameScene::game_has_ended_by_fails() <<<<<<<<<<<");
-    sound_stop_music();
+    game_has_ended();
+}
+
+
+void GameScene::game_has_ended_by_time()
+{
+    LOG_SCORE("GameScene::game_has_ended_by_time() <<<<<<<<<<<");
+    game_has_ended();
+}
+
+void GameScene::game_has_ended()
+{
+    if (!ingame) return;
+    ingame=false;
+    generator->stop();
+    touch_destroy();
+
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(GameScene::start_finish_animation, this))));
 }
 
 
 void GameScene::start_finish_animation()
 {
-    ingame=false;
-    touch_destroy();
     Trash::delete_all_trashes();
     int i;
     for (i=0;i<container_n;i++) {
@@ -775,8 +787,6 @@ void GameScene::start_finish_animation()
 //        ->runAction(MoveTo::create(container_enter_movement_duration[i], container_enter_movement_position[i]));
     }
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(GameScene::finish_animation_ended, this))));
-    
-    
 }
 
 
