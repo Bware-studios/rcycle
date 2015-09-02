@@ -25,12 +25,17 @@ public:
     void add_to_layer(cocos2d::Layer *alayer);
     void play_destroyed_sound();
     
+    void setPlayerTouch(bool t);
+    
     void destroy();
     static void delete_all_trashes();
     
     
     int trash_type;
     int trash_category;
+    
+    bool player_touching;
+    
     
     static cocos2d::Vector<Trash*> *trashes;
     

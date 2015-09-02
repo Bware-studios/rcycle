@@ -9,6 +9,8 @@
 #include "Trash.h"
 
 #include "Audio.h"
+#include "GameScene.h"
+
 
 USING_NS_CC;
 
@@ -60,6 +62,7 @@ bool Trash::init(int p_trash_type, int p_trash_category)
 
     this->is_dragable=true;
     
+    player_touching=false;
 
     // para probar las labels
 //    Label *debug_label=Label::create("X","Marker Felt",30);
@@ -112,7 +115,16 @@ void Trash::play_destroyed_sound()
 }
 
 
+void Trash::setPlayerTouch(bool t)
+{
+    player_touching=t;
+}
+
+
 void Trash::destroy() {
+    if (player_touching) {
+        GameScene::thegamescene->touch_destroy();
+    }
     this->removeFromParent();
     trashes->eraseObject(this);
 }

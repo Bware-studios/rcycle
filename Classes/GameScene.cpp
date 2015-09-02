@@ -519,6 +519,7 @@ bool GameScene::touch_began(Touch *t,Event *e)
         touch_down=false;
         return false;
     }
+    
     return true;
 }
 
@@ -558,6 +559,13 @@ void GameScene::touch_destroy()
         //      touch_sprite->getPhysicsBody()->setDynamic(true);
         touch_joint->removeFormWorld();
         touch_sprite->getPhysicsBody()->setRotationEnable(true);
+        Trash *thetrash=dynamic_cast<Trash *>(touch_sprite);
+        if (thetrash !=NULL) {
+            thetrash->setPlayerTouch(false);
+        } else {
+            LOG_UI("WARNING: grabbing non Trash object !!!!");
+        }
+
     }
     touch_sprite=NULL;
     touch_joint=NULL;
@@ -577,6 +585,12 @@ bool GameScene::touch_began_found_object(cocos2d::PhysicsWorld& world ,cocos2d::
         LOG_UI("joint created max force %f",touch_joint->getMaxForce());
         getPhysicsWorld()->addJoint(touch_joint);
         touch_sprite->getPhysicsBody()->setRotationEnable(false);
+        Trash *thetrash=dynamic_cast<Trash *>(touch_sprite);
+        if (thetrash !=NULL) {
+            thetrash->setPlayerTouch(true);
+        } else {
+            LOG_UI("WARNING: grabbing non Trash object !!!!");
+        }
     } else {
        touch_sprite=NULL;
     }
@@ -772,7 +786,6 @@ void GameScene::game_has_ended()
     if (!ingame) return;
     ingame=false;
     generator->stop();
-    touch_destroy();
 
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.0),CallFunc::create(CC_CALLBACK_0(GameScene::start_finish_animation, this))));
 }
@@ -780,7 +793,11 @@ void GameScene::game_has_ended()
 
 void GameScene::start_finish_animation()
 {
+
+    //touch_destroy();
+    // not needed trash tracks touch and destroy it when trash is destroyed
     Trash::delete_all_trashes();
+
     int i;
     for (i=0;i<container_n;i++) {
         container_sprite[i]->start_exit_animation(container_enter_movement_position[i]);
