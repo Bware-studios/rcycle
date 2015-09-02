@@ -9,10 +9,10 @@ the game
 - poner best en el marcador (hecho)
 - quitar high scores online (hecho)
 - poner boton de replay rapido (hecho)
-- corregir error de final de destruccion de objetos o algo raro (creo que hecho)
+- corregir error de final de destruccion de objetos o algo raro (hecho)
 - poner algun sonido extra (hecho)
-- error de sonido en la pausa (hecho mayormente el menu podria mejorarse)
-- problema del preload de dos musicas, que se veia en el iphone de iñigo... recopilar mas info
+- error de sonido en la pausa (hecho)
+- problema del preload de dos musicas (no es reproducible probablemente fue problema de su iphone)
 
 
 

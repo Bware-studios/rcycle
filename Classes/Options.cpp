@@ -40,11 +40,11 @@ bool Options::one_fail_bonus_per_level = false;
 
 // generator
 float Options::lambda0 = .8 ;
-float Options::lambdam = .2 ;
+float Options::lambdam = .2  *.5;
 float Options::rnd_tmax = 4.0;
 float Options::rnd_tmin = .2;
 float Options::p20 = .05 ;
-float Options::p2m = .1 ;
+float Options::p2m = .1 *.5;
 bool Options::randomtime = false ;
 
 bool Options::first_boost = true ;
