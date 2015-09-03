@@ -72,6 +72,10 @@ bool Trash::init(int p_trash_type, int p_trash_category)
 //    debug_label->setColor(Color3B(255, 0, 0));
 //    this->addChild(debug_label);
     
+    float u = rand()*1.0/RAND_MAX;
+
+    setRotation(u*360.0);
+    
     return true;
 }
 
