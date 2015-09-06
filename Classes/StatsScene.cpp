@@ -37,15 +37,15 @@ bool StatsScene::init() {
 //    camion->start_enter_animation(Point(600,160), Point(240,160));
 
     label_1->setString("...");
-    label_2->setString("...");
-    label_3->setString("...");
+//    label_2->setString("...");
+//    label_3->setString("...");
 
     label_1->setFontSize(10);
     label_1->setAlignment(CCTextAlignment::CENTER);
-    label_2->setFontSize(10);
-    label_2->setAlignment(CCTextAlignment::CENTER);
-    label_3->setFontSize(10);
-    label_3->setAlignment(CCTextAlignment::CENTER);
+//    label_2->setFontSize(10);
+//    label_2->setAlignment(CCTextAlignment::CENTER);
+//    label_3->setFontSize(10);
+//    label_3->setAlignment(CCTextAlignment::CENTER);
     
     bool passed = Game::thegame->get_last_wave_passed();
     char target_s[30];
@@ -54,16 +54,27 @@ bool StatsScene::init() {
         sprintf(target_s,"need %d",Game::thegame->score_target);
     }
     //sprintf(score_s,"Score: %d\n%s",Game::thegame->get_last_wave_score(),passed?"":target_s);
-    sprintf(score_s,"Score: %d",Game::thegame->get_last_wave_score()/*,passed?"":target_s*/);
+    //sprintf(score_s,"Score: %d",Game::thegame->get_last_wave_score()/*,passed?"":target_s*/);
+    int best=Preferences::getInstance()->getBestScore();
+    int score=Game::thegame->get_total_score();
+    if (score>best) {
+        sprintf(score_s,"New Best: %d",score);
+        label_1->setColor(Color3B(255,0,0));
+    } else {
+        sprintf(score_s,"Score: %d",score/*,passed?"":target_s*/);
+    }
     label_1->setString(score_s);
 
-    sprintf(score_s,"Lvl %d %s",Game::thegame->wave_completed+(passed?0:1),passed?"ok":"failed" );
-    label_2->setColor(passed?Color3B(0, 255, 0):Color3B(255, 0, 0));
-    label_2->setString(score_s);
+//    sprintf(score_s,"Lvl %d %s",Game::thegame->wave_completed+(passed?0:1),passed?"ok":"failed" );
+//    label_2->setColor(passed?Color3B(0, 255, 0):Color3B(255, 0, 0));
+//    label_2->setString(score_s);
     
-    sprintf(score_s,"Total: %d",Game::thegame->get_total_score());
-    label_3->setString(score_s);
+//    sprintf(score_s,"Total: %d",Game::thegame->get_total_score());
+//    label_3->setString(score_s);
 
+//    if (passed) {
+//        homebutton->setVisible(false);
+//    }
     
     Dialogo *d=Dialogo::create();
     addChild(d);
@@ -82,12 +93,14 @@ bool StatsScene::init() {
 SEL_MenuHandler StatsScene::onResolveCCBCCMenuItemSelector(Ref * pTarget, const char* pSelectorName)
 {
     CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "enter", StatsScene::action_enter);
+    CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "back", StatsScene::action_back);
     //CCB_SELECTORRESOLVER_CCMENUITEM_GLUE(this, "action_quit", GameScene::action_quit);
     return NULL;
 }
 
 SEL_CallFuncN StatsScene::onResolveCCBCCCallFuncSelector(Ref * pTarget, const char* pSelectorName)
 {
+    CCB_SELECTORRESOLVER_CALLFUNC_GLUE(this, "finish_enter_animation", StatsScene::event_fnish_enter_animation);
     return NULL;
 }
 
@@ -111,8 +124,12 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
 
     
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t1", Label *, this->label_1);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t2", Label *, this->label_2);
-    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t3", Label *, this->label_3);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t2", Label *, this->label_2);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t3", Label *, this->label_3);
+//    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "homeboton", MenuItemImage *, this->homebutton);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "r1", Sprite *, this->title_1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "r2", Sprite *, this->title_2);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m1", Menu *, this->menu1);
 
     
     return true;
@@ -128,6 +145,11 @@ void StatsScene::save_high_score_and_exit() {
 
 void StatsScene::start_exit_animation()
 {
+    title_1->setVisible(false);
+    title_2->setVisible(false);
+    menu1->setVisible(false);
+    label_1->setVisible(false);
+    exit_animation=true;
     SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("salida");
     //camion->start_exit_animation(Point(-240,160));
     this->runAction(Sequence::createWithTwoActions(DelayTime::create(1.1),CallFunc::create(CC_CALLBACK_0(StatsScene::event_camion_gone, this))));
@@ -138,23 +160,48 @@ void StatsScene::start_exit_animation()
 
 void StatsScene::action_enter(Ref *pSender)
 {
+    if (exit_animation) return;
     //printf("action enter \n");
     if (Game::thegame->get_last_wave_passed()) {
         going_back_to_game=true;
         start_exit_animation();
     } else {
-        Preferences::getInstance()->setIfBestScore(Game::thegame->total_score);
-//            if ( Options::online_scores ) {
-//        
-//                bool record_achieved;
-//                record_achieved=enter_player_name_for_record_if_needed();
-//                if (!record_achieved) {
-//                    start_exit_animation();
-//                }
-//            } else {
-//                start_exit_animation();
-//            }
-        start_exit_animation();
+        the_game_has_ended();
+    }
+}
+
+void StatsScene::action_back(Ref *pSender)
+{
+    if (exit_animation) return;
+    going_to_menu=true;
+    the_game_has_ended();
+}
+
+
+void StatsScene::the_game_has_ended()
+{
+    Preferences::getInstance()->setIfBestScore(Game::thegame->total_score);
+    //            if ( Options::online_scores ) {
+    //
+    //                bool record_achieved;
+    //                record_achieved=enter_player_name_for_record_if_needed();
+    //                if (!record_achieved) {
+    //                    start_exit_animation();
+    //                }
+    //            } else {
+    //                start_exit_animation();
+    //            }
+    start_exit_animation();
+    
+}
+
+
+void StatsScene::event_fnish_enter_animation(cocos2d::Node *pSender)
+{
+    if (Game::thegame->get_last_wave_passed()) {
+        SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("ganas");
+    } else {
+        SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("pierdes");
     }
 }
 
@@ -162,9 +209,10 @@ void StatsScene::event_camion_gone()
 {
     if (going_back_to_game) {
         GameScene::enter_game_scene(false);
+    } else if (going_to_menu) {
+        auto newscene = MainMenuScene::create();
+        Director::getInstance()->replaceScene(newscene);
     } else {
-        //auto newscene = MainMenuScene::create();
-        //Director::getInstance()->replaceScene(newscene);
         GameScene::enter_game_scene(true);
     }
 }

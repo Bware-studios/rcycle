@@ -142,7 +142,9 @@ public:
     cocos2d::Sprite *fail2;
     cocos2d::Sprite *fail3;
     cocos2d::Sprite **failsprite;
-    
+
+    cocos2d::Sprite *best_label;
+
     
 //    cocos2d::Label *score_1;
 //    cocos2d::Label *score_2;

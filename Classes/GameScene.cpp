@@ -125,20 +125,23 @@ bool GameScene::init() {
 
     score2=Label::create("0", score1->getFontName(), score1->getFontSize()-5);
     score2->setPosition(Point(dr.width-10,dr.height-8));
+    score2->setFontSize(40);
+
     score2->setVerticalAlignment(score1->getVerticalAlignment());
     score2->setAlignment(CCTextAlignment::CENTER);
     score2->setColor(score1->getColor());
     score2->setAnchorPoint(Point(1,1));
+    frontLayer->addChild(score2);
 
-    score3=Label::create("Best 0", score1->getFontName(), score1->getFontSize()-15);
-    score3->setPosition(Point(dr.width-10,dr.height-40));
+    score3=Label::create("0", score1->getFontName(), score1->getFontSize()-15);
+//    score3->setPosition(Point(dr.width-10,dr.height-40));
+    score3->setFontSize(30);
+    score3->setPosition(Point(34,10));
     score3->setVerticalAlignment(score1->getVerticalAlignment());
     score3->setAlignment(CCTextAlignment::CENTER);
     score3->setColor(score1->getColor());
-    score3->setAnchorPoint(Point(1,1));
-
-    frontLayer->addChild(score2);
-    frontLayer->addChild(score3);
+    score3->setAnchorPoint(Point(.5,1));
+    best_label->addChild(score3);
 
     best_score_for_display = Preferences::getInstance()->getBestScore();
     update_score_display();
@@ -343,6 +346,7 @@ bool GameScene::init() {
     sound_stop_music();
 
     
+    
     return true;
 }
 
@@ -395,6 +399,8 @@ bool GameScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fail2", Sprite *, this->fail2);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "fail3", Sprite *, this->fail3);
 
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "best", Sprite *, this->best_label);
+    
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "pause_menu", Menu *, this->pause_menu);
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_1", Label *, this->score_1);
 //    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "score_2", Label *, this->score_2);
@@ -627,7 +633,7 @@ void GameScene::update_score_display()
 //    sprintf(sstr,"%d / %d",partial,target);
     sprintf(sstr,"%d",acumulated);
     score2->setString(sstr);
-    sprintf(sstr,"Best %d",best_score_for_display);
+    sprintf(sstr,"%d",best_score_for_display);
     score3->setString(sstr);
 //    if (partial>=target) {
 //        score2->setColor(Color3B(0,255,0));

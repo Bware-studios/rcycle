@@ -108,6 +108,9 @@ public:
     cocos2d::Label *text2 = NULL;
     cocos2d::Label *text3 = NULL;
     cocos2d::Menu *menu = NULL;
+
+    cocos2d::Sprite *best_label = NULL;
+
     
     MenuLayer *layer;
 };

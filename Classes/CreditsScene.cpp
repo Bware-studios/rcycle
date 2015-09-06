@@ -19,6 +19,9 @@ bool CreditsScene::init() {
     this->text1->setString(VERSION_STR);
     this->text2->setString(CREDITS_STR);
 
+    this->text1->setFontSize(30);
+    this->text2->setFontSize(24);
+    
     return true;
 }
 

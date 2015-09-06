@@ -40,8 +40,13 @@ public:
     void start_exit_animation();
     void save_high_score_and_exit();
     void action_enter(cocos2d::Ref *pSender);
+    void action_back(cocos2d::Ref *pSender);
+    void the_game_has_ended();
+
+    void event_fnish_enter_animation(cocos2d::Node *pSender);
     void event_camion_gone();
     void event_exit_from_name_dialog(Dialogo* d, int b,std::string name);
+    
     
     bool enter_player_name_for_record_if_needed();
 
@@ -50,9 +55,13 @@ public:
     
     
     cocos2d::Label *label_1;
-    cocos2d::Label *label_2;
-    cocos2d::Label *label_3;
-    
+//    cocos2d::Label *label_2;
+//    cocos2d::Label *label_3;
+
+//    cocos2d::MenuItemImage *homebutton;
+    cocos2d::Menu *menu1;
+    cocos2d::Sprite *title_1;
+    cocos2d::Sprite *title_2;
 
     cocos2d::Layer *backLayer;
     cocos2d::Layer *statsLayer;
@@ -61,7 +70,9 @@ public:
 
     cocos2d::ui::TextField *field;
     
-    bool going_back_to_game;
+    bool going_back_to_game = false;
+    bool going_to_menu = false;
+    bool exit_animation = false;
     //bool first_exit_pressed;
 
 };

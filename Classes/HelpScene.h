@@ -26,7 +26,15 @@ public:
     CREATE_FUNC(HelpScene);
     void setStartGameAfterHelp(bool start);
     
+    bool touch_began(cocos2d::Touch *t,cocos2d::Event *e);
+    void touch_moved(cocos2d::Touch *t,cocos2d::Event *e);
+    void touch_ended(cocos2d::Touch *t,cocos2d::Event *e);
+    void touch_cancelled(cocos2d::Touch *t,cocos2d::Event *e);
+
+    
     void back(cocos2d::Ref *pSender);
+    
+    
     
 private:
     bool startGameAfterHelp;

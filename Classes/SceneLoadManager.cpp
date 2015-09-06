@@ -146,6 +146,8 @@ bool MenuScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVaria
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t2", Label *, this->text2);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "t3", Label *, this->text3);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "menu", Menu *, this->menu);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "best", Sprite *, this->best_label);
+
     return true;
 }
 

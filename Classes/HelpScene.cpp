@@ -15,12 +15,22 @@ using namespace std;
 using namespace cocosbuilder;
 
 bool HelpScene::init() {
-    if ( ! MenuScene::init("Instructions-2") ) return false;
+    if ( ! MenuScene::init("Instructions") ) return false;
     
     startGameAfterHelp=false;
     
     state=0;
     SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("Organico");
+
+    
+    EventListenerTouchOneByOne *etouch = EventListenerTouchOneByOne::create();
+    etouch->onTouchBegan=CC_CALLBACK_2(HelpScene::touch_began,this);
+    etouch->onTouchMoved=CC_CALLBACK_2(HelpScene::touch_moved,this);
+    etouch->onTouchEnded=CC_CALLBACK_2(HelpScene::touch_ended,this);
+    etouch->onTouchCancelled=CC_CALLBACK_2(HelpScene::touch_cancelled,this);
+    EventDispatcher *edispatcher = this->getEventDispatcher();
+    edispatcher->addEventListenerWithSceneGraphPriority(etouch, this);
+
     
     return true;
 }
@@ -28,6 +38,25 @@ bool HelpScene::init() {
 void HelpScene::setStartGameAfterHelp(bool start)
 {
     startGameAfterHelp=start;
+}
+
+
+bool HelpScene::touch_began(cocos2d::Touch *t,cocos2d::Event *e)
+{
+    return true;
+}
+
+void HelpScene::touch_moved(cocos2d::Touch *t,cocos2d::Event *e)
+{
+}
+
+void HelpScene::touch_ended(cocos2d::Touch *t,cocos2d::Event *e)
+{
+    back(NULL);
+}
+
+void HelpScene::touch_cancelled(cocos2d::Touch *t,cocos2d::Event *e)
+{
 }
 
 
