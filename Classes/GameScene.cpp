@@ -124,7 +124,7 @@ bool GameScene::init() {
     }
 
     score2=Label::create("0", score1->getFontName(), score1->getFontSize()-5);
-    score2->setPosition(Point(dr.width-10,dr.height-8));
+    score2->setPosition(Point(dr.width-80,dr.height-8));
     score2->setFontSize(40);
 
     score2->setVerticalAlignment(score1->getVerticalAlignment());

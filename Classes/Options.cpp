@@ -35,8 +35,8 @@ bool Options::container_show_score = false;
 // game
 bool Options::easy_game_for_debug = false;
 int Options::num_fails_to_end = 3;
-bool Options::fails_persist = false;
-bool Options::one_fail_bonus_per_level = false;
+bool Options::fails_persist = true;
+bool Options::one_fail_bonus_per_level = true;
 
 // generator
 float Options::lambda0 = .8 ;
