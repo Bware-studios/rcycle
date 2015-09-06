@@ -63,12 +63,18 @@ public:
     cocos2d::Sprite *title_1;
     cocos2d::Sprite *title_2;
 
+    cocos2d::Sprite *newbest;
+
+    
     cocos2d::Layer *backLayer;
     cocos2d::Layer *statsLayer;
     
     Camion *camion;
 
     cocos2d::ui::TextField *field;
+    
+    bool best_achieved = false;
+    
     
     bool going_back_to_game = false;
     bool going_to_menu = false;

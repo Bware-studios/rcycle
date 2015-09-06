@@ -37,20 +37,22 @@ bool MainMenuScene::init() {
 
 
     int best_score = Preferences::getInstance()->getBestScore();
-    if (best_label && best_score>0) {
-        char sstr[10];
-        sprintf(sstr,"%d",best_score);
-        Label *score3;
-        score3=Label::create(sstr,"Helvetica",30);
-        score3->setFontSize(30);
-        score3->setPosition(Point(34,10));
-        //score3->setVerticalAlignment(score1->getVerticalAlignment());
-        score3->setAlignment(CCTextAlignment::CENTER);
-        score3->setColor(Color3B(0,0,0));
-        score3->setAnchorPoint(Point(.5,1));
-        best_label->addChild(score3);
-        
-
+    if (best_label) {
+        if (best_score>0) {
+            char sstr[10];
+            sprintf(sstr,"%d",best_score);
+            Label *score3;
+            score3=Label::create(sstr,"Helvetica",30);
+            score3->setFontSize(30);
+            score3->setPosition(Point(34,10));
+            //score3->setVerticalAlignment(score1->getVerticalAlignment());
+            score3->setAlignment(CCTextAlignment::CENTER);
+            score3->setColor(Color3B(0,0,0));
+            score3->setAnchorPoint(Point(.5,1));
+            best_label->addChild(score3);
+        } else {
+            best_label->setVisible(false);
+        }
     }
     
     sound_play_music(menu_theme_name);

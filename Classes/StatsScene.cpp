@@ -60,6 +60,7 @@ bool StatsScene::init() {
     if (score>best) {
         sprintf(score_s,"New Best: %d",score);
         label_1->setColor(Color3B(255,0,0));
+        best_achieved=true;
     } else {
         sprintf(score_s,"Score: %d",score/*,passed?"":target_s*/);
     }
@@ -78,6 +79,8 @@ bool StatsScene::init() {
     
     Dialogo *d=Dialogo::create();
     addChild(d);
+    
+    newbest->setVisible(false);
     
     //first_exit_pressed=false;
     
@@ -130,6 +133,7 @@ bool StatsScene::onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVari
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "r1", Sprite *, this->title_1);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "r2", Sprite *, this->title_2);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m1", Menu *, this->menu1);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "newbest", Sprite *, this->newbest);
 
     
     return true;
@@ -202,6 +206,11 @@ void StatsScene::event_fnish_enter_animation(cocos2d::Node *pSender)
         SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("ganas");
     } else {
         SceneLoadManager::getAnimationManager()->runAnimationsForSequenceNamed("pierdes");
+        if (best_achieved) {
+            newbest->setScale(4, 4);
+            newbest->runAction(ScaleTo::create(.25, 1.0));
+            newbest->setVisible(true);
+        }
     }
 }
 
