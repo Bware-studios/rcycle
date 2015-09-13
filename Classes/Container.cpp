@@ -200,9 +200,9 @@ bool Container::init(int p_trash_category)
         dust[i]->setLife(.5);
         dust[i]->setLifeVar(.25);
         dust[i]->setEmissionRate(100);
-        dust[i]->setStartColor(Color4F(0, 0, 0, 1));
+        dust[i]->setStartColor(Color4F(.5,.5,.5, 1));
         dust[i]->setStartColorVar(Color4F(0, 0, 0, 0.5));
-        dust[i]->setEndColor(Color4F(0, 0, 0, 0.2));
+        dust[i]->setEndColor(Color4F(.5,.5,.5, 0.2));
         dust[i]->setEndColorVar(Color4F(0, 0, 0, 0.1));
         this->addChild(dust[i]);
     }
