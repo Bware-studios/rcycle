@@ -31,7 +31,7 @@ void TrashGenerator::startforlevel(int l)
     lambda= Options::lambda0 + l*Options::lambdam ;
     p2= Options::p20 + l*Options::p2m ;
 
-    printf("trash generator intiated for wave: %d  lambda=%f  p2=%.4f\n",l,lambda,p2);
+    //printf("trash generator intiated for wave: %d  lambda=%f  p2=%.4f\n",l,lambda,p2);
     time_passes();
 }
 
