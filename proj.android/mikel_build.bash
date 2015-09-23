@@ -11,5 +11,5 @@ android update project -p ../cocos2d/cocos/2d/platform/android/java/ -t $android
 ./build_native.py
 find assets -name "Icon*" -exec rm \{\} \;
 ant debug
-
+#ant release
 
